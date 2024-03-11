@@ -1,0 +1,67 @@
+/* *
+ *
+ * @author whiteshader@163.com
+ * @datetime  2021/09/16
+ *
+ * */
+
+export default {
+  'system.User.user_id': 'User ID',
+  'system.User.dept_id': 'Dept ID',
+  'system.User.user_name': 'User Name',
+  'system.User.nick_name': 'Ncik Name',
+  'system.User.user_type': 'User Type',
+  'system.User.email': 'Email',
+  'system.User.phonenumber': 'Phome Number',
+  'system.User.sex': 'Sex',
+  'system.User.avatar': 'Avatar',
+  'system.User.password': 'Password',
+  'system.User.status': 'Status',
+  'system.User.del_flag': 'Flag',
+  'system.User.login_ip': 'IP',
+  'system.User.login_date': 'Login Date',
+  'system.User.create_by': 'Creator',
+  'system.User.create_time': 'Create Time',
+  'system.User.update_by': 'Updater',
+  'system.User.update_time': 'Update Time',
+  'system.User.remark': 'Remark',
+  'system.User.reset.password': 'Reset Password',
+  'system.User.modify_info': 'Edit',
+  'user.center': 'User Center',
+  'user.loginOut': 'Login Out',
+  'user.localeLoading': 'Change Language ...',
+  'user.localeDone': 'Change Done',
+  'user.accountManagement': 'Account management',
+  'user.authorityManagement': 'Authority management',
+  'user.accountName': 'Account Name',
+  'user.role': 'Role',
+  'user.mobilePhone': 'Mobile phone',
+  'user.organization': 'Organization',
+  'user.phoneFormatError': 'Phone format error',
+  'user.phoneFormatErrorHint':
+    'Format error: 8-16 numeric words, at least two of which are: letters/numbers/symbols',
+  'user.phoneFormatHint': '8-16 numeric words, at least two of which are: letters/numbers/symbols',
+  'user.confirmPassword': 'Confirm password',
+  'user.initialPasswordDifferentConfirmPassword':
+    'The initial password is different from the confirm password',
+  'user.associatedSite': 'Associated site',
+  'user.customRole': 'Custom Role',
+  'user.predefinedRoles': 'Predefined Role',
+  'user.deleteRoleConfirm':
+    'Are you sure you want to delete this role? Cannot be recovered after deletion!',
+  'user.menuPermissions': 'Menu permissions',
+  'user.productId': 'Product ID',
+  'user.productManufacturer': 'Product manufacturer',
+  'user.inputTime': 'Input time',
+  'user.functionPointId': 'Function point ID',
+  'user.functionPointName': 'Function point name',
+  'user.valueRange': 'Value Range',
+  'user.attributeType': 'Attribute Type',
+  'user.attribute': 'Property',
+  'user.event': 'Event',
+  'user.service': 'Service',
+  'user.moduleName': 'Module Name',
+  'user.moduleIdentification': 'Module identification',
+  'user.productDetails': 'Product details',
+  'user.moduleManagement': 'Module management',
+};
