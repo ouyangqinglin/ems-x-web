@@ -16,6 +16,7 @@ export type DeviceModelAuthorityType = {
 export type DeviceModelType = {
   type?: DeviceModelTypeEnum;
   specs?: any;
+  name?: string;
 };
 
 export type DevicePropsType = {
@@ -66,6 +67,7 @@ export type DeviceServiceModelType = {
   deviceId?: string;
   parentId?: string;
   serviceId?: string;
+  queryId?: string;
   name?: string;
   required?: boolean;
   span?: number;
@@ -83,10 +85,12 @@ export type DeviceServiceModelType = {
         type?: DeviceModelTypeEnum;
         specs?: DeviceServiceModelType[];
       };
+  buttons?: 'refresh' | 'edit';
 };
 
 export type DeviceServiceType = {
   id?: string;
+  queryId?: string;
   deviceId?: string;
   disabled?: string;
   name?: string;
@@ -97,6 +101,7 @@ export type DeviceServiceType = {
   outputData?: DeviceServiceModelType[];
   children?: DeviceServiceModelType[];
   authority?: DeviceModelAuthorityType[];
+  buttons?: 'refresh' | 'edit';
 };
 
 export type DeviceLocationType = {
@@ -118,6 +123,7 @@ export type DevicePageModels = {
 
 export type DeviceModelDescribeType = {
   id?: string;
+  queryId?: string;
   name?: string;
   type?: DeviceModelDescribeTypeEnum;
   showType?: DeviceModelShowTypeEnum;

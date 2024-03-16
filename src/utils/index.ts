@@ -3,7 +3,7 @@ import type { MenuDataItem } from '@umijs/route-utils';
 import { formatMessage as umiFormatMessage } from 'umi';
 import { createIcon } from './IconUtil';
 import FileSaver from 'file-saver';
-import { DeviceModelType, DevicePropsType } from '@/types/device';
+import { DeviceModelDescribeType, DeviceModelType, DevicePropsType } from '@/types/device';
 import routers, { getPathLocaleMap } from '../../config/routes';
 import moment from 'moment';
 
@@ -417,5 +417,18 @@ export const getPropsFromTree = <T extends Record<string, any>, U = string>(
       result.push(...childrenResult);
     }
   });
+  return result;
+};
+
+export const getModelByGroup = (groupData: DeviceModelDescribeType[]) => {
+  let result = {};
+  const childrens = getPropsFromTree<DeviceModelDescribeType, DeviceModelDescribeType[]>(
+    groupData,
+    'children',
+  )?.reduce?.((arr, item) => {
+    arr.push(...item);
+    return arr;
+  }, []);
+  result = getModelByProps(childrens || []);
   return result;
 };

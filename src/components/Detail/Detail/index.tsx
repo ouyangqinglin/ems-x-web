@@ -2,14 +2,16 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-07-18 11:51:31
- * @LastEditTime: 2024-01-23 17:12:25
+ * @LastEditTime: 2024-03-16 10:56:06
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\Detail\Detail\index.tsx
+ * @FilePath: \ems-x-web\src\components\Detail\Detail\index.tsx
  */
 import React, { cloneElement, useMemo } from 'react';
-import { Descriptions, DescriptionsProps } from 'antd';
+import { Descriptions } from 'antd';
+import type { DescriptionsProps } from 'antd';
 import { isEmpty } from '@/utils';
-import { ProFormColumnsType } from '@ant-design/pro-components';
+import type { ProFormColumnsType } from '@ant-design/pro-components';
+import styles from './index.less';
 
 export type DetailItem = {
   className?: string;
@@ -26,7 +28,8 @@ export type DetailItem = {
   valueStyle?: React.CSSProperties;
   show?: boolean | ((value: any, data?: any) => boolean);
   showExtra?: boolean;
-  unit?: string;
+  unit?: React.ReactNode;
+  extral?: React.ReactElement;
   [key: string]: any;
 };
 
@@ -38,6 +41,7 @@ export type DetailProps = DescriptionsProps & {
   format?: (value: any, data?: any) => React.ReactNode;
   extral?: React.ReactElement;
   valueStyle?: React.CSSProperties;
+  unitInLabel?: boolean;
 };
 
 const Detail: React.FC<DetailProps> = (props) => {
@@ -49,7 +53,9 @@ const Detail: React.FC<DetailProps> = (props) => {
     colon = true,
     format,
     extral,
-    valueStyle,
+    valueStyle = {},
+    unitInLabel = false,
+    className = '',
     ...restProps
   } = props;
 
@@ -61,7 +67,9 @@ const Detail: React.FC<DetailProps> = (props) => {
     const content: React.ReactNode[] = [];
     items.forEach((item) => {
       let fieldValue = data[(item?.field ?? item?.dataIndex) || ''];
-      fieldValue = item?.valueInterceptor?.(fieldValue, data) ?? fieldValue;
+      if (item?.valueInterceptor) {
+        fieldValue = item?.valueInterceptor?.(fieldValue, data);
+      }
       let show;
       if (typeof item.show == 'function') {
         show = item?.show?.(fieldValue, data);
@@ -78,7 +86,14 @@ const Detail: React.FC<DetailProps> = (props) => {
         content.push(
           <Descriptions.Item
             className={item.className || ''}
-            label={item.label ?? item.title}
+            label={
+              <>
+                <span className={styles.label} title={(item.label ?? item.title) as string}>
+                  {item.label ?? item.title}
+                </span>
+                {unitInLabel && (item?.unit ? `(${item?.unit})` : '')}
+              </>
+            }
             labelStyle={item.labelStyle}
             contentStyle={item.contentStyle}
             span={item.span || 1}
@@ -94,7 +109,8 @@ const Detail: React.FC<DetailProps> = (props) => {
                     : fieldValue ?? ''
                   : '--'}
               </span>
-              <span>{item.unit || ''}</span>
+              {!unitInLabel && <span>{item.unit || ''}</span>}
+              {item.extral}
               {item.showExtra !== false && extralNode}
             </div>
           </Descriptions.Item>,
@@ -106,6 +122,7 @@ const Detail: React.FC<DetailProps> = (props) => {
 
   return (
     <Descriptions
+      className={`${styles.detail} ${className}`}
       column={column}
       labelStyle={labelStyle}
       contentStyle={contentStyle}

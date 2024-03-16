@@ -66,10 +66,29 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
           component: 'Layout',
           meta: {
             title: '状态数据',
-            icon: 'SyncOutlined',
+            icon: 'YTStationOutlined',
             noCache: false,
             link: null,
           },
+          children: [
+            {
+              path: 'pcs',
+            },
+          ],
+        },
+        {
+          name: 'config',
+          path: '/config',
+          hidden: false,
+          component: 'Layout',
+          meta: {
+            icon: 'YTSettingOutlined',
+          },
+          children: [
+            {
+              path: 'pcs',
+            },
+          ],
         },
       ],
       msg: '',
