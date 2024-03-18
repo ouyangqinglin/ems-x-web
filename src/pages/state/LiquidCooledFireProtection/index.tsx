@@ -15,7 +15,7 @@ import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import { baseInfoItems, statusItems } from './helper';
 
-const LiquidCooler: React.FC = () => {
+const LiquidCooledFireProtection: React.FC = () => {
   const { config } = useModel('config');
   const { data: realTimeData, run } = useRequest(getDeviceData, {
     manual: true,
@@ -30,7 +30,7 @@ const LiquidCooler: React.FC = () => {
             realTimeData={realTimeData}
             groupData={baseInfoItems}
             detailProps={{
-              column: 4,
+              column: 5,
             }}
           />
         </Card>
@@ -39,7 +39,7 @@ const LiquidCooler: React.FC = () => {
             realTimeData={realTimeData}
             groupData={statusItems}
             detailProps={{
-              column: 4,
+              column: 5,
             }}
           />
         </Card>
@@ -48,4 +48,4 @@ const LiquidCooler: React.FC = () => {
   );
 };
 
-export default LiquidCooler;
+export default LiquidCooledFireProtection;

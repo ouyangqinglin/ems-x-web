@@ -80,6 +80,14 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
+      {
+        path: 'liquidCooledFireProtection',
+        name: 'liquidCooledFireProtection',
+        component: './state/LiquidCooledFireProtection',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.liquidCooledFireProtection',
+      },
       
     ],
   },

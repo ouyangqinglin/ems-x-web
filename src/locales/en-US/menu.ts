@@ -13,4 +13,6 @@ export default {
   'menu.state.airCooledFireProtection' : 'Air Cooled Fire Protection',
   'menu.state.dehumidifier': 'Dehumidifier',
   'menu.state.liquidCooler': 'Liquid Cooler',
+  'menu.state.liquidCooledFireProtection': 'Liquid Cooled Fire Protection',
+
 };
