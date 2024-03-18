@@ -74,6 +74,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             {
               path: 'pcs',
             },
+            {
+              path: 'pcs-sess',
+            },
           ],
         },
         {
@@ -87,6 +90,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
           children: [
             {
               path: 'pcs',
+            },
+            {
+              path: 'pcs-sess',
             },
           ],
         },

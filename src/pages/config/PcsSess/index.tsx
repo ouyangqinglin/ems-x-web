@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-03-18 14:34:17
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\PcsSess\index.tsx
  */
 
 import React from 'react';
@@ -31,7 +31,7 @@ const Pcs: React.FC = () => {
             groupData={baseInfoItems}
             realTimeData={realTimeData}
             detailProps={{
-              column: 4,
+              column: 3,
             }}
           />
         </Card>

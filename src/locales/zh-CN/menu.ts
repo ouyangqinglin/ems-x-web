@@ -10,5 +10,6 @@ export default {
   'menu.index': '首页',
   'menu.state': '状态数据',
   'menu.state.pcs': '变流器',
+  'menu.state.pcsSess': '变流器-SESS',
   'menu.config': '系统配置',
 };
