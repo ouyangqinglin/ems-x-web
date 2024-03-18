@@ -77,6 +77,18 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             {
               path: 'pcs-sess',
             },
+            {
+              path: 'airCooledFireProtection',
+            },
+            {
+              path: 'liquidCooler',
+            },
+            {
+              path: 'dehumidifier',
+            },
+            {
+              path: 'liquidCooledFireProtection',
+            },
           ],
         },
         {
@@ -93,6 +105,18 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'pcs-sess',
+            },
+            {
+              path: 'airCooledFireProtection',
+            },
+            {
+              path: 'liquidCooler',
+            },
+            {
+              path: 'dehumidifier',
+            },
+            {
+              path: 'liquidCooledFireProtection',
             },
           ],
         },
