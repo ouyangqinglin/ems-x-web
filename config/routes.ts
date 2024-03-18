@@ -64,6 +64,14 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.airCooledFireProtection',
       },
+      {
+        path: 'liquidCooler',
+        name: 'liquidCooler',
+        component: './state/LiquidCooler',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.liquidCooler',
+      },
     ],
   },
   {

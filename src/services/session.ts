@@ -76,6 +76,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'airCooledFireProtection'
+            },
+            {
+              path: 'liquidCooler'
             }
           ],
         },
@@ -93,6 +96,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'airCooledFireProtection'
+            },
+            {
+              path: 'liquidCooler'
             }
           ],
         },

@@ -15,7 +15,7 @@ import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import { baseInfoItems, statusItems } from './helper';
 
-const AirCooledFireProtection: React.FC = () => {
+const LiquidCooler: React.FC = () => {
   const { config } = useModel('config');
   const { data: realTimeData, run } = useRequest(getDeviceData, {
     manual: true,
@@ -48,4 +48,4 @@ const AirCooledFireProtection: React.FC = () => {
   );
 };
 
-export default AirCooledFireProtection;
+export default LiquidCooler;
