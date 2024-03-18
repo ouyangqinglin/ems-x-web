@@ -11,5 +11,6 @@ export default {
   'menu.state': 'Status Data',
   'menu.state.pcs': 'Converter',
   'menu.state.airCooledFireProtection' : 'Air Cooled Fire Protection',
+  'menu.state.dehumidifier': 'Dehumidifier',
   'menu.state.liquidCooler': 'Liquid Cooler',
 };

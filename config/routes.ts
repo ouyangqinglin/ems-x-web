@@ -72,6 +72,15 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.liquidCooler',
       },
+      {
+        path: 'dehumidifier',
+        name: 'dehumidifier',
+        component: './state/Dehumidifier',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.dehumidifier',
+      },
+      
     ],
   },
   {

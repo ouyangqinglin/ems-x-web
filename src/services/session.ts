@@ -79,6 +79,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'liquidCooler'
+            },
+            {
+              path: 'dehumidifier'
             }
           ],
         },
@@ -99,6 +102,9 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'liquidCooler'
+            },
+            {
+              path: 'dehumidifier'
             }
           ],
         },
