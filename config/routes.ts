@@ -56,6 +56,14 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.pcs',
       },
+      {
+        path: 'airCooledFireProtection',
+        name: 'airCooledFireProtection',
+        component: './state/AirCooledFireProtection',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.airCooledFireProtection',
+      },
     ],
   },
   {

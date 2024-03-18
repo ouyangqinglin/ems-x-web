@@ -10,5 +10,7 @@ export default {
   'menu.index': '首页',
   'menu.state': '状态数据',
   'menu.state.pcs': '变流器',
+  'menu.state.airCooledFireProtection' : '消防-风冷',
   'menu.config': '系统配置',
+
 };
