@@ -188,7 +188,21 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             {
               path: 'cloudPlatform',
             },
-            
+            {
+              path: 'pvPv',
+            },
+            {
+              path: 'inverterSideMeterPv',
+            },
+            {
+              path: 'gridSideElectricityMeterPv',
+            },
+            {
+              path: 'energyManagementPv',
+            },
+            {
+              path: 'cloudPlatformPv',
+            },
           ],
         },
       ],
