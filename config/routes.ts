@@ -152,6 +152,38 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
+      {
+        path: 'liquidCooledFireProtection',
+        name: 'liquidCooledFireProtection',
+        component: './state/LiquidCooledFireProtection',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.liquidCooledFireProtection',
+      },
+      {
+        path: 'gridSideElectricityMeter',
+        name: 'gridSideElectricityMeter',
+        component: './state/GridSideElectricityMeter',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.gridSideElectricityMeter',
+      },
+      {
+        path: 'inverterSideMeter',
+        name: 'inverterSideMeter',
+        component: './state/InverterSideMeter',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.inverterSideMeter',
+      }, 
+      {
+        path: 'fireFightingSESS',
+        name: 'fireFightingSESS',
+        component: './state/FireFightingSESS',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.fireFightingSESS',
+      },
     ],
   },
   {
@@ -257,6 +289,14 @@ const routers: RouterType[] = [
         locale: 'menu.state.liquidCooler',
       },
       {
+        path: 'liquidCooledFireProtection',
+        name: 'liquidCooledFireProtection',
+        component: './state/LiquidCooledFireProtection',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.liquidCooledFireProtection',
+      },
+      {
         path: 'dehumidifier',
         name: 'dehumidifier',
         component: './config/Dehumidifier',
@@ -264,6 +304,7 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
+      
       {
         path: 'gridSideElectricityMeter',
         name: 'gridSideElectricityMeter',
