@@ -131,7 +131,6 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             {
               path: 'inverterSideMeterPv'
             },
-            
           ],
         },
         {

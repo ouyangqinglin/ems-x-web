@@ -30,6 +30,7 @@ export default {
   'menu.config.systemControl': 'System Control',
   'menu.config.system': 'System',
   'menu.config.pv': 'Photovoltaic',
+  
   'menu.config.energyManagement': 'Energy Management',
   'menu.config.cloudPlatform': 'Cloud Platform',
 };
