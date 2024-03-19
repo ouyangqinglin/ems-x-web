@@ -18,6 +18,8 @@ export default {
   'menu.state.air': '系统-风冷',
   'menu.state.systemSess': '系统-SESS',
   'menu.state.liquid': '系统-液冷',
+  'menu.state.gridSideElectricityMeter': '电网侧电表',
+  'menu.state.inverterSideMeter': '逆变器侧电表',
   'menu.state.batteryPack': '电池组',
   'menu.state.batteryPackSess': '电池组-SESS',
   'menu.state.airCondition': '空调',

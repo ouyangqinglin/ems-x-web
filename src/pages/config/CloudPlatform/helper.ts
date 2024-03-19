@@ -9,42 +9,114 @@
 
 import { DeviceModelDescribeType } from '@/types/device';
 
-export const baseInfoItems: any = [
+/// 云平台通信接口参数
+export const cloudApiItems: any = [
   {
     id: 'a',
-    name: '基本信息',
+    name: '云平台通信接口参数',
     type: 'group',
     children: [
       {
         id: 'a',
-        name: '基本信息',
+        name: '云平台通信接口参数',
         type: 'service',
-        buttons: ['refresh'],
+        buttons: ['refresh', 'edit'],
         children: [
           {
             id: '1',
-            name: '变流器SN',
+            name: '通信接口',
             type: 'property',
-            buttons: ['refresh'],
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "WiFi",
+                1: "LAN1",
+                2: "LAN4",
+                3: "4G"
+              }
+            },
+          },
+          {
+            id: '1',
+            name: 'WiFi名称',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'string',
             },
           },
           {
-            id: '3',
-            name: '变流器型号',
+            id: '1',
+            name: 'WiFi密码',
             type: 'property',
-            buttons: ['refresh'],
+            buttons: ['refresh', 'edit'],
             dataType: {
+              specs: {
+                unit: '',
+              },
               type: 'string',
             },
           },
           {
-            id: '2',
-            name: '变流器厂商',
+            id: '1',
+            name: '连接类型',
             type: 'property',
-            buttons: ['refresh'],
+            buttons: ['refresh', 'edit'],
             dataType: {
+              type: "enum",
+              specs: {
+                0: "静态IP",
+                1: "DHCP",
+              }
+            },
+          },
+          {
+            id: '1',
+            name: '外网IP地址',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '子网掩码',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '网关',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: 'DNS服务器',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            span: 2,
+            dataType: {
+              specs: {
+                unit: '',
+              },
               type: 'string',
             },
           },
@@ -54,217 +126,114 @@ export const baseInfoItems: any = [
   },
 ];
 
-export const cloudPlatformParamsItems: any = [
+/// 永泰云通信接口参数
+export const yotaiComApiItems: any = [
   {
     id: 'a',
-    name: '变流器参数设置',
+    name: '云平台通信接口参数',
     type: 'group',
     children: [
       {
         id: 'a',
-        name: '变流器参数设置',
+        name: '云平台通信接口参数',
         type: 'service',
         buttons: ['refresh', 'edit'],
         children: [
           {
             id: '1',
-            name: '直流恒流电流设置值',
+            name: '通信接口',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "WiFi",
+                1: "LAN1",
+                2: "LAN4",
+                3: "4G"
+              }
+            },
+          },
+          {
+            id: '1',
+            name: 'WiFi名称',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: 'WiFi密码',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
-                unit: 'V',
+                unit: '',
               },
               type: 'string',
             },
           },
           {
             id: '1',
-            name: '直流恒压电压设置值',
+            name: '连接类型',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "静态IP",
+                1: "DHCP",
+              }
+            },
+          },
+          {
+            id: '1',
+            name: '外网IP地址',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
-                unit: 'A',
+                unit: '',
               },
               type: 'string',
             },
           },
           {
             id: '1',
-            name: '直流恒功率功率设置值',
+            name: '子网掩码',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
-                unit: 'kW',
+                unit: '',
               },
               type: 'string',
             },
           },
           {
             id: '1',
-            name: '交流恒压电压设置值',
+            name: '网关',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
-                unit: 'V',
+                unit: '',
               },
               type: 'string',
             },
           },
           {
             id: '1',
-            name: '交流恒压电压频率设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'hz',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '直流源电压设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '充电终止电压设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '放电终止电压设置值',
+            name: 'DNS服务器',
             type: 'property',
             buttons: ['refresh', 'edit'],
             span: 2,
             dataType: {
               specs: {
-                unit: 'V',
+                unit: '',
               },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '电池过压电压设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '电池欠压电压设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            span: 2,
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '最大充电电流设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'A',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '最大放电电流设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'A',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '充电截止电流设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'A',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '直流电压过压保护点',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: '直流电压欠压保护点',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            span: 2,
-            dataType: {
-              specs: {
-                unit: 'V',
-              },
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: 'RS485通信地址设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
-            name: 'RS485通信波特率设置值',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            span: 2,
-            dataType: {
               type: 'string',
             },
           },
@@ -273,3 +242,132 @@ export const cloudPlatformParamsItems: any = [
     ],
   },
 ];
+
+/// 云平台软件连接参数
+export const cloudApiSoftwareItems: any = [
+  {
+    id: 'a',
+    name: '云平台软件连接参数',
+    type: 'group',
+    children: [
+      {
+        id: 'a',
+        name: '云平台软件连接参数',
+        type: 'service',
+        buttons: ['refresh', 'edit'],
+        children: [
+          {
+            id: '1',
+            name: '云平台接入使能',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "允许",
+                1: "禁止",
+              }
+            },
+          },
+          {
+            id: '1',
+            name: '云平台IP/域名',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '端口',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '账号',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '密码',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '供应商编号',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '产品型号',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '设备ID',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '1',
+            name: '永泰云IP/域名',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
+
