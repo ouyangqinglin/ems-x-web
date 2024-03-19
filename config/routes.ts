@@ -184,6 +184,30 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.fireFightingSESS',
       },
+      {
+        path: 'fireFightingPv',
+        name: 'fireFightingPv',
+        component: './state/FireFightingPv',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.fireFightingPv',
+      },
+      {
+        path: 'inverterSideMeterPv',
+        name: 'inverterSideMeterPv',
+        component: './state/InverterSideMeterPv',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.inverterSideMeterPv',
+      },
+      {
+        path: 'gridSideElectricityMeterPv',
+        name: 'gridSideElectricityMeterPv',
+        component: './state/GridSideElectricityMeterPv',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.gridSideElectricityMeterPv',
+      }
     ],
   },
   {
