@@ -65,6 +65,14 @@ const routers: RouterType[] = [
         locale: 'menu.state.pcsSess',
       },
       {
+        path: 'pcs-pv',
+        name: 'pcsPv',
+        component: './state/PcsPv',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.pcs',
+      },
+      {
         path: 'system-air',
         name: 'system-air',
         component: './state/System-Air',
@@ -183,6 +191,14 @@ const routers: RouterType[] = [
         wrappers: ['@/components/KeepAlive'],
         keepAlive: true,
         locale: 'menu.state.pcsSess',
+      },
+      {
+        path: 'pcs-pv',
+        name: 'pcsPv',
+        component: './config/PcsPv',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.pcs',
       },
       {
         path: 'pv',

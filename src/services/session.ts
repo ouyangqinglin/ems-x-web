@@ -78,6 +78,9 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'pcs-sess',
             },
             {
+              path: 'pcs-pv',
+            },
+            {
               path: 'system-air',
             },
             {
@@ -111,14 +114,14 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'liquidCooledFireProtection',
             },
             {
-              path: 'gridSideElectricityMeter'
+              path: 'gridSideElectricityMeter',
             },
             {
               path: 'inverterSideMeter',
             },
             {
               path: 'fireFightingSESS',
-            }
+            },
           ],
         },
         {
@@ -141,6 +144,9 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'pcs-sess',
+            },
+            {
+              path: 'pcs-pv',
             },
             {
               path: 'pv',
@@ -171,7 +177,7 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'cloudPlatform',
-            }
+            },
           ],
         },
       ],

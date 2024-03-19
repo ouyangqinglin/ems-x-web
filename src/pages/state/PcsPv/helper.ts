@@ -70,98 +70,6 @@ export const baseInfoItems: any = [
   },
 ];
 
-export const versionItems: any = [
-  {
-    id: 'a',
-    name: '版本信息',
-    type: 'group',
-    children: [
-      {
-        id: '1',
-        name: 'DSP-V版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '2',
-        name: '硬件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3',
-        name: 'DSP-B版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '4',
-        name: 'ARM-V版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '5',
-        name: 'DSP-D版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: 'ARM-B版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '7',
-        name: 'CPLD-V版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '8',
-        name: 'ARM-D版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '9',
-        name: 'CPLD-B版本',
-        type: 'property',
-        span: 2,
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '10',
-        name: 'CPLD-D版本',
-        type: 'property',
-        span: 2,
-        dataType: {
-          type: 'string',
-        },
-      },
-    ],
-  },
-];
-
 export const stateItems: any = [
   {
     id: 'a',
@@ -186,7 +94,7 @@ export const stateItems: any = [
       },
       {
         id: '2',
-        name: '输出模式',
+        name: 'PV连接状态',
         type: 'property',
         dataType: {
           type: 'string',
@@ -202,7 +110,7 @@ export const stateItems: any = [
       },
       {
         id: '3',
-        name: '告警状态',
+        name: '电池类型',
         type: 'property',
         span: 2,
         dataType: {
@@ -245,7 +153,7 @@ export const electricEnergyItems: any = [
     children: [
       {
         id: '1',
-        name: '今日充电量',
+        name: 'PV日输出电量(',
         type: 'property',
         dataType: {
           specs: {
@@ -256,7 +164,7 @@ export const electricEnergyItems: any = [
       },
       {
         id: '5',
-        name: '今日放电量',
+        name: 'PV年输出电量',
         type: 'property',
         dataType: {
           specs: {
@@ -267,7 +175,7 @@ export const electricEnergyItems: any = [
       },
       {
         id: '2',
-        name: '累计充电量',
+        name: 'PV总输出电量',
         type: 'property',
         dataType: {
           specs: {
@@ -278,7 +186,95 @@ export const electricEnergyItems: any = [
       },
       {
         id: '6',
-        name: '累计放电量',
+        name: '逆变日输出EPS电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变年输出EPS电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变总输出EPS电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器日输出电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器年输出电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器总输出EPS电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器日用电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器年用电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kWh',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变器总用电量',
         type: 'property',
         dataType: {
           specs: {
@@ -291,15 +287,15 @@ export const electricEnergyItems: any = [
   },
 ];
 
-export const dcSideItems: any = [
+export const pvSideItems: any = [
   {
     id: 'a',
-    name: '直流侧信息',
+    name: '光伏侧信息',
     type: 'group',
     children: [
       {
-        id: '1',
-        name: '直流电压',
+        id: '6',
+        name: 'PV1电压',
         type: 'property',
         dataType: {
           specs: {
@@ -309,8 +305,85 @@ export const dcSideItems: any = [
         },
       },
       {
-        id: '5',
-        name: '直流电流',
+        id: '6',
+        name: 'PV2电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV3电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV4电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV5电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV6电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV7电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV8电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV1电流',
         type: 'property',
         dataType: {
           specs: {
@@ -320,45 +393,89 @@ export const dcSideItems: any = [
         },
       },
       {
-        id: '2',
-        name: '直流功率',
+        id: '6',
+        name: 'PV2电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV3电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV4电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV5电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV6电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV7电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV8电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: 'PV输出总功率',
         type: 'property',
         dataType: {
           specs: {
             unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: '总母线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: '正母线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: '负母线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
           },
           type: 'string',
         },
@@ -421,6 +538,57 @@ export const tempItems: any = [
   },
 ];
 
+export const inverterSideItems: any = [
+  {
+    id: 'a',
+    name: '逆变侧信息',
+    type: 'group',
+    children: [
+      {
+        id: '1',
+        name: '逆变有功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '5',
+        name: '逆变无功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '2',
+        name: '逆变视在功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '6',
+        name: '逆变功率因数',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+    ],
+  },
+];
+
 export const epsItems: any = [
   {
     id: 'a',
@@ -453,7 +621,6 @@ export const epsItems: any = [
         id: '2',
         name: 'EPS C相电压',
         type: 'property',
-        span: 2,
         dataType: {
           specs: {
             unit: 'V',
@@ -487,7 +654,6 @@ export const epsItems: any = [
         id: '6',
         name: 'EPS C相电流',
         type: 'property',
-        span: 2,
         dataType: {
           specs: {
             unit: 'A',
@@ -497,29 +663,29 @@ export const epsItems: any = [
       },
       {
         id: '6',
-        name: 'EPS A相视在功率',
+        name: 'EPS 有功功率',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'kVA',
+            unit: 'kW',
           },
           type: 'string',
         },
       },
       {
         id: '6',
-        name: 'EPS B相视在功率',
+        name: 'EPS 无功功率',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'kVA',
+            unit: 'kVar',
           },
           type: 'string',
         },
       },
       {
         id: '6',
-        name: 'EPS C相视在功率',
+        name: 'EPS 视在功率',
         type: 'property',
         span: 2,
         dataType: {
@@ -531,45 +697,17 @@ export const epsItems: any = [
       },
       {
         id: '6',
-        name: 'EPS A相DCV',
+        name: 'EPS功率因数',
         type: 'property',
         dataType: {
-          specs: {
-            unit: 'mV',
-          },
           type: 'string',
         },
       },
       {
         id: '6',
-        name: 'EPS B相DCV',
+        name: 'EPS频率',
         type: 'property',
         dataType: {
-          specs: {
-            unit: 'mV',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: 'EPS C相DCV',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'mV',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: 'EPS 频率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'hz',
-          },
           type: 'string',
         },
       },
@@ -583,163 +721,6 @@ export const gridSideItems: any = [
     name: '电网侧信息',
     type: 'group',
     children: [
-      {
-        id: '1',
-        name: '电网A相有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网B相有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网C相有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网总有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网A相无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网B相无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网C相无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网总无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网A相视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网B相视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网C相视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网总视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网A相功率因数',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网B相功率因数',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网C相功率因数',
-        type: 'property',
-        span: 2,
-        dataType: {
-          type: 'string',
-        },
-      },
       {
         id: '1',
         name: '电网A相电压',
@@ -766,7 +747,6 @@ export const gridSideItems: any = [
         id: '1',
         name: '电网C相电压',
         type: 'property',
-        span: 2,
         dataType: {
           specs: {
             unit: 'V',
@@ -800,7 +780,6 @@ export const gridSideItems: any = [
         id: '1',
         name: '电网C相电流',
         type: 'property',
-        span: 2,
         dataType: {
           specs: {
             unit: 'A',
@@ -810,34 +789,66 @@ export const gridSideItems: any = [
       },
       {
         id: '1',
-        name: '电网A相DCI',
+        name: '电网RS线电压',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'mA',
+            unit: 'V',
           },
           type: 'string',
         },
       },
       {
         id: '1',
-        name: '电网B相DCI',
+        name: '电网RT线电压',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'mA',
+            unit: 'V',
           },
           type: 'string',
         },
       },
       {
         id: '1',
-        name: '电网C相DCI',
+        name: '电网ST线电压',
         type: 'property',
-        span: 2,
         dataType: {
           specs: {
-            unit: 'mA',
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电网有功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电网无功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电网视在功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
           },
           type: 'string',
         },
@@ -855,7 +866,154 @@ export const gridSideItems: any = [
       },
       {
         id: '1',
-        name: '当前电网相序',
+        name: '电网功率因数',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+    ],
+  },
+];
+
+export const meterItems: any = [
+  {
+    id: 'a',
+    name: '电表信息',
+    type: 'group',
+    children: [
+      {
+        id: '1',
+        name: '电表A相电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表B相电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表C相电压',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'V',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表A相电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表B相电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表C相电流',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'A',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表有功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表无功功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kVar',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表视在功率',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kVA',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表输出电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电网馈入电量',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'kW',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表频率',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '电表标志位',
         type: 'property',
         dataType: {
           type: 'string',

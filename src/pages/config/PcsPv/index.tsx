@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-03-19 14:29:10
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\PcsPv\index.tsx
  */
 
 import React from 'react';
@@ -18,7 +18,6 @@ import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
-
   const { data: realTimeData, run } = useRequest(getDeviceData, {
     manual: true,
     pollingInterval: config.refreshTime * 1000,
@@ -32,7 +31,7 @@ const Pcs: React.FC = () => {
             groupData={baseInfoItems}
             realTimeData={realTimeData}
             detailProps={{
-              column: 4,
+              column: 3,
             }}
           />
         </Card>
