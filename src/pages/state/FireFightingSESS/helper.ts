@@ -90,51 +90,52 @@ export const statusItems: any = [
     children: [
       {
         id: '1',
-        name: '总有功功率',
+        name: '消防告警状态',
         type: 'property',
         dataType: {
+          type: 'enum',
           specs: {
-            unit: 'W',
+            '0': '正常',
+            '1': '告警',
           },
-          type: 'string',
         },
       },
       {
         id: '2',
-        name: '总有功功率',
+        name: '主机报警状态',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'W',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '3',
-        name: '总无功功率',
+        name: '总故障标志',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KVar',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '4',
-        name: '总视在功率',
+        name: '备电故障',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KVA',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '5',
-        name: '总功率因数',
+        name: '第一瓶阀门故障',
         type: 'property',
         dataType: {
           specs: {
@@ -145,73 +146,139 @@ export const statusItems: any = [
       },
       {
         id: '6',
-        name: '频率',
+        name: '启动总状态',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'Hz',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '7',
-        name: 'A相电压',
+        name: '反馈总状态',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'V',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '8',
-        name: 'A相电流',
+        name: '第一瓶启动',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'A',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '9',
-        name: 'A相有功功率',
+        name: '第一瓶喷洒反馈',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KW',
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '10',
-        name: 'A相无功功率',
+        name: '箱外探测器温度1',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KVar',
+            unit: '°C',
           },
           type: 'string',
         },
       },
       {
         id: '11',
-        name: 'A相视在功率',
+        name: '箱外探测器温度2',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KVA',
+            unit: '°C',
           },
           type: 'string',
         },
       },
       {
         id: '12',
-        name: 'A相功率因数',
+        name: '箱外探测器CO传感器实时数据',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'ppm',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '13',
+        name: '箱外探测器H2传感器实时数据',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'ppm',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '14',
+        name: '箱外探测器H2预警',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '15',
+        name: '箱外探测器CO预警',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '16',
+        name: '箱外探测器温度预警',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '17',
+        name: '箱外探测器烟雾预警',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '18',
+        name: '箱外探测器故障码',
         type: 'property',
         dataType: {
           specs: {
@@ -222,128 +289,40 @@ export const statusItems: any = [
       },
       {
         id: '13',
-        name: 'B相电压',
+        name: '探测器温度1',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'V',
+            unit: '°C',
           },
           type: 'string',
         },
       },
       {
         id: '14',
-        name: 'B相电流',
+        name: '探测器温度2',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'A',
+            unit: '°C',
           },
           type: 'string',
         },
       },
       {
         id: '15',
-        name: 'B相有功功率',
+        name: '探测器CO传感器实时数据',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KW',
+            unit: 'ppm',
           },
           type: 'string',
         },
       },
       {
         id: '16',
-        name: 'B相无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '17',
-        name: 'B相视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '18',
-        name: 'B相功率因数',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: '',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '13',
-        name: 'C相电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '14',
-        name: 'C相电流',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'A',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '15',
-        name: 'C相有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '16',
-        name: 'C相无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '17',
-        name: 'C相视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KVA',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '18',
-        name: 'C相功率因数',
+        name: '探测器烟雾预警',
         type: 'property',
         dataType: {
           specs: {
@@ -354,44 +333,33 @@ export const statusItems: any = [
       },
       {
         id: '17',
-        name: '正向有功电能',
+        name: '探测器VOC预警',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'kWh',
+            unit: '',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '18',
+        name: '探测器预警等级',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '',
           },
           type: 'string',
         },
       },
       {
         id: '17',
-        name: '正向无功电能',
+        name: '探测器故障',
         type: 'property',
         dataType: {
           specs: {
-            unit: 'KVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '17',
-        name: '反向有功电能',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kWh',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '17',
-        name: '反向无功电能',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'KVar',
+            unit: '',
           },
           type: 'string',
         },

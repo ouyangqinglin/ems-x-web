@@ -34,7 +34,7 @@ const InverterSideMeter: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mt20">
           <Run
             realTimeData={realTimeData}
             groupData={statusItems}
@@ -43,7 +43,7 @@ const InverterSideMeter: React.FC = () => {
             }}
           />
         </Card>
-        <Card>
+        <Card className="h-full mt20">
           <Run realTimeData={realTimeData}
             groupData={eleInfoItems}
             detailProps={{
