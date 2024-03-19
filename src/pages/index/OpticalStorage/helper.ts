@@ -21,8 +21,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -32,8 +32,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -43,8 +43,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -54,8 +54,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -65,8 +65,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -76,8 +76,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -103,8 +103,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
       {
@@ -114,8 +114,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
       {
@@ -125,8 +125,8 @@ export const pvItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
     ],
@@ -147,8 +147,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -158,8 +158,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -169,8 +169,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -180,8 +180,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -191,8 +191,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
     ],
@@ -213,8 +213,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -224,8 +224,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -235,8 +235,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -246,8 +246,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -257,9 +257,296 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
+      },
+    ],
+  },
+];
+
+export const systemItems: any = [
+  {
+    id: 'a',
+    name: '状态信息',
+    type: 'group',
+    showType: 2,
+    children: [
+      {
+        id: 'b',
+        name: '系统',
+        type: 'group',
+        children: [
+          {
+            id: '1',
+            type: 'property',
+            name: '设备SN',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '2',
+            type: 'property',
+            name: '设备厂商',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '3',
+            type: 'property',
+            name: '设备型号',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '4',
+            type: 'property',
+            name: '工作模式',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '5',
+            type: 'property',
+            name: '工作状态',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '6',
+            type: 'property',
+            name: 'EMS SN',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '7',
+            type: 'property',
+            name: 'EMS型号',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '8',
+            type: 'property',
+            name: 'EMS 硬件版本',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '9',
+            type: 'property',
+            name: 'EMS 软件版本',
+            dataType: {
+              type: 'string',
+            },
+          },
+        ],
+      },
+      {
+        id: 'c',
+        name: '变流器',
+        type: 'group',
+        children: [
+          {
+            id: 'b',
+            name: '变流器SN',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '变流器厂商',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '变流器型号',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '离并网模式',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '工作状态',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '硬件版本',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '软件版本',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+        ],
+      },
+      {
+        id: 'c',
+        name: '电池',
+        type: 'group',
+        children: [
+          {
+            id: 'b',
+            name: '电池SN',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '电池厂商',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '电池型号',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '工作模式',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '工作状态',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: 'BMS SN',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: 'BMS 厂商',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: 'BMS型号',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: 'BMS硬件版本',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: 'BMS软件版本',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+        ],
+      },
+      {
+        id: 'c',
+        name: '空调',
+        type: 'group',
+        children: [
+          {
+            id: 'b',
+            name: '空调SN',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '空调厂商',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '空调型号',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '控制模式',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: 'b',
+            name: '工作状态',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+        ],
       },
     ],
   },

@@ -1,13 +1,13 @@
-import React from "react";
-import OpticalStorage from "./OpticalStorage";
-import IndustryStorage from "./IndustryStorage";
+import React from 'react';
+import OpticalStorage from './OpticalStorage';
+import IndustryStorage from './IndustryStorage';
 const Index: React.FC = () => {
   return (
     <>
-      <IndustryStorage />
-      {/*<OpticalStorage />*/}
+      {/*<IndustryStorage />*/}
+      <OpticalStorage />
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
