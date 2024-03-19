@@ -34,7 +34,7 @@ const AirCooledFireProtection: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mt20">
           <Run
             realTimeData={realTimeData}
             groupData={statusItems}
