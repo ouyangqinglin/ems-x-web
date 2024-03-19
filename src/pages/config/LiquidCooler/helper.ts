@@ -101,12 +101,12 @@ export const baseInfoItems: any = [
 
 export const liquidCooParamsItems: any = [
   {
-    id: 'a',
+    id: 'RunningSetting',
     name: '运行设置',
     type: 'group',
     children: [
       {
-        id: 'a',
+        id: 'RunFixedValueSet',
         name: '运行设置',
         type: 'service',
         buttons: ['refresh', 'edit'],
@@ -118,7 +118,7 @@ export const liquidCooParamsItems: any = [
             sortOrder: 1,
             parentId: "RunFixedValueSet",
             type: "property",
-            buttons: ['refresh', 'edt'],
+            buttons: ['refresh', 'edit'],
             dataType: {
               type: "long",
               specs: {}

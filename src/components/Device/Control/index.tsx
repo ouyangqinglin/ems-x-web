@@ -250,16 +250,16 @@ const Control: React.FC<ControlType> = memo((props) => {
                   field?.required === false
                     ? []
                     : [
-                        {
-                          required: true,
-                          message: formatMessage(
-                            { id: 'common.pleaseEnterSentence', defaultMessage: '请输入' },
-                            {
-                              content: field?.name,
-                            },
-                          ),
-                        },
-                      ],
+                      {
+                        required: true,
+                        message: formatMessage(
+                          { id: 'common.pleaseEnterSentence', defaultMessage: '请输入' },
+                          {
+                            content: field?.name,
+                          },
+                        ),
+                      },
+                    ],
               },
               fieldProps: {
                 creatorButtonProps: {
@@ -351,16 +351,16 @@ const Control: React.FC<ControlType> = memo((props) => {
                   ...(field?.required === false
                     ? []
                     : [
-                        {
-                          required: true,
-                          message: formatMessage(
-                            { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
-                            {
-                              content: field?.name,
-                            },
-                          ),
-                        },
-                      ]),
+                      {
+                        required: true,
+                        message: formatMessage(
+                          { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
+                          {
+                            content: field?.name,
+                          },
+                        ),
+                      },
+                    ]),
                   {
                     validator: (rule, value) => {
                       return validatorTime(rule, value, field?.parentId || '', getFieldValue);
@@ -482,7 +482,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                       if (typeof evalResult == 'boolean') {
                         fieldDisabled = evalResult;
                       }
-                    } catch {}
+                    } catch { }
                   }
                   return (
                     <>
@@ -529,16 +529,16 @@ const Control: React.FC<ControlType> = memo((props) => {
                     field?.required === false
                       ? []
                       : [
-                          {
-                            required: true,
-                            message: formatMessage(
-                              { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
-                              {
-                                content: field?.name,
-                              },
-                            ),
-                          },
-                        ],
+                        {
+                          required: true,
+                          message: formatMessage(
+                            { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
+                            {
+                              content: field?.name,
+                            },
+                          ),
+                        },
+                      ],
                 },
               });
               detailItems.push?.({
@@ -591,16 +591,16 @@ const Control: React.FC<ControlType> = memo((props) => {
                 field?.required === false
                   ? []
                   : [
-                      {
-                        required: true,
-                        message: formatMessage(
-                          { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
-                          {
-                            content: field?.name,
-                          },
-                        ),
-                      },
-                    ],
+                    {
+                      required: true,
+                      message: formatMessage(
+                        { id: 'common.pleaseSelectSentence', defaultMessage: '请选择' },
+                        {
+                          content: field?.name,
+                        },
+                      ),
+                    },
+                  ],
             },
             renderFormItem: () => <DateStamp />,
           });
@@ -655,13 +655,13 @@ const Control: React.FC<ControlType> = memo((props) => {
             fieldProps: {
               ...(valueType == 'digit'
                 ? {
-                    min: Number.MIN_SAFE_INTEGER,
-                  }
+                  min: Number.MIN_SAFE_INTEGER,
+                }
                 : {}),
               ...((field?.dataType as DeviceDoubleType)?.specs?.unit
                 ? {
-                    addonAfter: (field?.dataType as DeviceDoubleType)?.specs?.unit,
-                  }
+                  addonAfter: (field?.dataType as DeviceDoubleType)?.specs?.unit,
+                }
                 : {}),
             },
             formItemProps: {
@@ -669,16 +669,16 @@ const Control: React.FC<ControlType> = memo((props) => {
                 field?.required === false
                   ? []
                   : [
-                      {
-                        required: true,
-                        message: formatMessage(
-                          { id: 'common.pleaseEnterSentence', defaultMessage: '请输入' },
-                          {
-                            content: field?.name,
-                          },
-                        ),
-                      },
-                    ],
+                    {
+                      required: true,
+                      message: formatMessage(
+                        { id: 'common.pleaseEnterSentence', defaultMessage: '请输入' },
+                        {
+                          content: field?.name,
+                        },
+                      ),
+                    },
+                  ],
             },
           });
           detailItems.push?.({

@@ -13,7 +13,7 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, eneManParamsItems } from './helper';
+import { spontaneousSelfUseItems, peakShavingValleyFillingItems, backupModeItems, manualModeItems, elePriceItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const EnergyManagement: React.FC = () => {
@@ -28,15 +28,21 @@ const EnergyManagement: React.FC = () => {
       <div className="p24">
         <Card>
           <Control
-            groupData={baseInfoItems}
+            groupData={spontaneousSelfUseItems}
             realTimeData={realTimeData}
-            detailProps={{
-              column: 3,
-            }}
           />
         </Card>
         <Card className="my20">
-          <Control groupData={eneManParamsItems} realTimeData={realTimeData} />
+          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={backupModeItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={manualModeItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={elePriceItems} realTimeData={realTimeData} />
         </Card>
       </div>
     </>
