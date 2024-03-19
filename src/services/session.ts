@@ -89,6 +89,15 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             {
               path: 'liquidCooledFireProtection',
             },
+            {
+              path: 'gridSideElectricityMeter'
+            },
+            {
+              path: 'inverterSideMeter'
+            },
+            {
+              path: 'fireFightingSESS'
+            }
           ],
         },
         {
@@ -118,6 +127,15 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
             {
               path: 'liquidCooledFireProtection',
             },
+            {
+              path: 'gridSideElectricityMeter'
+            },
+            {
+              path: 'inverterSideMeter'
+            },
+            {
+              path: 'fireFightingSESS'
+            }
           ],
         },
       ],

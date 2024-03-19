@@ -14,4 +14,7 @@ export default {
   'menu.state.dehumidifier': 'Dehumidifier',
   'menu.state.liquidCooler': 'Liquid Cooler',
   'menu.state.liquidCooledFireProtection': 'Liquid Cooled Fire Protection',
+  'menu.state.gridSideElectricityMeter': 'Grid Side Electricity Meter',
+  'menu.state.inverterSideMeter': 'Inverter Side Meter',
+  'menu.state.fireFightingSESS': 'Fire Fighting-SESS',
 };

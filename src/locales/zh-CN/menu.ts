@@ -15,5 +15,8 @@ export default {
   'menu.state.liquidCooler': '液冷机',
   'menu.state.dehumidifier': '除湿机',
   'menu.state.liquidCooledFireProtection': '消防-液冷',
+  'menu.state.gridSideElectricityMeter': '电网侧电表',
+  'menu.state.inverterSideMeter': '逆变侧电表',
+  'menu.state.fireFightingSESS': '消防-SESS',
   'menu.config': '系统配置',
 };
