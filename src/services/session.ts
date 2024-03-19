@@ -42,7 +42,7 @@ export async function logout(options?: Record<string, any>) {
   });
 }
 
-export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
+export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
   return new Promise((resolve) => {
     resolve({
       code: 200,
@@ -75,14 +75,35 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
               path: 'pcs',
             },
             {
-              path: 'airCooledFireProtection'
+              path: 'system-air',
             },
             {
-              path: 'liquidCooler'
+              path: 'system-sess',
             },
             {
-              path: 'dehumidifier'
-            }
+              path: 'system-liquid',
+            },
+            {
+              path: 'battery-pack',
+            },
+            {
+              path: 'battery-pack-sess',
+            },
+            {
+              path: 'air-condition',
+            },
+            {
+              path: 'air-condition-sess',
+            },
+            {
+              path: 'airCooledFireProtection',
+            },
+            {
+              path: 'liquidCooler',
+            },
+            {
+              path: 'dehumidifier',
+            },
           ],
         },
         {
@@ -95,26 +116,46 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
           },
           children: [
             {
+              path: 'system-control',
+            },
+            {
+              path: 'system',
+            },
+            {
               path: 'pcs',
             },
             {
-              path: 'airCooledFireProtection'
+              path: 'pv',
             },
             {
-              path: 'liquidCooler'
+              path: 'air-condition',
             },
             {
-              path: 'dehumidifier'
-            }
+              path: 'air-condition-sess',
+            },
+            {
+              path: 'battery-pack',
+            },
+            {
+              path: 'airCooledFireProtection',
+            },
+            {
+              path: 'liquidCooler',
+            },
+            {
+              path: 'dehumidifier',
+            },
           ],
         },
       ],
       msg: '',
     });
   });
-  return request('/system/menu/getRouters', {
-    method: 'GET',
-    params,
+  return request('/v1/system/menu/get', {
+    method: 'POST',
+    data: {
+      roleId,
+    },
   });
 }
 
@@ -123,19 +164,40 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
     return {
       path: item.path,
       icon: createIcon(item?.meta?.icon?.replace?.('#', 'YTDotOutlined') || 'YTDotOutlined'),
-      name: item?.meta?.title,
+      name: item?.source_name || item?.meta?.title,
       children: item.children ? convertCompatRouters(item.children) : undefined,
       hideChildrenInMenu: item.hidden,
       hideInMenu: item.hidden,
       component: item.component,
       authority: item.perms,
       meta: item?.meta || {},
+      sourceId: item?.source_id,
     };
   });
 }
 
 export async function getRoutersInfo(params?: any): Promise<MenuDataItem[]> {
   return getRouters(params).then((res) => {
+    res.data.forEach((i) => {
+      if (i.path === '/configuration') {
+        i.meta = {
+          title: '系统配置',
+          icon: 'YTSettingOutlined',
+        };
+      }
+      if (i.path === '/home') {
+        i.meta = {
+          title: '首页',
+          icon: 'YTHomeOutlined',
+        };
+      }
+      if (i.path === '/status') {
+        i.meta = {
+          title: '状态数据',
+          icon: 'SyncOutlined',
+        };
+      }
+    });
     return convertCompatRouters(res.data);
   });
 }

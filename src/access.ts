@@ -60,6 +60,14 @@ export function setSessionToken(
   localStorage.setItem('expireTime', `${expireTime}`);
 }
 
+export function setUserRoleId(roleId) {
+  localStorage.setItem('roleId', roleId);
+}
+
+export function getUserRoleId() {
+  return localStorage.getItem('roleId');
+}
+
 export function getAccessToken() {
   return localStorage.getItem('access_token');
 }

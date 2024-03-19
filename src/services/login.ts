@@ -20,14 +20,7 @@ export async function getFakeCaptcha(
 
 /** 登录接口 POST /login/account */
 export async function login(body: API.LoginParams, options?: Record<string, any>) {
-  return new Promise<unknown>((resolve, reject) => {
-    resolve({
-      code: 200,
-      data: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwic3RhdHVzIjoxLCJ1c2VyTmFtZSI6ImFkbWluIiwidXNlckxvZ28iOm51bGwsImlhdCI6MTcwOTUzMzM0OSwiZXhwIjoxNzEyMTI1MzQ5fQ.pdLOslFIZyihl-cq0v10U7KmgmlrbKIAlIffpgGtiyc',
-      msg: '',
-    });
-  });
-  return request<API.LoginResult>('/v1/web/system/login', {
+  return request<API.LoginResult>('/v1/system/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

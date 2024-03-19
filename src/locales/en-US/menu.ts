@@ -10,7 +10,17 @@
 export default {
   'menu.state': 'Status Data',
   'menu.state.pcs': 'Converter',
-  'menu.state.airCooledFireProtection' : 'Air Cooled Fire Protection',
+  'menu.state.airCooledFireProtection': 'Air Cooled Fire Protection',
   'menu.state.dehumidifier': 'Dehumidifier',
   'menu.state.liquidCooler': 'Liquid Cooler',
+  'menu.state.air': 'Air',
+  'menu.state.systemSess': 'System-SESS',
+  'menu.state.liquid': 'Liquid',
+  'menu.state.batteryPack': 'battery pack',
+  'menu.state.batteryPackSess': 'battery pack sess',
+  'menu.state.airCondition': 'Air Condition',
+  'menu.state.airConditionSess': 'Air Condition SESS',
+  'menu.config.systemControl': 'System Control',
+  'menu.config.system': 'System',
+  'menu.config.pv': 'Photovoltaic',
 };
