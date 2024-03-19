@@ -13,7 +13,7 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, cloudPlatformParamsItems } from './helper';
+import { cloudApiItems, yotaiComApiItems, cloudApiSoftwareItems, } from './helper';
 import Control from '@/components/Device/Control';
 
 const CloudPlatform: React.FC = () => {
@@ -28,7 +28,7 @@ const CloudPlatform: React.FC = () => {
       <div className="p24">
         <Card>
           <Control
-            groupData={baseInfoItems}
+            groupData={cloudApiItems}
             realTimeData={realTimeData}
             detailProps={{
               column: 3,
@@ -36,7 +36,10 @@ const CloudPlatform: React.FC = () => {
           />
         </Card>
         <Card className="my20">
-          <Control groupData={cloudPlatformParamsItems} realTimeData={realTimeData} />
+          <Control groupData={yotaiComApiItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={cloudApiSoftwareItems} realTimeData={realTimeData} />
         </Card>
       </div>
     </>
