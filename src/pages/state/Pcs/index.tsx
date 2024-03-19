@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-18 14:17:13
+ * @LastEditTime: 2024-03-19 17:23:33
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
@@ -23,6 +23,7 @@ import {
   tempItems,
   versionItems,
 } from './helper';
+import RefreshData from '@/components/Device/RefreshData';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -33,6 +34,7 @@ const Pcs: React.FC = () => {
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={4}>

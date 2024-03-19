@@ -45,7 +45,7 @@ const Login: React.FC = () => {
   const handleSubmit = async (values: API.LoginParams) => {
     try {
       // 登录
-      const { code, data, msg } = await login({ ...values, uuid });
+      const { code, data, msg, time } = await login({ ...values, uuid });
       console.log(code);
       if (+code === 200) {
         const defaultLoginSuccessMessage = intl.formatMessage({

@@ -10,8 +10,11 @@
 import request, { ResponseCommonData, ResponsePageData } from '@/utils/request';
 
 export const getDeviceData = (params: any) => {
-  return request<ResponseCommonData<Record<string, any>>>(`/uc/customerUser/serviceProvider/page`, {
-    method: 'GET',
-    params,
-  });
+  return request<ResponseCommonData<Record<string, any> & { refreshTime: string }>>(
+    `/uc/customerUser/serviceProvider/page`,
+    {
+      method: 'GET',
+      params,
+    },
+  );
 };

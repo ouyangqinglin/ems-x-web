@@ -20,6 +20,7 @@ import defaultSettings from '../../config/defaultSettings';
 import { isEmpty } from 'lodash';
 import { RequestCode } from './dictionary';
 import { stringify } from 'querystring';
+import moment from 'moment';
 
 const codeMessage: Record<number, string> = {
   10000: '系统未知错误，请反馈给管理员',
@@ -220,7 +221,13 @@ export class HttpRequest implements HttpRequestType {
         });
       };
     }
-    return result as ResponsePromise<T, U>;
+    return result.then((res) => {
+      if (res.data) {
+        res.data.refreshTime = moment().format('YYYY-MM-DD HH:mm:ss');
+      }
+      return res as ResponsePromise<T, U>;
+    });
+    // return result as ResponsePromise<T, U>;
   }
 }
 
