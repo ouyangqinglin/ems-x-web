@@ -954,7 +954,7 @@ export const batteryTwoParamsItems: any = [
 export const batteryThreeParamsItems: any = [
   {
     id: 'a',
-    name: '电池组保护参数设置',
+    name: '电池组保护参数设置 三级保护参数',
     type: 'group',
     children: [
       {
