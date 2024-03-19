@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:29:44
+ * @LastEditTime: 2024-03-18 14:34:17
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\PcsSess\index.tsx
  */
 
 import React from 'react';
@@ -13,9 +13,10 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, statusItems } from './helper';
+import { baseInfoItems, eneManParamsItems } from './helper';
+import Control from '@/components/Device/Control';
 
-const AirCooledFireProtection: React.FC = () => {
+const EnergyManagement: React.FC = () => {
   const { config } = useModel('config');
   const { data: realTimeData, run } = useRequest(getDeviceData, {
     manual: true,
@@ -25,27 +26,21 @@ const AirCooledFireProtection: React.FC = () => {
   return (
     <>
       <div className="p24">
-        <Card className="h-full">
-          <Run
-            realTimeData={realTimeData}
+        <Card>
+          <Control
             groupData={baseInfoItems}
+            realTimeData={realTimeData}
             detailProps={{
-              column: 5,
+              column: 3,
             }}
           />
         </Card>
-        <Card className="h-full mt20">
-          <Run
-            realTimeData={realTimeData}
-            groupData={statusItems}
-            detailProps={{
-              column: 5,
-            }}
-          />
+        <Card className="my20">
+          <Control groupData={eneManParamsItems} realTimeData={realTimeData} />
         </Card>
       </div>
     </>
   );
 };
 
-export default AirCooledFireProtection;
+export default EnergyManagement;

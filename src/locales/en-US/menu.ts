@@ -23,4 +23,11 @@ export default {
   'menu.config.systemControl': 'System Control',
   'menu.config.system': 'System',
   'menu.config.pv': 'Photovoltaic',
+  'menu.state.liquidCooledFireProtection': 'Liquid Cooled Fire Protection',
+  'menu.state.gridSideElectricityMeter': 'Grid Side Electricity Meter',
+  'menu.state.inverterSideMeter': 'Inverter Side Meter',
+  'menu.state.fireFightingSESS': 'Fire Fighting-SESS',
+  
+  'menu.config.energyManagement': 'Energy Management',
+  'menu.config.cloudPlatform': 'Cloud Platform',
 };
