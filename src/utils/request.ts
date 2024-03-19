@@ -173,7 +173,7 @@ export class HttpRequest implements HttpRequestType {
           const data = await resp.json();
           if (data) {
             const { code } = data;
-            if (code && code !== 200) {
+            if (+code && +code !== 200) {
               if ([RequestCode.NoToken, RequestCode.TokenExpire].includes(code)) {
                 const { query = {}, pathname } = history.location;
                 if (pathname != LoginPageUrl) {

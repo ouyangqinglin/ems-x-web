@@ -80,7 +80,6 @@ export const baseInfoItems: any = [
             name: 'ARM-D版本',
             type: 'property',
             buttons: ['refresh'],
-            span: 2,
             dataType: {
               type: 'string',
             },
@@ -108,7 +107,6 @@ export const baseInfoItems: any = [
             name: 'DSP-D版本',
             type: 'property',
             buttons: ['refresh'],
-            span: 2,
             dataType: {
               type: 'string',
             },

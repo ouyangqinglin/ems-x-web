@@ -34,7 +34,7 @@ const Dehumidifier: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full mt20">
+        <Card className="h-full">
           <Run
             realTimeData={realTimeData}
             groupData={statusItems}

@@ -6,6 +6,7 @@ import { history, setLocale } from 'umi';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 import defaultSettings from '../config/defaultSettings';
 import { getUserInfo, getRoutersInfo } from './services/session';
+import { getUserRoleId } from '@/access';
 import MyHeader from '@/components/header/MyHeader';
 import {
   getMenus,
@@ -105,7 +106,7 @@ export async function getInitialState(): Promise<initialStateType> {
     const currentUser = await fetchUserInfo();
     let menus;
     if (currentUser) {
-      const requestMenus = await getRoutersInfo();
+      const requestMenus = await getRoutersInfo(+getUserRoleId());
       menus = getLocaleMenus(requestMenus);
     }
     const antMenus = menus && getMenus(menus);

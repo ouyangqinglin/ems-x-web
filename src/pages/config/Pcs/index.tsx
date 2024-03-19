@@ -27,13 +27,7 @@ const Pcs: React.FC = () => {
     <>
       <div className="p24">
         <Card>
-          <Control
-            groupData={baseInfoItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 4,
-            }}
-          />
+          <Control groupData={baseInfoItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
           <Control groupData={pcsParamsItems} realTimeData={realTimeData} />
