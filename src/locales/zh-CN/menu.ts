@@ -24,4 +24,7 @@ export default {
   'menu.config.systemControl': '系统控制',
   'menu.config.system': '系统',
   'menu.config.pv': '光伏',
+  'menu.config.energyManagement': '能源管理',
+  'menu.config.cloudPlatform': '云平台',
+
 };

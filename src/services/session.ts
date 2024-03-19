@@ -104,6 +104,18 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             {
               path: 'dehumidifier',
             },
+            {
+              path: 'liquidCooledFireProtection',
+            },
+            {
+              path: 'gridSideElectricityMeter'
+            },
+            {
+              path: 'inverterSideMeter',
+            },
+            {
+              path: 'fireFightingSESS',
+            }
           ],
         },
         {
@@ -137,14 +149,23 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'battery-pack',
             },
             {
-              path: 'airCooledFireProtection',
-            },
-            {
               path: 'liquidCooler',
             },
             {
               path: 'dehumidifier',
             },
+            {
+              path: 'gridSideElectricityMeter',
+            },
+            {
+              path: 'inverterSideMeter',
+            },
+            {
+              path: 'energyManagement',
+            },
+            {
+              path: 'cloudPlatform',
+            }
           ],
         },
       ],
