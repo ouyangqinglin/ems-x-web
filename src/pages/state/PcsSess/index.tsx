@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-18 14:17:13
+ * @LastEditTime: 2024-03-18 14:26:07
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\state\PcsSess\index.tsx
  */
 
 import React from 'react';
@@ -15,13 +15,11 @@ import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
+  cSideItems,
   dcSideItems,
   electricEnergyItems,
-  epsItems,
-  gridSideItems,
   stateItems,
   tempItems,
-  versionItems,
 } from './helper';
 
 const Pcs: React.FC = () => {
@@ -35,35 +33,24 @@ const Pcs: React.FC = () => {
     <>
       <div className="p24">
         <Row gutter={20}>
-          <Col span={4}>
+          <Col span={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={baseInfoItems}
                 detailProps={{
-                  column: 1,
-                }}
-              />
-            </Card>
-          </Col>
-          <Col span={8}>
-            <Card className="h-full">
-              <Run
-                realTimeData={realTimeData}
-                groupData={versionItems}
-                detailProps={{
                   column: 2,
                 }}
               />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col span={12}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={stateItems}
                 detailProps={{
-                  column: 2,
+                  column: 3,
                 }}
               />
             </Card>
@@ -81,7 +68,7 @@ const Pcs: React.FC = () => {
           </Col>
         </Row>
         <Row gutter={20} className="my20">
-          <Col span={14}>
+          <Col span={18}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -92,13 +79,13 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={10}>
+          <Col span={6}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={tempItems}
                 detailProps={{
-                  column: 2,
+                  column: 1,
                 }}
               />
             </Card>
@@ -107,18 +94,9 @@ const Pcs: React.FC = () => {
         <Card className="h-full mb20">
           <Run
             realTimeData={realTimeData}
-            groupData={epsItems}
+            groupData={cSideItems}
             detailProps={{
-              column: 4,
-            }}
-          />
-        </Card>
-        <Card className="h-full">
-          <Run
-            realTimeData={realTimeData}
-            groupData={gridSideItems}
-            detailProps={{
-              column: 4,
+              column: 3,
             }}
           />
         </Card>

@@ -75,6 +75,9 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'pcs',
             },
             {
+              path: 'pcs-sess',
+            },
+            {
               path: 'system-air',
             },
             {
@@ -123,6 +126,9 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'pcs',
+            },
+            {
+              path: 'pcs-sess',
             },
             {
               path: 'pv',
