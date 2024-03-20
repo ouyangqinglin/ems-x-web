@@ -119,7 +119,7 @@ const Index: React.FC = () => {
   let timerOne = useRef(), timerTwo = useRef()
   useEffect(() => {
     getChartLine()
-  }, []);
+  }, [])
   function getChartLine() {
     // if (timerOne?.current) clearInterval(timerOne.current);
     for(let i = 0; i < 16; i++) {
@@ -128,7 +128,7 @@ const Index: React.FC = () => {
     }
     optionBat.series = seriesLine
     optionBat.legend.data = ['充放电功率'];
-    chartTnit();
+    chartInit();
   }
   function getChartBat() {
     // if (timerTwo?.current) clearInterval(timerTwo.current);
@@ -142,7 +142,7 @@ const Index: React.FC = () => {
     optionBat.yAxis.name = '单位(kWh)'
     optionBat.series = seriesBar;
     optionBat.legend.data = ['充电量', '放电量'];
-    chartTnit();
+    chartInit();
   }
 
   const handleRadio = (e) => {
@@ -195,7 +195,7 @@ const Index: React.FC = () => {
     }
   };
 
-  const chartTnit = () => {
+  function chartInit() {
     myChart = echarts.init(domRef.current);
     myChart.setOption(optionBat, true);
   };

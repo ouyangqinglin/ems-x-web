@@ -3,7 +3,7 @@ import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Chart from '../Chart';
 import Run from '@/components/Device/Run';
-import { pvItems, batteryItems, loadItems, systemItems } from './helper';
+import {pvItems, batteryItems, loadItems, systemItems, incomeItems, electricItems, reduceItems} from './helper';
 import { useModel } from '@@/plugin-model/useModel';
 import { useRequest } from '@@/plugin-request/request';
 import { getDeviceData } from '@/services/device';
@@ -92,7 +92,7 @@ const Index: React.FC = () => {
                 </div>
                 <Run
                   realTimeData={realTimeData}
-                  groupData={loadItems}
+                  groupData={electricItems}
                   detailProps={{
                     column: 1,
                   }}
@@ -105,7 +105,7 @@ const Index: React.FC = () => {
                 </div>
                 <Run
                   realTimeData={realTimeData}
-                  groupData={loadItems}
+                  groupData={incomeItems}
                   detailProps={{
                     column: 1,
                   }}
@@ -135,7 +135,7 @@ const Index: React.FC = () => {
               </div>
               <Run
                 realTimeData={realTimeData}
-                groupData={loadItems}
+                groupData={reduceItems}
                 detailProps={{
                   column: 1,
                 }}

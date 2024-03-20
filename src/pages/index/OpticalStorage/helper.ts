@@ -208,7 +208,7 @@ export const loadItems: any = [
     children: [
       {
         id: '1',
-        name: '今日电池充电量',
+        name: '今日负载用电量',
         type: 'property',
         dataType: {
           type: 'string',
@@ -219,7 +219,7 @@ export const loadItems: any = [
       },
       {
         id: '1',
-        name: '今日电池放电量',
+        name: '今日自给自足电量',
         type: 'property',
         dataType: {
           type: 'string',
@@ -230,40 +230,248 @@ export const loadItems: any = [
       },
       {
         id: '1',
-        name: '累计电池充电量',
+        name: '今日自给自足率',
         type: 'property',
         dataType: {
           type: 'string',
-          specs: {
-            unit: 'kWh',
-          },
         },
       },
       {
         id: '1',
-        name: '电池充放电功率',
+        name: '累计负载用电量',
         type: 'property',
         dataType: {
           type: 'string',
-          specs: {
-            unit: 'kWh',
-          },
         },
       },
       {
         id: '1',
-        name: '电池剩余电能',
+        name: '累计自给自足电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '累计自给自足率',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
+        id: '1',
+        name: '负载用电功率',
         type: 'property',
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh',
+            unit: 'kW',
           },
         },
       },
     ],
   },
 ];
+
+export const electricItems: any = [
+  {
+    id: 'a',
+    name: '',
+    type: 'group',
+    showType: 2,
+    children: [
+      {
+        id: '1',
+        name: '今日市电供电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kWh',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '今日馈网电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kWh',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计市电供电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kWh',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计馈网电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kWh',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '市电功率',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kW',
+          },
+        },
+      },
+    ]
+  }
+]
+
+export const incomeItems: any = [
+  {
+    id: 'a',
+    name: '',
+    type: 'group',
+    showType: 2,
+    children: [
+      {
+        id: '1',
+        name: '今日光伏收益',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '元',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '今日节约电费',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '元',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计光伏收益',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '元',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计节约电费',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '元',
+          },
+        },
+      },
+    ]
+  }
+]
+
+export const reduceItems: any = [
+  {
+    id: 'a',
+    name: '',
+    type: 'group',
+    showType: 2,
+    children: [
+      {
+        id: '1',
+        name: '年CO₂减排量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 't',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计减排量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 't',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '年节约标准煤',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 't',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计节约',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 't',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '年等效植树',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '棵',
+          },
+        },
+      },
+      {
+        id: '1',
+        name: '累计等效植树',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: '棵',
+          },
+        },
+      },
+    ]
+  }
+]
 
 export const systemItems: any = [
   {

@@ -131,6 +131,15 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             {
               path: 'inverterSideMeterPv'
             },
+            {
+              path: 'system-optical'
+            },
+            {
+              path: 'battery-pack-optical'
+            },
+            {
+              path: 'air-condition-optical'
+            },
           ],
         },
         {

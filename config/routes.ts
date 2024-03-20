@@ -175,7 +175,7 @@ const routers: RouterType[] = [
         wrappers: ['@/components/KeepAlive'],
         keepAlive: true,
         locale: 'menu.state.inverterSideMeter',
-      }, 
+      },
       {
         path: 'fireFightingSESS',
         name: 'fireFightingSESS',
@@ -207,7 +207,31 @@ const routers: RouterType[] = [
         wrappers: ['@/components/KeepAlive'],
         keepAlive: true,
         locale: 'menu.state.gridSideElectricityMeterPv',
-      }
+      },
+      {
+        path: 'system-optical',
+        name: 'system-optical',
+        component: './state/System-Optical',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.systemOptical',
+      },
+      {
+        path: 'battery-pack-optical',
+        name: 'battery-pack-optical',
+        component: './state/Battery-Pack-Optical',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.batteryPackOptical',
+      },
+      {
+        path: 'air-condition-optical',
+        name: 'air-condition-optical',
+        component: './state/Air-Condition-Optical',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.state.airConditionOptical',
+      },
     ],
   },
   {
@@ -328,7 +352,7 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
-      
+
       {
         path: 'gridSideElectricityMeter',
         name: 'gridSideElectricityMeter',

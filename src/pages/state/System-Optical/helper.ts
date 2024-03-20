@@ -41,7 +41,7 @@ export const baseInfoItems: any = [
       },
       {
         id: '4',
-        name: 'IP地址',
+        name: '本机IP',
         type: 'property',
         dataType: {
           type: 'string',
@@ -135,7 +135,7 @@ export const baseInfoItems: any = [
       },
       {
         id: '15',
-        name: 'IMEI号',
+        name: '4G-IMEI号',
         type: 'property',
         dataType: {
           type: 'string',
@@ -279,7 +279,7 @@ export const statusItems: any = [
           {
             id: '6',
             type: 'property',
-            name: '系统总有功功率',
+            name: '光伏发电功率',
             dataType: {
               type: 'string',
               specs: {
@@ -290,51 +290,51 @@ export const statusItems: any = [
           {
             id: '7',
             type: 'property',
-            name: '系统总无功功率',
+            name: '用电功率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kVar',
+                unit: 'kW',
               },
             },
           },
           {
             id: '8',
             type: 'property',
-            name: '系统总视在功率',
+            name: '自发自用功率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kVA',
+                unit: 'kW',
               },
             },
           },
           {
             id: '9',
             type: 'property',
-            name: '电池SOC',
+            name: '今日发电量',
             dataType: {
               type: 'string',
               specs: {
-                unit: '%',
+                unit: 'kWh',
               },
             },
           },
           {
             id: '10',
             type: 'property',
-            name: '电池SOH',
+            name: '今日用电量',
             dataType: {
               type: 'string',
               specs: {
-                unit: '%',
+                unit: 'kWh',
               },
             },
           },
           {
             id: '11',
             type: 'property',
-            name: '可充电能量',
+            name: '今日自发自用电量',
             dataType: {
               type: 'string',
               specs: {
@@ -345,18 +345,18 @@ export const statusItems: any = [
           {
             id: '12',
             type: 'property',
-            name: '可放电能量',
+            name: '今日自发自用率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: '%',
               },
             },
           },
           {
             id: '13',
             type: 'property',
-            name: '今日系统充电量',
+            name: '累计发电量',
             dataType: {
               type: 'string',
               specs: {
@@ -367,7 +367,7 @@ export const statusItems: any = [
           {
             id: '14',
             type: 'property',
-            name: '今日系统放电量',
+            name: '累计用电量',
             dataType: {
               type: 'string',
               specs: {
@@ -378,7 +378,7 @@ export const statusItems: any = [
           {
             id: '15',
             type: 'property',
-            name: '累计系统充电量',
+            name: '累计自发自用电量',
             dataType: {
               type: 'string',
               specs: {
@@ -389,51 +389,51 @@ export const statusItems: any = [
           {
             id: '16',
             type: 'property',
-            name: '累计系统放电量',
+            name: '累计自发自用率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: '%',
               },
             },
           },
           {
             id: '17',
             type: 'property',
-            name: '一充电量',
+            name: '电池SOC',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: '%',
               },
             },
           },
           {
             id: '18',
             type: 'property',
-            name: '一放电量',
+            name: '电池SOH',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: '%',
               },
             },
           },
           {
             id: '19',
             type: 'property',
-            name: '二充电量',
+            name: '电池充放电功率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: 'kW',
               },
             },
           },
           {
             id: '20',
             type: 'property',
-            name: '二放电量',
+            name: '电池剩余电能',
             dataType: {
               type: 'string',
               specs: {
@@ -444,18 +444,18 @@ export const statusItems: any = [
           {
             id: '21',
             type: 'property',
-            name: '负载有功功率',
+            name: '今日电池充电量',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kW',
+                unit: 'kWh',
               },
             },
           },
           {
             id: '22',
             type: 'property',
-            name: '今日负载用电量',
+            name: '今日电池放电量',
             dataType: {
               type: 'string',
               specs: {
@@ -466,7 +466,7 @@ export const statusItems: any = [
           {
             id: '23',
             type: 'property',
-            name: '累计负载用电量',
+            name: '累计电池充电量',
             dataType: {
               type: 'string',
               specs: {
@@ -477,7 +477,7 @@ export const statusItems: any = [
           {
             id: '24',
             type: 'property',
-            name: '电网侧电表有功功率',
+            name: '累计电池放电量',
             dataType: {
               type: 'string',
               specs: {
@@ -488,18 +488,18 @@ export const statusItems: any = [
           {
             id: '25',
             type: 'property',
-            name: '电网侧电表当前正向总有功电能',
+            name: '负载用电功率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kWh',
+                unit: 'kW',
               },
             },
           },
           {
             id: '26',
             type: 'property',
-            name: '电网侧电表当前反向总有功电能',
+            name: '今日负载用电量',
             dataType: {
               type: 'string',
               specs: {
@@ -510,15 +510,18 @@ export const statusItems: any = [
           {
             id: '27',
             type: 'property',
-            name: '防逆流启动',
+            name: '今日自给自足电量',
             dataType: {
               type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
             },
           },
           {
             id: '28',
             type: 'property',
-            name: '防过流启动',
+            name: '今日自给自足率',
             dataType: {
               type: 'string',
             },
@@ -526,40 +529,37 @@ export const statusItems: any = [
           {
             id: '29',
             type: 'property',
-            name: '防逆流阈值',
+            name: '累计负载用电量',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kW',
+                unit: 'kWh',
               },
             },
           },
           {
             id: '30',
             type: 'property',
-            name: '变压器最大功率',
+            name: '累计自给自足电量',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kW',
+                unit: 'kWh',
               },
             },
           },
           {
             id: '31',
             type: 'property',
-            name: '需量启动功率',
+            name: '累计自给自足率',
             dataType: {
               type: 'string',
-              specs: {
-                unit: 'kW',
-              },
             },
           },
           {
             id: '32',
             type: 'property',
-            name: '系统设置有功功率',
+            name: '逆变侧有功功率',
             dataType: {
               type: 'string',
               specs: {
@@ -570,12 +570,272 @@ export const statusItems: any = [
           {
             id: '33',
             type: 'property',
+            name: '逆变侧无功功率',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '逆变侧视在功率',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '市电功率',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '今日市电供电量',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '今日市电馈网电量',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '累计市电供电量',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '累计市电馈网电量',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '电网侧电表有功功率',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '电网侧电表当前正向总有功电能',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '电网侧电表当前反向总有功电能',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kWh',
+              },
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '防逆流启动',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '防逆流启动',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '防过流启动',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '防逆流阈值',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW'
+              }
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '系统设置有功功率',
+            dataType: {
+              type: 'string',
+              specs: {
+                unit: 'kW'
+              }
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
             name: '系统设置无功功率',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kVar',
-              },
+                unit: 'kVar'
+              }
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '市电开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '直流开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '负载开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '电气急停信号',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '辅助供电开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: 'EMS直流供电开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '站控消防',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '交流防雷器状态',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '直流防雷器状态',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '可燃气体排风扇开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '水浸报警',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '门禁开关',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '33',
+            type: 'property',
+            name: '电池柜开门次数',
+            dataType: {
+              type: 'string',
             },
           },
         ],
@@ -596,7 +856,7 @@ export const statusItems: any = [
           {
             id: '35',
             type: 'property',
-            name: '变流器输出模式',
+            name: '变流器工作状态',
             dataType: {
               type: 'string',
             },
@@ -604,7 +864,7 @@ export const statusItems: any = [
           {
             id: '36',
             type: 'property',
-            name: '变流器工作状态',
+            name: '变流器告警状态',
             dataType: {
               type: 'string',
             },
@@ -612,86 +872,66 @@ export const statusItems: any = [
           {
             id: '37',
             type: 'property',
-            name: '变流器告警状态',
+            name: '电网交流 A 相电压',
             dataType: {
               type: 'string',
+              specs: {
+                unit: 'V'
+              }
             },
           },
           {
             id: '38',
             type: 'property',
-            name: '变流器环境温度',
+            name: '电网交流 B 相电压',
             dataType: {
               type: 'string',
               specs: {
-                unit: '°C',
+                unit: 'V'
               }
-
             },
           },
           {
             id: '39',
             type: 'property',
-            name: '交流 A 相电压',
+            name: '电网交流 C 相电压',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V',
+                unit: 'V'
               }
             },
           },
           {
             id: '40',
             type: 'property',
-            name: '交流 B 相电压',
+            name: '电网交流 A 相电流',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V',
+                unit: 'A'
               }
             },
           },
           {
             id: '41',
             type: 'property',
-            name: '交流 C 相电压',
+            name: '电网交流 B 相电流',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V',
+                unit: 'A'
               }
             },
           },
           {
             id: '42',
             type: 'property',
-            name: '交流 A 相电流',
+            name: '电网交流 C 相电流',
             dataType: {
               type: 'string',
               specs: {
-                unit: 'A',
-              }
-            },
-          },
-          {
-            id: '43',
-            type: 'property',
-            name: '交流 B 相电流',
-            dataType: {
-              type: 'string',
-              specs: {
-                unit: 'A',
-              }
-            },
-          },
-          {
-            id: '44',
-            type: 'property',
-            name: '交流 C 相电流',
-            dataType: {
-              type: 'string',
-              specs: {
-                unit: 'A',
+                unit: 'A'
               }
             },
           },
@@ -939,7 +1179,7 @@ export const statusItems: any = [
           {
             id: '68',
             type: 'property',
-            name: '盘管温度',
+            name: '室外温度',
             dataType: {
               type: 'string',
               specs: {
@@ -950,7 +1190,7 @@ export const statusItems: any = [
           {
             id: '69',
             type: 'property',
-            name: '冷凝温度',
+            name: '室外温度',
             dataType: {
               type: 'string',
               specs: {
@@ -961,18 +1201,7 @@ export const statusItems: any = [
           {
             id: '70',
             type: 'property',
-            name: '室外温度',
-            dataType: {
-              type: 'string',
-              specs: {
-                unit: '°C',
-              },
-            },
-          },
-          {
-            id: '71',
-            type: 'property',
-            name: '室内温度',
+            name: '回风温度',
             dataType: {
               type: 'string',
               specs: {
@@ -983,7 +1212,7 @@ export const statusItems: any = [
           {
             id: '72',
             type: 'property',
-            name: '排气温度',
+            name: '冷凝盘管温度',
             dataType: {
               type: 'string',
               specs: {
@@ -1012,7 +1241,7 @@ export const statusItems: any = [
           {
             id: '74',
             type: 'property',
-            name: '消防工作状态',
+            name: '消防告警状态',
             dataType: {
               type: 'string',
             },
@@ -1020,7 +1249,7 @@ export const statusItems: any = [
           {
             id: '75',
             type: 'property',
-            name: '消防告警状态',
+            name: '主机报警状态',
             dataType: {
               type: 'string',
             },
@@ -1028,7 +1257,7 @@ export const statusItems: any = [
           {
             id: '76',
             type: 'property',
-            name: '消防喷射信号',
+            name: '总故障标志',
             dataType: {
               type: 'string',
             },
@@ -1039,145 +1268,15 @@ export const statusItems: any = [
   },
 ];
 
-export const systemChargeCostItems: any = [
-  {
-    id: 'a',
-    name: '系统充电费用统计',
-    type: 'group',
-    children: [
-      {
-        id: '1',
-        type: 'property',
-        name: '尖充电日费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '2',
-        type: 'property',
-        name: '峰充电日费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '3',
-        type: 'property',
-        name: '平充电日费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '4',
-        type: 'property',
-        name: '谷充电日费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '5',
-        type: 'property',
-        name: '日充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '6',
-        type: 'property',
-        name: '尖充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '7',
-        type: 'property',
-        name: '峰充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '8',
-        type: 'property',
-        name: '平充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '9',
-        type: 'property',
-        name: '谷充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '10',
-        type: 'property',
-        name: '月充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        id: '11',
-        type: 'property',
-        name: '累计充电总费用',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-    ],
-  },
-];
 
-export const systemDischargeCostItems: any = [
+export const incomeItems: any = [
   {
-    name: '系统放电收益统计',
+    name: '收益统计',
     type: 'group',
     id: 'a',
     children: [
       {
-        name: '尖放电日收入',
+        name: '昨日光伏收益',
         type: 'property',
         id: '1',
         dataType: {
@@ -1188,7 +1287,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '峰放电日收入',
+        name: '昨日节约电费',
         type: 'property',
         id: '1',
         dataType: {
@@ -1199,7 +1298,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '平放电日收入',
+        name: '今日光伏收益',
         type: 'property',
         id: '1',
         dataType: {
@@ -1210,7 +1309,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '谷放电日收入',
+        name: '今日节约电费',
         type: 'property',
         id: '1',
         dataType: {
@@ -1221,7 +1320,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '日放电总收入',
+        name: '上月光伏收益',
         type: 'property',
         id: '1',
         dataType: {
@@ -1232,7 +1331,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '累计放电收入',
+        name: '上月节约电费',
         type: 'property',
         id: '1',
         dataType: {
@@ -1243,7 +1342,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '尖放电总收入',
+        name: '当月光伏收益',
         type: 'property',
         id: '1',
         dataType: {
@@ -1254,7 +1353,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '峰放电总收入',
+        name: '当月节约电费',
         type: 'property',
         id: '1',
         dataType: {
@@ -1265,7 +1364,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '平放电总收入',
+        name: '累计光伏收益',
         type: 'property',
         id: '1',
         dataType: {
@@ -1276,7 +1375,7 @@ export const systemDischargeCostItems: any = [
         },
       },
       {
-        name: '谷放电总收入',
+        name: '累计节约电费',
         type: 'property',
         id: '1',
         dataType: {
@@ -1285,95 +1384,7 @@ export const systemDischargeCostItems: any = [
             unit: '¥',
           },
         },
-      },
-      {
-        name: '月放电总收入',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '日充放电效率',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '%',
-          },
-        },
-      },
-      {
-        name: '昨日收益',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '当日收益',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '上月收益',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '当月收益',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '累计收益',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '¥',
-          },
-        },
-      },
-      {
-        name: '总充放电效率',
-        type: 'property',
-        id: '1',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '%',
-          },
-        },
-      },
+      }
     ],
   },
 ];

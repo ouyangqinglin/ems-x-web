@@ -39,4 +39,8 @@ export default {
   'menu.config.gridSideElectricityMeterPv': '光储一体-电网侧电表',
   'menu.config.energyManagementPv': '光储一体机-能量管理',
   'menu.config.cloudPlatformPv': '光储一体机-云平台',
+  'menu.state.systemOptical': '光储系统',
+  'menu.state.batteryPackOptical': '光储电池组',
+  'menu.state.airConditionOptical': '光储空调',
+
 };
