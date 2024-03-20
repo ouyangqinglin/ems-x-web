@@ -90,7 +90,7 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'system-liquid',
             },
             {
-              path: 'battery-pack',
+              path: 'battery-pack-air',
             },
             {
               path: 'battery-pack-sess',
@@ -139,6 +139,9 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'air-condition-optical',
+            },
+            {
+              path: 'battery-pack-liquid',
             },
           ],
         },
@@ -210,6 +213,18 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
             },
             {
               path: 'cloud-platform-pv',
+            },
+            {
+              path: 'system-control-optical',
+            },
+            {
+              path: 'system-optical',
+            },
+            {
+              path: 'battery-pack-optical',
+            },
+            {
+              path: 'air-condition-optical',
             },
           ],
         },

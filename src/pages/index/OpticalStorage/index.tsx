@@ -3,7 +3,15 @@ import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Chart from '../Chart';
 import Run from '@/components/Device/Run';
-import {pvItems, batteryItems, loadItems, systemItems, incomeItems, electricItems, reduceItems} from './helper';
+import {
+  pvItems,
+  batteryItems,
+  loadItems,
+  systemItems,
+  incomeItems,
+  electricItems,
+  reduceItems,
+} from './helper';
 import { useModel } from '@@/plugin-model/useModel';
 import { useRequest } from '@@/plugin-request/request';
 import { getDeviceData } from '@/services/device';
@@ -14,6 +22,7 @@ import electricImg from '@/assets/image/station/overview/icon_市电.svg';
 import incomeImg from '@/assets/image/station/overview/icon_收益.svg';
 import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
 import SystemRunStatus from '@/pages/index/SystemRunStatus';
+import LiquidSystemRunStatus from '@/pages/index/LiquidSystemRunStatus';
 
 const Index: React.FC = () => {
   const { config } = useModel('config');
@@ -75,7 +84,7 @@ const Index: React.FC = () => {
         <Row gutter={12} className="mt16" align="top">
           <Col span={7}>
             <Card style={{ height: 412 }} className={styles.card}>
-              <SystemRunStatus />
+              <LiquidSystemRunStatus />
             </Card>
           </Col>
           <Col span={11}>

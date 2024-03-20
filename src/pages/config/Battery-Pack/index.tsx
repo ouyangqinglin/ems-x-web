@@ -11,13 +11,7 @@ import React from 'react';
 import Card from '@/components/Card';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import {
-  baseInfoItems,
-  batteryOneParamsItems,
-  batteryTwoParamsItems,
-  batteryThreeParamsItems,
-  batteryFourParamsItems,
-} from './helper';
+import { baseInfoItems, batteryParamsItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
@@ -35,34 +29,7 @@ const Pcs: React.FC = () => {
         </Card>
         <Card className="my20">
           <Control
-            groupData={batteryOneParamsItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 2,
-            }}
-          />
-        </Card>
-        <Card className="my20">
-          <Control
-            groupData={batteryTwoParamsItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 2,
-            }}
-          />
-        </Card>
-        <Card className="my20">
-          <Control
-            groupData={batteryThreeParamsItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 2,
-            }}
-          />
-        </Card>
-        <Card className="my20">
-          <Control
-            groupData={batteryFourParamsItems}
+            groupData={batteryParamsItems}
             realTimeData={realTimeData}
             detailProps={{
               column: 2,
