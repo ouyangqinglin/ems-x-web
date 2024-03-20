@@ -14,8 +14,8 @@ import styles from './index.less';
 
 export type MyMenuProps = {
   onClick?: () => void;
+  
 };
-
 const Menu: React.FC<MyMenuProps> = (props) => {
   const { initialState } = useModel('@@initialState');
   const location = useLocation();

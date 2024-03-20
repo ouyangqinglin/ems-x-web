@@ -8,6 +8,8 @@ import * as echarts from 'echarts';
 import TimeButtonGroup, { TimeType } from '@/components/TimeButtonGroup';
 import { useToggle } from 'ahooks';
 import { getDeviceData, chartPowerData, chartElectricData } from '@/services/report';
+import SystemAlarm from '@/components/SystemAlarm';
+import RunLog from '@/components/RunLog';
 
 const Index: React.FC = () => {
   const [showDatePicker, { set }] = useToggle(true);
@@ -533,6 +535,12 @@ const Index: React.FC = () => {
             </Col>
           </Row>
         </Card>
+        <div className="mt12">
+          <SystemAlarm />
+        </div>
+        <div className="mt12">
+          <RunLog />
+        </div>
       </div>
     </>
   );
