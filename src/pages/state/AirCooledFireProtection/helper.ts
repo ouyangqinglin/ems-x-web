@@ -16,7 +16,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '33003',
         name: '消防SN',
         type: 'property',
         dataType: {
@@ -24,7 +24,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '33013',
         name: '消防厂商',
         type: 'property',
         dataType: {
@@ -32,51 +32,56 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '33025',
         name: '消防型号',
         type: 'property',
         dataType: {
           type: 'string',
         },
       },
+      // {
+      //   id: '4',
+      //   name: '硬件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     specs: {
+      //       unit: 'kW',
+      //     },
+      //     type: 'string',
+      //   },
+      // },
+      // {
+      //   id: '5',
+      //   name: '软件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'string',
+      //   },
+      // },
       {
-        id: '4',
-        name: '硬件版本',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '5',
-        name: '软件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
+        id: '33001',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
           "type": "enum",
           "specs": {
-            "0": "断开",
-            "1": "连接",
+            "0": "初始化",
+            "1": "断开",
+            "2": "连接",
           }
         }
       },
       {
-        id: '7',
+        id: '33002',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
-        },
+          "type": "enum",
+          "specs": {
+            "0": "485",
+            "1": "未知",
+          }
+        }
       },
     ],
   },
@@ -102,8 +107,21 @@ export const statusItems: any = [
         }
       },
       {
-        id: '2',
+        id: '33036',
         name: '消防告警状态',
+        type: 'property',
+        "dataType": {
+          "type": "enum",
+          "specs": {
+            "0": "运行",
+            "1": "停止",
+            "2": "故障"
+          }
+        }
+      },
+      {
+        id: '33037',
+        name: '消防喷射信号',
         type: 'property',
         "dataType": {
           "type": "enum",
@@ -114,19 +132,7 @@ export const statusItems: any = [
         }
       },
       {
-        id: '3',
-        name: '消防喷射信号',
-        type: 'property',
-        "dataType": {
-          "type": "enum",
-          "specs": {
-            "0": "正常",
-            "1": "开启"
-          }
-        }
-      },
-      {
-        id: '4',
+        id: '33050',
         name: '电池箱号',
         type: 'property',
         dataType: {
@@ -135,7 +141,7 @@ export const statusItems: any = [
         }
       },
       {
-        id: '5',
+        id: '33053',
         name: '启动类型',
         type: 'property',
         dataType: {
@@ -143,19 +149,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '33056',
         name: '电池箱消防运行状态',
         type: 'property',
         dataType: {
           "type": "enum",
           "specs": {
-            "0": "正常",
-            "1": "故障"
+            "0": "运行",
+            "1": "停止",
+            "2": "故障"
           }
         }
       },
       {
-        id: '7',
+        id: '33051',
         name: '预警级别',
         type: 'property',
         dataType: {
@@ -163,7 +170,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '8',
+        id: '33055',
         name: '消息计数器',
         type: 'property',
         dataType: {
@@ -171,7 +178,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '9',
+        id: '33054',
         name: '子阀门状态',
         type: 'property',
         span: 2,
