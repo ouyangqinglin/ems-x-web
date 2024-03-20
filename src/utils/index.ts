@@ -48,6 +48,7 @@ export type AntMenuProps = {
   label: string;
   key: string;
   icon?: React.ReactNode;
+  sourceId?: string;
   children?: AntMenuProps[];
 };
 
@@ -81,6 +82,7 @@ export const getMenus = (data: MenuDataItem[], prePath = ''): AntMenuProps[] => 
         label: item?.name || '',
         key: path,
         icon: createIcon(item?.meta?.icon, { style: { fontSize: '20px' } }),
+        sourceId: item.sourceId,
         ...(item.children ? { children: getMenus(item.children, path) } : {}),
       });
     }

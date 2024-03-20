@@ -43,7 +43,7 @@ export async function logout(options?: Record<string, any>) {
 }
 
 export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
-  return new Promise((resolve) => {
+  new Promise((resolve) => {
     resolve({
       code: 200,
       data: [
@@ -102,43 +102,43 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'air-condition-sess',
             },
             {
-              path: 'airCooledFireProtection',
+              path: 'air-cooled-fire-protection',
             },
             {
-              path: 'liquidCooler',
+              path: 'liquid-cooler',
             },
             {
               path: 'dehumidifier',
             },
             {
-              path: 'liquidCooledFireProtection',
+              path: 'liquid-cooled-fire-protection',
             },
             {
-              path: 'gridSideElectricityMeter',
+              path: 'grid-side-electricity-meter',
             },
             {
-              path: 'inverterSideMeter',
+              path: 'inverter-side-meter',
             },
             {
-              path: 'fireFightingSESS',
+              path: 'fire-fighting-sess',
             },
             {
-              path: 'fireFightingPv'
+              path: 'fire-fighting-pv',
             },
             {
-              path: 'gridSideElectricityMeterPv'
+              path: 'grid-side-electricity-meter-pv',
             },
             {
-              path: 'inverterSideMeterPv'
+              path: 'inverter-side-meter-pv',
             },
             {
-              path: 'system-optical'
+              path: 'system-optical',
             },
             {
-              path: 'battery-pack-optical'
+              path: 'battery-pack-optical',
             },
             {
-              path: 'air-condition-optical'
+              path: 'air-condition-optical',
             },
           ],
         },
@@ -179,37 +179,37 @@ export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
               path: 'battery-pack',
             },
             {
-              path: 'liquidCooler',
+              path: 'liquid-cooler',
             },
             {
               path: 'dehumidifier',
             },
             {
-              path: 'gridSideElectricityMeter',
+              path: 'grid-side-electricity-meter',
             },
             {
-              path: 'inverterSideMeter',
+              path: 'inverter-side-meter',
             },
             {
-              path: 'energyManagement',
+              path: 'energy-management',
             },
             {
-              path: 'cloudPlatform',
+              path: 'cloud-platform',
             },
             {
-              path: 'pvPv',
+              path: 'pv-pv',
             },
             {
-              path: 'inverterSideMeterPv',
+              path: 'inverter-side-meter-pv',
             },
             {
-              path: 'gridSideElectricityMeterPv',
+              path: 'grid-side-electricity-meter-pv',
             },
             {
-              path: 'energyManagementPv',
+              path: 'energy-management-pv',
             },
             {
-              path: 'cloudPlatformPv',
+              path: 'cloud-platform-pv',
             },
           ],
         },

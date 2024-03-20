@@ -15,7 +15,7 @@ import styles from './index.less';
 type RefreshDataType = {
   className?: string;
   time?: string;
-  run?: (params?: any) => Promise<any>;
+  run?: (params?: any) => Promise<any> | undefined;
 };
 
 const RefreshData: React.FC<RefreshDataType> = (props) => {

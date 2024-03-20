@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-19 13:54:53
+ * @LastEditTime: 2024-03-20 15:33:12
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
@@ -16,7 +16,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '3102',
         name: '变流器SN',
         type: 'property',
         dataType: {
@@ -24,7 +24,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '3112',
         name: '变流器厂商',
         type: 'property',
         dataType: {
@@ -32,7 +32,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '3122',
         name: '变流器型号',
         type: 'property',
         dataType: {
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '3134',
         name: '变流器额定功率',
         type: 'property',
         dataType: {
@@ -51,19 +51,28 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '3100',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '初始化',
+            1: '断开',
+            2: '连接',
+          },
+          type: 'enum',
         },
       },
       {
-        id: '6',
+        id: '3101',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '485',
+            1: '未知',
+          },
+          type: 'enum',
         },
       },
     ],

@@ -129,7 +129,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.airConditionSess',
       },
       {
-        path: 'airCooledFireProtection',
+        path: 'air-cooled-fire-protection',
         name: 'airCooledFireProtection',
         component: './state/AirCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
@@ -137,7 +137,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.airCooledFireProtection',
       },
       {
-        path: 'liquidCooler',
+        path: 'liquid-cooler',
         name: 'liquidCooler',
         component: './state/LiquidCooler',
         wrappers: ['@/components/KeepAlive'],
@@ -153,7 +153,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.dehumidifier',
       },
       {
-        path: 'liquidCooledFireProtection',
+        path: 'liquid-cooled-fire-protection',
         name: 'liquidCooledFireProtection',
         component: './state/LiquidCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
@@ -161,7 +161,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.liquidCooledFireProtection',
       },
       {
-        path: 'gridSideElectricityMeter',
+        path: 'grid-side-electricity-meter',
         name: 'gridSideElectricityMeter',
         component: './state/GridSideElectricityMeter',
         wrappers: ['@/components/KeepAlive'],
@@ -169,7 +169,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.gridSideElectricityMeter',
       },
       {
-        path: 'inverterSideMeter',
+        path: 'inverter-side-meter',
         name: 'inverterSideMeter',
         component: './state/InverterSideMeter',
         wrappers: ['@/components/KeepAlive'],
@@ -177,7 +177,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.inverterSideMeter',
       },
       {
-        path: 'fireFightingSESS',
+        path: 'fire-fighting-sess',
         name: 'fireFightingSESS',
         component: './state/FireFightingSESS',
         wrappers: ['@/components/KeepAlive'],
@@ -185,7 +185,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.fireFightingSESS',
       },
       {
-        path: 'fireFightingPv',
+        path: 'fire-fighting-pv',
         name: 'fireFightingPv',
         component: './state/FireFightingPv',
         wrappers: ['@/components/KeepAlive'],
@@ -193,7 +193,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.fireFightingPv',
       },
       {
-        path: 'inverterSideMeterPv',
+        path: 'inverter-side-meter-pv',
         name: 'inverterSideMeterPv',
         component: './state/InverterSideMeterPv',
         wrappers: ['@/components/KeepAlive'],
@@ -201,7 +201,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.inverterSideMeterPv',
       },
       {
-        path: 'gridSideElectricityMeterPv',
+        path: 'grid-side-electricity-meter-pv',
         name: 'gridSideElectricityMeterPv',
         component: './state/GridSideElectricityMeterPv',
         wrappers: ['@/components/KeepAlive'],
@@ -329,7 +329,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.liquid',
       },
       {
-        path: 'liquidCooler',
+        path: 'liquid-cooler',
         name: 'liquidCooler',
         component: './config/LiquidCooler',
         wrappers: ['@/components/KeepAlive'],
@@ -337,7 +337,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.liquidCooler',
       },
       {
-        path: 'liquidCooledFireProtection',
+        path: 'liquid-cooled-fire-protection',
         name: 'liquidCooledFireProtection',
         component: './state/LiquidCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
@@ -354,7 +354,7 @@ const routers: RouterType[] = [
       },
 
       {
-        path: 'gridSideElectricityMeter',
+        path: 'grid-side-electricity-meter',
         name: 'gridSideElectricityMeter',
         component: './config/GridSideElectricityMeter',
         wrappers: ['@/components/KeepAlive'],
@@ -362,7 +362,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.gridSideElectricityMeter',
       },
       {
-        path: 'inverterSideMeter',
+        path: 'inverter-side-meter',
         name: 'inverterSideMeter',
         component: './config/InverterSideMeter',
         wrappers: ['@/components/KeepAlive'],
@@ -370,7 +370,7 @@ const routers: RouterType[] = [
         locale: 'menu.state.inverterSideMeter',
       },
       {
-        path: 'energyManagement',
+        path: 'energy-management',
         name: 'energyManagement',
         component: './config/EnergyManagement',
         wrappers: ['@/components/KeepAlive'],
@@ -378,7 +378,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.energyManagement',
       },
       {
-        path: 'cloudPlatform',
+        path: 'cloud-platform',
         name: 'cloudPlatform',
         component: './config/CloudPlatform',
         wrappers: ['@/components/KeepAlive'],
@@ -386,7 +386,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.cloudPlatform',
       },
       {
-        path: 'pvPv',
+        path: 'pv-pv',
         name: 'pvPv',
         component: './config/PvPv',
         wrappers: ['@/components/KeepAlive'],
@@ -394,7 +394,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.pvPv',
       },
       {
-        path: 'inverterSideMeterPv',
+        path: 'inverter-side-meter-pv',
         name: 'inverterSideMeterPv',
         component: './config/InverterSideMeterPv',
         wrappers: ['@/components/KeepAlive'],
@@ -402,7 +402,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.inverterSideMeterPv',
       },
       {
-        path: 'gridSideElectricityMeterPv',
+        path: 'grid-side-electricity-meter-pv',
         name: 'gridSideElectricityMeterPv',
         component: './config/GridSideElectricityMeterPv',
         wrappers: ['@/components/KeepAlive'],
@@ -410,7 +410,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.gridSideElectricityMeterPv',
       },
       {
-        path: 'energyManagementPv',
+        path: 'energy-management-pv',
         name: 'energyManagementPv',
         component: './config/EnergyManagementPv',
         wrappers: ['@/components/KeepAlive'],
@@ -418,7 +418,7 @@ const routers: RouterType[] = [
         locale: 'menu.config.energyManagementPv',
       },
       {
-        path: 'cloudPlatformPv',
+        path: 'cloud-platform-pv',
         name: 'cloudPlatformPv',
         component: './config/CloudPlatformPv',
         wrappers: ['@/components/KeepAlive'],

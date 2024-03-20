@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-19 17:23:33
+ * @LastEditTime: 2024-03-20 14:58:18
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
@@ -11,8 +11,6 @@ import React from 'react';
 import Card from '@/components/Card';
 import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
   dcSideItems,
@@ -24,13 +22,10 @@ import {
   versionItems,
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
+import { useDeviceData } from '@/hooks';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run } = useDeviceData();
 
   return (
     <>

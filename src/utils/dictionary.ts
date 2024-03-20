@@ -2,14 +2,14 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-04-26 14:58:44
- * @LastEditTime: 2024-01-24 10:35:08
+ * @LastEditTime: 2024-03-20 14:07:08
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\utils\dictionary.ts
+ * @FilePath: \ems-x-web\src\utils\dictionary.ts
  */
 
 export enum RequestCode {
   NoToken = 500001,
-  TokenExpire = 500003,
+  TokenExpire = '1001',
 }
 
 export const aks = [
