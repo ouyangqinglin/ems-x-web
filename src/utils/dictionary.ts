@@ -8,6 +8,7 @@
  */
 
 export enum RequestCode {
+  Success = 200,
   NoToken = 500001,
   TokenExpire = '1001',
 }

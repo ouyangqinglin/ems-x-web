@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-20 16:15:20
+ * @LastEditTime: 2024-03-20 16:26:43
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
@@ -182,7 +182,11 @@ export const stateItems: any = [
         name: '主从模式',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '从机',
+            1: '主机',
+          },
+          type: 'enum',
         },
       },
       {
@@ -202,7 +206,15 @@ export const stateItems: any = [
         name: '输出模式',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '未初始化',
+            1: '直流恒流',
+            2: '直流恒压',
+            3: '直流恒功率',
+            4: '交流并网恒功率',
+            5: '交流离网恒压',
+          },
+          type: 'enum',
         },
       },
       {
