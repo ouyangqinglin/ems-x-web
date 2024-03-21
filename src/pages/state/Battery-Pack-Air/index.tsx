@@ -15,13 +15,13 @@ import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
+  batteryModuleItems,
+  funItems,
   individualExtremumItems,
-  reductionItems,
   remoteSignalItems,
   statusItems,
-  systemChargeCostItems,
-  systemDischargeCostItems,
 } from './helper';
+import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -78,6 +78,32 @@ const Pcs: React.FC = () => {
               <Run
                 realTimeData={realTimeData}
                 groupData={remoteSignalItems}
+                detailProps={{
+                  column: 6,
+                }}
+              />
+            </Card>
+          </Col>
+        </Row>
+        <Row gutter={20} className="mt24">
+          <Col span={24}>
+            <Card className="h-full">
+              <Run
+                realTimeData={realTimeData}
+                groupData={funItems}
+                detailProps={{
+                  column: 4,
+                }}
+              />
+            </Card>
+          </Col>
+        </Row>
+        <Row gutter={20} className="mt24">
+          <Col span={24}>
+            <Card className="h-full">
+              <Control
+                groupData={batteryModuleItems}
+                realTimeData={realTimeData}
                 detailProps={{
                   column: 6,
                 }}

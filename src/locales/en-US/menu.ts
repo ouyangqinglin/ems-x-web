@@ -36,4 +36,10 @@ export default {
   'menu.state.systemOptical': '光储系统',
   'menu.state.batteryPackOptical': '光储电池组',
   'menu.state.airConditionOptical': '光储空调',
+  'menu.config.systemControlOptical': '光储系统控制',
+  'menu.config.systemOptical': '光储系统',
+  'menu.config.batteryPackOptical': '光储电池组',
+  'menu.config.airConditionOptical': '光储空调',
+  'menu.state.batteryPackAir': 'battery pack air',
+  'menu.state.batteryPackLiquid': 'battery pack liquid',
 };

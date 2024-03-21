@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Chart from '../Chart';
@@ -12,27 +12,18 @@ import {
   electricItems,
   reduceItems,
 } from './helper';
-import { useModel } from '@@/plugin-model/useModel';
-import { useRequest } from '@@/plugin-request/request';
-import { getDeviceData } from '@/services/device';
 import pvImg from '@/assets/image/station/overview/icon_光伏1.svg';
 import batImg from '@/assets/image/station/overview/icon_储能.svg';
 import loadImg from '@/assets/image/station/overview/icon_负载1.svg';
 import electricImg from '@/assets/image/station/overview/icon_市电.svg';
 import incomeImg from '@/assets/image/station/overview/icon_收益.svg';
 import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
-import SystemRunStatus from '@/pages/index/SystemRunStatus';
 import SystemAlarm from '@/components/SystemAlarm';
 import { useDeviceData } from '@/hooks';
+import LiquidSystemRunStatus from '@/pages/index/LiquidSystemRunStatus';
 
 const Index: React.FC = () => {
   const { realTimeData, run } = useDeviceData({ isInterval: false });
-  // const { config } = useModel('config');
-  // const { data: realTimeData, run } = useRequest(getDeviceData, {
-  //   manual: true,
-  //   pollingInterval: config.refreshTime * 1000,
-  // });
-
   return (
     <>
       <div className={styles.optical}>
@@ -86,7 +77,7 @@ const Index: React.FC = () => {
         <Row gutter={12} className="mt16" align="top">
           <Col span={7}>
             <Card style={{ height: 412 }} className={styles.card}>
-              <SystemRunStatus />
+              <LiquidSystemRunStatus />
             </Card>
           </Col>
           <Col span={11}>

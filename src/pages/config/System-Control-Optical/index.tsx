@@ -9,9 +9,11 @@
 
 import React from 'react';
 import Card from '@/components/Card';
+import { Col, Row } from 'antd';
+import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, batteryParamsItems } from './helper';
+import { baseInfoItems, batteryModeItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
@@ -28,13 +30,7 @@ const Pcs: React.FC = () => {
           <Control groupData={baseInfoItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
-          <Control
-            groupData={batteryParamsItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 2,
-            }}
-          />
+          <Control groupData={batteryModeItems} realTimeData={realTimeData} />
         </Card>
       </div>
     </>

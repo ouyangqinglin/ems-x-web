@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-03-16 11:44:08
+ * @LastEditTime: 2024-03-21 11:26:14
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -54,7 +54,7 @@ import useAuthority, { AuthorityModeEnum } from '@/hooks/useAuthority';
 import RadioButton from '@/components/RadioButton';
 import { useRequest } from 'umi';
 import styles from './index.less';
-import { useSubscribe } from '@/hooks';
+import { useDeviceData, useSubscribe } from '@/hooks';
 import { EditOutlined, RedoOutlined } from '@ant-design/icons';
 import DeviceContext, { RefreshRequestParams } from '../Context/DeviceContext';
 
@@ -70,9 +70,19 @@ export type ControlType = {
 const singleFieldName = 'arryField';
 
 const Control: React.FC<ControlType> = memo((props) => {
-  const { deviceId, deviceData, groupData, realTimeData, onLoadChange, detailProps } = props;
+  const {
+    deviceId,
+    deviceData,
+    groupData,
+    realTimeData: allRealTimeData,
+    onLoadChange,
+    detailProps,
+  } = props;
 
-  const { refreshDataByRequest } = useContext(DeviceContext);
+  const { run: refreshDeviceData, realTimeData: partRealTimeData } = useDeviceData({
+    manual: true,
+    isInterval: false,
+  });
   const [transformData, setTransformData] = useState({});
   const [openForm, { set, setTrue }] = useBoolean(false);
   const [currentFormInfo, setCurrentFormInfo] = useState<{
@@ -88,6 +98,10 @@ const Control: React.FC<ControlType> = memo((props) => {
     return Array.from(new Set(result));
   }, [groupData]);
   const extralDeviceRealTimeData = useSubscribe(extralDeviceIds, true);
+
+  const realTimeData = useMemo(() => {
+    return merge({}, allRealTimeData, partRealTimeData);
+  }, [allRealTimeData, partRealTimeData]);
 
   const components = useMemo<
     Record<string, React.LazyExoticComponent<React.ComponentType<any>>>
@@ -178,15 +192,15 @@ const Control: React.FC<ControlType> = memo((props) => {
       if (service.queryId) {
         refreshParams.serviceId = service.queryId;
       }
-      refreshDataByRequest?.(refreshParams).then(({ code }) => {
-        if (code == '200') {
+      refreshDeviceData?.(refreshParams)?.then?.((data) => {
+        if (data.code == '200') {
           message.success(
             formatMessage({ id: 'device.refreshSuccess', defaultMessage: '刷新成功' }),
           );
         }
       });
     },
-    [refreshDataByRequest, deviceId],
+    [refreshDeviceData, deviceId],
   );
 
   const passAuthority = useCallback(

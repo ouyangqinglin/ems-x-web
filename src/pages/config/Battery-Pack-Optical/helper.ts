@@ -99,6 +99,38 @@ export const baseInfoItems: any = [
   },
 ];
 
+export const batteryPackEnableItems: any = [
+  {
+    id: 'a',
+    name: '电池组使能设置',
+    type: 'group',
+    showType: 2,
+    children: [
+      {
+        id: 'a',
+        name: '电池组使能设置',
+        type: 'service',
+        buttons: ['refresh', 'edit'],
+        children: [
+          {
+            id: '1',
+            name: '自启动功能使能',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'enum',
+              specs: {
+                1: 'mV',
+                2: 'mV',
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export const batteryParamsItems: any = [
   {
     id: 'a',
@@ -106,6 +138,35 @@ export const batteryParamsItems: any = [
     type: 'group',
     showType: 2,
     children: [
+      {
+        id: 'a',
+        name: '电池组使能状态',
+        type: 'group',
+        showType: 2,
+        children: [
+          {
+            id: 'a',
+            name: '电池组使能状态',
+            type: 'service',
+            showType: 2,
+            buttons: ['refresh', 'edit'],
+            children: [
+              {
+                id: '1',
+                name: '电池组使能状态',
+                type: 'property',
+                buttons: ['refresh', 'edit'],
+                dataType: {
+                  type: 'string',
+                  specs: {
+                    unit: 'mV',
+                  },
+                },
+              },
+            ],
+          },
+        ],
+      },
       {
         id: 'a',
         name: '一级保护参数',

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-20 11:47:05
- * @LastEditTime: 2024-03-20 15:16:32
+ * @LastEditTime: 2024-03-21 11:30:46
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\hooks\useDeviceData.ts
  */
@@ -10,35 +10,45 @@
 import { useModel, useRequest } from 'umi';
 import useLocation from './useLocation';
 import { getDeviceData } from '@/services/device';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { arrayToMap, getPropsFromTree } from '@/utils';
+import { RequestCode } from '@/utils/dictionary';
 
 type UseDeviceDataType = {
   manual?: boolean;
   isInterval?: boolean;
+  interval?: number;
 };
 
 const useDeviceData = (options?: UseDeviceDataType) => {
-  const { manual, isInterval = true } = options || {};
+  const { manual, isInterval = true, interval } = options || {};
 
   const location = useLocation();
   const { initialState } = useModel('@@initialState');
   const { config } = useModel('config');
+  const [realTimeData, setRealTimeData] = useState<
+    Record<string, any> & {
+      refreshTime?: string;
+    }
+  >({});
 
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
+  const { run } = useRequest(getDeviceData, {
     manual: true,
-    pollingInterval: isInterval ? config.refreshTime * 1000 : 0,
-    formatResult(res) {
-      const data = res?.data;
+    pollingInterval: isInterval ? (interval ? interval : config.refreshTime * 1000) : 0,
+    formatResult(response) {
+      const res = response || {};
       res.data = {
-        refreshTime: data.refreshTime,
-        ...arrayToMap(data as any, 'id', 'value'),
+        code: res.code,
+        ...res?.data,
       };
+      if (res.code == RequestCode.Success) {
+        setRealTimeData(res.data);
+      }
       return res.data;
     },
   });
 
-  const runRequest = () => {
+  const runRequest = (params?: any) => {
     const sourceIds = getPropsFromTree(
       initialState?.antMenus as any,
       'sourceId',
@@ -46,7 +56,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
       (item) => item.key == location.pathname,
     );
     if (sourceIds.length) {
-      return run(sourceIds[0]);
+      return run(sourceIds[0], params);
     }
   };
 

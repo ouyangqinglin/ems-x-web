@@ -2,16 +2,16 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-03-16 11:29:44
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
 
 import React from 'react';
 import Card from '@/components/Card';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, batteryParamsItems } from './helper';
+import { baseInfoItems, runValueItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
@@ -29,10 +29,10 @@ const Pcs: React.FC = () => {
         </Card>
         <Card className="my20">
           <Control
-            groupData={batteryParamsItems}
+            groupData={runValueItems}
             realTimeData={realTimeData}
             detailProps={{
-              column: 2,
+              column: 4,
             }}
           />
         </Card>
