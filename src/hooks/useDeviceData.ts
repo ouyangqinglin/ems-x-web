@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-20 11:47:05
- * @LastEditTime: 2024-03-20 17:32:32
+ * @LastEditTime: 2024-03-21 11:30:46
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\hooks\useDeviceData.ts
  */
@@ -12,14 +12,16 @@ import useLocation from './useLocation';
 import { getDeviceData } from '@/services/device';
 import { useEffect, useState } from 'react';
 import { arrayToMap, getPropsFromTree } from '@/utils';
+import { RequestCode } from '@/utils/dictionary';
 
 type UseDeviceDataType = {
   manual?: boolean;
   isInterval?: boolean;
+  interval?: number;
 };
 
 const useDeviceData = (options?: UseDeviceDataType) => {
-  const { manual, isInterval = true } = options || {};
+  const { manual, isInterval = true, interval } = options || {};
 
   const location = useLocation();
   const { initialState } = useModel('@@initialState');
@@ -32,25 +34,21 @@ const useDeviceData = (options?: UseDeviceDataType) => {
 
   const { run } = useRequest(getDeviceData, {
     manual: true,
-    pollingInterval: isInterval ? config.refreshTime * 1000 : 0,
-    formatResult(res) {
-      const resData = res?.data;
+    pollingInterval: isInterval ? (interval ? interval : config.refreshTime * 1000) : 0,
+    formatResult(response) {
+      const res = response || {};
       res.data = {
         code: res.code,
-        refreshTime: resData.refreshTime,
-        ...arrayToMap(resData as any, 'id', 'value'),
+        ...res?.data,
       };
-      setRealTimeData((prevData) => {
-        return {
-          ...prevData,
-          ...res.data,
-        };
-      });
+      if (res.code == RequestCode.Success) {
+        setRealTimeData(res.data);
+      }
       return res.data;
     },
   });
 
-  const runRequest = () => {
+  const runRequest = (params?: any) => {
     const sourceIds = getPropsFromTree(
       initialState?.antMenus as any,
       'sourceId',
@@ -58,7 +56,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
       (item) => item.key == location.pathname,
     );
     if (sourceIds.length) {
-      return run(sourceIds[0]);
+      return run(sourceIds[0], params);
     }
   };
 

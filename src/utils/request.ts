@@ -69,7 +69,7 @@ export interface Init {
 }
 
 export type ResponsePageData<T> = {
-  code: string;
+  code: RequestCode;
   data: {
     list: T[];
     total: number;
@@ -78,7 +78,7 @@ export type ResponsePageData<T> = {
 };
 
 export type ResponseCommonData<T> = {
-  code: string;
+  code: RequestCode;
   data: T;
   msg: string;
 };
@@ -222,7 +222,7 @@ export class HttpRequest implements HttpRequestType {
       };
     }
     return result.then((res) => {
-      if (res.data) {
+      if (res?.data) {
         res.data.refreshTime = moment().format('YYYY-MM-DD HH:mm:ss');
       }
       return res as ResponsePromise<T, U>;
