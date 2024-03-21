@@ -2,14 +2,14 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-20 11:47:05
- * @LastEditTime: 2024-03-21 15:56:44
+ * @LastEditTime: 2024-03-21 18:04:43
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\hooks\useDeviceData.ts
  */
 
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { RequestCode } from '@/utils/dictionary';
 import useSourceId from './useSourceId';
 
@@ -46,17 +46,20 @@ const useDeviceData = (options?: UseDeviceDataType) => {
     },
   });
 
-  const runRequest = (params?: any) => {
-    if (sourceId) {
-      return run(sourceId, params);
-    }
-  };
+  const runRequest = useCallback(
+    (params?: any) => {
+      if (sourceId) {
+        return run(sourceId, params);
+      }
+    },
+    [sourceId],
+  );
 
   useEffect(() => {
     if (!manual) {
       runRequest();
     }
-  }, [manual, sourceId]);
+  }, [manual, runRequest]);
 
   return {
     realTimeData,
