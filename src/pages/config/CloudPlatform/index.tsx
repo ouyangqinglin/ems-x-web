@@ -9,31 +9,20 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { Col, Row } from 'antd';
-import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
-import { cloudApiItems, yotaiComApiItems, cloudApiSoftwareItems } from './helper';
+import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, cloudApiSoftwareItems, yotaiComApiItems} from './helper';
 import Control from '@/components/Device/Control';
+import RefreshData from '@/components/Device/RefreshData';
+import { useDeviceData } from '@/hooks';
 
 const CloudPlatform: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run } = useDeviceData();
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card>
-          <Control
-            groupData={cloudApiItems}
-            realTimeData={realTimeData}
-            detailProps={{
-              column: 3,
-            }}
-          />
+          <Control groupData={commInterfaceWiFiItems} realTimeData={realTimeData} detailProps={{ column: 3 }} />
         </Card>
         <Card className="my20">
           <Control groupData={yotaiComApiItems} realTimeData={realTimeData} />

@@ -22,7 +22,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '30190',
             name: '电表SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +31,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: ' 2',
+            id: '30239',
             name: '电表型号',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '30229',
             name: '电表厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +49,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '4',
+            id: '30205',
             name: '电表序号',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +58,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '5',
+            id: '30206',
             name: '电表地址',
             type: 'property',
             buttons: ['refresh'],
@@ -85,7 +85,7 @@ export const gridSidEleMetParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '52300',
             name: '电流变比',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -97,7 +97,7 @@ export const gridSidEleMetParamsItems: any = [
             },
           },
           {
-            id: '2',
+            id: '52301',
             name: '电压变比',
             type: 'property',
             buttons: ['refresh', 'edit'],

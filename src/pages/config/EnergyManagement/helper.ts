@@ -9,7 +9,7 @@
 
 import { DeviceModelDescribeType } from '@/types/device';
 
-/// 自发自用模式参数设置
+/// 自发自用模式参数设置 - 暂时不写
 export const spontaneousSelfUseItems: any = [
   {
     id: 'eS19',
@@ -190,6 +190,7 @@ export const peakShavingValleyFillingItems: any = [
   },
 ];
 
+/// 备电模式设置 - 暂时不写
 export const backupModeItems: any = [
   {
     id: 'BackupPowerModeSetting',
@@ -272,7 +273,6 @@ export const backupModeItems: any = [
   },
 ];
 
-/// 手动模式参数设置
 export const manualModeItems: any = [
   {
     id: 'ManualMode',
