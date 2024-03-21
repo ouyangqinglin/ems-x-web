@@ -9,8 +9,8 @@
 
 import { DeviceModelDescribeType } from '@/types/device';
 
-/// 云平台通信接口参数
-export const cloudApiItems: any = [
+/// 云平台通信接口 WIFI
+export const commInterfaceWiFiItems: any = [
   {
     id: 'a',
     name: '云平台通信接口参数',
@@ -23,22 +23,22 @@ export const cloudApiItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '50019',
             name: '通信接口',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
-                0: 'WiFi',
-                1: 'LAN1',
-                2: 'LAN4',
-                3: '4G',
-              },
+                0: "WiFi",
+                1: "LAN1",
+                2: "LAN2",
+                3: "4G"
+              }
             },
           },
           {
-            id: '1',
+            id: '50020',
             name: 'WiFi名称',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -47,7 +47,7 @@ export const cloudApiItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50036',
             name: 'WiFi密码',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -59,20 +59,20 @@ export const cloudApiItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50051',
             name: '连接类型',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
-                0: '静态IP',
-                1: 'DHCP',
-              },
+                0: "dhcp",
+                1: "静态ip",
+              }
             },
           },
           {
-            id: '1',
+            id: '50052',
             name: '外网IP地址',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -84,7 +84,7 @@ export const cloudApiItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50054',
             name: '子网掩码',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -96,7 +96,7 @@ export const cloudApiItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50056',
             name: '网关',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -108,7 +108,7 @@ export const cloudApiItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50058',
             name: 'DNS服务器',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -126,7 +126,199 @@ export const cloudApiItems: any = [
   },
 ];
 
-/// 永泰云通信接口参数
+/// 云平台通信接口 LAN1
+export const commInterfaceLAN1Items: any = [
+  {
+    id: 'a',
+    name: '云平台通信接口参数',
+    type: 'group',
+    children: [
+      {
+        id: '50019',
+        name: '通信接口',
+        type: 'property',
+        buttons: ['refresh', 'edit'],
+        dataType: {
+          type: "enum",
+          specs: {
+            0: "WiFi",
+            1: "LAN1",
+            2: "LAN2",
+            3: "4G"
+          }
+        },
+      },
+      {
+        id: 'a',
+        name: '云平台通信接口参数',
+        type: 'service',
+        buttons: ['refresh', 'edit'],
+        children: [
+          {
+            id: '50229',
+            name: '连接类型',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "dhcp",
+                1: "静态ip",
+              }
+            },
+          },
+          {
+            id: '50230',
+            name: '外网IP地址',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50232',
+            name: '子网掩码',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50234',
+            name: '网关',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50236',
+            name: 'DNS服务器',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            span: 2,
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
+
+/// 云平台通信接口 LAN2
+export const commInterfaceLAN2Items: any = [
+  {
+    id: 'a',
+    name: '云平台通信接口参数',
+    type: 'group',
+    children: [
+      {
+        id: '50019',
+        name: '通信接口',
+        type: 'property',
+        buttons: ['refresh', 'edit'],
+        dataType: {
+          type: "enum",
+          specs: {
+            0: "WiFi",
+            1: "LAN1",
+            2: "LAN2",
+            3: "4G"
+          }
+        },
+      },
+      {
+        id: 'a',
+        name: '云平台通信接口参数',
+        type: 'service',
+        buttons: ['refresh', 'edit'],
+        children: [
+          {
+            id: '50238',
+            name: '连接类型',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: "enum",
+              specs: {
+                0: "dhcp",
+                1: "静态ip",
+              }
+            },
+          },
+          {
+            id: '50239',
+            name: '外网IP地址',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50241',
+            name: '子网掩码',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50243',
+            name: '网关',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50245',
+            name: 'DNS服务器',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            span: 2,
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
+
+/// 永泰云通信接口参数 - 【暂时先不做】
 export const yotaiComApiItems: any = [
   {
     id: 'a',
@@ -257,20 +449,20 @@ export const cloudApiSoftwareItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '50063',
             name: '云平台接入使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
-                0: '允许',
-                1: '禁止',
-              },
+                0: "禁止",
+                1: "允许",
+              }
             },
           },
           {
-            id: '1',
+            id: '50143',
             name: '云平台IP/域名',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -282,7 +474,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50066',
             name: '端口',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -294,7 +486,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50068',
             name: '账号',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -306,7 +498,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50084',
             name: '密码',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -318,7 +510,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50100',
             name: '供应商编号',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -330,7 +522,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50110',
             name: '产品型号',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -342,7 +534,7 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50209',
             name: '设备ID',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -354,8 +546,20 @@ export const cloudApiSoftwareItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50128',
             name: '永泰云IP/域名',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              specs: {
+                unit: '',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50062',
+            name: '永泰云端口',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {

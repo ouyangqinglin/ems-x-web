@@ -9,22 +9,17 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { Col, Row } from 'antd';
-import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, gridSidEleMetParamsItems } from './helper';
 import Control from '@/components/Device/Control';
+import RefreshData from '@/components/Device/RefreshData';
+import { useDeviceData } from '@/hooks';
 
 const GridSideElectricityMeter: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run } = useDeviceData();
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card>
           <Control
