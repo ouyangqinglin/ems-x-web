@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-03-21 11:26:14
+ * @LastEditTime: 2024-03-21 15:54:34
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -47,16 +47,16 @@ import { Button, Modal, Spin, message, Typography, Switch } from 'antd';
 import { useBoolean } from 'ahooks';
 import { TimeRangePicker, DateStamp } from '@/components/Time';
 import type { DeviceDataType } from '@/services/equipment';
-import { editSetting } from '@/services/equipment';
 import { DeviceMasterMode, OnlineStatusEnum } from '@/utils/dictionary';
 import Authority from '@/components/Authority';
 import useAuthority, { AuthorityModeEnum } from '@/hooks/useAuthority';
 import RadioButton from '@/components/RadioButton';
 import { useRequest } from 'umi';
 import styles from './index.less';
-import { useDeviceData, useSubscribe } from '@/hooks';
+import { useDeviceData, useSourceId, useSubscribe } from '@/hooks';
 import { EditOutlined, RedoOutlined } from '@ant-design/icons';
 import DeviceContext, { RefreshRequestParams } from '../Context/DeviceContext';
+import { editDeviceData } from '@/services/device';
 
 export type ControlType = {
   deviceId?: string;
@@ -83,6 +83,7 @@ const Control: React.FC<ControlType> = memo((props) => {
     manual: true,
     isInterval: false,
   });
+  const { sourceId } = useSourceId();
   const [transformData, setTransformData] = useState({});
   const [openForm, { set, setTrue }] = useBoolean(false);
   const [currentFormInfo, setCurrentFormInfo] = useState<{
@@ -90,7 +91,7 @@ const Control: React.FC<ControlType> = memo((props) => {
     columns?: ProFormColumnsType[];
     width?: string;
   }>({});
-  const { loading, run } = useRequest(editSetting, {
+  const { loading, run } = useRequest(editDeviceData, {
     manual: true,
   });
   const extralDeviceIds = useMemo(() => {
@@ -164,11 +165,7 @@ const Control: React.FC<ControlType> = memo((props) => {
         okText: formatMessage({ id: 'common.confirm', defaultMessage: '确认' }),
         cancelText: formatMessage({ id: 'common.cancel', defaultMessage: '取消' }),
         onOk: () =>
-          run({
-            deviceId: field.deviceId || deviceData?.deviceId,
-            input: { [field.id || '']: value },
-            serviceId: field.serviceId,
-          }).then((data: any) => {
+          run({ [field.id || '']: value, sourceId }).then((data: any) => {
             if (data) {
               message.success(
                 formatMessage({ id: 'device.issueSuccess', defaultMessage: '下发成功' }),
@@ -177,21 +174,15 @@ const Control: React.FC<ControlType> = memo((props) => {
           }),
       });
     },
-    [deviceData?.deviceId],
+    [deviceData?.deviceId, sourceId],
   );
 
   const onRefresh = useCallback(
     (service: DeviceServiceType | DeviceServiceModelType) => {
       const ids = getPropsFromTree([service]);
-      const refreshParams: RefreshRequestParams = {
-        deviceId: service?.deviceId || deviceId || '',
-        input: {
-          queryList: ids,
-        },
+      const refreshParams = {
+        data: ids,
       };
-      if (service.queryId) {
-        refreshParams.serviceId = service.queryId;
-      }
       refreshDeviceData?.(refreshParams)?.then?.((data) => {
         if (data.code == '200') {
           message.success(

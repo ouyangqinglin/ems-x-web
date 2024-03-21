@@ -10,6 +10,7 @@ import useAuthority from './useAuthority';
 import useFullScreen from './useFullScreen';
 import useDeviceData from './useDeviceData';
 import useDeviceModel from './useDeviceModel';
+import useSourceId from './useSourceId';
 
 export {
   useArea,
@@ -24,4 +25,5 @@ export {
   useFullScreen,
   useDeviceData,
   useDeviceModel,
+  useSourceId,
 };

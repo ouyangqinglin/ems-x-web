@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-03-21 11:45:36
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
@@ -22,7 +22,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '3102',
             name: '变流器SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +31,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '3122',
             name: '变流器型号',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '3112',
             name: '变流器厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +49,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '3206',
             name: '硬件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +58,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '4',
+            id: '3207',
             name: 'ARM-V版本',
             type: 'property',
             buttons: ['refresh'],
@@ -67,7 +67,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '6',
+            id: '3208',
             name: 'ARM-B版本',
             type: 'property',
             buttons: ['refresh'],
@@ -76,7 +76,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '8',
+            id: '3209',
             name: 'ARM-D版本',
             type: 'property',
             buttons: ['refresh'],
@@ -86,7 +86,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '1',
+            id: '3200',
             name: 'DSP-V版本',
             buttons: ['refresh'],
             type: 'property',
@@ -95,7 +95,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '3201',
             name: 'DSP-B版本',
             type: 'property',
             buttons: ['refresh'],
@@ -104,7 +104,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '5',
+            id: '3202',
             name: 'DSP-D版本',
             type: 'property',
             buttons: ['refresh'],
@@ -114,7 +114,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '7',
+            id: '3203',
             name: 'CPLD-V版本',
             type: 'property',
             buttons: ['refresh'],
@@ -123,7 +123,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '9',
+            id: '3204',
             name: 'CPLD-B版本',
             type: 'property',
             buttons: ['refresh'],
@@ -132,7 +132,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '10',
+            id: '3205',
             name: 'CPLD-D版本',
             type: 'property',
             buttons: ['refresh'],
@@ -159,8 +159,21 @@ export const pcsParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
-            name: '直流电压过压保护点',
+            id: '50718',
+            name: '有功功率设置',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            span: 3,
+            dataType: {
+              specs: {
+                unit: 'kW',
+              },
+              type: 'string',
+            },
+          },
+          {
+            id: '50301',
+            name: '无功补偿方式',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -173,13 +186,31 @@ export const pcsParamsItems: any = [
             },
           },
           {
-            id: '1',
-            name: '直流电压欠压保护点',
+            id: '50303',
+            name: '无功补偿电流',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '50302',
+            name: '无功补偿功率因数',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '50304',
+            name: '无功功率设置',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
-                unit: 'V',
+                unit: 'kVar',
               },
               type: 'string',
             },

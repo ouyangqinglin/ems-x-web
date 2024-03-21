@@ -9,11 +9,12 @@ import type { ProtectFormType, RemoteSettingDataType } from './config';
 import Button from 'antd/lib/button';
 import SchemaForm, { FormTypeEnum, SchemaFormProps } from '@/components/SchemaForm';
 import { useBoolean } from 'ahooks';
-import { editSetting, editEquipConfig } from '@/services/equipment';
+import { editEquipConfig } from '@/services/equipment';
 import moment from 'moment';
 import { DeviceTypeEnum, OnlineStatusEnum } from '@/utils/dictionary';
 import { formatMessage } from '@/utils';
-import { useAuthority } from '@/hooks';
+import { useAuthority, useSourceId } from '@/hooks';
+import { editDeviceData } from '@/services/device';
 
 export type ConfigModalType<T = any> = Omit<SchemaFormProps, 'beforeSubmit'> & {
   deviceId?: string;
@@ -46,44 +47,15 @@ const ConfigModal: React.FC<ConfigModalType> = (props) => {
   const [isEditing, { setFalse: setIsEditingFalse, setTrue: setIsEditingTrue }] = useBoolean(false);
   const [initialValues, setInitialValues] = useState<ProtectFormType['realTimeData']>();
   const { passAuthority } = useAuthority(authority ? [authority] : []);
+  const { sourceId } = useSourceId();
 
   const onBeforeSubmit = useCallback(
     (formData: any) => {
-      let result: RemoteSettingDataType<ProtectFormType['realTimeData']> = {
-        deviceId,
-        input: formData,
-        serviceId,
-      };
-      if (deviceData?.productId == DeviceTypeEnum.YTEnergyEms && serviceId === 'correctionTime') {
-        result.input = { correctionTime: moment(formData.correctionTime).valueOf() };
-      }
-      //尖峰平谷时段设置
-      if (
-        deviceData?.productId == DeviceTypeEnum.YTEnergyEms &&
-        serviceId === 'PeakAndValleyTimeSettings'
-      ) {
-        if (formData.ElectrovalenceTimeFrame.length > 0) {
-          const timeFormData = formData.ElectrovalenceTimeFrame.map((item: any) => {
-            return {
-              ...item,
-              ElectrovalenceType: item.ElectrovalenceType,
-              TimeFrame:
-                moment('2023-01-01 ' + item.TimeFrame[0]).format('HH:mm') +
-                '-' +
-                moment('2023-01-01 ' + item.TimeFrame[1]).format('HH:mm'),
-            };
-          });
-          result = {
-            deviceId,
-            input: { ...formData, ElectrovalenceTimeFrame: timeFormData },
-            serviceId,
-          };
-        }
-      }
-      const submitResult = beforeSubmit?.(result);
-      return submitResult ?? result;
+      formData.sourceId = sourceId;
+      const submitResult = beforeSubmit?.(formData);
+      return submitResult ?? formData;
     },
-    [deviceId, deviceData, realTimeData, serviceId],
+    [sourceId],
   );
 
   const onClick = useCallback(() => {
@@ -137,7 +109,7 @@ const ConfigModal: React.FC<ConfigModalType> = (props) => {
           columns={columns}
           className={'distributeParameters'}
           initialValues={initialValues}
-          editData={serviceId === 'report' ? editEquipConfig : editSetting}
+          editData={editDeviceData}
           beforeSubmit={onBeforeSubmit}
           grid={true}
           colProps={{
