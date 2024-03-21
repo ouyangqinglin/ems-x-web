@@ -197,8 +197,7 @@ export const systemEnableItems: any = [
       },
     ],
   },
-
-]
+];
 
 export const systemParamsItems: any = [
   {

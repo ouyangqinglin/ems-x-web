@@ -11,7 +11,13 @@ import React from 'react';
 import Card from '@/components/Card';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import {baseInfoItems, systemParamsItems, otherParamsItems, timeSetItems, systemEnableItems} from './helper';
+import {
+  baseInfoItems,
+  systemParamsItems,
+  otherParamsItems,
+  timeSetItems,
+  systemEnableItems,
+} from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {

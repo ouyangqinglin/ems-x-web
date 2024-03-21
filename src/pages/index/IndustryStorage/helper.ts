@@ -21,8 +21,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -32,8 +32,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -43,8 +43,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -54,8 +54,8 @@ export const batteryItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
     ],
@@ -76,8 +76,8 @@ export const batterySysItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -87,8 +87,8 @@ export const batterySysItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -98,13 +98,13 @@ export const batterySysItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
     ],
   },
-]
+];
 
 export const loadItems: any = [
   {
@@ -120,8 +120,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -131,8 +131,8 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kWh'
-          }
+            unit: 'kWh',
+          },
         },
       },
       {
@@ -142,13 +142,13 @@ export const loadItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 'kW'
-          }
+            unit: 'kW',
+          },
         },
       },
     ],
   },
-]
+];
 
 export const incomeItems: any = [
   {
@@ -164,8 +164,8 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
       {
@@ -175,8 +175,8 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
       {
@@ -186,8 +186,8 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
       {
@@ -197,8 +197,8 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
       {
@@ -208,8 +208,8 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
       {
@@ -219,13 +219,13 @@ export const incomeItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '元'
-          }
+            unit: '元',
+          },
         },
       },
     ],
   },
-]
+];
 
 export const reduceItems: any = [
   {
@@ -241,8 +241,8 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 't'
-          }
+            unit: 't',
+          },
         },
       },
       {
@@ -252,8 +252,8 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 't'
-          }
+            unit: 't',
+          },
         },
       },
       {
@@ -263,8 +263,8 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 't'
-          }
+            unit: 't',
+          },
         },
       },
       {
@@ -274,8 +274,8 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: 't'
-          }
+            unit: 't',
+          },
         },
       },
       {
@@ -285,8 +285,8 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '棵'
-          }
+            unit: '棵',
+          },
         },
       },
       {
@@ -296,13 +296,13 @@ export const reduceItems: any = [
         dataType: {
           type: 'string',
           specs: {
-            unit: '棵'
-          }
+            unit: '棵',
+          },
         },
       },
     ],
   },
-]
+];
 
 export const systemItems: any = [
   {
@@ -400,58 +400,58 @@ export const systemItems: any = [
             name: '变流器SN',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '变流器厂商',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '变流器型号',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '离并网模式',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '硬件版本',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '软件版本',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
-        ]
+        ],
       },
       {
         id: 'c',
@@ -463,82 +463,82 @@ export const systemItems: any = [
             name: '电池SN',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '电池厂商',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '电池型号',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '工作模式',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: 'BMS SN',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: 'BMS 厂商',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: 'BMS型号',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: 'BMS硬件版本',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: 'BMS软件版本',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
-        ]
+        ],
       },
       {
         id: 'c',
@@ -550,44 +550,43 @@ export const systemItems: any = [
             name: '空调SN',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '空调厂商',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '空调型号',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '控制模式',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
           {
             id: 'b',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string'
-            }
+              type: 'string',
+            },
           },
-        ]
+        ],
       },
     ],
   },
-]
-
+];

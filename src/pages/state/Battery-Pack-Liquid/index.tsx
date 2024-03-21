@@ -14,12 +14,14 @@ import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import {
-  baseInfoItems, batteryModuleItems, funItems,
+  baseInfoItems,
+  batteryModuleItems,
+  funItems,
   individualExtremumItems,
   remoteSignalItems,
   statusItems,
 } from './helper';
-import Control from "@/components/Device/Control";
+import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');

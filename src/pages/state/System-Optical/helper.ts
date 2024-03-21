@@ -708,8 +708,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kW'
-              }
+                unit: 'kW',
+              },
             },
           },
           {
@@ -719,8 +719,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kW'
-              }
+                unit: 'kW',
+              },
             },
           },
           {
@@ -730,8 +730,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'kVar'
-              }
+                unit: 'kVar',
+              },
             },
           },
           {
@@ -876,8 +876,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V'
-              }
+                unit: 'V',
+              },
             },
           },
           {
@@ -887,8 +887,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V'
-              }
+                unit: 'V',
+              },
             },
           },
           {
@@ -898,8 +898,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V'
-              }
+                unit: 'V',
+              },
             },
           },
           {
@@ -909,8 +909,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'A'
-              }
+                unit: 'A',
+              },
             },
           },
           {
@@ -920,8 +920,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'A'
-              }
+                unit: 'A',
+              },
             },
           },
           {
@@ -931,8 +931,8 @@ export const statusItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'A'
-              }
+                unit: 'A',
+              },
             },
           },
         ],
@@ -966,7 +966,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'V',
-              }
+              },
             },
           },
           {
@@ -977,7 +977,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'A',
-              }
+              },
             },
           },
           {
@@ -988,7 +988,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kW',
-              }
+              },
             },
           },
           {
@@ -999,7 +999,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kΩ',
-              }
+              },
             },
           },
           {
@@ -1010,7 +1010,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kΩ',
-              }
+              },
             },
           },
           {
@@ -1021,7 +1021,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kWh',
-              }
+              },
             },
           },
           {
@@ -1032,7 +1032,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kWh',
-              }
+              },
             },
           },
           {
@@ -1043,7 +1043,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kWh',
-              }
+              },
             },
           },
           {
@@ -1054,7 +1054,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'kWh',
-              }
+              },
             },
           },
           {
@@ -1065,7 +1065,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'mV',
-              }
+              },
             },
           },
           {
@@ -1076,7 +1076,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'mV',
-              }
+              },
             },
           },
           {
@@ -1087,7 +1087,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'mV',
-              }
+              },
             },
           },
           {
@@ -1098,7 +1098,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: 'mV',
-              }
+              },
             },
           },
           {
@@ -1109,7 +1109,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: '℃',
-              }
+              },
             },
           },
           {
@@ -1120,7 +1120,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: '℃',
-              }
+              },
             },
           },
           {
@@ -1131,7 +1131,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: '℃',
-              }
+              },
             },
           },
           {
@@ -1142,7 +1142,7 @@ export const statusItems: any = [
               type: 'string',
               specs: {
                 unit: '℃',
-              }
+              },
             },
           },
         ],
@@ -1268,7 +1268,6 @@ export const statusItems: any = [
   },
 ];
 
-
 export const incomeItems: any = [
   {
     name: '收益统计',
@@ -1384,7 +1383,7 @@ export const incomeItems: any = [
             unit: '¥',
           },
         },
-      }
+      },
     ],
   },
 ];

@@ -8,6 +8,8 @@ import defaultSettings from '../config/defaultSettings';
 import { getUserInfo, getRoutersInfo } from './services/session';
 import { getUserRoleId } from '@/access';
 import MyHeader from '@/components/header/MyHeader';
+import Footer from '@/components/Footer';
+
 import {
   getMenus,
   getPathTitleMap,
@@ -149,7 +151,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     waterMarkProps: {
       content: initialState?.currentUser?.userName,
     },
-    footerRender: false,
+    footerRender: () => <Footer />,
     onPageChange: () => {
       // const { location } = history;
       // // 如果没有登录，重定向到 login
@@ -213,23 +215,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     // unAccessible: <div>unAccessible</div>,
     // 增加一个 loading 的状态
     childrenRender: (children, props) => {
-      return (
-        <div>
-          {children}
-          {/* {!props.location?.pathname?.includes('/login') && (
-            <SettingDrawer
-              enableDarkTheme
-              settings={initialState?.settings}
-              onSettingChange={(settings) => {
-                setInitialState((preInitialState) => ({
-                  ...preInitialState,
-                  settings,
-                }));
-              }}
-            />
-          )} */}
-        </div>
-      );
+      return <div className="mb50">{children}</div>;
     },
     ...initialState?.settings,
   };

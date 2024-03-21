@@ -1,11 +1,13 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.less';
-import {useToggle} from "ahooks";
-import moment from "moment/moment";
+import { useToggle } from 'ahooks';
+import moment from 'moment/moment';
 import TimeButtonGroup, { TimeType } from '@/components/TimeButtonGroup';
 import * as echarts from 'echarts';
-import {DatePicker, Radio} from "antd";
-let arr1 = [], arr2 = [], myChart = null
+import { DatePicker, Radio } from 'antd';
+let arr1 = [],
+  arr2 = [],
+  myChart = null;
 const optionBat = {
   legend: {
     data: ['充放电功率'],
@@ -20,7 +22,7 @@ const optionBat = {
     bottom: '10%',
     left: 28,
     top: '24%',
-    right: 2
+    right: 2,
   },
   xAxis: [
     {
@@ -56,11 +58,11 @@ const optionBat = {
     splitLine: {
       lineStyle: {
         type: 'solid',
-        color: ['#E9E9E9']
+        color: ['#E9E9E9'],
       },
     },
   },
-  series: []
+  series: [],
 };
 
 const seriesLine = [
@@ -74,18 +76,15 @@ const seriesLine = [
     data: [],
     areaStyle: {
       normal: {
-        color: new echarts.graphic.LinearGradient(
-        0, 0, 0, 1,
-        [
-          {offset: 0, color: '#f4f8ff'},
-          {offset: 0.5, color: '#f0f5ff'},
-          {offset: 1, color: '#eff4ff'}
-          ]
-        )
-      }
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: '#f4f8ff' },
+          { offset: 0.5, color: '#f0f5ff' },
+          { offset: 1, color: '#eff4ff' },
+        ]),
+      },
     },
   },
-]
+];
 
 const seriesBar = [
   {
@@ -104,9 +103,9 @@ const seriesBar = [
     stack: 'one',
     color: '#3cd599',
     data: [],
-    barWidth: 12
-  }
-]
+    barWidth: 12,
+  },
+];
 const Index: React.FC = () => {
   const [showDatePicker, { set }] = useToggle(true);
   const [date, setDate] = useState(moment());
@@ -116,17 +115,18 @@ const Index: React.FC = () => {
   const [timeType, setTimeType] = useState<TimeType>(TimeType.DAY);
   const [chartType, setChartType] = useState(0);
   const domRef = useRef();
-  let timerOne = useRef(), timerTwo = useRef()
+  const timerOne = useRef(),
+    timerTwo = useRef();
   useEffect(() => {
-    getChartLine()
-  }, [])
+    getChartLine();
+  }, []);
   function getChartLine() {
     // if (timerOne?.current) clearInterval(timerOne.current);
-    for(let i = 0; i < 16; i++) {
+    for (let i = 0; i < 16; i++) {
       optionBat.xAxis[0].data.push(i);
       seriesLine[0].data.push((Math.random() * 10).toFixed(2));
     }
-    optionBat.series = seriesLine
+    optionBat.series = seriesLine;
     optionBat.legend.data = ['充放电功率'];
     chartInit();
   }
@@ -137,9 +137,9 @@ const Index: React.FC = () => {
       arr1.push(-(Math.random() * 10).toFixed(2));
       arr2.push((Math.random() * 10).toFixed(2));
     }
-    seriesBar[0].data = arr1
-    seriesBar[1].data = arr2
-    optionBat.yAxis.name = '单位(kWh)'
+    seriesBar[0].data = arr1;
+    seriesBar[1].data = arr2;
+    optionBat.yAxis.name = '单位(kWh)';
     optionBat.series = seriesBar;
     optionBat.legend.data = ['充电量', '放电量'];
     chartInit();
@@ -161,11 +161,11 @@ const Index: React.FC = () => {
     arr2 = [];
     optionBat.xAxis[0].data = [];
     seriesLine[0].data = [];
-    seriesBar[0].data = []
-    seriesBar[1].data = []
+    seriesBar[0].data = [];
+    seriesBar[1].data = [];
     optionBat.yAxis.name = ['单位(kW)', '单位(kWh)'][+v];
-    if (+v === 1) getChartBat()
-    else getChartLine()
+    if (+v === 1) getChartBat();
+    else getChartLine();
   }
 
   const onChange = (value) => {
@@ -198,7 +198,7 @@ const Index: React.FC = () => {
   function chartInit() {
     myChart = echarts.init(domRef.current);
     myChart.setOption(optionBat, true);
-  };
+  }
 
   return (
     <>
@@ -216,9 +216,7 @@ const Index: React.FC = () => {
           </Radio.Group>
         </div>
         <div className={styles.time}>
-          {showDatePicker && (
-            <DatePicker defaultValue={date} onChange={onChange} picker={picker}/>
-          )}
+          {showDatePicker && <DatePicker defaultValue={date} onChange={onChange} picker={picker} />}
           <TimeButtonGroup
             style={{
               marginLeft: 20,
@@ -228,7 +226,7 @@ const Index: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

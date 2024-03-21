@@ -13,7 +13,7 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { cloudApiItems, yotaiComApiItems, cloudApiSoftwareItems, } from './helper';
+import { cloudApiItems, yotaiComApiItems, cloudApiSoftwareItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const CloudPlatformPv: React.FC = () => {

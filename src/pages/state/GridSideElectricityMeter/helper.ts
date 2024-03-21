@@ -60,25 +60,25 @@ export const baseInfoItems: any = [
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          "type": "enum",
-          "specs": {
-            "0": "初始化",
-            "1": "断开",
-            "2": "连接",
-          }
-        }
+          type: 'enum',
+          specs: {
+            '0': '初始化',
+            '1': '断开',
+            '2': '连接',
+          },
+        },
       },
       {
         id: '30208',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          "type": "enum",
-          "specs": {
-            "0": "RS485",
-            "1": "未知",
-          }
-        }
+          type: 'enum',
+          specs: {
+            '0': 'RS485',
+            '1': '未知',
+          },
+        },
       },
     ],
   },

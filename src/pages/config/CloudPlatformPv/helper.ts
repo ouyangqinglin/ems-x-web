@@ -28,13 +28,13 @@ export const cloudApiItems: any = [
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "WiFi",
-                1: "LAN1",
-                2: "LAN4",
-                3: "4G"
-              }
+                0: 'WiFi',
+                1: 'LAN1',
+                2: 'LAN4',
+                3: '4G',
+              },
             },
           },
           {
@@ -64,11 +64,11 @@ export const cloudApiItems: any = [
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "静态IP",
-                1: "DHCP",
-              }
+                0: '静态IP',
+                1: 'DHCP',
+              },
             },
           },
           {
@@ -145,13 +145,13 @@ export const yotaiComApiItems: any = [
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "WiFi",
-                1: "LAN1",
-                2: "LAN4",
-                3: "4G"
-              }
+                0: 'WiFi',
+                1: 'LAN1',
+                2: 'LAN4',
+                3: '4G',
+              },
             },
           },
           {
@@ -181,11 +181,11 @@ export const yotaiComApiItems: any = [
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "静态IP",
-                1: "DHCP",
-              }
+                0: '静态IP',
+                1: 'DHCP',
+              },
             },
           },
           {
@@ -262,11 +262,11 @@ export const cloudApiSoftwareItems: any = [
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "允许",
-                1: "禁止",
-              }
+                0: '允许',
+                1: '禁止',
+              },
             },
           },
           {
@@ -370,4 +370,3 @@ export const cloudApiSoftwareItems: any = [
     ],
   },
 ];
-

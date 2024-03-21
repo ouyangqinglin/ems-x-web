@@ -97,99 +97,99 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            "id": "DehumidificationPoint",
-            "name": "除湿启控值",
-            "modelName": "除湿启控值",
-            "sortOrder": 9,
-            "parentId": "statusInformation",
-            "type": "property",
+            id: 'DehumidificationPoint',
+            name: '除湿启控值',
+            modelName: '除湿启控值',
+            sortOrder: 9,
+            parentId: 'statusInformation',
+            type: 'property',
             buttons: ['refresh', 'edit'],
-            "dataType": {
-              "type": "double",
-              "specs": {
-                "unit": "%RH",
-                "min": "0",
-                "unitName": "",
-                "max": "99.9",
-                "step": "0.01"
-              }
-            }
+            dataType: {
+              type: 'double',
+              specs: {
+                unit: '%RH',
+                min: '0',
+                unitName: '',
+                max: '99.9',
+                step: '0.01',
+              },
+            },
           },
           {
-            "id": "DehumidificationReturnDifference",
-            "name": "除湿停止值",
-            "modelName": "除湿停止值",
-            "sortOrder": 10,
-            "parentId": "statusInformation",
-            "type": "property",
+            id: 'DehumidificationReturnDifference',
+            name: '除湿停止值',
+            modelName: '除湿停止值',
+            sortOrder: 10,
+            parentId: 'statusInformation',
+            type: 'property',
             buttons: ['refresh', 'edit'],
-            "dataType": {
-              "type": "double",
-              "specs": {
-                "unit": "%RH",
-                "min": "0",
-                "unitName": "",
-                "max": "99.9",
-                "step": "0.01"
-              }
-            }
+            dataType: {
+              type: 'double',
+              specs: {
+                unit: '%RH',
+                min: '0',
+                unitName: '',
+                max: '99.9',
+                step: '0.01',
+              },
+            },
           },
           {
-            "id": "TempWhenStartControl",
-            "name": "温度启控值",
-            "modelName": "温度启控值",
-            "sortOrder": 11,
-            "parentId": "statusInformation",
-            "type": "property",
+            id: 'TempWhenStartControl',
+            name: '温度启控值',
+            modelName: '温度启控值',
+            sortOrder: 11,
+            parentId: 'statusInformation',
+            type: 'property',
             buttons: ['refresh', 'edit'],
-            "dataType": {
-              "type": "double",
-              "specs": {
-                "unit": "℃",
-                "min": "0",
-                "unitName": "温度",
-                "max": "99.9",
-                "step": "0.01"
-              }
-            }
+            dataType: {
+              type: 'double',
+              specs: {
+                unit: '℃',
+                min: '0',
+                unitName: '温度',
+                max: '99.9',
+                step: '0.01',
+              },
+            },
           },
           {
-            "id": "TempWhenStopControl",
-            "name": "温度控制回差值",
-            "modelName": "温度控制回差值",
-            "sortOrder": 12,
-            "parentId": "statusInformation",
-            "type": "property",
+            id: 'TempWhenStopControl',
+            name: '温度控制回差值',
+            modelName: '温度控制回差值',
+            sortOrder: 12,
+            parentId: 'statusInformation',
+            type: 'property',
             buttons: ['refresh', 'edit'],
-            "dataType": {
-              "type": "double",
-              "specs": {
-                "unit": "℃",
-                "min": "0",
-                "unitName": "温度",
-                "max": "20",
-                "step": "0.01"
-              }
-            }
+            dataType: {
+              type: 'double',
+              specs: {
+                unit: '℃',
+                min: '0',
+                unitName: '温度',
+                max: '20',
+                step: '0.01',
+              },
+            },
           },
           {
-            "id": "CoolingPlateDeicingTemp",
-            "name": "冷凝片除冰值",
-            "modelName": "冷凝片除冰值",
-            "sortOrder": 13,
-            "parentId": "statusInformation",
-            "type": "property",
+            id: 'CoolingPlateDeicingTemp',
+            name: '冷凝片除冰值',
+            modelName: '冷凝片除冰值',
+            sortOrder: 13,
+            parentId: 'statusInformation',
+            type: 'property',
             buttons: ['refresh', 'edit'],
-            "dataType": {
-              "type": "double",
-              "specs": {
-                "unit": "℃",
-                "min": "-9",
-                "unitName": "温度",
-                "max": "9",
-                "step": "0.01"
-              }
-            }
+            dataType: {
+              type: 'double',
+              specs: {
+                unit: '℃',
+                min: '-9',
+                unitName: '温度',
+                max: '9',
+                step: '0.01',
+              },
+            },
           },
         ],
       },

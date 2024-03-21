@@ -70,7 +70,7 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'string',
         },
-      }
+      },
     ],
   },
 ];

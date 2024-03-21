@@ -13,12 +13,7 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import {
-  baseInfoItems,
-  statusItems,
-  reductionItems,
-  incomeItems,
-} from './helper';
+import { baseInfoItems, statusItems, reductionItems, incomeItems } from './helper';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');

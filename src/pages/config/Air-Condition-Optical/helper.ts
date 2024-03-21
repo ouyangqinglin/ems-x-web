@@ -247,8 +247,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'H'
-              }
+                unit: 'H',
+              },
             },
           },
           {
@@ -259,8 +259,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'Min'
-              }
+                unit: 'Min',
+              },
             },
           },
           {
@@ -271,8 +271,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V'
-              }
+                unit: 'V',
+              },
             },
           },
           {
@@ -283,8 +283,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: 'V'
-              }
+                unit: 'V',
+              },
             },
           },
           {
@@ -304,8 +304,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: '°C'
-              }
+                unit: '°C',
+              },
             },
           },
           {
@@ -316,8 +316,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: '°C'
-              }
+                unit: '°C',
+              },
             },
           },
           {
@@ -328,8 +328,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: '°C'
-              }
+                unit: '°C',
+              },
             },
           },
           {
@@ -340,8 +340,8 @@ export const runValueItems: any = [
             dataType: {
               type: 'string',
               specs: {
-                unit: '°C'
-              }
+                unit: '°C',
+              },
             },
           },
         ],
@@ -349,4 +349,3 @@ export const runValueItems: any = [
     ],
   },
 ];
-

@@ -337,9 +337,9 @@ export const electricItems: any = [
           },
         },
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export const incomeItems: any = [
   {
@@ -392,9 +392,9 @@ export const incomeItems: any = [
           },
         },
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export const reduceItems: any = [
   {
@@ -469,9 +469,9 @@ export const reduceItems: any = [
           },
         },
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export const systemItems: any = [
   {

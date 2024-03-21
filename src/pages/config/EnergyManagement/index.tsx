@@ -13,7 +13,13 @@ import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { spontaneousSelfUseItems, peakShavingValleyFillingItems, backupModeItems, manualModeItems, elePriceItems } from './helper';
+import {
+  spontaneousSelfUseItems,
+  peakShavingValleyFillingItems,
+  backupModeItems,
+  manualModeItems,
+  elePriceItems,
+} from './helper';
 import Control from '@/components/Device/Control';
 
 const EnergyManagement: React.FC = () => {
@@ -27,10 +33,7 @@ const EnergyManagement: React.FC = () => {
     <>
       <div className="p24">
         <Card>
-          <Control
-            groupData={spontaneousSelfUseItems}
-            realTimeData={realTimeData}
-          />
+          <Control groupData={spontaneousSelfUseItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
           <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} />

@@ -11,11 +11,7 @@ import React from 'react';
 import Card from '@/components/Card';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import {
-  baseInfoItems,
-  batteryParamsItems,
-  batteryPackEnableItems,
-} from './helper';
+import { baseInfoItems, batteryParamsItems, batteryPackEnableItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {

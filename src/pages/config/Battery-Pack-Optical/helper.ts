@@ -125,11 +125,11 @@ export const batteryPackEnableItems: any = [
               },
             },
           },
-        ]
+        ],
       },
-    ]
-  }
-]
+    ],
+  },
+];
 
 export const batteryParamsItems: any = [
   {
@@ -163,9 +163,9 @@ export const batteryParamsItems: any = [
                   },
                 },
               },
-            ]
+            ],
           },
-        ]
+        ],
       },
       {
         id: 'a',
@@ -588,8 +588,8 @@ export const batteryParamsItems: any = [
                 },
               },
             ],
-          }
-        ]
+          },
+        ],
       },
       {
         id: 'a',
@@ -1012,8 +1012,8 @@ export const batteryParamsItems: any = [
                 },
               },
             ],
-          }
-        ]
+          },
+        ],
       },
       {
         id: 'a',
@@ -1436,8 +1436,8 @@ export const batteryParamsItems: any = [
                 },
               },
             ],
-          }
-        ]
+          },
+        ],
       },
       {
         id: 'a',
@@ -1860,9 +1860,9 @@ export const batteryParamsItems: any = [
                 },
               },
             ],
-          }
-        ]
-      }
+          },
+        ],
+      },
     ],
   },
 ];

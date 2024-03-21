@@ -111,7 +111,6 @@ export const baseInfoItems: any = [
       },
     ],
   },
-
 ];
 
 export const statusItems: any = [
@@ -820,8 +819,8 @@ export const batteryModuleItems: any = [
                     0: 'BMU1',
                     1: 'BMU2',
                     2: 'BMU3',
-                  }
-                }
+                  },
+                },
               },
               {
                 type: 'property',
@@ -829,11 +828,11 @@ export const batteryModuleItems: any = [
                 id: '2',
                 dataType: {
                   type: 'string',
-                }
+                },
               },
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
       {
         type: 'group',
@@ -854,9 +853,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -865,9 +864,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -876,9 +875,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -887,9 +886,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -898,9 +897,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -909,9 +908,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -920,9 +919,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -931,9 +930,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -942,9 +941,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -953,9 +952,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -964,9 +963,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -975,9 +974,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -986,9 +985,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -997,9 +996,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1008,9 +1007,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1019,9 +1018,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1030,9 +1029,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1041,9 +1040,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1052,9 +1051,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1063,9 +1062,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1074,9 +1073,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1085,9 +1084,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1096,9 +1095,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1107,9 +1106,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1118,9 +1117,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1129,9 +1128,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1140,9 +1139,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1151,9 +1150,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1162,9 +1161,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1173,9 +1172,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1184,9 +1183,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1195,9 +1194,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1206,9 +1205,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1217,9 +1216,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1228,9 +1227,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1239,9 +1238,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1250,9 +1249,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1261,9 +1260,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1272,9 +1271,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1283,9 +1282,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1294,9 +1293,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1305,9 +1304,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1316,9 +1315,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1327,9 +1326,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1338,9 +1337,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1349,9 +1348,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1360,9 +1359,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1371,9 +1370,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: 'mV'
-                  }
-                }
+                    unit: 'mV',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1382,9 +1381,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1393,9 +1392,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1404,9 +1403,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1415,9 +1414,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1426,9 +1425,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1437,9 +1436,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1448,9 +1447,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1459,9 +1458,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1470,9 +1469,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1481,9 +1480,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1492,9 +1491,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1503,9 +1502,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1514,9 +1513,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1525,9 +1524,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1536,9 +1535,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1547,9 +1546,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1558,9 +1557,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1569,9 +1568,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1580,9 +1579,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1591,9 +1590,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1602,9 +1601,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1613,9 +1612,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1624,9 +1623,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1635,9 +1634,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1646,9 +1645,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1657,9 +1656,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1668,9 +1667,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1679,9 +1678,9 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
               {
                 type: 'property',
@@ -1690,15 +1689,14 @@ export const batteryModuleItems: any = [
                 dataType: {
                   type: 'string',
                   specs: {
-                    unit: '℃'
-                  }
-                }
+                    unit: '℃',
+                  },
+                },
               },
-            ]
-          }
-        ]
+            ],
+          },
+        ],
       },
     ],
   },
-
-]
+];

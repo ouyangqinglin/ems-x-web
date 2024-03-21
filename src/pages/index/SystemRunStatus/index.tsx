@@ -1,6 +1,6 @@
-import React from "react";
-import styles from './index.less'
-import energyFlowImg from '@/assets/image/station/overview/energy-flow.webp'
+import React from 'react';
+import styles from './index.less';
+import energyFlowImg from '@/assets/image/station/overview/energy-flow.webp';
 
 const Index: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Index: React.FC = () => {
       <div className={styles.energy}>
         <div>系统运行状态</div>
         <div className={styles.imgBox}>
-          <img src={energyFlowImg} alt=""/>
+          <img src={energyFlowImg} alt="" />
           {/*上位机 对称*/}
           <span className={styles.one}>(已连接)</span>
           <span className={styles.six}>(已连接)</span>
@@ -23,7 +23,7 @@ const Index: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

@@ -26,6 +26,7 @@ const YTProTable = <
     toolBarRenderOptions,
     request,
     tableRef,
+    rowKey='id',
     className,
     resizable = false,
     resizableOptions,
@@ -103,7 +104,7 @@ const YTProTable = <
           showSizeChanger: true,
         }}
         request={standardRequest}
-        rowKey="id"
+        rowKey={rowKey}
         className={styles.ytTable + ' ' + className}
         {...restProps}
         scroll={{
