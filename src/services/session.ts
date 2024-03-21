@@ -42,8 +42,8 @@ export async function logout(options?: Record<string, any>) {
   });
 }
 
-export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
-  return new Promise((resolve) => {
+export async function getRouters(roleId?: any): Promise<API.GetRoutersResult> {
+  new Promise((resolve) => {
     resolve({
       code: 200,
       data: [
@@ -78,26 +78,68 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
               path: 'pcs-sess',
             },
             {
-              path: 'airCooledFireProtection',
+              path: 'pcs-pv',
             },
             {
-              path: 'liquidCooler',
+              path: 'system-air',
+            },
+            {
+              path: 'system-sess',
+            },
+            {
+              path: 'system-liquid',
+            },
+            {
+              path: 'battery-pack',
+            },
+            {
+              path: 'battery-pack-sess',
+            },
+            {
+              path: 'air-condition',
+            },
+            {
+              path: 'air-condition-sess',
+            },
+            {
+              path: 'air-cooled-fire-protection',
+            },
+            {
+              path: 'liquid-cooler',
             },
             {
               path: 'dehumidifier',
             },
             {
-              path: 'liquidCooledFireProtection',
+              path: 'liquid-cooled-fire-protection',
             },
             {
-              path: 'gridSideElectricityMeter'
+              path: 'grid-side-electricity-meter',
             },
             {
-              path: 'inverterSideMeter'
+              path: 'inverter-side-meter',
             },
             {
-              path: 'fireFightingSESS'
-            }
+              path: 'fire-fighting-sess',
+            },
+            {
+              path: 'fire-fighting-pv',
+            },
+            {
+              path: 'grid-side-electricity-meter-pv',
+            },
+            {
+              path: 'inverter-side-meter-pv',
+            },
+            {
+              path: 'system-optical',
+            },
+            {
+              path: 'battery-pack-optical',
+            },
+            {
+              path: 'air-condition-optical',
+            },
           ],
         },
         {
@@ -110,41 +152,76 @@ export async function getRouters(params?: any): Promise<API.GetRoutersResult> {
           },
           children: [
             {
+              path: 'system-control',
+            },
+            {
+              path: 'system',
+            },
+            {
               path: 'pcs',
             },
             {
               path: 'pcs-sess',
             },
             {
-              path: 'airCooledFireProtection',
+              path: 'pcs-pv',
             },
             {
-              path: 'liquidCooler',
+              path: 'pv',
+            },
+            {
+              path: 'air-condition',
+            },
+            {
+              path: 'air-condition-sess',
+            },
+            {
+              path: 'battery-pack',
+            },
+            {
+              path: 'liquid-cooler',
             },
             {
               path: 'dehumidifier',
             },
             {
-              path: 'liquidCooledFireProtection',
+              path: 'grid-side-electricity-meter',
             },
             {
-              path: 'gridSideElectricityMeter'
+              path: 'inverter-side-meter',
             },
             {
-              path: 'inverterSideMeter'
+              path: 'energy-management',
             },
             {
-              path: 'fireFightingSESS'
-            }
+              path: 'cloud-platform',
+            },
+            {
+              path: 'pv-pv',
+            },
+            {
+              path: 'inverter-side-meter-pv',
+            },
+            {
+              path: 'grid-side-electricity-meter-pv',
+            },
+            {
+              path: 'energy-management-pv',
+            },
+            {
+              path: 'cloud-platform-pv',
+            },
           ],
         },
       ],
       msg: '',
     });
   });
-  return request('/system/menu/getRouters', {
-    method: 'GET',
-    params,
+  return request('/v1/system/menu/get', {
+    method: 'POST',
+    data: {
+      roleId,
+    },
   });
 }
 
@@ -153,19 +230,40 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
     return {
       path: item.path,
       icon: createIcon(item?.meta?.icon?.replace?.('#', 'YTDotOutlined') || 'YTDotOutlined'),
-      name: item?.meta?.title,
+      name: item?.source_name || item?.meta?.title,
       children: item.children ? convertCompatRouters(item.children) : undefined,
       hideChildrenInMenu: item.hidden,
       hideInMenu: item.hidden,
       component: item.component,
       authority: item.perms,
       meta: item?.meta || {},
+      sourceId: item?.source_id,
     };
   });
 }
 
 export async function getRoutersInfo(params?: any): Promise<MenuDataItem[]> {
   return getRouters(params).then((res) => {
+    res.data.forEach((i) => {
+      if (i.path === '/configuration') {
+        i.meta = {
+          title: '系统配置',
+          icon: 'YTSettingOutlined',
+        };
+      }
+      if (i.path === '/home') {
+        i.meta = {
+          title: '首页',
+          icon: 'YTHomeOutlined',
+        };
+      }
+      if (i.path === '/status') {
+        i.meta = {
+          title: '状态数据',
+          icon: 'SyncOutlined',
+        };
+      }
+    });
     return convertCompatRouters(res.data);
   });
 }

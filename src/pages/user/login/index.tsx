@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import { login } from '@/services/login';
 import BGImg from '@/assets/image/login-bg.png';
 import styles from './index.less';
-import { clearSessionToken, setSessionToken } from '@/access';
+import { clearSessionToken, setSessionToken, setUserRoleId } from '@/access';
 import { useLocation } from '@/hooks';
 import request from '@/utils/request';
 //import { getRoutersInfo } from '@/services/session';
@@ -45,8 +45,9 @@ const Login: React.FC = () => {
   const handleSubmit = async (values: API.LoginParams) => {
     try {
       // 登录
-      const { code, data: accessToken, msg } = await login({ ...values, uuid });
-      if (code === 200) {
+      const { code, data, msg, time } = await login({ ...values, uuid });
+      console.log(code);
+      if (+code === 200) {
         const defaultLoginSuccessMessage = intl.formatMessage({
           id: 'pages.login.success',
           defaultMessage: '登录成功！',
@@ -54,11 +55,12 @@ const Login: React.FC = () => {
         const current = new Date();
         const expireTime = current.setTime(current.getTime() + 1000 * 12 * 60 * 60);
 
-        setSessionToken(accessToken, accessToken, expireTime);
+        setSessionToken(data.token, data.token, expireTime);
+        setUserRoleId(data.roleId);
         message.success(defaultLoginSuccessMessage);
 
         let redirectPath = location.query?.redirect || '/';
-        const routesList = await getRouters();
+        const routesList = await getRouters(data.roleId);
         const resList = routesList.data;
         const menus = getLocaleMenus(resList);
         const antMenus = menus && getMenus(menus);
@@ -83,6 +85,7 @@ const Login: React.FC = () => {
         message.error(msg);
       }
     } catch (error) {
+      console.log('error', error);
       clearSessionToken();
       const defaultLoginFailureMessage = intl.formatMessage({
         id: 'pages.login.failure',
@@ -116,7 +119,7 @@ const Login: React.FC = () => {
           {type === 'account' && (
             <>
               <ProFormText
-                name="account"
+                name="username"
                 fieldProps={{
                   size: 'large',
                   prefix: <UserOutlined className={styles.prefixIcon} />,

@@ -67,4 +67,5 @@ export default {
   'pages.searchTable.tenThousand': '万',
   'pages.searchTable.batchDeletion': '批量删除',
   'pages.searchTable.batchApproval': '批量审批',
+  'system.company': '深圳永泰数能科技有限公司',
 };

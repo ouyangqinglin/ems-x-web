@@ -1,5 +1,5 @@
 import React from 'react';
-import type { DeviceDataType, ModelTypeEnum } from './config';
+import type { ModelTypeEnum } from './config';
 import type { TabsProps } from 'antd';
 import AlarmRecord from './AlarmRecord';
 import AlarmStatus from './AlarmStatus';
@@ -7,12 +7,11 @@ import { Tabs, Card } from 'antd';
 import { formatMessage } from '@/utils';
 
 export type SystemAlarmProps = {
-  modelType?: keyof typeof ModelTypeEnum;
-  deviceData?: DeviceDataType;
+  modelType?: ModelTypeEnum;
+  realTimeData?: any;
 };
 
 const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
-  
   const items: TabsProps['items'] = [
     {
       key: '1',

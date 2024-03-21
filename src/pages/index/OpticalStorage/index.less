@@ -1,0 +1,27 @@
+.optical {
+  overflow-x: hidden;
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 412px;
+  }
+  .card {
+    .icon {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+      width: 60px;
+      margin: 0 40px;
+    }
+    :global {
+      .ant-card-body {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 20px 16px;
+      }
+    }
+  }
+}

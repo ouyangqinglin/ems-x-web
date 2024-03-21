@@ -70,4 +70,5 @@ export default {
   'pages.searchTable.tenThousand': '0000',
   'pages.searchTable.batchDeletion': 'bacth deletion',
   'pages.searchTable.batchApproval': 'batch approval',
+  'system.company': '深圳永泰数能科技有限公司',
 };

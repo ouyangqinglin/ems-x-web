@@ -34,7 +34,7 @@ const GridSideElectricityMeter: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mt20">
           <Run
             realTimeData={realTimeData}
             groupData={statusItems}
@@ -43,8 +43,9 @@ const GridSideElectricityMeter: React.FC = () => {
             }}
           />
         </Card>
-        <Card>
-          <Run realTimeData={realTimeData}
+        <Card className="h-full mt20">
+          <Run
+            realTimeData={realTimeData}
             groupData={eleInfoItems}
             detailProps={{
               column: 4,

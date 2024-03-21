@@ -6,6 +6,7 @@ import { history, setLocale } from 'umi';
 import { BookOutlined, LinkOutlined } from '@ant-design/icons';
 import defaultSettings from '../config/defaultSettings';
 import { getUserInfo, getRoutersInfo } from './services/session';
+import { getUserRoleId } from '@/access';
 import MyHeader from '@/components/header/MyHeader';
 import Footer from '@/components/Footer';
 
@@ -107,7 +108,7 @@ export async function getInitialState(): Promise<initialStateType> {
     const currentUser = await fetchUserInfo();
     let menus;
     if (currentUser) {
-      const requestMenus = await getRoutersInfo();
+      const requestMenus = await getRoutersInfo(+getUserRoleId());
       menus = getLocaleMenus(requestMenus);
     }
     const antMenus = menus && getMenus(menus);
@@ -150,7 +151,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     waterMarkProps: {
       content: initialState?.currentUser?.userName,
     },
-    footerRender: () => <Footer/>,
+    footerRender: () => <Footer />,
     onPageChange: () => {
       // const { location } = history;
       // // 如果没有登录，重定向到 login
@@ -214,11 +215,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
     // unAccessible: <div>unAccessible</div>,
     // 增加一个 loading 的状态
     childrenRender: (children, props) => {
-      return (
-        <div className='mb50'>
-          {children}
-        </div>
-      );
+      return <div className="mb50">{children}</div>;
     },
     ...initialState?.settings,
   };

@@ -30,16 +30,16 @@ const LiquidCooler: React.FC = () => {
             realTimeData={realTimeData}
             groupData={baseInfoItems}
             detailProps={{
-              column: 4,
+              column: 5,
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mt20">
           <Run
             realTimeData={realTimeData}
             groupData={statusItems}
             detailProps={{
-              column: 4,
+              column: 5,
             }}
           />
         </Card>
