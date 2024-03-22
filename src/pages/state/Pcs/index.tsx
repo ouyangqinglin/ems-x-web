@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-20 14:58:18
+ * @LastEditTime: 2024-03-22 13:59:18
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
@@ -23,6 +23,7 @@ import {
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -110,7 +111,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mb20">
           <Run
             realTimeData={realTimeData}
             groupData={gridSideItems}
@@ -119,6 +120,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} />
       </div>
     </>
   );
