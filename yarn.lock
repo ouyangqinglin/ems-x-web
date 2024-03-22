@@ -5539,7 +5539,7 @@
   resolved "https://registry.npmmirror.com/@xobotyi/scrollbar-width/-/scrollbar-width-1.9.5.tgz"
   integrity sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==
 
-"@yangjianfei/react-antd-column-resize@^1.0.0":
+"@yangjianfei/react-antd-column-resize@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmmirror.com/@yangjianfei/react-antd-column-resize/-/react-antd-column-resize-1.0.1.tgz#2e1c56faebdd8730ce5e4d810c4e61aa98729b29"
   integrity sha512-HQp+LX5Qcb88OR9k3+DUfnpuBktQXgErWxYKmLa1czZ8joK1g3D8E58qajTqVidiCyaCus5LAd3zeNDxlLeUsQ==

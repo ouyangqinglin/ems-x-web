@@ -244,7 +244,7 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
   return childrens.map((item: API.RoutersMenuItem) => {
     return {
       path: item.path,
-      icon: createIcon(item?.meta?.icon?.replace?.('#', 'YTDotOutlined') || 'YTDotOutlined'),
+      icon: createIcon(item?.icon?.replace?.('#', 'YTDotOutlined') || 'YTDotOutlined'),
       name: item?.source_name || item?.meta?.title,
       children: item.children ? convertCompatRouters(item.children) : undefined,
       hideChildrenInMenu: item.hidden,
@@ -260,26 +260,6 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
 
 export async function getRoutersInfo(params?: any): Promise<MenuDataItem[]> {
   return getRouters(params).then((res) => {
-    res.data.forEach((i) => {
-      if (i.path === '/configuration') {
-        i.meta = {
-          title: '系统配置',
-          icon: 'YTSettingOutlined',
-        };
-      }
-      if (i.path === '/home') {
-        i.meta = {
-          title: '首页',
-          icon: 'YTHomeOutlined',
-        };
-      }
-      if (i.path === '/status') {
-        i.meta = {
-          title: '状态数据',
-          icon: 'SyncOutlined',
-        };
-      }
-    });
     return convertCompatRouters(res.data);
   });
 }
