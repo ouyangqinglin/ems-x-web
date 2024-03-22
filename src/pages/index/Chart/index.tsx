@@ -3,11 +3,26 @@ import styles from './index.less';
 import { useToggle } from 'ahooks';
 import moment from 'moment/moment';
 import TimeButtonGroup, { TimeType } from '@/components/TimeButtonGroup';
+import { getDeviceData } from '@/services/device';
 import * as echarts from 'echarts';
 import { DatePicker, Radio } from 'antd';
-let arr1 = [],
-  arr2 = [],
+
+let arr1 = localStorage.getItem('arr1') ? JSON.parse(localStorage.getItem('arr1')) : [],
+  arr2 = localStorage.getItem('arr2') ? JSON.parse(localStorage.getItem('arr2')) : [],
+  arr3 = localStorage.getItem('arr3') ? JSON.parse(localStorage.getItem('arr3')) : [],
+  arrTime = localStorage.getItem('arrTime') ? JSON.parse(localStorage.getItem('arrTime')) : [],
   myChart = null;
+
+let day = (new Date()).getDate()
+if (!localStorage.getItem('day')) localStorage.setItem('day', day)
+else {
+  if (+day !== +(localStorage.getItem('day'))) {
+    arr1 = []
+    arr2 = []
+    arr3 = []
+    arrTime = []
+  }
+}
 const optionBat = {
   legend: {
     data: ['充放电功率'],
@@ -106,7 +121,8 @@ const seriesBar = [
     barWidth: 12,
   },
 ];
-const Index: React.FC = () => {
+const Index: React.FC = (props) => {
+
   const [showDatePicker, { set }] = useToggle(false);
   const [date, setDate] = useState(moment());
   const [picker, setPicker] = useState<
@@ -115,57 +131,65 @@ const Index: React.FC = () => {
   const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
   const [chartType, setChartType] = useState(0);
   const domRef = useRef();
-  const timerOne = useRef(),
-    timerTwo = useRef();
+  const timerOne = useRef()
+  const newChartType = useRef(chartType)
   useEffect(() => {
-    getChartLine();
+    getChartData()
   }, []);
-  function getChartLine() {
-    // if (timerOne?.current) clearInterval(timerOne.current);
-    for (let i = 0; i < 16; i++) {
-      optionBat.xAxis[0].data.push(i);
-      seriesLine[0].data.push((Math.random() * 10).toFixed(2));
-    }
-    optionBat.series = seriesLine;
-    optionBat.legend.data = ['充放电功率'];
-    chartInit();
-  }
-  function getChartBat() {
-    // if (timerTwo?.current) clearInterval(timerTwo.current);
-    for (let i = 0; i < 16; i++) {
-      optionBat.xAxis[0].data.push(`${i}:00`);
-      arr1.push(-(Math.random() * 10).toFixed(2));
-      arr2.push((Math.random() * 10).toFixed(2));
-    }
-    seriesBar[0].data = arr1;
-    seriesBar[1].data = arr2;
-    optionBat.yAxis.name = '单位(kWh)';
-    optionBat.series = seriesBar;
-    optionBat.legend.data = ['充电量', '放电量'];
-    chartInit();
+  useEffect(() => {
+    // 更新最新的state值到ref中
+    newChartType.current = chartType;
+  });
+
+  useEffect(() => {
+    chartInit(chartType)
+  }, [chartType]);
+  function getChartData(v) {
+    if (timerOne?.current) clearInterval(timerOne.current);
+    getDeviceData(1, { id: 313}).then(res => {
+      if(+res.code === 200) {
+        arrTime.push(res?.data?.refreshTime?.slice(11))
+        arr1.push(res?.data[313])
+        arr2.push(res?.data[334])
+        arr3.push(res?.data[336])
+        localStorage.setItem('arrTime', JSON.stringify(arrTime))
+        localStorage.setItem('arr1', JSON.stringify(arr1))
+        localStorage.setItem('arr2', JSON.stringify(arr2))
+        localStorage.setItem('arr3', JSON.stringify(arr3))
+        optionBat.xAxis[0].data = arrTime
+        seriesLine[0].data = arr1// 充放电功率
+        seriesBar[0].data = arr2 // 充
+        seriesBar[1].data = arr3 // 放
+        chartInit(v)
+      }
+    }).finally(() => {
+      timerOne.current = setInterval(() => getChartData(newChartType.current), 60000)
+    })
   }
 
-  const handleRadio = (e) => {
-    setChartType(e.target.value);
-    clearData(e.target.value);
-  };
-
-  function clearData(v) {
+  const changeChartType = (e) => {
     if (myChart) {
       myChart.dispose();
       myChart = null;
     }
-    // if (timerOne.current) clearInterval(timerOne.current);
-    // if (timerTwo.current) clearInterval(timerTwo.current);
-    arr1 = [];
-    arr2 = [];
-    optionBat.xAxis[0].data = [];
-    seriesLine[0].data = [];
-    seriesBar[0].data = [];
-    seriesBar[1].data = [];
-    optionBat.yAxis.name = ['单位(kW)', '单位(kWh)'][+v];
-    if (+v === 1) getChartBat();
-    else getChartLine();
+    setChartType(() => e.target.value);
+    chartInit(e.target.value)
+  };
+
+
+  function chartInit(v) {
+    if (v && +v === 1) {
+      optionBat.yAxis.name = '单位(kWh)';
+      optionBat.series = seriesBar;
+      optionBat.legend.data = ['充电量', '放电量'];
+    } else {
+      optionBat.series = seriesLine;
+      optionBat.legend.data = ['充放电功率'];
+    }
+    if (domRef?.current){
+      myChart = echarts.init(domRef.current);
+      myChart.setOption(optionBat, true);
+    }
   }
 
   const onChange = (value) => {
@@ -195,18 +219,13 @@ const Index: React.FC = () => {
     }
   };
 
-  function chartInit() {
-    myChart = echarts.init(domRef.current);
-    myChart.setOption(optionBat, true);
-  }
-
   return (
     <>
       <div className={styles.chartBox}>
         <div className={styles.chart} ref={domRef}></div>
         <div className={styles.radio}>
           <Radio.Group
-            onChange={handleRadio}
+            onChange={changeChartType}
             optionType="button"
             buttonStyle="solid"
             value={chartType}

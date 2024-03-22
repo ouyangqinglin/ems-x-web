@@ -7,7 +7,14 @@
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
+const commonDataType = {
+  type: 'enum',
+  specs: {
+    0: '初始化',
+    1: '断开',
+    2: '连接',
+  }
+}
 
 export const baseInfoItems: any = [
   {
@@ -153,73 +160,55 @@ export const baseInfoItems: any = [
         id: '180',
         name: '云平台通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '182',
         name: '永泰云通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '184',
         name: '灯板通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '186',
         name: '变流器通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '231',
         name: 'BMS 通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '188',
         name: '空调通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '194',
         name: '消防通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '196',
         name: '电网侧电表通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
       {
         id: '198',
         name: '逆变侧电表通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonDataType
       },
     ],
   },
@@ -720,10 +709,10 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '正常',
-                1: '核容',
-                2: '均衡',
-                3: '调试',
+                1: '正常',
+                2: '核容',
+                3: '均衡',
+                4: '调试',
               },
             },
           },
@@ -734,9 +723,11 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '[充电/放电]',
-                1: '待机',
-                2: '停止',
+                1: '启动',
+                2: '充电',
+                3: '放电',
+                4: '待机',
+                5: '停止',
               },
             },
           },
@@ -972,7 +963,11 @@ export const statusItems: any = [
             type: 'property',
             name: '空调告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
@@ -1426,7 +1421,7 @@ export const reductionItems = [
       {
         name: '年CO₂减排量',
         type: 'property',
-        id: '1',
+        id: '204',
         dataType: {
           type: 'string',
           specs: {
@@ -1437,7 +1432,7 @@ export const reductionItems = [
       {
         name: '累计减排量',
         type: 'property',
-        id: '1',
+        id: '206',
         dataType: {
           type: 'string',
           specs: {
@@ -1448,7 +1443,7 @@ export const reductionItems = [
       {
         name: '年节约标准煤',
         type: 'property',
-        id: '1',
+        id: '208',
         dataType: {
           type: 'string',
           specs: {
@@ -1459,7 +1454,7 @@ export const reductionItems = [
       {
         name: '累计节约',
         type: 'property',
-        id: '1',
+        id: '210',
         dataType: {
           type: 'string',
           specs: {
@@ -1470,7 +1465,7 @@ export const reductionItems = [
       {
         name: '年等效植树',
         type: 'property',
-        id: '1',
+        id: '212',
         dataType: {
           type: 'string',
           specs: {
@@ -1481,7 +1476,7 @@ export const reductionItems = [
       {
         name: '累计等效植树',
         type: 'property',
-        id: '1',
+        id: '214',
         dataType: {
           type: 'string',
           specs: {

@@ -271,9 +271,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -283,9 +280,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -295,9 +289,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -307,9 +298,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -319,9 +307,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -331,9 +316,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -343,9 +325,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -355,9 +334,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -367,9 +343,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },
@@ -379,9 +352,6 @@ export const runTimeSetItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              specs: {
-                unit: '℃',
-              },
               type: 'string',
             },
           },

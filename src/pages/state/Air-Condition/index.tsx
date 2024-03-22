@@ -16,6 +16,7 @@ import { getDeviceData } from '@/services/device';
 import { baseInfoItems, statusItems } from './helper';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
+import SystemAlarm from "@/components/SystemAlarm";
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -51,6 +52,9 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
+        <div className="mt16">
+          <SystemAlarm modelType="aircondit" realTimeData={realTimeData}/>
+        </div>
       </div>
     </>
   );

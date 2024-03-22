@@ -48,7 +48,7 @@ export const batteryItems: any = [
         },
       },
       {
-        id: '1',
+        id: '518',
         name: '储能电池功率',
         type: 'property',
         dataType: {
@@ -136,7 +136,7 @@ export const loadItems: any = [
         },
       },
       {
-        id: '1',
+        id: '347',
         name: '负载用电功率',
         type: 'property',
         dataType: {
@@ -235,7 +235,7 @@ export const reduceItems: any = [
     showType: 2,
     children: [
       {
-        id: '1',
+        id: '204',
         name: '年CO₂减排量',
         type: 'property',
         dataType: {
@@ -246,7 +246,7 @@ export const reduceItems: any = [
         },
       },
       {
-        id: '1',
+        id: '206',
         name: '累计减排量',
         type: 'property',
         dataType: {
@@ -257,7 +257,7 @@ export const reduceItems: any = [
         },
       },
       {
-        id: '1',
+        id: '208',
         name: '年节约标准煤',
         type: 'property',
         dataType: {
@@ -268,7 +268,7 @@ export const reduceItems: any = [
         },
       },
       {
-        id: '1',
+        id: '210',
         name: '累计节约',
         type: 'property',
         dataType: {
@@ -279,7 +279,7 @@ export const reduceItems: any = [
         },
       },
       {
-        id: '1',
+        id: '212',
         name: '年等效植树',
         type: 'property',
         dataType: {
@@ -290,7 +290,7 @@ export const reduceItems: any = [
         },
       },
       {
-        id: '1',
+        id: '214',
         name: '累计等效植树',
         type: 'property',
         dataType: {
