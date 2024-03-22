@@ -7,27 +7,99 @@
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
 
-import React from 'react';
-import Card from '@/components/Card';
-import { Col, Row } from 'antd';
+import React, {useState} from 'react';
+import CardC from '@/components/Card';
+import { Col, Row, Card } from 'antd';
 import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
+import styles from './index.less'
 import {
   baseInfoItems,
-  batteryModuleItems,
   funItems,
   individualExtremumItems,
   remoteSignalItems,
   statusItems,
+  bmuOneV,
+  bmuTwoV,
+  bmuThreeV,
+  bmuFourV,
+  bmuFiveV,
+  bmuSixV,
+  bmuSevenV,
+  bmuEightV,
+  bmuNineV,
+  bmuTenV,
+  bmuOneT,
+  bmuTwoT,
+  bmuThreeT,
+  bmuFourT,
+  bmuFiveT,
+  bmuSixT,
+  bmuSevenT,
+  bmuEightT,
+  bmuNineT,
+  bmuTenT
 } from './helper';
-import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
+import SystemAlarm from "@/components/SystemAlarm";
+
+let arr = new Array(24)
+arr.fill(1)
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
   const { realTimeData, run } = useDeviceData();
+
+  const [activeTabKey, setActiveTabKey] = useState<string>('0');
+  const vArr = [bmuOneV, bmuTwoV, bmuThreeV, bmuFourV, bmuFiveV, bmuSixV, bmuSevenV, bmuEightV, bmuNineV, bmuTenV]
+  const tArr = [  bmuOneT, bmuTwoT, bmuThreeT, bmuFourT, bmuFiveT, bmuSixT, bmuSevenT, bmuEightT, bmuNineT, bmuTenT]
+  const snArr= [5900,5910,5920,5930,5940,5950,5960,5970,5980,5990]
+  const onTab1Change = (key: string) => {
+    setActiveTabKey(key);
+  };
+  const tabList = [
+    {
+      key: '0',
+      tab: 'BMU1',
+    },
+    {
+      key: '1',
+      tab: 'BMU2',
+    },
+    {
+      key: '2',
+      tab: 'BMU3',
+    },
+    {
+      key: '3',
+      tab: 'BMU4',
+    },
+    {
+      key: '4',
+      tab: 'BMU5',
+    },
+    {
+      key: '5',
+      tab: 'BMU6',
+    },
+    {
+      key: '6',
+      tab: 'BMU7',
+    },
+    {
+      key: '7',
+      tab: 'BMU8',
+    },
+    {
+      key: '8',
+      tab: 'BMU9',
+    },
+    {
+      key: '9',
+      tab: 'BMU10',
+    },
+  ];
 
   return (
     <>
@@ -35,7 +107,7 @@ const Pcs: React.FC = () => {
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={baseInfoItems}
@@ -43,12 +115,12 @@ const Pcs: React.FC = () => {
                   column: 5,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={statusItems}
@@ -56,12 +128,12 @@ const Pcs: React.FC = () => {
                   column: 5,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={individualExtremumItems}
@@ -69,12 +141,12 @@ const Pcs: React.FC = () => {
                   column: 5,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={remoteSignalItems}
@@ -82,12 +154,12 @@ const Pcs: React.FC = () => {
                   column: 6,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={funItems}
@@ -95,22 +167,43 @@ const Pcs: React.FC = () => {
                   column: 4,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card className="h-full">
-              <Control
-                groupData={batteryModuleItems}
-                realTimeData={realTimeData}
-                detailProps={{
-                  column: 6,
-                }}
-              />
+            <Card tabList={tabList}
+                  className={styles.card}
+                  title="电池模块单体信息"
+                  activeTabKey={activeTabKey}
+                  onTabChange={onTab1Change}>
+              <div className={styles.sn}>BMU SN: <span>{realTimeData[snArr[+activeTabKey]]}</span></div>
+              <div className={styles.table}>
+                <div className={styles.first}>
+                  <span>序号</span>
+                  { arr.map((item, index) => {
+                    return (<span>{index+1}</span>)
+                  } )}
+                </div>
+                <div className={styles.two}>
+                  <span style={{ backgroundColor: '#f2f2f2' }}>电压(mV)</span>
+                  { vArr[+activeTabKey].map((item) => {
+                    return (<span>{realTimeData[item]}</span>)
+                  } )}
+                </div>
+                <div className={styles.three}>
+                  <span style={{ backgroundColor: '#f2f2f2' }}>温度(℃)</span>
+                  { tArr[+activeTabKey].map((item) => {
+                    return (<span>{realTimeData[item]}</span>)
+                  } )}
+                </div>
+              </div>
             </Card>
           </Col>
         </Row>
+        <div className="mt16">
+          <SystemAlarm modelType="battery" realTimeData={realTimeData}/>
+        </div>
       </div>
     </>
   );
