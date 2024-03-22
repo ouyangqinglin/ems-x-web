@@ -4,8 +4,8 @@ import IndustryStorage from './IndustryStorage';
 const Index: React.FC = () => {
   return (
     <>
-      {/*<IndustryStorage />*/}
-      <OpticalStorage />
+      <IndustryStorage />
+      {/*<OpticalStorage />*/}
     </>
   );
 };

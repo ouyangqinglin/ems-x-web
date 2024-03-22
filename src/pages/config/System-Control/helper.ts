@@ -22,7 +22,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '50400',
             name: '控制模式',
             type: 'property',
             dataType: {
@@ -30,7 +30,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '50401',
             name: '工作模式',
             type: 'property',
             dataType: {
@@ -38,7 +38,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '50402',
             name: '工作状态',
             type: 'property',
             dataType: {
@@ -46,21 +46,20 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '50400',
             name: '系统控制模式切换',
             type: 'property',
             buttons: ['edit'],
             dataType: {
               type: 'enum',
               specs: {
-                0: '削峰填谷',
-                1: '备电',
-                2: '手动控制',
+                0: '本地',
+                1: '远程',
               },
             },
           },
           {
-            id: '4',
+            id: '50401',
             name: '系统工作模式切换',
             type: 'property',
             buttons: ['edit'],
@@ -74,7 +73,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '6',
+            id: '50402',
             name: '系统工作状态控制',
             type: 'property',
             buttons: ['edit'],
@@ -85,20 +84,21 @@ export const baseInfoItems: any = [
                 1: '待机',
                 2: '停止',
                 3: '急停',
+                4: '复位',
               },
             },
           },
+          // {
+          //   id: '8',
+          //   name: '系统能量统计初始化',
+          //   type: 'property',
+          //   buttons: ['refresh'],
+          //   dataType: {
+          //     type: 'string',
+          //   },
+          // },
           {
-            id: '8',
-            name: '系统能量统计初始化',
-            type: 'property',
-            buttons: ['refresh'],
-            dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: '1',
+            id: '50416',
             name: '系统复位',
             buttons: ['refresh'],
             type: 'property',
@@ -125,7 +125,7 @@ export const batteryModeItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '50414',
             name: '工作状态',
             type: 'property',
             dataType: {
@@ -138,15 +138,17 @@ export const batteryModeItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50414',
             name: '电池工作状态控制',
             type: 'property',
             buttons: ['edit'],
             dataType: {
               specs: {
-                0: '充电',
-                1: '启动',
-                2: '放电',
+                1: '正常',
+                2: '充电',
+                3: '放电',
+                4: '待机',
+                5: '停止',
               },
               type: 'enum',
             },

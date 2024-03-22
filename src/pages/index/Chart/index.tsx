@@ -107,12 +107,12 @@ const seriesBar = [
   },
 ];
 const Index: React.FC = () => {
-  const [showDatePicker, { set }] = useToggle(true);
+  const [showDatePicker, { set }] = useToggle(false);
   const [date, setDate] = useState(moment());
   const [picker, setPicker] = useState<
     'year' | 'month' | 'time' | 'date' | 'week' | 'quarter' | undefined
   >();
-  const [timeType, setTimeType] = useState<TimeType>(TimeType.DAY);
+  const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
   const [chartType, setChartType] = useState(0);
   const domRef = useRef();
   const timerOne = useRef(),

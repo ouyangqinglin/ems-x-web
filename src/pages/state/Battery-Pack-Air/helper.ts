@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +14,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5161',
         name: '电池堆SN',
         type: 'property',
         dataType: {
@@ -24,7 +22,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '5171',
         name: '电池堆厂商',
         type: 'property',
         dataType: {
@@ -32,7 +30,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '5181',
         name: '电池组型号',
         type: 'property',
         dataType: {
@@ -40,7 +38,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '5159',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
@@ -48,7 +46,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5160',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
@@ -56,7 +54,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5200',
         name: 'BCMU SN',
         type: 'property',
         dataType: {
@@ -67,7 +65,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5210',
         name: 'BCMU厂商',
         type: 'property',
         dataType: {
@@ -78,7 +76,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '7',
+        id: '5286',
         name: 'BCMU型号',
         type: 'property',
         dataType: {
@@ -86,7 +84,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '8',
+        id: '5220',
         name: 'BCMU硬件版本',
         type: 'property',
         dataType: {
@@ -94,7 +92,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '9',
+        id: '5221',
         name: 'BCMU软件版本',
         type: 'property',
         dataType: {
@@ -102,7 +100,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '10',
+        id: '5191',
         name: '电池模块个数',
         type: 'property',
         dataType: {
@@ -120,47 +118,72 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '50',
+        id: '5296',
         type: 'property',
         name: 'BMS控制模式',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '本地',
+            1: '远程',
+          },
         },
       },
       {
-        id: '1',
+        id: '5297',
         type: 'property',
         name: '工作模式',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            1: '正常',
+            2: '核容',
+            3: '均衡',
+            4: '调试',
+          },
         },
       },
       {
-        id: '2',
+        id: '5298',
         type: 'property',
         name: '工作状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            1: '启动',
+            2: '充电',
+            3: '放电',
+            4: '待机',
+            5: '停止',
+          },
         },
       },
       {
-        id: '3',
+        id: '5301',
         type: 'property',
         name: '告警状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '告警',
+          },
         },
       },
       {
-        id: '3',
+        id: '5303',
         type: 'property',
         name: 'Pack风扇状态反馈',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '告警',
+          },
         },
       },
       {
-        id: '4',
+        id: '5240',
         type: 'property',
         name: '总电压',
         dataType: {
@@ -171,7 +194,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5241',
         type: 'property',
         name: '总电流',
         dataType: {
@@ -182,7 +205,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5260',
         type: 'property',
         name: '总功率',
         dataType: {
@@ -193,7 +216,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5242',
         type: 'property',
         name: 'SOC',
         dataType: {
@@ -204,7 +227,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5243',
         type: 'property',
         name: 'SOH',
         dataType: {
@@ -215,7 +238,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '7',
+        id: '5285',
         type: 'property',
         name: '额定容量',
         dataType: {
@@ -226,7 +249,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '8',
+        id: '5223',
         type: 'property',
         name: '可充电能量',
         dataType: {
@@ -237,7 +260,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '9',
+        id: '5224',
         type: 'property',
         name: '可放电能量',
         dataType: {
@@ -248,7 +271,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '10',
+        id: '5227',
         type: 'property',
         name: '电柜开门次数',
         dataType: {
@@ -256,7 +279,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '10',
+        id: '5236',
         type: 'property',
         name: '最近一次充电量',
         dataType: {
@@ -267,7 +290,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5237',
         type: 'property',
         name: '最近一次放电量',
         dataType: {
@@ -278,7 +301,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '12',
+        id: '5228',
         type: 'property',
         name: '今日充电量',
         dataType: {
@@ -289,7 +312,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '13',
+        id: '5230',
         type: 'property',
         name: '今日放电量',
         dataType: {
@@ -300,7 +323,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5232',
         type: 'property',
         name: '累计充电量',
         dataType: {
@@ -311,7 +334,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '15',
+        id: '5234',
         type: 'property',
         name: '累计放电量',
         dataType: {
@@ -322,7 +345,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5245',
         type: 'property',
         name: '正极绝缘值',
         dataType: {
@@ -333,7 +356,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5246',
         type: 'property',
         name: '负极绝缘值',
         dataType: {
@@ -344,7 +367,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5238',
         type: 'property',
         name: '预充总压',
         dataType: {
@@ -355,7 +378,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5247',
         type: 'property',
         name: '高压箱温度1',
         dataType: {
@@ -366,7 +389,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5192',
         type: 'property',
         name: '高压箱温度2',
         dataType: {
@@ -377,7 +400,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5193',
         type: 'property',
         name: '高压箱温度3',
         dataType: {
@@ -388,7 +411,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5194',
         type: 'property',
         name: '高压箱温度4',
         dataType: {
@@ -399,7 +422,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '18',
+        id: '5225',
         type: 'property',
         name: '最大允许充电电流',
         dataType: {
@@ -410,7 +433,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '19',
+        id: '5226',
         type: 'property',
         name: '最大允许放电电流',
         dataType: {
@@ -421,7 +444,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '20',
+        id: '5258',
         type: 'property',
         name: '最大允许充电功率',
         dataType: {
@@ -432,7 +455,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '21',
+        id: '5259',
         type: 'property',
         name: '最大允许放电功率',
         dataType: {
@@ -453,7 +476,7 @@ export const individualExtremumItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5250',
         name: '最高单体电压值',
         type: 'property',
         dataType: {
@@ -464,7 +487,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5249',
         name: '最高单体电压编号',
         type: 'property',
         dataType: {
@@ -472,7 +495,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5195',
         name: '最高单体电压BMU编号',
         type: 'property',
         dataType: {
@@ -480,7 +503,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5252',
         name: '最低单体电压值',
         type: 'property',
         dataType: {
@@ -491,7 +514,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5251',
         name: '最低单体电压编号',
         type: 'property',
         dataType: {
@@ -499,7 +522,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5196',
         name: '最低单体电压BMU编号',
         type: 'property',
         dataType: {
@@ -507,7 +530,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5262',
         name: '平均单体电压',
         type: 'property',
         dataType: {
@@ -518,7 +541,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5263',
         name: '单体电压差',
         type: 'property',
         dataType: {
@@ -529,7 +552,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5254',
         name: '最高单体温度值',
         type: 'property',
         dataType: {
@@ -540,7 +563,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5253',
         name: '最高单体温度编号',
         type: 'property',
         dataType: {
@@ -548,7 +571,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5197',
         name: '最高单体温度BMU编号',
         type: 'property',
         dataType: {
@@ -556,7 +579,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5256',
         name: '最低单体温度值',
         type: 'property',
         dataType: {
@@ -567,7 +590,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5255',
         name: '最低单体温度编号',
         type: 'property',
         dataType: {
@@ -575,7 +598,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5198',
         name: '最低单体温度BMU编号',
         type: 'property',
         dataType: {
@@ -583,7 +606,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5257',
         name: '平均单体温度',
         type: 'property',
         dataType: {
@@ -594,7 +617,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5263',
         name: '单体温度差',
         type: 'property',
         dataType: {
@@ -605,7 +628,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5269',
         name: '最高电池模块电压',
         type: 'property',
         dataType: {
@@ -616,7 +639,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5273',
         name: '最高电池电压模块编号',
         type: 'property',
         dataType: {
@@ -624,7 +647,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5271',
         name: '最低电池模块电压',
         type: 'property',
         dataType: {
@@ -635,7 +658,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5274',
         name: '最低电池电压模块编号',
         type: 'property',
         dataType: {
@@ -643,7 +666,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5275',
         name: '最高电池模块温度',
         type: 'property',
         dataType: {
@@ -654,7 +677,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5277',
         name: '最高电池温度模块编号',
         type: 'property',
         dataType: {
@@ -662,7 +685,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5279',
         name: '最低电池模块温度',
         type: 'property',
         dataType: {
@@ -673,7 +696,7 @@ export const individualExtremumItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5280',
         name: '最低电池温度模块编号',
         type: 'property',
         dataType: {
@@ -692,15 +715,20 @@ export const remoteSignalItems: any = [
     children: [
       {
         type: 'property',
-        id: '1',
+        id: '5324',
         name: '充放电指示',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '静置',
+            1: '放电',
+            2: '充电',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5325',
         name: '预充电阶段',
         dataType: {
           type: 'string',
@@ -708,87 +736,127 @@ export const remoteSignalItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5326',
         name: '主接触器状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5327',
         name: '预充接触器状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5328',
         name: '门禁状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5329',
         name: '直流断路器状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5330',
         name: '交流断路器状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5331',
         name: '接触器状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '故障',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5400[13,14]',
         name: '气溶胶信号',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '告警',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5331',
         name: '电气急停信号',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '故障',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5332',
         name: 'BMS急停信号',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '故障',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5333',
         name: '水浸信号',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5334',
         name: '交流防雷器故障',
         dataType: {
           type: 'string',
@@ -806,19 +874,19 @@ export const funItems: any = [
     children: [
       {
         type: 'property',
-        id: '1',
+        id: '5314',
         name: 'BMU1风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5304',
         name: '电池模块风扇PWM占空比1',
         dataType: {
           type: 'string',
@@ -829,19 +897,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5319',
         name: 'BMU6风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5309',
         name: '电池模块风扇PWM占空比6',
         dataType: {
           type: 'string',
@@ -852,19 +920,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5315',
         name: 'BMU2风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5305',
         name: '电池模块风扇PWM占空比2',
         dataType: {
           type: 'string',
@@ -875,19 +943,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5320',
         name: 'BMU7风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5310',
         name: '电池模块风扇PWM占空比7',
         dataType: {
           type: 'string',
@@ -898,19 +966,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5316',
         name: 'BMU3风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5306',
         name: '电池模块风扇PWM占空比3',
         dataType: {
           type: 'string',
@@ -921,19 +989,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5321',
         name: 'BMU8风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5311',
         name: '电池模块风扇PWM占空比8',
         dataType: {
           type: 'string',
@@ -944,19 +1012,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5317',
         name: 'BMU4风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5307',
         name: '电池模块风扇PWM占空比4',
         dataType: {
           type: 'string',
@@ -967,19 +1035,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5322',
         name: 'BMU9风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5312',
         name: '电池模块风扇PWM占空比9',
         dataType: {
           type: 'string',
@@ -990,19 +1058,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5318',
         name: 'BMU5风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5308',
         name: '电池模块风扇PWM占空比5',
         dataType: {
           type: 'string',
@@ -1013,19 +1081,19 @@ export const funItems: any = [
       },
       {
         type: 'property',
-        id: '1',
+        id: '5323',
         name: 'BMU10风扇',
         dataType: {
           type: 'enum',
           specs: {
-            0: '开',
-            1: '关',
+            0: '关',
+            1: '开',
           },
         },
       },
       {
         type: 'property',
-        id: '1',
+        id: '5313',
         name: '电池模块风扇PWM占空比10',
         dataType: {
           type: 'string',

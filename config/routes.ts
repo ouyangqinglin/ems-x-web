@@ -97,8 +97,8 @@ const routers: RouterType[] = [
         locale: 'menu.state.liquid',
       },
       {
-        path: 'battery-pack-air',
-        name: 'battery-pack-air',
+        path: 'battery-pack',
+        name: 'battery-pack',
         component: './state/Battery-Pack-Air',
         wrappers: ['@/components/KeepAlive'],
         keepAlive: true,
