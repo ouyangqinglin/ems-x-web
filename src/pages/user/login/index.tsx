@@ -72,8 +72,8 @@ const Login: React.FC = () => {
         const pathArr = redirectPath.split('?');
         await clear();
         history.push({
-          pathname: pathArr[0],
-          search: pathArr[1] ? '?' + pathArr[1] : '',
+          pathname: '/index',
+          // search: pathArr[1] ? '?' + pathArr[1] : '',
         });
         refresh();
         return;

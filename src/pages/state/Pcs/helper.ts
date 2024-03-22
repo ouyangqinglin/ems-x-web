@@ -94,24 +94,8 @@ export const versionItems: any = [
         },
       },
       {
-        id: '3206',
-        name: '硬件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
         id: '3201',
         name: 'DSP-B版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3207',
-        name: 'ARM-V版本',
         type: 'property',
         dataType: {
           type: 'string',
@@ -126,24 +110,8 @@ export const versionItems: any = [
         },
       },
       {
-        id: '3208',
-        name: 'ARM-B版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
         id: '3203',
         name: 'CPLD-V版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3209',
-        name: 'ARM-D版本',
         type: 'property',
         dataType: {
           type: 'string',

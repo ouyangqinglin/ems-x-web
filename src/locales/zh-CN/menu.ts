@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:36:37
- * @LastEditTime: 2024-03-19 11:18:00
+ * @LastEditTime: 2024-03-22 15:38:33
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\locales\zh-CN\menu.ts
  */
@@ -11,12 +11,12 @@ export default {
   'menu.state': '状态数据',
   'menu.state.pcs': '变流器',
   'menu.state.pcsSess': '变流器-SESS',
-  'menu.state.airCooledFireProtection': '消防-风冷',
+  'menu.state.airCooledFireProtection': '消防',
   'menu.state.liquidCooledFireProtection': '消防-液冷',
   'menu.state.fireFightingSESS': '消防-SESS',
   'menu.state.liquidCooler': '液冷机',
   'menu.state.dehumidifier': '除湿机',
-  'menu.state.air': '系统-风冷',
+  'menu.state.air': '系统',
   'menu.state.systemSess': '系统-SESS',
   'menu.state.liquid': '系统-液冷',
   'menu.state.gridSideElectricityMeter': '电网侧电表',
@@ -46,6 +46,6 @@ export default {
   'menu.config.systemOptical': '光储系统',
   'menu.config.batteryPackOptical': '光储电池组',
   'menu.config.airConditionOptical': '光储空调',
-  'menu.state.batteryPackAir': '电池组风冷',
+  'menu.state.batteryPackAir': '电池组',
   'menu.state.batteryPackLiquid': '电池组液冷',
 };
