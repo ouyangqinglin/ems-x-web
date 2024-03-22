@@ -105,7 +105,7 @@ export const peakShavingValleyFillingItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: 'peakShavingAndValleyFillingModeMaximumSOC',
+            id: '50962',
             name: '最高SOC',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -120,7 +120,7 @@ export const peakShavingValleyFillingItems: any = [
             },
           },
           {
-            id: 'peakShavingAndValleyFillingModeLowestSOC',
+            id: '50963',
             name: '最低SOC',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -190,7 +190,6 @@ export const peakShavingValleyFillingItems: any = [
   },
 ];
 
-/// 备电模式设置 - 暂时不写
 export const backupModeItems: any = [
   {
     id: 'BackupPowerModeSetting',
@@ -204,7 +203,7 @@ export const backupModeItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: 'BackupChargingPower',
+            id: '51024',
             name: '充电功率',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -220,7 +219,7 @@ export const backupModeItems: any = [
             sortOrder: 1,
           },
           {
-            id: 'BackupDischargePower',
+            id: '51025',
             name: '放电功率',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -236,7 +235,7 @@ export const backupModeItems: any = [
             sortOrder: 2,
           },
           {
-            id: 'BackupHighestSOC',
+            id: '51026',
             name: '最高SOC',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -252,7 +251,7 @@ export const backupModeItems: any = [
             sortOrder: 3,
           },
           {
-            id: 'BackupMinimumSOC',
+            id: '51027',
             name: '最低SOC',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -286,7 +285,7 @@ export const manualModeItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: 'ChargingPower',
+            id: '51028',
             name: '充电功率',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -302,7 +301,7 @@ export const manualModeItems: any = [
             },
           },
           {
-            id: 'DischargePower',
+            id: '51029',
             name: '放电功率',
             type: 'property',
             buttons: ['refresh', 'edit'],
