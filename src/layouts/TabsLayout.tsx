@@ -1,9 +1,9 @@
 import KeepAliveTabs from '@/components/KeepAliveTabs';
 import defaultSettings from '../../config/defaultSettings';
-import { Button } from 'antd';
 import styles from './index.less';
-import { ExportOutlined,UndoOutlined } from '@ant-design/icons';
 const { tabsLayout } = defaultSettings;
+// import { useDeviceData } from '@/hooks';
+// import RefreshData from '@/components/Device/RefreshData';
 
 /* *
  *
@@ -13,7 +13,7 @@ const { tabsLayout } = defaultSettings;
  * */
 
 const TabsLayout: React.FC = (props) => {
-  
+  // const { realTimeData, run } = useDeviceData();
   const renderTabs = () => {
     if (tabsLayout) return <KeepAliveTabs />;
     else return null;
@@ -22,7 +22,6 @@ const TabsLayout: React.FC = (props) => {
   return (
     <div>
       {renderTabs()}
-      
       <div className={styles.tabsContent}>
         <div
           className={styles.contain}
@@ -36,11 +35,6 @@ const TabsLayout: React.FC = (props) => {
               : {}
           }
         >
-          <div className={styles.systemWrapper}>
-            <span className={styles.systemTime}>2024-03-15 11:45:24 星期五</span>
-            <Button><UndoOutlined/>更新</Button>
-            <Button className='ml16' type="primary"><ExportOutlined/>导出数据</Button>
-          </div>
           {props.children}
         </div>
       </div>

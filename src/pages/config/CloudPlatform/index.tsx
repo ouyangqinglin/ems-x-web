@@ -7,9 +7,9 @@
  * @FilePath: \ems-x-web\src\pages\config\PcsSess\index.tsx
  */
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Card from '@/components/Card';
-import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, cloudApiSoftwareItems, yotaiComApiItems } from './helper';
+import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, commInterface4GItems, cloudApiSoftwareItems, yotaiComApiItems } from './helper';
 import Control from '@/components/Device/Control';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
@@ -19,24 +19,21 @@ const CloudPlatform: React.FC = () => {
   const [groupData, setGroupData] = useState([]);
 
   useMemo(() => {
-    if (realTimeData?.id === "50019") {
-      // 0: "WiFi", 默认
-      // 1: "LAN1",
-      // 2: "LAN2",
-      // 3: "4G"
-      switch (realTimeData?.value) {
-        case "LAN1":
-          setGroupData(commInterfaceLAN1Items);
-          break; 
-        case "LAN2":
-          setGroupData(commInterfaceLAN2Items);
-          break; 
-        case "4G":
-          setGroupData([])
-          break;
-      }
+    switch (realTimeData["50019"]) {
+      case "1":
+        setGroupData(commInterfaceWiFiItems);
+        break;
+      case "2":
+        setGroupData(commInterfaceLAN1Items);
+        break;
+      case "3":
+        setGroupData(commInterfaceLAN2Items);
+        break;
+      case "4":
+        setGroupData(commInterface4GItems)
+        break;
     }
-  }, [realTimeData?.id]);
+  }, [realTimeData["50019"]]);
 
   return (
     <>
@@ -45,9 +42,9 @@ const CloudPlatform: React.FC = () => {
         <Card>
           <Control groupData={groupData} realTimeData={realTimeData} detailProps={{ column: 3 }} />
         </Card>
-        <Card className="my20">
+        {/* <Card className="my20">
           <Control groupData={yotaiComApiItems} realTimeData={realTimeData} />
-        </Card>
+        </Card> */}
         <Card className="my20">
           <Control groupData={cloudApiSoftwareItems} realTimeData={realTimeData} />
         </Card>

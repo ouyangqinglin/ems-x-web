@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 /// 云平台通信接口 WIFI
 export const commInterfaceWiFiItems: any = [
   {
@@ -30,10 +28,10 @@ export const commInterfaceWiFiItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "WiFi",
-                1: "LAN1",
-                2: "LAN2",
-                3: "4G"
+                1: "WiFi",
+                2: "LAN1",
+                3: "LAN2",
+                4: "4G"
               }
             },
           },
@@ -66,8 +64,8 @@ export const commInterfaceWiFiItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "dhcp",
-                1: "静态ip",
+                "1": "dhcp",
+                "2": "静态ip",
               }
             },
           },
@@ -134,41 +132,41 @@ export const commInterfaceLAN1Items: any = [
     type: 'group',
     children: [
       {
-        id: '50019',
-        name: '通信接口',
-        type: 'property',
-        buttons: ['refresh', 'edit'],
-        dataType: {
-          type: "enum",
-          specs: {
-            0: "WiFi",
-            1: "LAN1",
-            2: "LAN2",
-            3: "4G"
-          }
-        },
-      },
-      {
         id: 'a',
         name: '云平台通信接口参数',
         type: 'service',
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '50229',
-            name: '连接类型',
+            id: '50019',
+            name: '通信接口',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "dhcp",
-                1: "静态ip",
+                1: "WiFi",
+                2: "LAN1",
+                3: "LAN2",
+                4: "4G"
               }
             },
           },
           {
-            id: '50230',
+            id: '50051',
+            name: '连接类型',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'enum',
+              specs: {
+                "1": "dhcp",
+                "2": "静态ip",
+              }
+            },
+          },
+          {
+            id: '50052',
             name: '外网IP地址',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -180,7 +178,7 @@ export const commInterfaceLAN1Items: any = [
             },
           },
           {
-            id: '50232',
+            id: '50054',
             name: '子网掩码',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -192,7 +190,7 @@ export const commInterfaceLAN1Items: any = [
             },
           },
           {
-            id: '50234',
+            id: '50056',
             name: '网关',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -204,7 +202,7 @@ export const commInterfaceLAN1Items: any = [
             },
           },
           {
-            id: '50236',
+            id: '50058',
             name: 'DNS服务器',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -230,41 +228,41 @@ export const commInterfaceLAN2Items: any = [
     type: 'group',
     children: [
       {
-        id: '50019',
-        name: '通信接口',
-        type: 'property',
-        buttons: ['refresh', 'edit'],
-        dataType: {
-          type: "enum",
-          specs: {
-            0: "WiFi",
-            1: "LAN1",
-            2: "LAN2",
-            3: "4G"
-          }
-        },
-      },
-      {
         id: 'a',
         name: '云平台通信接口参数',
         type: 'service',
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '50238',
-            name: '连接类型',
+            id: '50019',
+            name: '通信接口',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              type: "enum",
+              type: 'enum',
               specs: {
-                0: "dhcp",
-                1: "静态ip",
+                1: "WiFi",
+                2: "LAN1",
+                3: "LAN2",
+                4: "4G"
               }
             },
           },
           {
-            id: '50239',
+            id: '50051',
+            name: '连接类型',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'enum',
+              specs: {
+                "1": "dhcp",
+                "2": "静态ip",
+              }
+            },
+          },
+          {
+            id: '50052',
             name: '外网IP地址',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -276,7 +274,7 @@ export const commInterfaceLAN2Items: any = [
             },
           },
           {
-            id: '50241',
+            id: '50054',
             name: '子网掩码',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -288,7 +286,7 @@ export const commInterfaceLAN2Items: any = [
             },
           },
           {
-            id: '50243',
+            id: '50056',
             name: '网关',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -300,7 +298,7 @@ export const commInterfaceLAN2Items: any = [
             },
           },
           {
-            id: '50245',
+            id: '50058',
             name: 'DNS服务器',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -310,6 +308,40 @@ export const commInterfaceLAN2Items: any = [
                 unit: '',
               },
               type: 'string',
+            },
+          },
+        ],
+      },
+    ],
+  },
+];
+
+/// 云平台通信接口 4G
+export const commInterface4GItems: any = [
+  {
+    id: 'a',
+    name: '云平台通信接口参数',
+    type: 'group',
+    children: [
+      {
+        id: 'a',
+        name: '云平台通信接口参数',
+        type: 'service',
+        buttons: ['refresh', 'edit'],
+        children: [
+          {
+            id: '50019',
+            name: '通信接口',
+            type: 'property',
+            buttons: ['refresh', 'edit'],
+            dataType: {
+              type: 'enum',
+              specs: {
+                1: "WiFi",
+                2: "LAN1",
+                3: "LAN2",
+                4: "4G"
+              }
             },
           },
         ],

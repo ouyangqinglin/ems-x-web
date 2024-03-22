@@ -27,16 +27,24 @@ const EnergyManagement: React.FC = () => {
       <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card className="my20">
-          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} />
+          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={manualModeItems} realTimeData={realTimeData} />
+          <Control groupData={manualModeItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={backupModeItems} realTimeData={realTimeData} />
+          <Control groupData={backupModeItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={elePriceItems} realTimeData={realTimeData} />
+          <Control groupData={elePriceItems} realTimeData={realTimeData} detailProps={{
+            column: 3,
+          }} />
         </Card>
       </div>
     </>

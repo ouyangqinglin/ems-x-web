@@ -49,6 +49,7 @@ export type AntMenuProps = {
   key: string;
   icon?: React.ReactNode;
   sourceId?: string;
+  disabled: boolean;
   children?: AntMenuProps[];
 };
 
@@ -79,6 +80,7 @@ export const getMenus = (data: MenuDataItem[], prePath = ''): AntMenuProps[] => 
     const path = item?.path?.split('')[0] === '/' ? item.path : `${prePath}/${item.path}`;
     if (!item.hideInMenu) {
       arr.push({
+        disabled: !item.is_export,
         label: item?.name || '',
         key: path,
         icon: createIcon(item?.meta?.icon, { style: { fontSize: '20px' } }),

@@ -14,7 +14,6 @@ export type SystemAlarmProps = {
 
 const AlarmStatus: React.FC<SystemAlarmProps> = ({ modelType = 'system', realTimeData = {} }) => {
   const alarm = useMemo(() => {
-    console.log('realTimeData>>', realTimeData);
     const AlarmStatusItem =
       alarmStatusConfig[`${modelType}AlarmStatusItem` as keyof typeof alarmStatusConfig];
     const statusRender = (status: string) => {
