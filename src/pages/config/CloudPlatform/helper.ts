@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 /// 云平台通信接口 WIFI
 export const commInterfaceWiFiItems: any = [
   {
