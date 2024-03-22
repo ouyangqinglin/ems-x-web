@@ -15,7 +15,7 @@ export const batteryItems: any = [
     showType: 2,
     children: [
       {
-        id: '1',
+        id: '403',
         name: '今日充电量',
         type: 'property',
         dataType: {
@@ -26,7 +26,7 @@ export const batteryItems: any = [
         },
       },
       {
-        id: '1',
+        id: '405',
         name: '今日放电量',
         type: 'property',
         dataType: {
@@ -37,7 +37,7 @@ export const batteryItems: any = [
         },
       },
       {
-        id: '1',
+        id: '328',
         name: '可放电能量',
         type: 'property',
         dataType: {
@@ -70,7 +70,7 @@ export const batterySysItems: any = [
     showType: 2,
     children: [
       {
-        id: '1',
+        id: '330',
         name: '今日系统充电量',
         type: 'property',
         dataType: {
@@ -81,7 +81,7 @@ export const batterySysItems: any = [
         },
       },
       {
-        id: '1',
+        id: '332',
         name: '今日系统放电量',
         type: 'property',
         dataType: {
@@ -92,7 +92,7 @@ export const batterySysItems: any = [
         },
       },
       {
-        id: '1',
+        id: '313',
         name: '系统总有功功率',
         type: 'property',
         dataType: {
@@ -114,7 +114,7 @@ export const loadItems: any = [
     showType: 2,
     children: [
       {
-        id: '1',
+        id: '348',
         name: '今日负载用电量',
         type: 'property',
         dataType: {
@@ -125,7 +125,7 @@ export const loadItems: any = [
         },
       },
       {
-        id: '1',
+        id: '350',
         name: '累计负载用电量',
         type: 'property',
         dataType: {
@@ -158,7 +158,7 @@ export const incomeItems: any = [
     showType: 2,
     children: [
       {
-        id: '1',
+        id: '1408',
         name: '今日系统充电费用',
         type: 'property',
         dataType: {
@@ -169,7 +169,7 @@ export const incomeItems: any = [
         },
       },
       {
-        id: '1',
+        id: '1508',
         name: '今日系统放电收入',
         type: 'property',
         dataType: {
@@ -180,7 +180,7 @@ export const incomeItems: any = [
         },
       },
       {
-        id: '1',
+        id: '1420',
         name: '累计系统充电总费用',
         type: 'property',
         dataType: {
@@ -191,7 +191,7 @@ export const incomeItems: any = [
         },
       },
       {
-        id: '1',
+        id: '1506',
         name: '累计系统放电总收入',
         type: 'property',
         dataType: {
@@ -202,7 +202,7 @@ export const incomeItems: any = [
         },
       },
       {
-        id: '1',
+        id: '1512',
         name: '今日收益',
         type: 'property',
         dataType: {
@@ -213,7 +213,7 @@ export const incomeItems: any = [
         },
       },
       {
-        id: '1',
+        id: '1520',
         name: '累计收益',
         type: 'property',
         dataType: {
@@ -317,7 +317,7 @@ export const systemItems: any = [
         type: 'group',
         children: [
           {
-            id: '1',
+            id: '100',
             type: 'property',
             name: '设备SN',
             dataType: {
@@ -325,7 +325,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '2',
+            id: '110',
             type: 'property',
             name: '设备厂商',
             dataType: {
@@ -333,7 +333,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '3',
+            id: '120',
             type: 'property',
             name: '设备型号',
             dataType: {
@@ -341,23 +341,35 @@ export const systemItems: any = [
             },
           },
           {
-            id: '4',
+            id: '400',
             type: 'property',
             name: '工作模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
-            id: '5',
+            id: '339',
             type: 'property',
             name: '工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '故障',
+                1: '启动',
+                2: '待机',
+                3: '停止',
+                4: '急停',
+                5: '复位',
+              },
             },
           },
           {
-            id: '6',
+            id: '130',
             type: 'property',
             name: 'EMS SN',
             dataType: {
@@ -365,7 +377,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '7',
+            id: '140',
             type: 'property',
             name: 'EMS型号',
             dataType: {
@@ -373,7 +385,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '8',
+            id: '150',
             type: 'property',
             name: 'EMS 硬件版本',
             dataType: {
@@ -381,7 +393,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '9',
+            id: '151',
             type: 'property',
             name: 'EMS 软件版本',
             dataType: {
@@ -396,7 +408,7 @@ export const systemItems: any = [
         type: 'group',
         children: [
           {
-            id: 'b',
+            id: '3102',
             name: '变流器SN',
             type: 'property',
             dataType: {
@@ -404,7 +416,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '3112',
             name: '变流器厂商',
             type: 'property',
             dataType: {
@@ -412,7 +424,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '3122',
             name: '变流器型号',
             type: 'property',
             dataType: {
@@ -420,35 +432,28 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '3412',
             name: '离并网模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '并网使能',
+                1: '离网使能',
+              },
             },
           },
           {
-            id: 'b',
+            id: '3401',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: 'b',
-            name: '硬件版本',
-            type: 'property',
-            dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: 'b',
-            name: '软件版本',
-            type: 'property',
-            dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停机',
+                1: '故障',
+                2: '运行',
+              },
             },
           },
         ],
@@ -459,7 +464,7 @@ export const systemItems: any = [
         type: 'group',
         children: [
           {
-            id: 'b',
+            id: '5161',
             name: '电池SN',
             type: 'property',
             dataType: {
@@ -467,7 +472,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5171',
             name: '电池厂商',
             type: 'property',
             dataType: {
@@ -475,7 +480,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5181',
             name: '电池型号',
             type: 'property',
             dataType: {
@@ -483,7 +488,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5291',
             name: '工作模式',
             type: 'property',
             dataType: {
@@ -491,7 +496,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5298',
             name: '工作状态',
             type: 'property',
             dataType: {
@@ -499,7 +504,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5200',
             name: 'BMS SN',
             type: 'property',
             dataType: {
@@ -507,7 +512,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5210',
             name: 'BMS 厂商',
             type: 'property',
             dataType: {
@@ -515,7 +520,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5286',
             name: 'BMS型号',
             type: 'property',
             dataType: {
@@ -523,7 +528,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5220',
             name: 'BMS硬件版本',
             type: 'property',
             dataType: {
@@ -531,7 +536,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '5221',
             name: 'BMS软件版本',
             type: 'property',
             dataType: {
@@ -546,7 +551,7 @@ export const systemItems: any = [
         type: 'group',
         children: [
           {
-            id: 'b',
+            id: '30002',
             name: '空调SN',
             type: 'property',
             dataType: {
@@ -554,7 +559,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '30012',
             name: '空调厂商',
             type: 'property',
             dataType: {
@@ -562,7 +567,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '30039',
             name: '空调型号',
             type: 'property',
             dataType: {
@@ -570,19 +575,27 @@ export const systemItems: any = [
             },
           },
           {
-            id: 'b',
+            id: '30049',
             name: '控制模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
-            id: 'b',
+            id: '30024',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停止',
+                1: '运行',
+              },
             },
           },
         ],

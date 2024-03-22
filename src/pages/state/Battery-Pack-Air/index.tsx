@@ -22,16 +22,16 @@ import {
   statusItems,
 } from './helper';
 import Control from '@/components/Device/Control';
+import { useDeviceData } from '@/hooks';
+import RefreshData from '@/components/Device/RefreshData';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run } = useDeviceData();
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>

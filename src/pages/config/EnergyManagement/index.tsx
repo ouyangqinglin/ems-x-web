@@ -13,6 +13,7 @@ import {
   peakShavingValleyFillingItems,
   manualModeItems,
   elePriceItems,
+  backupModeItems
 } from './helper';
 import Control from '@/components/Device/Control';
 import RefreshData from '@/components/Device/RefreshData';
@@ -30,6 +31,9 @@ const EnergyManagement: React.FC = () => {
         </Card>
         <Card className="my20">
           <Control groupData={manualModeItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={backupModeItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
           <Control groupData={elePriceItems} realTimeData={realTimeData} />

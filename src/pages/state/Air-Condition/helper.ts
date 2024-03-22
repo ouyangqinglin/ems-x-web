@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +14,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '30002',
         name: '空调SN',
         type: 'property',
         dataType: {
@@ -24,7 +22,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '30012',
         name: '空调厂商',
         type: 'property',
         dataType: {
@@ -32,7 +30,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '30039',
         name: '空调型号',
         type: 'property',
         dataType: {
@@ -40,7 +38,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '30022',
         name: '空调硬件版本',
         type: 'property',
         dataType: {
@@ -48,7 +46,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '30023',
         name: '空调软件版本',
         type: 'property',
         dataType: {
@@ -56,19 +54,28 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '30000',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '初始化',
+            1: '断开',
+            2: '连接',
+          },
         },
       },
       {
-        id: '6',
+        id: '30001',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '485',
+            1: '未知',
+          },
         },
       },
       {
@@ -106,111 +113,103 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '50',
+        id: '30049',
         type: 'property',
         name: '空调机组控制模式',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '本地',
+            1: '远程',
+          },
         },
       },
       {
-        id: '1',
+        id: '30024',
         type: 'property',
         name: '空调机组工作状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '2',
+        id: '30103',
         type: 'property',
         name: '空调告警状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '告警',
+          },
         },
       },
       {
-        id: '3',
+        id: '30025',
         type: 'property',
         name: '内风机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '4',
+        id: '30026',
         type: 'property',
         name: '外风机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '5',
+        id: '30027',
         type: 'property',
         name: '压缩机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '6',
+        id: '30028',
         type: 'property',
         name: '电加热运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '7',
+        id: '30029',
         type: 'property',
         name: '应急风机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '8',
-        type: 'property',
-        name: '内风机运行状态',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '9',
-        type: 'property',
-        name: '外风机运行状态',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '10',
-        type: 'property',
-        name: '压缩机运行状态',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '11',
-        type: 'property',
-        name: '电加热运行状态',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '12',
-        type: 'property',
-        name: '应急风机运行状态',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '13',
+        id: '30030',
         type: 'property',
         name: '盘管温度',
         dataType: {
@@ -221,7 +220,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '30031',
         type: 'property',
         name: '室外温度',
         dataType: {
@@ -232,7 +231,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '15',
+        id: '30032',
         type: 'property',
         name: '冷凝温度',
         dataType: {
@@ -243,7 +242,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '30033',
         type: 'property',
         name: '室内温度',
         dataType: {
@@ -254,7 +253,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '30035',
         type: 'property',
         name: '排气温度',
         dataType: {
@@ -265,7 +264,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '18',
+        id: '30034',
         type: 'property',
         name: '湿度',
         dataType: {
@@ -276,7 +275,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '19',
+        id: '30037',
         type: 'property',
         name: '交流电压',
         dataType: {
@@ -287,7 +286,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '20',
+        id: '30038',
         type: 'property',
         name: '直流电压',
         dataType: {
@@ -298,7 +297,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '21',
+        id: '30036',
         type: 'property',
         name: '电流',
         dataType: {

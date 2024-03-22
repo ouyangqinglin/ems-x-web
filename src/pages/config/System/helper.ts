@@ -22,7 +22,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '100',
             name: '设备SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +31,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '110',
             name: '设备厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '120',
             name: '设备型号',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +49,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '130',
             name: 'EMS SN',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +58,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '4',
+            id: '140',
             name: 'EMS 型号',
             type: 'property',
             buttons: ['refresh'],
@@ -67,7 +67,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '6',
+            id: '150',
             name: 'EMS硬件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -76,7 +76,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '8',
+            id: '151',
             name: 'EMS软件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -103,7 +103,7 @@ export const systemParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '50716',
             name: '防逆流阈值',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -115,7 +115,7 @@ export const systemParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50717',
             name: '变压器最大负荷',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -127,7 +127,7 @@ export const systemParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50721',
             name: '需量启动功率',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -157,7 +157,7 @@ export const otherParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '50158',
             name: '数据上报频率(云平台)',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -169,7 +169,7 @@ export const otherParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '50121',
             name: '数据上报频率(永泰云平台)',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -180,18 +180,18 @@ export const otherParamsItems: any = [
               type: 'string',
             },
           },
-          {
-            id: '1',
-            name: '数据刷新频率(上位机软件)',
-            type: 'property',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                unit: 'S',
-              },
-              type: 'string',
-            },
-          },
+          // {
+          //   id: '1',
+          //   name: '数据刷新频率(上位机软件)',
+          //   type: 'property',
+          //   buttons: ['refresh', 'edit'],
+          //   dataType: {
+          //     specs: {
+          //       unit: 'S',
+          //     },
+          //     type: 'string',
+          //   },
+          // },
         ],
       },
     ],
@@ -211,7 +211,7 @@ export const timeSetItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '50000',
             name: '校时时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
