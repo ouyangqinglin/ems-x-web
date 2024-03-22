@@ -3,7 +3,6 @@ import { Alert, message, Row } from 'antd';
 import React, { useState } from 'react';
 import { ProFormCheckbox, ProFormText, LoginForm } from '@ant-design/pro-form';
 import { useIntl, history, FormattedMessage, SelectLang, useModel, useAliveController } from 'umi';
-import Footer from '@/components/Footer';
 import { login } from '@/services/login';
 import BGImg from '@/assets/image/login-bg.png';
 import styles from './index.less';
@@ -213,7 +212,6 @@ const Login: React.FC = () => {
           </div>
         </LoginForm>
       </div>
-      <Footer className={styles.footer} />
     </div>
   );
 };

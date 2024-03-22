@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ProTable, ProFormInstance } from '@ant-design/pro-components';
+import { ProTable } from '@ant-design/pro-table';
+import type { ProFormInstance } from '@ant-design/pro-components';
 import type { ParamsType } from '@ant-design/pro-provider';
 import type { YTProColumns, YTProTableProps } from './typing';
 import genDefaultOperation from './operation';
@@ -9,7 +10,7 @@ import useToolBarRender from './useToolBarRender';
 import useTableSize from './useTableSize';
 import { useBoolean } from 'ahooks';
 import { formatMessage } from '@/utils';
-import { useAntdColumnResize } from 'react-antd-column-resize';
+import { useAntdColumnResize } from '@yangjianfei/react-antd-column-resize';
 
 const YTProTable = <
   DataType extends Record<string, any>,
@@ -25,8 +26,8 @@ const YTProTable = <
     formRef,
     toolBarRenderOptions,
     request,
+    rowKey = 'id',
     tableRef,
-    rowKey='id',
     className,
     resizable = false,
     resizableOptions,

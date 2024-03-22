@@ -21,12 +21,13 @@ import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
 import SystemAlarm from '@/components/SystemAlarm';
 import { useDeviceData } from '@/hooks';
 import LiquidSystemRunStatus from '@/pages/index/LiquidSystemRunStatus';
-
+import RefreshData from '@/components/Device/RefreshData';
 const Index: React.FC = () => {
   const { realTimeData, run } = useDeviceData({ isInterval: false });
   return (
     <>
       <div className={styles.optical}>
+        <RefreshData run={run} time={realTimeData?.refreshTime} />
         <Row gutter={12}>
           <Col span={12}>
             <Card className={styles.card} style={{ height: 198 }}>

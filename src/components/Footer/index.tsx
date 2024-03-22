@@ -1,7 +1,10 @@
 import styles from './index.less';
 import { Select } from 'antd';
-
+import { useModel } from 'umi';
 export default () => {
+  const { config, dispatch } = useModel('config');
+  const { initialState } = useModel('@@initialState');
+  console.log('initialState>>', initialState);
   const options = [
     { label: '1s', value: 1 },
     { label: '2s', value: 2 },
@@ -12,9 +15,11 @@ export default () => {
     { label: '10s', value: 10 },
     { label: '12s', value: 12 },
     { label: '13s', value: 13 },
-    { label: '14s', value: 4 },
     { label: '15s', value: 15 },
   ];
+  const changeRefreshRate = (value: number) => {
+    dispatch({ payload: { refreshTime: value } });
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -33,7 +38,12 @@ export default () => {
         </div>
         <div>
           <span>自动刷新频率：</span>
-          <Select options={options} />
+          <Select
+            style={{ width: '60px' }}
+            defaultValue={config.refreshTime}
+            onChange={changeRefreshRate}
+            options={options}
+          />
         </div>
       </div>
     </div>
