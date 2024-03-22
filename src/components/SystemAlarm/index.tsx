@@ -5,7 +5,7 @@ import AlarmRecord from './AlarmRecord';
 import AlarmStatus from './AlarmStatus';
 import { Tabs, Card } from 'antd';
 import { formatMessage } from '@/utils';
-
+import styles from './index.less';
 export type SystemAlarmProps = {
   modelType?: ModelTypeEnum;
   realTimeData?: any;
@@ -26,7 +26,7 @@ const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
   ];
 
   return (
-    <Card>
+    <Card className={styles.alarmCard}>
       <Tabs items={items} />
     </Card>
   );

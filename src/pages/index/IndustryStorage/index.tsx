@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Card, Col, Row, DatePicker, Radio } from 'antd';
+import React from 'react';
+import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Run from '@/components/Device/Run';
+import SystemAlarm from '@/components/SystemAlarm';
 import {
   batteryItems,
   batterySysItems,
@@ -10,26 +11,21 @@ import {
   reduceItems,
   systemItems,
 } from './helper';
-import { useModel } from '@@/plugin-model/useModel';
-import { useRequest } from '@@/plugin-request/request';
-import { getDeviceData } from '@/services/device';
 import Chart from '../Chart';
+import { useDeviceData } from '@/hooks';
 import SystemRunStatus from '../SystemRunStatus';
 import batImg from '@/assets/image/station/overview/icon_储能电池.svg';
 import batSystemImg from '@/assets/image/station/overview/icon_储能.svg';
 import loadImg from '@/assets/image/station/overview/icon_负载1.svg';
 import incomeImg from '@/assets/image/station/overview/icon_收益.svg';
 import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
+import RefreshData from '@/components/Device/RefreshData';
 
 const Index: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
-
+  const { realTimeData, run } = useDeviceData();
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className={styles.industry}>
         <Row gutter={12}>
           <Col span={8}>
@@ -131,6 +127,11 @@ const Index: React.FC = () => {
                 }}
               />
             </Card>
+          </Col>
+        </Row>
+        <Row className="mt16">
+          <Col span={24}>
+            <SystemAlarm modelType="system" realTimeData={realTimeData} />
           </Col>
         </Row>
       </div>

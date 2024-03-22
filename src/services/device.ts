@@ -27,3 +27,15 @@ export const editDeviceData = (data: any) => {
     data,
   });
 };
+
+export const getSystemTime = () => {
+  return request(`/v1/system/data/systemTime`, {
+    method: 'GET',
+  });
+};
+
+export const getSystemStatus = () => {
+  return request(`/v1/system/data/deviceStatus`, {
+    method: 'GET',
+  });
+};

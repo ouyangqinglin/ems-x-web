@@ -215,7 +215,7 @@ export class HttpRequest implements HttpRequestType {
       };
     }
     return result.then((res) => {
-      if (res?.data) {
+      if (res?.data && Object.prototype.toString.call(res?.data) === '[object Object]') {
         res.data.refreshTime = moment().format('YYYY-MM-DD HH:mm:ss');
       }
       return res as ResponsePromise<T, U>;

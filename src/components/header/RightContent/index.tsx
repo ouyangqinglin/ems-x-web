@@ -3,24 +3,36 @@ import React, { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import Avatar from './AvatarDropdown';
 import styles from './index.less';
-import moment from 'moment';
-
 export type SiderTheme = 'light' | 'dark';
+import { getSystemTime } from '@/services/device';
 
 const GlobalHeaderRight: React.FC = () => {
   const { initialState } = useModel('@@initialState');
   const [tiem, setTime] = useState();
+  const { config } = useModel('config');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const requestSystemTime = () => {
+    return getSystemTime()
+      .then((res) => {
+        setTime(res.data);
+        return true;
+      })
+      .catch(() => {
+        return false;
+      });
+  };
   useEffect(() => {
+    requestSystemTime();
     const timer = setInterval(() => {
-      const currentTime = moment().format('YYYY-MM-DD dddd');
-      setTime(currentTime as any);
-    }, 1000);
+      const isNoError = requestSystemTime();
+      !isNoError && clearInterval(timer);
+    }, config.refreshTime * 1000);
     return () => {
       clearInterval(timer);
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [config.refreshTime]);
 
   if (!initialState || !initialState.settings) {
     return null;
