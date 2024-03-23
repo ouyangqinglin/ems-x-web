@@ -26,9 +26,9 @@ const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
   ];
 
   return (
-    <Card className={styles.alarmCard}>
+    <div className="card-wrap shadow p20 h-full">
       <Tabs items={items} />
-    </Card>
+    </div>
   );
 };
 
