@@ -1,8 +1,12 @@
-import { formatMessage } from '@/utils';
+// import { formatMessage } from '@/utils';
 type AlarmStatusItemType = {
   name: string;
   hideTitle?: boolean;
   children: { name: string; status: string }[];
+};
+//暂时不做国际化
+const formatMessage = (message: any) => {
+  return message.defaultMessage;
 };
 //系统告警状态
 export const systemAlarmStatusItem: AlarmStatusItemType[] = [

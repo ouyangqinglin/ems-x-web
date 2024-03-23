@@ -1,14 +1,15 @@
-import { Space, Button, Modal, Tree } from 'antd';
+import { Space, Button, Modal, Tree, message } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useModel } from 'umi';
 import Avatar from './AvatarDropdown';
 import styles from './index.less';
 export type SiderTheme = 'light' | 'dark';
-import { getSystemTime } from '@/services/device';
+import { getSystemTime, exportData } from '@/services/device';
 
 const GlobalHeaderRight: React.FC = () => {
   const { initialState } = useModel('@@initialState');
   const [tiem, setTime] = useState();
+  const [checkData, setCheckData] = useState<string[]>([]);
   const { config } = useModel('config');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -48,13 +49,19 @@ const GlobalHeaderRight: React.FC = () => {
     setIsModalOpen(true);
   };
   const handleOk = () => {
-    setIsModalOpen(false);
+    if (!checkData.length) {
+      message.info('请至少选择一项进行导出！');
+      return;
+    }
+    exportData(checkData).catch(() => {
+      message.error('导出失败！');
+    });
   };
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-  const onTreeSelect = (data) => {
-    console.log('data>>', data);
+  const onTreeSelect = (data: string[]) => {
+    setCheckData(data);
   };
   return (
     <>
@@ -68,9 +75,9 @@ const GlobalHeaderRight: React.FC = () => {
       <Modal title="选择导出数据页面" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <Tree
           checkable
-          fieldNames={{ title: 'label', key: 'key' }}
+          fieldNames={{ title: 'label', key: 'sourceId' }}
           treeData={initialState?.antMenus}
-          onSelect={onTreeSelect}
+          onCheck={onTreeSelect}
           defaultExpandAll
         />
       </Modal>

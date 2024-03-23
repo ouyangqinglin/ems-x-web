@@ -15,12 +15,12 @@ const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
   const items: TabsProps['items'] = [
     {
       key: '1',
-      label: formatMessage({ id: 'common', defaultMessage: '告警状态' }),
+      label: formatMessage({ id: 'alarm.status', defaultMessage: '告警状态' }),
       children: <AlarmStatus {...props} />,
     },
     {
       key: '2',
-      label: formatMessage({ id: 'common', defaultMessage: '告警记录' }),
+      label: formatMessage({ id: 'alarm.record', defaultMessage: '告警记录' }),
       children: <AlarmRecord {...props} />,
     },
   ];

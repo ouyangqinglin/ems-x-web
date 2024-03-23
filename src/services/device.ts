@@ -8,6 +8,7 @@
  */
 
 import request, { ResponseCommonData, ResponsePageData } from '@/utils/request';
+import { downLoadXlsx } from '@/utils/downloadfile';
 
 export const getDeviceData = (sourceId: string, data?: any) => {
   return request<ResponseCommonData<Record<string, any> & { refreshTime: string }>>(
@@ -38,4 +39,8 @@ export const getSystemStatus = () => {
   return request(`/v1/system/data/deviceStatus`, {
     method: 'GET',
   });
+};
+
+export const exportData = (data: any) => {
+  return downLoadXlsx(`/v1/system/data/export`, { data }, '上位机数据.xlsx');
 };

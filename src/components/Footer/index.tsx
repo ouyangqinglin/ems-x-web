@@ -20,7 +20,12 @@ const options = [
 // import { useDeviceData } from '@/hooks';
 export default () => {
   const { config, dispatch } = useModel('config');
-  const [statusInfo, setStatusInfo] = useState({ online: false });
+  const [statusInfo, setStatusInfo] = useState({
+    status: false,
+    deviceSn: '',
+    connectType: '',
+    address: '',
+  });
 
   const requestSystemStatus = () => {
     return getSystemStatus()
@@ -50,21 +55,22 @@ export default () => {
 
   return (
     <div className={styles.wrapper}>
-      <div>
-        <span>打开成功：</span>
-        <span>COM1 9600</span>
+      <div className={styles.left_content}>
+        <span>{statusInfo?.connectType ? '打开成功：' : '串口未打开'}</span>
+        <span className={styles.connectType}>{statusInfo?.connectType}</span>
+        <span className={styles.address}>{statusInfo?.address}</span>
       </div>
       <div className={styles.right_content}>
         <div>
           <span>通信状态：</span>
           <span style={{ verticalAlign: 'middle' }}>
-            {statusInfo?.online ? <NormalStatusIcon /> : <AlarmStatusIcon />}
+            {statusInfo?.status ? <NormalStatusIcon /> : <AlarmStatusIcon />}
           </span>
-          <span className="ml5">{statusInfo?.online ? '连接正常' : '连接失败'}</span>
+          <span className="ml5">{statusInfo?.status ? '连接正常' : '连接失败'}</span>
         </div>
         <div>
           <span>SN：</span>
-          <span>L4M0KC0685</span>
+          <span>{statusInfo?.deviceSn}</span>
         </div>
         <div>
           <span>自动刷新频率：</span>

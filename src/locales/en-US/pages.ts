@@ -71,4 +71,7 @@ export default {
   'pages.searchTable.batchDeletion': 'bacth deletion',
   'pages.searchTable.batchApproval': 'batch approval',
   'system.company': '深圳永泰数能科技有限公司',
+
+  'alarm.status': 'Alarm Status',
+  'alarm.record': 'Alarm Record',
 };
