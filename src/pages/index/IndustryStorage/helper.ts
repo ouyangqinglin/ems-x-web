@@ -488,11 +488,17 @@ export const systemItems: any = [
             },
           },
           {
-            id: '5291',
+            id: '5297',
             name: '工作模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '正常',
+                2: '核容',
+                3: '均衡',
+                4: '调试',
+              },
             },
           },
           {
@@ -500,7 +506,14 @@ export const systemItems: any = [
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '启动',
+                2: '充电',
+                3: '放电',
+                4: '待机',
+                5: '停止',
+              },
             },
           },
           {

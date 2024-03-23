@@ -13,6 +13,7 @@ import Run from '@/components/Device/Run';
 import { baseInfoItems, statusItems } from './helper';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const AirCooledFireProtection: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -39,6 +40,9 @@ const AirCooledFireProtection: React.FC = () => {
             }}
           />
         </Card>
+        <div className="mt16">
+          <SystemAlarm modelType="fireFightWind" realTimeData={realTimeData} />
+        </div>
       </div>
     </>
   );

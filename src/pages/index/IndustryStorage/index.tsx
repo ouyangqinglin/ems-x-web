@@ -33,7 +33,7 @@ const Index: React.FC = () => {
             <Card className={styles.card} style={{ height: 198 }}>
               <div className={styles.icon}>
                 <img src={batImg} alt="" />
-                <span>储能电池</span>
+                <span className={styles.title}>储能电池</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -48,7 +48,7 @@ const Index: React.FC = () => {
             <Card className={styles.card} style={{ height: 198 }}>
               <div className={styles.icon}>
                 <img src={batSystemImg} alt="" />
-                <span>储能系统</span>
+                <span className={styles.title}>储能系统</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -63,7 +63,7 @@ const Index: React.FC = () => {
             <Card className={styles.card} style={{ height: 198 }}>
               <div className={styles.icon}>
                 <img src={loadImg} alt="" />
-                <span>负载</span>
+                <span className={styles.title}>负载</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -91,7 +91,7 @@ const Index: React.FC = () => {
               <Card style={{ height: 198 }} className={styles.card}>
                 <div className={styles.icon}>
                   <img src={incomeImg} alt="" />
-                  <span>收益</span>
+                  <span className={styles.title}>收益</span>
                 </div>
                 <Run
                   realTimeData={realTimeData}
@@ -104,7 +104,7 @@ const Index: React.FC = () => {
               <Card style={{ height: 198 }} className={styles.card}>
                 <div className={styles.icon}>
                   <img src={reduceImg} alt="" />
-                  <span>减排</span>
+                  <span className={styles.title}>减排</span>
                 </div>
                 <Run
                   realTimeData={realTimeData}

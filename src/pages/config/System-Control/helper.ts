@@ -26,7 +26,11 @@ export const baseInfoItems: any = [
             name: '控制模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
@@ -34,7 +38,12 @@ export const baseInfoItems: any = [
             name: '工作模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '削峰填谷',
+                1: '备电',
+                2: '手动控制',
+              },
             },
           },
           {
@@ -42,7 +51,14 @@ export const baseInfoItems: any = [
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '启动',
+                1: '待机',
+                2: '停止',
+                3: '急停',
+                4: '复位',
+              },
             },
           },
           {
@@ -103,7 +119,10 @@ export const baseInfoItems: any = [
             buttons: ['refresh'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '有效',
+              },
             },
           },
         ],
@@ -130,9 +149,10 @@ export const batteryModeItems: any = [
             type: 'property',
             dataType: {
               specs: {
-                0: '充电',
-                1: '启动',
-                2: '放电',
+                1: '正常',
+                2: '核容',
+                3: '均衡',
+                4: '调试',
               },
               type: 'enum',
             },

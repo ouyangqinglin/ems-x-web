@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -93,19 +90,19 @@ export const statusItems: any = [
     name: '状态信息',
     type: 'group',
     children: [
-      {
-        id: '1',
-        name: '消防工作状态',
-        type: 'property',
-        dataType: {
-          type: 'enum',
-          specs: {
-            '0': '运行',
-            '1': '停止',
-            '2': '故障',
-          },
-        },
-      },
+      // {
+      //   id: '1',
+      //   name: '消防工作状态',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'enum',
+      //     specs: {
+      //       '0': '运行',
+      //       '1': '停止',
+      //       '2': '故障',
+      //     },
+      //   },
+      // },
       {
         id: '33036',
         name: '消防告警状态',
@@ -145,7 +142,11 @@ export const statusItems: any = [
         name: '启动类型',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '3': '自动',
+            '4': '手动',
+          },
         },
       },
       {
@@ -166,7 +167,12 @@ export const statusItems: any = [
         name: '预警级别',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '系统正常',
+            '3': '一级预警',
+            '4': '二级预警',
+          },
         },
       },
       {
@@ -183,7 +189,11 @@ export const statusItems: any = [
         type: 'property',
         span: 2,
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '关闭',
+            '1': '打开',
+          },
         },
       },
     ],

@@ -13,8 +13,8 @@ const commonDataType = {
     0: '初始化',
     1: '断开',
     2: '连接',
-  }
-}
+  },
+};
 
 export const baseInfoItems: any = [
   {
@@ -160,55 +160,55 @@ export const baseInfoItems: any = [
         id: '180',
         name: '云平台通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '182',
         name: '永泰云通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '184',
         name: '灯板通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '186',
         name: '变流器通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '231',
         name: 'BMS 通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '188',
         name: '空调通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '194',
         name: '消防通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '196',
         name: '电网侧电表通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
       {
         id: '198',
         name: '逆变侧电表通信',
         type: 'property',
-        dataType: commonDataType
+        dataType: commonDataType,
       },
     ],
   },
@@ -591,7 +591,11 @@ export const statusItems: any = [
             type: 'property',
             name: '变流器离并网模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '离网使能',
+                0: '并网使能',
+              },
             },
           },
           {
@@ -599,7 +603,14 @@ export const statusItems: any = [
             type: 'property',
             name: '变流器输出模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '离网使能',
+                2: '直流恒流',
+                3: '直流恒功率',
+                4: '交流并网恒功率',
+                5: '交流离网恒压',
+              },
             },
           },
           {
@@ -607,7 +618,12 @@ export const statusItems: any = [
             type: 'property',
             name: '变流器工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停机',
+                1: '故障',
+                2: '运行',
+              },
             },
           },
           {
@@ -615,7 +631,11 @@ export const statusItems: any = [
             type: 'property',
             name: '变流器告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
