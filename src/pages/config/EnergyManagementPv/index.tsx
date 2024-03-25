@@ -9,43 +9,48 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { Col, Row } from 'antd';
-import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import {
   spontaneousSelfUseItems,
   peakShavingValleyFillingItems,
-  backupModeItems,
   manualModeItems,
   elePriceItems,
+  backupModeItems
 } from './helper';
 import Control from '@/components/Device/Control';
+import RefreshData from '@/components/Device/RefreshData';
+import { useDeviceData } from '@/hooks';
 
 const EnergyManagementPv: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run } = useDeviceData();
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
-        <Card>
-          <Control groupData={spontaneousSelfUseItems} realTimeData={realTimeData} />
+      <Card className="my20">
+          <Control groupData={spontaneousSelfUseItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} />
+          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={backupModeItems} realTimeData={realTimeData} />
+          <Control groupData={manualModeItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={manualModeItems} realTimeData={realTimeData} />
+          <Control groupData={backupModeItems} realTimeData={realTimeData} detailProps={{
+            column: 4,
+          }} />
         </Card>
         <Card className="my20">
-          <Control groupData={elePriceItems} realTimeData={realTimeData} />
+          <Control groupData={elePriceItems} realTimeData={realTimeData} detailProps={{
+            column: 3,
+          }} />
         </Card>
       </div>
     </>
