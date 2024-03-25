@@ -13,21 +13,25 @@ const GlobalHeaderRight: React.FC = () => {
   const { config } = useModel('config');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const requestSystemTime = () => {
-    return getSystemTime()
-      .then((res) => {
+  const requestSystemTime = async () => {
+    let isError = false;
+    try {
+      const res = await getSystemTime();
+      if (res.code === 200) {
         setTime(res.data);
-        return true;
-      })
-      .catch(() => {
-        return false;
-      });
+      } else {
+        isError = true;
+      }
+    } catch {
+      isError = true;
+    }
+    return isError;
   };
   useEffect(() => {
     requestSystemTime();
-    const timer = setInterval(() => {
-      const isNoError = requestSystemTime();
-      !isNoError && clearInterval(timer);
+    const timer = setInterval(async () => {
+      const isError = await requestSystemTime();
+      isError && clearInterval(timer);
     }, config.refreshTime * 1000);
     return () => {
       clearInterval(timer);

@@ -27,26 +27,29 @@ export default () => {
     address: '',
   });
 
-  const requestSystemStatus = () => {
-    return getSystemStatus()
-      .then((res) => {
+  const requestSystemStatus = async () => {
+    let isError = false;
+    try {
+      const res = await getSystemStatus();
+      if (res.code === 200) {
         setStatusInfo(res.data);
-        return true;
-      })
-      .catch(() => {
-        return false;
-      });
+      } else {
+        isError = true;
+      }
+    } catch {
+      isError = true;
+    }
+    return isError;
   };
   useEffect(() => {
     requestSystemStatus();
-    const timer = setInterval(() => {
-      const isNoError = requestSystemStatus();
-      !isNoError && clearInterval(timer);
+    const timer = setInterval(async () => {
+      const isError = await requestSystemStatus();
+      isError && clearInterval(timer);
     }, config.refreshTime * 1000);
     return () => {
       clearInterval(timer);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [config.refreshTime]);
 
   const changeRefreshRate = (value: number) => {
