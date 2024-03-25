@@ -33,7 +33,7 @@ const Index: React.FC = (props) => {
           {/*上位机 对称*/}
           <span className={styles.one}>
             {communityMethods[data?.[179]]}
-            {status && '(已连接)'}
+            {status && '(连接)'}
           </span>
           <span className={styles.six}>
             {communityMethods[data?.[195]]}({communityStatus[data?.[194]]})
