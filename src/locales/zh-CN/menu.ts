@@ -9,6 +9,7 @@
 export default {
   'menu.index': '首页',
   'menu.state': '状态数据',
+  'menu.help': '帮助',
   'menu.state.pcs': '变流器',
   'menu.state.pcsSess': '变流器-SESS',
   'menu.state.airCooledFireProtection': '消防',

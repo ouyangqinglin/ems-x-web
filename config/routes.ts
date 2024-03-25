@@ -483,6 +483,15 @@ const routers: RouterType[] = [
         keepAlive: false,
         locale: 'menu.index',
       },
+      {
+        path: 'help',
+        name: 'help',
+        component: './help/Help',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: false,
+        locale: 'menu.help',
+      },
+      
     ],
   },
   {

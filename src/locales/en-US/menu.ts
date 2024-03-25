@@ -30,7 +30,6 @@ export default {
   'menu.config.systemControl': 'System Control',
   'menu.config.system': 'System',
   'menu.config.pv': 'Photovoltaic',
-
   'menu.config.energyManagement': 'Energy Management',
   'menu.config.cloudPlatform': 'Cloud Platform',
   'menu.state.systemOptical': '光储系统',
@@ -42,4 +41,5 @@ export default {
   'menu.config.airConditionOptical': '光储空调',
   'menu.state.batteryPackAir': 'battery pack air',
   'menu.state.batteryPackLiquid': 'battery pack liquid',
+  'menu.help': 'Help',
 };
