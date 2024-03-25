@@ -9,7 +9,8 @@
 export default {
   dev: {
     '/api/': {
-      target: 'http://192.168.3.74:8080',
+      // target: 'http://192.168.3.74:8080', // 张阳
+      target: 'http://192.168.3.53:8080', // 梁柱深
       // target: 'https://cbc.yotaienergy.com',
       // target: 'https://120.78.129.213',
       // target: 'https://192.168.3.47',

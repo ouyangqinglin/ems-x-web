@@ -22,8 +22,8 @@ import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
 import { useDeviceData } from '@/hooks';
 import { useModel } from 'umi';
 const Index: React.FC = () => {
-  const { config } = useModel('config');
-  const { realTimeData, run } = useDeviceData({ isInterval: false });
+  const { realTimeData, run } = useDeviceData();
+
   return (
     <>
       <RefreshData run={run} time={realTimeData?.refreshTime} />
