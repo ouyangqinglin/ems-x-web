@@ -294,9 +294,8 @@ export const statusItems: any = [
         type: 'property',
         dataType: {
           type: 'enum',
-          specs: {  // TODO [0-正常,1-正常,2-故障]
+          specs: {
             '0': '正常',
-            '1': '正常',
             '2': '故障',
           },
         },
