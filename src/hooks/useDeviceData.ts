@@ -60,6 +60,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
   }, [config.refreshTime]);
 
   useEffect(() => {
+    ``;
     if (!manual) {
       runRequest();
     }

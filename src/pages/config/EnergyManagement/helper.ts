@@ -169,7 +169,6 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
               type: 'string'
@@ -207,6 +206,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50969',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -268,6 +268,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50965',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -328,6 +329,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50981',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -388,6 +390,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50967',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -448,6 +451,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50993',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -508,6 +512,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '50999',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -568,6 +573,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '51005',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -628,6 +634,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '51011',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -688,6 +695,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '51017',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -748,6 +756,7 @@ export const peakShavingValleyFillingItems: any = [
 
             id: '51023',
             name: '固定功率',
+            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',

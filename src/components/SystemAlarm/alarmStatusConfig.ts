@@ -500,10 +500,6 @@ export const converterAlarmStatusItem: AlarmStatusItemType[] = [
         status: '3802[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '' }),
-        status: '',
-      },
-      {
         name: formatMessage({ id: 'common', defaultMessage: '电网相序错误' }),
         status: '3802[8,9]',
       },
@@ -834,10 +830,6 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BMU9风扇故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '' }),
         status: '5405[8,9]',
       },
       {
@@ -1174,8 +1166,8 @@ export const airconditAlarmStatusItem: AlarmStatusItemType[] = [
         status: '30100[2,3]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '30100[3,4]' }),
-        status: '低湿告警',
+        name: formatMessage({ id: 'common', defaultMessage: '低湿告警' }),
+        status: '30100[3,4]',
       },
     ],
   },
