@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +13,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5035',
         name: '电表SN',
         type: 'property',
         dataType: {
@@ -24,7 +21,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '5045',
         name: '电表厂商',
         type: 'property',
         dataType: {
@@ -32,7 +29,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '5055',
         name: '电表型号',
         type: 'property',
         dataType: {
@@ -40,7 +37,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '5065',
         name: '电表序号',
         type: 'property',
         dataType: {
@@ -48,7 +45,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5066',
         name: '电表地址',
         type: 'property',
         dataType: {
@@ -56,23 +53,27 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5067',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '断开',
-            '1': '连接',
+            '0': '正常',
+            '1': '失联',
           },
         },
       },
       {
-        id: '7',
+        id: '5068',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '485',
+            '1': '未知',
+          },
         },
       },
     ],
@@ -86,7 +87,7 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5200',
         name: '总有功功率',
         type: 'property',
         dataType: {
@@ -97,18 +98,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '2',
-        name: '总有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'W',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '3',
+        id: '5202',
         name: '总无功功率',
         type: 'property',
         dataType: {
@@ -119,7 +109,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '4',
+        id: '5204',
         name: '总视在功率',
         type: 'property',
         dataType: {
@@ -130,7 +120,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5206',
         name: '总功率因数',
         type: 'property',
         dataType: {
@@ -141,7 +131,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5208',
         name: '频率',
         type: 'property',
         dataType: {
@@ -152,7 +142,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '7',
+        id: '5209',
         name: 'A相电压',
         type: 'property',
         dataType: {
@@ -163,7 +153,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '8',
+        id: '5212',
         name: 'A相电流',
         type: 'property',
         dataType: {
@@ -174,7 +164,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '9',
+        id: '5215',
         name: 'A相有功功率',
         type: 'property',
         dataType: {
@@ -185,7 +175,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '10',
+        id: '5221',
         name: 'A相无功功率',
         type: 'property',
         dataType: {
@@ -196,7 +186,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5227',
         name: 'A相视在功率',
         type: 'property',
         dataType: {
@@ -207,7 +197,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '12',
+        id: '5233',
         name: 'A相功率因数',
         type: 'property',
         dataType: {
@@ -218,7 +208,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '13',
+        id: '5210',
         name: 'B相电压',
         type: 'property',
         dataType: {
@@ -229,7 +219,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5213',
         name: 'B相电流',
         type: 'property',
         dataType: {
@@ -240,7 +230,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '15',
+        id: '5217',
         name: 'B相有功功率',
         type: 'property',
         dataType: {
@@ -251,7 +241,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5223',
         name: 'B相无功功率',
         type: 'property',
         dataType: {
@@ -262,7 +252,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5229',
         name: 'B相视在功率',
         type: 'property',
         dataType: {
@@ -273,7 +263,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '18',
+        id: '5235',
         name: 'B相功率因数',
         type: 'property',
         dataType: {
@@ -284,7 +274,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '13',
+        id: '5211',
         name: 'C相电压',
         type: 'property',
         dataType: {
@@ -295,7 +285,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5214',
         name: 'C相电流',
         type: 'property',
         dataType: {
@@ -306,7 +296,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '15',
+        id: '5219',
         name: 'C相有功功率',
         type: 'property',
         dataType: {
@@ -317,7 +307,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5225',
         name: 'C相无功功率',
         type: 'property',
         dataType: {
@@ -328,7 +318,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5231',
         name: 'C相视在功率',
         type: 'property',
         dataType: {
@@ -339,7 +329,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '18',
+        id: '5237',
         name: 'C相功率因数',
         type: 'property',
         dataType: {
@@ -350,7 +340,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5239',
         name: '正向有功电能',
         type: 'property',
         dataType: {
@@ -361,7 +351,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5241',
         name: '正向无功电能',
         type: 'property',
         dataType: {
@@ -372,7 +362,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5243',
         name: '反向有功电能',
         type: 'property',
         dataType: {
@@ -383,7 +373,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5245',
         name: '反向无功电能',
         type: 'property',
         dataType: {
@@ -404,7 +394,7 @@ export const eleInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5247',
         name: '今日充电量',
         type: 'property',
         dataType: {
@@ -415,7 +405,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '5249',
         name: '今日放电量',
         type: 'property',
         dataType: {
@@ -426,7 +416,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '5251',
         name: '当前组合有功尖电能',
         type: 'property',
         dataType: {
@@ -437,7 +427,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '5253',
         name: '当前组合有功峰电能',
         type: 'property',
         dataType: {
@@ -448,7 +438,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5255',
         name: '当前组合有功平电能',
         type: 'property',
         dataType: {
@@ -459,7 +449,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5257',
         name: '当前组合有功谷电能',
         type: 'property',
         dataType: {
@@ -470,7 +460,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '7',
+        id: '5259',
         name: '当前组合有功总电能',
         type: 'property',
         dataType: {
@@ -481,7 +471,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '8',
+        id: '5261',
         name: '当前正向有功尖电能',
         type: 'property',
         dataType: {
@@ -492,7 +482,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '9',
+        id: '5263',
         name: '当前正向有功峰电能',
         type: 'property',
         dataType: {
@@ -503,7 +493,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '10',
+        id: '5265',
         name: '当前正向有功平电能',
         type: 'property',
         dataType: {
@@ -514,7 +504,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5267',
         name: '当前正向有功谷电能',
         type: 'property',
         dataType: {
@@ -525,7 +515,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '12',
+        id: '5270',
         name: '当前正向总有功电能',
         type: 'property',
         dataType: {
@@ -536,7 +526,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '13',
+        id: '5272',
         name: '当前反向有功尖电能',
         type: 'property',
         dataType: {
@@ -547,7 +537,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5274',
         name: '当前反向有功峰电能',
         type: 'property',
         dataType: {
@@ -558,7 +548,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '15',
+        id: '5276',
         name: '当前反向有功平电能',
         type: 'property',
         dataType: {
@@ -569,7 +559,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5278',
         name: '当前反向有功谷电能',
         type: 'property',
         dataType: {
@@ -580,7 +570,7 @@ export const eleInfoItems: any = [
         },
       },
       {
-        id: '17',
+        id: '5280',
         name: '当前反向总有功电能',
         type: 'property',
         dataType: {
