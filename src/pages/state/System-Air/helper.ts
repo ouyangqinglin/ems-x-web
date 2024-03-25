@@ -598,8 +598,10 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '离网使能',
-                0: '并网使能',
+                1: '离网',
+                2: '并网',
+                3: '并网(仅馈电)',
+                4: '并网(仅市电充电)',
               },
             },
           },
@@ -610,11 +612,9 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '直流恒流',
-                2: '直流恒压',
-                3: '直流恒功率',
-                4: '交流并网恒功率',
-                5: '交流离网恒压',
+                0: '电池恒压',
+                1: '并网恒压',
+                2: '电池恒流',
               },
             },
           },
@@ -625,9 +625,11 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '停机',
-                1: '故障',
-                2: '运行',
+                0: '启动',
+                1: '待机',
+                2: '停止',
+                3: '急停',
+                4: '复位',
               },
             },
           },

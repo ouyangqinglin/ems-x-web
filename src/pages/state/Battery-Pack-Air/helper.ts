@@ -741,7 +741,14 @@ export const remoteSignalItems: any = [
         id: '5325',
         name: '预充电阶段',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断网',
+            1: '启动并网',
+            2: '离网中',
+            3: '并网成功',
+            4: '并网失败',
+          },
         },
       },
       {
