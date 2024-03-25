@@ -13,7 +13,11 @@ const communityOtherMethods = {
   2: 'CAN',
   5: '未知',
 };
-const communityStatus = ['初始化', '断开', '连接'];
+const communityStatus = {
+  0: '初始化',
+  1: '断开',
+  2: '连接',
+};
 
 const Index: React.FC = (props) => {
   const { data } = props;

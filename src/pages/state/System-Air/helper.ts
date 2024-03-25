@@ -260,7 +260,11 @@ export const statusItems: any = [
             type: 'property',
             name: '系统告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
@@ -271,9 +275,10 @@ export const statusItems: any = [
               type: 'enum',
               specs: {
                 1: '启动',
-                2: '[充电/放电]',
-                3: '待机',
-                4: '停止',
+                2: '充电',
+                3: '放电',
+                4: '待机',
+                5: '停止',
               },
             },
           },
@@ -605,8 +610,8 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '离网使能',
-                2: '直流恒流',
+                1: '直流恒流',
+                2: '直流恒压',
                 3: '直流恒功率',
                 4: '交流并网恒功率',
                 5: '交流离网恒压',
