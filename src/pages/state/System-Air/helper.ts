@@ -181,7 +181,7 @@ export const baseInfoItems: any = [
         dataType: commonDataType,
       },
       {
-        id: '231',
+        id: '230',
         name: 'BMS 通信',
         type: 'property',
         dataType: commonDataType,
