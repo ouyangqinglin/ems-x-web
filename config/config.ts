@@ -85,14 +85,15 @@ export default defineConfig({
   chainWebpack: (config) => {
     config.module.rule('otf').test(/.otf$/).use('file-loader').loader('file-loader');
     config.module.rule('mp4').test(/.mp4$/).use('file-loader').loader('file-loader');
-    config.plugin('compression-webpack-plugin').use(CompressionPlugin, [
+    config.plugin('extract-css').tap(() => [
       {
-        algorithm: 'gzip',
-        test: /\.(js|css|html|svg|gif|png|jpeg|txt|json)$/,
-        filename: '[base].gz',
-        threshold: 2048,
-        deleteOriginalAssets: false,
+        filename: `static/css/[name].[contenthash:8].css`,
+        chunkFilename: `static/css/[name].[contenthash:8].chunk.css`,
+        ignoreOrder: true,
       },
     ]);
+    config.output
+      .filename(`static/js/[name].[hash:8].js`)
+      .chunkFilename(`static/js/[name].[contenthash:8].chunk.js`);
   },
 });
