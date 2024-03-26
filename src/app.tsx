@@ -91,7 +91,6 @@ export async function getInitialState(): Promise<initialStateType> {
           permissions: resp.permissions,
           systemInfo: {
             ...defaultSystemInfo,
-            ...resp?.systemInfo,
           },
         } as API.CurrentUser;
       }

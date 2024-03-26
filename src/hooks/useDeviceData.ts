@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-20 11:47:05
- * @LastEditTime: 2024-03-21 18:04:43
+ * @LastEditTime: 2024-03-26 11:46:03
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\hooks\useDeviceData.ts
  */
@@ -22,6 +22,7 @@ type UseDeviceDataType = {
 const useDeviceData = (options?: UseDeviceDataType) => {
   const { manual, isInterval = true, interval } = options || {};
 
+  const { data: page } = useModel('page');
   const { sourceId } = useSourceId();
   const { config } = useModel('config');
   const [realTimeData, setRealTimeData] = useState<
@@ -32,7 +33,6 @@ const useDeviceData = (options?: UseDeviceDataType) => {
 
   const { run } = useRequest(getDeviceData, {
     manual: true,
-    pollingInterval: isInterval ? (interval ? interval : config.refreshTime * 1000) : 0,
     formatResult(response) {
       const res = response || {};
       res.data = {
@@ -56,15 +56,19 @@ const useDeviceData = (options?: UseDeviceDataType) => {
   );
 
   useEffect(() => {
-    // location.reload()
-  }, [config.refreshTime]);
-
-  useEffect(() => {
-    ``;
-    if (!manual) {
+    let timer: NodeJS.Timer;
+    if (!manual && sourceId && page?.isVisible) {
       runRequest();
+      if (isInterval) {
+        timer = setInterval(() => {
+          runRequest();
+        }, interval || config.refreshTime * 1000);
+      }
     }
-  }, [manual, runRequest]);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [runRequest, config.refreshTime, page?.isVisible]);
 
   return {
     realTimeData,

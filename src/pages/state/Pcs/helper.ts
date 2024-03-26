@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-20 16:26:43
+ * @LastEditTime: 2024-03-26 10:07:06
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
@@ -94,8 +94,24 @@ export const versionItems: any = [
         },
       },
       {
+        id: '3206',
+        name: '硬件版本',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
         id: '3201',
         name: 'DSP-B版本',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
+        id: '3207',
+        name: 'ARM-V版本',
         type: 'property',
         dataType: {
           type: 'string',
@@ -110,8 +126,24 @@ export const versionItems: any = [
         },
       },
       {
+        id: '3208',
+        name: 'ARM-B版本',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
         id: '3203',
         name: 'CPLD-V版本',
+        type: 'property',
+        dataType: {
+          type: 'string',
+        },
+      },
+      {
+        id: '3209',
+        name: 'ARM-D版本',
         type: 'property',
         dataType: {
           type: 'string',
@@ -163,8 +195,10 @@ export const stateItems: any = [
         type: 'property',
         dataType: {
           specs: {
-            0: '并网使能',
-            1: '离网使能',
+            1: '离网',
+            2: '并网',
+            3: '并网(仅馈电)',
+            4: '并网(仅市电充电)',
           },
           type: 'enum',
         },
@@ -175,12 +209,9 @@ export const stateItems: any = [
         type: 'property',
         dataType: {
           specs: {
-            0: '未初始化',
-            1: '直流恒流',
-            2: '直流恒压',
-            3: '直流恒功率',
-            4: '交流并网恒功率',
-            5: '交流离网恒压',
+            0: '电池恒压',
+            1: '并网恒压',
+            2: '电池恒流',
           },
           type: 'enum',
         },
@@ -191,9 +222,11 @@ export const stateItems: any = [
         type: 'property',
         dataType: {
           specs: {
-            0: '停机',
-            1: '故障',
-            2: '运行',
+            0: '启动',
+            1: '待机',
+            2: '停止',
+            3: '急停',
+            4: '复位',
           },
           type: 'enum',
         },

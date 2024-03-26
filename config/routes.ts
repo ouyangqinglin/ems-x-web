@@ -53,7 +53,6 @@ const routers: RouterType[] = [
         name: 'pcs',
         component: './state/Pcs',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcs',
       },
       {
@@ -61,7 +60,6 @@ const routers: RouterType[] = [
         name: 'pcsSess',
         component: './state/PcsSess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcsSess',
       },
       {
@@ -69,7 +67,6 @@ const routers: RouterType[] = [
         name: 'pcsPv',
         component: './state/PcsPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcs',
       },
       {
@@ -77,7 +74,6 @@ const routers: RouterType[] = [
         name: 'system-air',
         component: './state/System-Air',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.air',
       },
       {
@@ -85,7 +81,6 @@ const routers: RouterType[] = [
         name: 'system-sess',
         component: './state/System-Sess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.systemSess',
       },
       {
@@ -93,7 +88,6 @@ const routers: RouterType[] = [
         name: 'system-liquid',
         component: './state/System-Liquid',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquid',
       },
       {
@@ -101,7 +95,6 @@ const routers: RouterType[] = [
         name: 'battery-pack',
         component: './state/Battery-Pack-Air',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.batteryPackAir',
       },
       {
@@ -109,7 +102,6 @@ const routers: RouterType[] = [
         name: 'battery-pack-liquid',
         component: './state/Battery-Pack-Liquid',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.batteryPackLiquid',
       },
       {
@@ -117,7 +109,6 @@ const routers: RouterType[] = [
         name: 'battery-pack-sess',
         component: './state/Battery-Pack-Sess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.batteryPackSess',
       },
       {
@@ -125,7 +116,6 @@ const routers: RouterType[] = [
         name: 'air-condition',
         component: './state/Air-Condition',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airCondition',
       },
       {
@@ -133,7 +123,6 @@ const routers: RouterType[] = [
         name: 'air-condition-sess',
         component: './state/Air-Condition-Sess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airConditionSess',
       },
       {
@@ -141,7 +130,6 @@ const routers: RouterType[] = [
         name: 'airCooledFireProtection',
         component: './state/AirCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airCooledFireProtection',
       },
       {
@@ -149,7 +137,6 @@ const routers: RouterType[] = [
         name: 'liquidCooler',
         component: './state/LiquidCooler',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquidCooler',
       },
       {
@@ -157,7 +144,6 @@ const routers: RouterType[] = [
         name: 'dehumidifier',
         component: './state/Dehumidifier',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
       {
@@ -165,7 +151,6 @@ const routers: RouterType[] = [
         name: 'liquidCooledFireProtection',
         component: './state/LiquidCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquidCooledFireProtection',
       },
       {
@@ -173,7 +158,6 @@ const routers: RouterType[] = [
         name: 'gridSideElectricityMeter',
         component: './state/GridSideElectricityMeter',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.gridSideElectricityMeter',
       },
       {
@@ -181,7 +165,6 @@ const routers: RouterType[] = [
         name: 'inverterSideMeter',
         component: './state/InverterSideMeter',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.inverterSideMeter',
       },
       {
@@ -189,7 +172,6 @@ const routers: RouterType[] = [
         name: 'fireFightingSESS',
         component: './state/FireFightingSESS',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.fireFightingSESS',
       },
       {
@@ -197,7 +179,6 @@ const routers: RouterType[] = [
         name: 'fireFightingPv',
         component: './state/FireFightingPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.fireFightingPv',
       },
       {
@@ -205,7 +186,6 @@ const routers: RouterType[] = [
         name: 'inverterSideMeterPv',
         component: './state/InverterSideMeterPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.inverterSideMeterPv',
       },
       {
@@ -213,7 +193,6 @@ const routers: RouterType[] = [
         name: 'gridSideElectricityMeterPv',
         component: './state/GridSideElectricityMeterPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.gridSideElectricityMeterPv',
       },
       {
@@ -221,7 +200,6 @@ const routers: RouterType[] = [
         name: 'system-optical',
         component: './state/System-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.systemOptical',
       },
       {
@@ -229,7 +207,6 @@ const routers: RouterType[] = [
         name: 'battery-pack-optical',
         component: './state/Battery-Pack-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.batteryPackOptical',
       },
       {
@@ -237,7 +214,6 @@ const routers: RouterType[] = [
         name: 'air-condition-optical',
         component: './state/Air-Condition-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airConditionOptical',
       },
     ],
@@ -253,7 +229,6 @@ const routers: RouterType[] = [
         name: 'system-control',
         component: './config/System-Control',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.systemControl',
       },
       {
@@ -261,7 +236,6 @@ const routers: RouterType[] = [
         name: 'system',
         component: './config/System',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.system',
       },
       {
@@ -269,7 +243,6 @@ const routers: RouterType[] = [
         name: 'pcs',
         component: './config/Pcs',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcs',
       },
       {
@@ -277,7 +250,6 @@ const routers: RouterType[] = [
         name: 'pcsSess',
         component: './config/PcsSess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcsSess',
       },
       {
@@ -285,7 +257,6 @@ const routers: RouterType[] = [
         name: 'pcsPv',
         component: './config/PcsPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.pcs',
       },
       {
@@ -293,7 +264,6 @@ const routers: RouterType[] = [
         name: 'pv',
         component: './config/Pv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.pv',
       },
       {
@@ -301,7 +271,6 @@ const routers: RouterType[] = [
         name: 'battery-pack',
         component: './config/Battery-Pack',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.batteryPack',
       },
       {
@@ -309,7 +278,6 @@ const routers: RouterType[] = [
         name: 'air-condition',
         component: './config/Air-Condition',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airCondition',
       },
       {
@@ -317,7 +285,6 @@ const routers: RouterType[] = [
         name: 'air-condition-sess',
         component: './config/Air-Condition-Sess',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.airConditionSess',
       },
       {
@@ -325,7 +292,6 @@ const routers: RouterType[] = [
         name: 'system-air',
         component: './state/System-Air',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.air',
       },
       {
@@ -333,7 +299,6 @@ const routers: RouterType[] = [
         name: 'system-liquid',
         component: './state/System-Liquid',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquid',
       },
       {
@@ -341,7 +306,6 @@ const routers: RouterType[] = [
         name: 'liquidCooler',
         component: './config/LiquidCooler',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquidCooler',
       },
       {
@@ -349,7 +313,6 @@ const routers: RouterType[] = [
         name: 'liquidCooledFireProtection',
         component: './state/LiquidCooledFireProtection',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.liquidCooledFireProtection',
       },
       {
@@ -357,7 +320,6 @@ const routers: RouterType[] = [
         name: 'dehumidifier',
         component: './config/Dehumidifier',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.dehumidifier',
       },
 
@@ -366,7 +328,6 @@ const routers: RouterType[] = [
         name: 'gridSideElectricityMeter',
         component: './config/GridSideElectricityMeter',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.gridSideElectricityMeter',
       },
       {
@@ -374,7 +335,6 @@ const routers: RouterType[] = [
         name: 'inverterSideMeter',
         component: './config/InverterSideMeter',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.state.inverterSideMeter',
       },
       {
@@ -382,7 +342,6 @@ const routers: RouterType[] = [
         name: 'energyManagement',
         component: './config/EnergyManagement',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.energyManagement',
       },
       {
@@ -390,7 +349,6 @@ const routers: RouterType[] = [
         name: 'cloudPlatform',
         component: './config/CloudPlatform',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.cloudPlatform',
       },
       {
@@ -398,7 +356,6 @@ const routers: RouterType[] = [
         name: 'pvPv',
         component: './config/PvPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.pvPv',
       },
       {
@@ -406,7 +363,6 @@ const routers: RouterType[] = [
         name: 'inverterSideMeterPv',
         component: './config/InverterSideMeterPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.inverterSideMeterPv',
       },
       {
@@ -414,7 +370,6 @@ const routers: RouterType[] = [
         name: 'gridSideElectricityMeterPv',
         component: './config/GridSideElectricityMeterPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.gridSideElectricityMeterPv',
       },
       {
@@ -422,7 +377,6 @@ const routers: RouterType[] = [
         name: 'energyManagementPv',
         component: './config/EnergyManagementPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.energyManagementPv',
       },
       {
@@ -430,7 +384,6 @@ const routers: RouterType[] = [
         name: 'cloudPlatformPv',
         component: './config/CloudPlatformPv',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.cloudPlatformPv',
       },
       {
@@ -438,7 +391,6 @@ const routers: RouterType[] = [
         name: 'system-control-optical',
         component: './config/System-Control-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.systemControlOptical',
       },
       {
@@ -446,7 +398,6 @@ const routers: RouterType[] = [
         name: 'system-optical',
         component: './config/System-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.systemOptical',
       },
       {
@@ -454,7 +405,6 @@ const routers: RouterType[] = [
         name: 'battery-pack-optical',
         component: './config/Battery-Pack-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.batteryPackOptical',
       },
       {
@@ -462,7 +412,6 @@ const routers: RouterType[] = [
         name: 'air-condition-optical',
         component: './config/Air-Condition-Optical',
         wrappers: ['@/components/KeepAlive'],
-        keepAlive: true,
         locale: 'menu.config.airConditionOptical',
       },
     ],

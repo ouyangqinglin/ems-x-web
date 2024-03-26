@@ -1,23 +1,24 @@
+import { useEffect } from 'react';
 import KeepAliveTabs from '@/components/KeepAliveTabs';
 import defaultSettings from '../../config/defaultSettings';
 import styles from './index.less';
-const { tabsLayout } = defaultSettings;
-// import { useDeviceData } from '@/hooks';
-// import RefreshData from '@/components/Device/RefreshData';
+import { useModel } from 'umi';
 
-/* *
- *
- * @author whiteshader@163.com
- * @datetime  2022/02/22
- *
- * */
+const { tabsLayout } = defaultSettings;
 
 const TabsLayout: React.FC = (props) => {
-  // const { realTimeData, run } = useDeviceData();
+  const { dispatch } = useModel('page');
+
   const renderTabs = () => {
     if (tabsLayout) return <KeepAliveTabs />;
     else return null;
   };
+
+  useEffect(() => {
+    document.onvisibilitychange = () => {
+      dispatch({ payload: { isVisible: document.visibilityState == 'visible' } });
+    };
+  }, []);
 
   return (
     <div>

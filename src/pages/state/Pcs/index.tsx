@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-22 16:15:26
+ * @LastEditTime: 2024-03-26 11:08:53
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
@@ -33,7 +33,7 @@ const Pcs: React.FC = () => {
       <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Row gutter={20}>
-          <Col span={5}>
+          <Col span={4}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -44,18 +44,18 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={5}>
+          <Col span={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={versionItems}
                 detailProps={{
-                  column: 1,
+                  column: 2,
                 }}
               />
             </Card>
           </Col>
-          <Col span={9}>
+          <Col span={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -66,7 +66,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={5}>
+          <Col span={4}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
