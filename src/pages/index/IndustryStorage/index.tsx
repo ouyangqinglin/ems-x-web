@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Run from '@/components/Device/Run';
+import CardC from '@/components/Card';
 import SystemAlarm from '@/components/SystemAlarm';
 import {
   batteryItems,
@@ -28,7 +29,7 @@ const Index: React.FC = () => {
     <>
       <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className={styles.industry}>
-        <Row gutter={12}>
+        <Row gutter={16}>
           <Col span={8}>
             <Card className={styles.card} style={{ height: 198 }}>
               <div className={styles.icon}>
@@ -75,7 +76,7 @@ const Index: React.FC = () => {
             </Card>
           </Col>
         </Row>
-        <Row gutter={12} className="mt16" align="top">
+        <Row gutter={16} className="mt16" align="top">
           <Col span={8}>
             <Card style={{ height: 412 }} className={styles.card}>
               <SystemRunStatus data={realTimeData} />
@@ -119,7 +120,7 @@ const Index: React.FC = () => {
         </Row>
         <Row className="mt16">
           <Col span={24}>
-            <Card className="h-full">
+            <CardC className="h-full">
               <Run
                 realTimeData={realTimeData}
                 groupData={systemItems}
@@ -127,7 +128,7 @@ const Index: React.FC = () => {
                   column: 5,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
         </Row>
         <div className="mt16">

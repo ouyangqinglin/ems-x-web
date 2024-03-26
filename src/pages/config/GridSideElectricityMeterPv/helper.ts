@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -22,7 +19,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '5035',
             name: '电表SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +28,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: ' 2',
+            id: '5045',
             name: '电表型号',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +37,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '5055',
             name: '电表厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +46,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '4',
+            id: '5065',
             name: '电表序号',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +55,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '5',
+            id: '5066',
             name: '电表地址',
             type: 'property',
             buttons: ['refresh'],
@@ -85,7 +82,7 @@ export const gridSidEleMetParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '12402',
             name: '电流变比',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -97,7 +94,7 @@ export const gridSidEleMetParamsItems: any = [
             },
           },
           {
-            id: '2',
+            id: '12403',
             name: '电压变比',
             type: 'property',
             buttons: ['refresh', 'edit'],

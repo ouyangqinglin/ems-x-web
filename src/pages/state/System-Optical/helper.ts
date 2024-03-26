@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +14,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '1000',
         name: '设备SN',
         type: 'property',
         dataType: {
@@ -24,7 +22,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '1010',
         name: '设备厂商',
         type: 'property',
         dataType: {
@@ -32,7 +30,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '1020',
         name: '设备型号',
         type: 'property',
         dataType: {
@@ -40,7 +38,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '1033',
         name: '本机IP',
         type: 'property',
         dataType: {
@@ -48,7 +46,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '1800',
         name: '系统时间',
         type: 'property',
         dataType: {
@@ -56,7 +54,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '1030',
         name: '额定功率',
         type: 'property',
         dataType: {
@@ -67,7 +65,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '1031',
         name: '额定容量',
         type: 'property',
         dataType: {
@@ -78,7 +76,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '7',
+        id: '1032',
         name: '主从标识',
         type: 'property',
         dataType: {
@@ -86,15 +84,19 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '8',
+        id: '1035',
         name: '设备ID',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '从机',
+            1: '主机',
+          },
         },
       },
       {
-        id: '9',
+        id: '1045',
         name: '外网IP',
         type: 'property',
         dataType: {
@@ -102,7 +104,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '10',
+        id: '1057',
         name: 'EMS SN',
         type: 'property',
         dataType: {
@@ -110,7 +112,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '11',
+        id: '1067',
         name: 'EMS 型号',
         type: 'property',
         dataType: {
@@ -118,7 +120,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '13',
+        id: '1077',
         name: 'EMS 硬件版本',
         type: 'property',
         dataType: {
@@ -126,7 +128,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '14',
+        id: '1078',
         name: 'EMS 软件版本',
         type: 'property',
         dataType: {
@@ -134,7 +136,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '15',
+        id: '1047',
         name: '4G-IMEI号',
         type: 'property',
         dataType: {

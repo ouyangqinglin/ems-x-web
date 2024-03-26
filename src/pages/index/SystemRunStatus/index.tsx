@@ -13,7 +13,11 @@ const communityOtherMethods = {
   2: 'CAN',
   5: '未知',
 };
-const communityStatus = ['初始化', '断开', '连接'];
+const communityStatus = {
+  0: '初始化',
+  1: '断开',
+  2: '连接',
+};
 
 const Index: React.FC = (props) => {
   const { data } = props;
@@ -33,43 +37,34 @@ const Index: React.FC = (props) => {
           {/*上位机 对称*/}
           <span className={styles.one}>
             {communityMethods[data?.[179]]}
-            {status && '(已连接)'}
+            {status && '(连接)'}
           </span>
           <span className={styles.six}>
-            {communityMethods[data?.[195]]}
-            {communityStatus[data?.[194]]}
+            {communityMethods[data?.[195]]}({communityStatus[data?.[194]]})
           </span>
           <span className={styles.two}>
-            {communityMethods[data?.[183]]}
-            {communityStatus[data?.[182]]}
+            {communityMethods[data?.[183]]}({communityStatus[data?.[182]]})
           </span>
           <span className={styles.seven}>
-            {communityOtherMethods[data?.[189]]}
-            {communityStatus[data?.[188]]}
+            {communityOtherMethods[data?.[189]]}({communityStatus[data?.[188]]})
           </span>
           <span className={styles.three}>
-            {communityOtherMethods[data?.[185]]}
-            {communityStatus[data?.[184]]}
+            {communityOtherMethods[data?.[185]]}({communityStatus[data?.[184]]})
           </span>
           <span className={styles.eight}>
-            {communityOtherMethods[data?.[230]]}
-            {communityStatus[data?.[231]]}
+            {communityOtherMethods[data?.[230]]}({communityStatus[data?.[231]]})
           </span>
           <span className={styles.four}>
-            {communityOtherMethods[data?.[197]]}
-            {communityStatus[data?.[196]]}
+            {communityOtherMethods[data?.[197]]}({communityStatus[data?.[196]]})
           </span>
           <span className={styles.nine}>
-            {communityOtherMethods[data?.[187]]}
-            {communityStatus[data?.[186]]}
+            {communityOtherMethods[data?.[187]]}({communityStatus[data?.[186]]})
           </span>
           <span className={styles.five}>
-            {communityOtherMethods[data?.[199]]}
-            {communityStatus[data?.[198]]}
+            {communityOtherMethods[data?.[199]]}({communityStatus[data?.[198]]})
           </span>
           <span className={styles.ten}>
-            {communityMethods[data?.[181]]}
-            {communityStatus[data?.[180]]}
+            {communityMethods[data?.[181]]}({communityStatus[data?.[180]]})
           </span>
         </div>
       </div>

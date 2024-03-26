@@ -267,7 +267,7 @@ export const runTimeSetItems: any = [
         children: [
           {
             id: '51216',
-            name: '开始时间1(HH:MM)',
+            name: '开始时间1(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -276,7 +276,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51218',
-            name: '结束时间1(HH:MM)',
+            name: '结束时间1(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -285,7 +285,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51220',
-            name: '开始时间2(HH:MM)',
+            name: '开始时间2(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -294,7 +294,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51222',
-            name: '结束时间2(HH:MM)',
+            name: '结束时间2(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -303,7 +303,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51224',
-            name: '开始时间3(HH:MM)',
+            name: '开始时间3(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -312,7 +312,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51226',
-            name: '结束时间3(HH:MM)',
+            name: '结束时间3(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -321,7 +321,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51228',
-            name: '开始时间4(HH:MM)',
+            name: '开始时间4(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -330,7 +330,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51230',
-            name: '结束时间4(HH:MM)',
+            name: '结束时间4(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -339,7 +339,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51232',
-            name: '开始时间5(HH:MM)',
+            name: '开始时间5(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
@@ -348,7 +348,7 @@ export const runTimeSetItems: any = [
           },
           {
             id: '51234',
-            name: '结束时间5(HH:MM)',
+            name: '结束时间5(HH:mm)',
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
