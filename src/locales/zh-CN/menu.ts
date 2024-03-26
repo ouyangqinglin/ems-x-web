@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:36:37
- * @LastEditTime: 2024-03-22 15:38:33
+ * @LastEditTime: 2024-03-26 13:53:25
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\locales\zh-CN\menu.ts
  */
@@ -22,9 +22,9 @@ export default {
   'menu.state.liquid': '系统-液冷',
   'menu.state.gridSideElectricityMeter': '电网侧电表',
   'menu.state.inverterSideMeter': '逆变侧电表',
-  'menu.state.fireFightingPv': '光储一体-消防',
-  'menu.state.gridSideElectricityMeterPv': '光储一体-电网侧电表',
-  'menu.state.inverterSideMeterPv': '光储一体-逆变侧电表',
+  'menu.state.fireFightingPv': '消防',
+  'menu.state.gridSideElectricityMeterPv': '电网侧电表',
+  'menu.state.inverterSideMeterPv': '逆变侧电表',
   'menu.state.batteryPack': '电池组',
   'menu.state.batteryPackSess': '电池组-SESS',
   'menu.state.airCondition': '空调',
@@ -35,18 +35,18 @@ export default {
   'menu.config.pv': '光伏',
   'menu.config.energyManagement': '能量管理',
   'menu.config.cloudPlatform': '云平台',
-  'menu.config.pvPv': '光储一体-光伏',
-  'menu.config.inverterSideMeterPv': '光储一体-逆变侧电表',
-  'menu.config.gridSideElectricityMeterPv': '光储一体-电网侧电表',
-  'menu.config.energyManagementPv': '光储一体机-能量管理',
-  'menu.config.cloudPlatformPv': '光储一体机-云平台',
-  'menu.state.systemOptical': '光储系统',
-  'menu.state.batteryPackOptical': '光储电池组',
-  'menu.state.airConditionOptical': '光储空调',
-  'menu.config.systemControlOptical': '光储系统控制',
-  'menu.config.systemOptical': '光储系统',
-  'menu.config.batteryPackOptical': '光储电池组',
-  'menu.config.airConditionOptical': '光储空调',
+  'menu.config.pvPv': '光伏',
+  'menu.config.inverterSideMeterPv': '逆变侧电表',
+  'menu.config.gridSideElectricityMeterPv': '电网侧电表',
+  'menu.config.energyManagementPv': '能量管理',
+  'menu.config.cloudPlatformPv': '云平台',
+  'menu.state.systemOptical': '系统',
+  'menu.state.batteryPackOptical': '电池组',
+  'menu.state.airConditionOptical': '空调',
+  'menu.config.systemControlOptical': '系统控制',
+  'menu.config.systemOptical': '系统',
+  'menu.config.batteryPackOptical': '电池组',
+  'menu.config.airConditionOptical': '空调',
   'menu.state.batteryPackAir': '电池组',
   'menu.state.batteryPackLiquid': '电池组液冷',
 };

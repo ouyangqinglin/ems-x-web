@@ -53,7 +53,7 @@ import useAuthority, { AuthorityModeEnum } from '@/hooks/useAuthority';
 import RadioButton from '@/components/RadioButton';
 import { useRequest } from 'umi';
 import styles from './index.less';
-import { useDeviceData, useSourceId, useSubscribe } from '@/hooks';
+import { useDeviceData, useSourceId } from '@/hooks';
 import { EditOutlined, RedoOutlined } from '@ant-design/icons';
 import DeviceContext, { RefreshRequestParams } from '../Context/DeviceContext';
 import { editDeviceData } from '@/services/device';
@@ -94,11 +94,6 @@ const Control: React.FC<ControlType> = memo((props) => {
   const { loading, run } = useRequest(editDeviceData, {
     manual: true,
   });
-  const extralDeviceIds = useMemo(() => {
-    const result = getPropsFromTree(groupData, 'deviceId');
-    return Array.from(new Set(result));
-  }, [groupData]);
-  const extralDeviceRealTimeData = useSubscribe(extralDeviceIds, true);
 
   const realTimeData = useMemo(() => {
     return merge({}, allRealTimeData, partRealTimeData);
@@ -921,7 +916,7 @@ const Control: React.FC<ControlType> = memo((props) => {
       {!!groupsItems?.length && (
         <>
           <Detail.Group
-            data={{ ...merge({}, realTimeData, transformData, extralDeviceRealTimeData) }}
+            data={{ ...merge({}, realTimeData, transformData) }}
             items={groupsItems}
             detailProps={{
               labelStyle: { width: 140 },
@@ -937,13 +932,7 @@ const Control: React.FC<ControlType> = memo((props) => {
             title={currentFormInfo?.service?.name || ''}
             deviceId={currentFormInfo?.service?.deviceId || deviceId}
             realTimeData={{
-              ...merge(
-                {},
-                currentFormInfo?.service?.deviceId
-                  ? extralDeviceRealTimeData?.[currentFormInfo?.service?.deviceId]
-                  : realTimeData,
-                transformData,
-              ),
+              ...merge({}, realTimeData, transformData),
             }}
             serviceId={currentFormInfo?.service?.id || ''}
             columns={currentFormInfo?.columns || []}

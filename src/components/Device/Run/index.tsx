@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-12-29 09:58:34
- * @LastEditTime: 2024-03-16 10:51:26
+ * @LastEditTime: 2024-03-26 19:03:15
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Run\index.tsx
  */
@@ -11,7 +11,7 @@ import Button from '@/components/CollectionModal/Button';
 import Detail, { DetailItem, DetailProps, GroupItem } from '@/components/Detail';
 import Meter from '@/components/Meter';
 import { GridItemType } from '@/components/Meter/helper';
-import { useAuthority, useSubscribe } from '@/hooks';
+import { useAuthority } from '@/hooks';
 import { DeviceDataType } from '@/services/equipment';
 import {
   DeviceModelAuthorityType,
@@ -46,11 +46,6 @@ const Run: React.FC<RunType> = (props) => {
     originCollection: '',
     deviceId: '',
   });
-  const extralDeviceIds = useMemo(() => {
-    const result = getPropsFromTree(groupData, 'deviceId');
-    return Array.from(new Set(result));
-  }, [groupData]);
-  const extralDeviceRealTimeData = useSubscribe(extralDeviceIds, true);
 
   const components = useMemo<
     Record<string, React.LazyExoticComponent<React.ComponentType<any>>>
@@ -277,7 +272,7 @@ const Run: React.FC<RunType> = (props) => {
     <>
       {groupsItems.length ? (
         <Detail.Group
-          data={{ ...realTimeData, ...extralDeviceRealTimeData }}
+          data={realTimeData}
           items={groupsItems}
           detailProps={{
             labelStyle: { width: 140 },
