@@ -15,13 +15,12 @@ import {
 import Chart from '../Chart';
 import RefreshData from '@/components/Device/RefreshData';
 import SystemRunStatus from '../SystemRunStatus';
-import batImg from '@/assets/image/station/overview/icon_储能电池.svg';
-import batSystemImg from '@/assets/image/station/overview/icon_储能.svg';
-import loadImg from '@/assets/image/station/overview/icon_负载1.svg';
-import incomeImg from '@/assets/image/station/overview/icon_收益.svg';
-import reduceImg from '@/assets/image/station/overview/icon_减排.svg';
+import batImg from '@/assets/image/station/overview/icon_bat_img.svg';
+import batSystemImg from '@/assets/image/station/overview/icon_bat_system_img.svg';
+import loadImg from '@/assets/image/station/overview/icon_load_img.svg';
+import incomeImg from '@/assets/image/station/overview/icon_income_img.svg';
+import reduceImg from '@/assets/image/station/overview/icon_reduce_img.svg';
 import { useDeviceData } from '@/hooks';
-import { useModel } from 'umi';
 const Index: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
 
