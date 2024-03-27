@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +13,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '33103',
         name: '消防SN',
         type: 'property',
         dataType: {
@@ -24,7 +21,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '33113',
         name: '消防厂商',
         type: 'property',
         dataType: {
@@ -32,7 +29,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '33125',
         name: '消防型号',
         type: 'property',
         dataType: {
@@ -40,42 +37,28 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
-        name: '硬件版本',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '5',
-        name: '软件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
+        id: '33101',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '断开',
-            '1': '连接',
+            '0': '初始化', 
+            '1': '断开',
+            '2': '连接',
           },
         },
       },
       {
-        id: '7',
+        id: '33102',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '485', 
+            '1': '未知',
+          },
         },
       },
     ],
@@ -89,19 +72,19 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: 'x8',
+        id: '33137',
         name: '消防喷射信号',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
             '0': '正常',
-            '1': '开启',
+            '1': '喷射',
           },
         },
       },
       {
-        id: '1',
+        id: '33135',
         name: '消防工作状态',
         type: 'property',
         dataType: {
@@ -114,7 +97,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'alms',
+        id: '33136',
         name: '消防告警状态',
         type: 'property',
         dataType: {
@@ -126,16 +109,15 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'bmNum',
+        id: '33150',
         name: '电池箱号',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: 'SensorStatus',
+        id: '33151',
         name: '状态标志',
         type: 'property',
         dataType: {
@@ -144,25 +126,25 @@ export const statusItems: any = [
             '0': '正在自检',
             '1': '工作正常',
             '2': '设备故障',
-            '3': '探测到报警信息(一级报警)',
-            '4': '探测到报警信息(二级报警)',
+            '3': '探测到报警信息',
           },
         },
       },
       {
-        id: 'x9',
+        id: '33165',
         name: '电池箱消防运行状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '故障',
+            '0': '运行',
+            '1': '停止',
+            '2': '故障',
           },
         },
       },
       {
-        id: 'x17',
+        id: '33166',
         name: '电池箱消防告警状态',
         type: 'property',
         dataType: {
@@ -174,19 +156,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'SensorPhotoelectricSmokeStatus',
+        id: '33167',
         name: '光电烟雾传感器状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '故障',
+            '0': '运行',
+            '1': '停止',
+            '2': '故障',
           },
         },
       },
       {
-        id: 'x20',
+        id: '33168',
         name: '光电烟雾传感器报警状态',
         type: 'property',
         dataType: {
@@ -198,19 +181,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'COSensorStatus',
+        id: '33169',
         name: '一氧化碳传感器状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '故障',
+            '0': '运行',
+            '1': '停止',
+            '2': '故障',
           },
         },
       },
       {
-        id: 'x22',
+        id: '33170',
         name: '一氧化碳传感器报警状态',
         type: 'property',
         dataType: {
@@ -222,19 +206,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'SensorHighTemperatureStatus',
+        id: '33171',
         name: '温度传感器状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '故障',
+            '0': '运行',
+            '1': '停止',
+            '2': '故障',
           },
         },
       },
       {
-        id: 'x24',
+        id: '33172',
         name: '温度传感器高温报警状态',
         type: 'property',
         dataType: {
@@ -246,19 +231,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'SensorLeakageElectrolyteStatus',
+        id: '33173',
         name: '电解液传感器状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '故障',
+            '0': '运行',
+            '1': '停止',
+            '2': '故障',
           },
         },
       },
       {
-        id: 'x26',
+        id: '33174',
         name: '电解液传感器报警状态',
         type: 'property',
         dataType: {
@@ -270,7 +256,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'Temperature',
+        id: '33157',
         name: '温度数值',
         type: 'property',
         dataType: {
@@ -284,21 +270,19 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'DetectorCo',
+        id: '33158',
         name: '一氧化碳数值',
         type: 'property',
         dataType: {
           type: 'double',
-          specs: {},
         },
       },
       {
-        id: 'x29',
+        id: '33159',
         name: 'Life信号',
         type: 'property',
         dataType: {
           type: 'double',
-          specs: {},
         },
       },
     ],

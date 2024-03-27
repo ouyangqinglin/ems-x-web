@@ -13,14 +13,15 @@ let arr1 = localStorage.getItem('arr1') ? JSON.parse(localStorage.getItem('arr1'
   arrTime = localStorage.getItem('arrTime') ? JSON.parse(localStorage.getItem('arrTime')) : [],
   myChart = null;
 
-let day = (new Date()).getDate()
-if (!localStorage.getItem('day')) localStorage.setItem('day', day)
+const day = new Date().getDate();
+if (!localStorage.getItem('day')) localStorage.setItem('day', day);
 else {
-  if (+day !== +(localStorage.getItem('day'))) {
-    arr1 = []
-    arr2 = []
-    arr3 = []
-    arrTime = []
+  if (+day !== +localStorage.getItem('day')) {
+    localStorage.setItem('day', day);
+    arr1 = [];
+    arr2 = [];
+    arr3 = [];
+    arrTime = [];
   }
 }
 const optionBat = {
@@ -121,20 +122,19 @@ const seriesBar = [
     barWidth: 12,
   },
 ];
-const Index: React.FC = (props) => {
-
+const Index: React.FC = () => {
   const [showDatePicker, { set }] = useToggle(false);
   const [date, setDate] = useState(moment());
   const [picker, setPicker] = useState<
     'year' | 'month' | 'time' | 'date' | 'week' | 'quarter' | undefined
   >();
-  const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
+  // const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
   const [chartType, setChartType] = useState(0);
   const domRef = useRef();
-  const timerOne = useRef()
-  const newChartType = useRef(chartType)
+  const timerOne = useRef();
+  const newChartType = useRef(chartType);
   useEffect(() => {
-    getChartData()
+    getChartData();
   }, []);
   useEffect(() => {
     // 更新最新的state值到ref中
@@ -142,29 +142,31 @@ const Index: React.FC = (props) => {
   });
 
   useEffect(() => {
-    chartInit(chartType)
+    chartInit(chartType);
   }, [chartType]);
   function getChartData(v) {
     if (timerOne?.current) clearInterval(timerOne.current);
-    getDeviceData(1, { id: 313}).then(res => {
-      if(+res.code === 200) {
-        arrTime.push(res?.data?.refreshTime?.slice(11))
-        arr1.push(res?.data[313])
-        arr2.push(res?.data[334])
-        arr3.push(res?.data[336])
-        localStorage.setItem('arrTime', JSON.stringify(arrTime))
-        localStorage.setItem('arr1', JSON.stringify(arr1))
-        localStorage.setItem('arr2', JSON.stringify(arr2))
-        localStorage.setItem('arr3', JSON.stringify(arr3))
-        optionBat.xAxis[0].data = arrTime
-        seriesLine[0].data = arr1// 充放电功率
-        seriesBar[0].data = arr2 // 充
-        seriesBar[1].data = arr3 // 放
-        chartInit(v)
-      }
-    }).finally(() => {
-      timerOne.current = setInterval(() => getChartData(newChartType.current), 60000)
-    })
+    getDeviceData(1, { id: 313 })
+      .then((res) => {
+        if (+res.code === 200) {
+          arrTime.push(res?.data?.refreshTime?.slice(11));
+          arr1.push(res?.data[313]);
+          arr2.push(res?.data[334]);
+          arr3.push(res?.data[336]);
+          localStorage.setItem('arrTime', JSON.stringify(arrTime));
+          localStorage.setItem('arr1', JSON.stringify(arr1));
+          localStorage.setItem('arr2', JSON.stringify(arr2));
+          localStorage.setItem('arr3', JSON.stringify(arr3));
+          optionBat.xAxis[0].data = arrTime;
+          seriesLine[0].data = arr1; // 充放电功率
+          seriesBar[0].data = arr2; // 充
+          seriesBar[1].data = arr3; // 放
+          chartInit(v);
+        }
+      })
+      .finally(() => {
+        timerOne.current = setInterval(() => getChartData(newChartType.current), 60000);
+      });
   }
 
   const changeChartType = (e) => {
@@ -173,9 +175,8 @@ const Index: React.FC = (props) => {
       myChart = null;
     }
     setChartType(() => e.target.value);
-    chartInit(e.target.value)
+    chartInit(e.target.value);
   };
-
 
   function chartInit(v) {
     if (v && +v === 1) {
@@ -186,7 +187,7 @@ const Index: React.FC = (props) => {
       optionBat.series = seriesLine;
       optionBat.legend.data = ['充放电功率'];
     }
-    if (domRef?.current){
+    if (domRef?.current) {
       myChart = echarts.init(domRef.current);
       myChart.setOption(optionBat, true);
     }

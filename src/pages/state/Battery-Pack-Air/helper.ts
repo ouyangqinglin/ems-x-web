@@ -876,7 +876,11 @@ export const remoteSignalItems: any = [
         id: '5334',
         name: '交流防雷器故障',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '断开',
+            1: '闭合',
+          },
         },
       },
     ],

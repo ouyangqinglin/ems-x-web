@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +13,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '32802',
         name: '除湿机SN',
         type: 'property',
         dataType: {
@@ -24,7 +21,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '32812',
         name: '除湿机厂商',
         type: 'property',
         dataType: {
@@ -32,7 +29,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '32827',
         name: '除湿机型号',
         type: 'property',
         dataType: {
@@ -40,7 +37,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '32822',
         name: '除湿机硬件版本',
         type: 'property',
         dataType: {
@@ -48,7 +45,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '32823',
         name: '除湿机软件版本',
         type: 'property',
         dataType: {
@@ -56,23 +53,28 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '32800',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '断开',
-            '1': '连接',
+            '0': '初始化',
+            '1': '断开',
+            '2': '连接',
           },
         },
       },
       {
-        id: '7',
+        id: '32801',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '485',
+            '1': '未知',
+          },
         },
       },
     ],
@@ -86,7 +88,7 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '32840',
         name: '除湿机工作模式',
         type: 'property',
         dataType: {
@@ -98,20 +100,25 @@ export const statusItems: any = [
         },
       },
       {
-        id: '2',
+        id: '32841',
         name: '除湿机工作状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '运行',
-            '1': '停止',
-            '2': '故障',
+            '0': '自动状态',
+            '1': '手动状态',
+            '2': '设置状态',
+            '3': '运行状态',
+            '4': '除湿器工作状态',
+            '5': '加热器工作状态',
+            '6': '风扇工作状态',
+            '7': '除冰工作状态',
           },
         },
       },
       {
-        id: '3',
+        id: '32842',
         name: '除湿机告警状态',
         type: 'property',
         dataType: {
@@ -119,12 +126,11 @@ export const statusItems: any = [
           specs: {
             '0': '正常',
             '1': '告警',
-            '255': '告警未使能',
           },
         },
       },
       {
-        id: '4',
+        id: '32843',
         name: '手动状态',
         type: 'property',
         dataType: {
@@ -136,7 +142,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '5',
+        id: '32844',
         name: '自动状态',
         type: 'property',
         dataType: {
@@ -148,77 +154,69 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '32845',
         name: '设置状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '设置',
-            '1': '正常',
+            '0': '停用',
+            '1': '启用',
           },
         },
       },
       {
-        id: '7',
+        id: '32846',
         name: '运行状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '故障',
-            '1': '运行',
+            '0': '停用',
+            '1': '启用',
           },
         },
       },
       {
-        id: 'HeaterWorkStatus',
+        id: '32847',
         name: '加热器工作状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '停止',
-            '1': '运行',
+            '0': '停用',
+            '1': '启用',
           },
         },
       },
       {
-        id: 'FanWorkStatus',
+        id: '32848',
         name: '风扇工作状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '停止',
-            '1': '运行',
+            '0': '停用',
+            '1': '启用',
           },
         },
       },
       {
-        id: 'DeicingWorkStatus',
+        id: '32849',
         name: '除冰工作状态',
-        modelName: '除冰工作状态',
-        sortOrder: 8,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'enum',
           specs: {
-            '0': '停止',
-            '1': '运行',
+            '0': '停用',
+            '1': '启用',
           },
         },
       },
       {
-        id: 'DehumidificationPoint',
+        id: '32850',
         name: '除湿启控值',
-        modelName: '除湿启控值',
-        sortOrder: 9,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -231,13 +229,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'DehumidificationReturnDifference',
+        id: '32851',
         name: '除湿停止值',
-        modelName: '除湿停止值',
-        sortOrder: 10,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -250,13 +244,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'TempWhenStartControl',
+        id: '32852',
         name: '温度启控值',
-        modelName: '温度启控值',
-        sortOrder: 11,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -269,13 +259,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'TempWhenStopControl',
+        id: '32853',
         name: '温度控制回差值',
-        modelName: '温度控制回差值',
-        sortOrder: 12,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -288,13 +274,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'CoolingPlateDeicingTemp',
+        id: '52205',
         name: '冷凝片除冰值',
-        modelName: '冷凝片除冰值',
-        sortOrder: 13,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -307,13 +289,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'CoolingPlateTemp',
+        id: '32826',
         name: '制冷片温度测量值',
-        modelName: '制冷片温度测量值',
-        sortOrder: 14,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -326,13 +304,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'EnvironmentTemperature',
+        id: '32824',
         name: '环境温度测量值',
-        modelName: '环境温度测量值',
-        sortOrder: 15,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {
@@ -345,13 +319,9 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'Humidity',
+        id: '32825',
         name: '环境湿度测量值',
-        modelName: '环境湿度测量值',
-        sortOrder: 16,
-        parentId: 'statusInformation',
         type: 'property',
-        children: [],
         dataType: {
           type: 'double',
           specs: {

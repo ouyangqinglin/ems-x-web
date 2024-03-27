@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -16,7 +13,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '32002',
         name: '液冷机SN',
         type: 'property',
         dataType: {
@@ -24,7 +21,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '32012',
         name: '液冷机厂商',
         type: 'property',
         dataType: {
@@ -32,7 +29,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '32035',
         name: '液冷机型号',
         type: 'property',
         dataType: {
@@ -40,7 +37,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '32022',
         name: '液冷机硬件版本',
         type: 'property',
         dataType: {
@@ -48,7 +45,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '32024',
         name: '液冷机软件版本',
         type: 'property',
         dataType: {
@@ -56,7 +53,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '32023',
         name: '软件编码',
         type: 'property',
         dataType: {
@@ -64,7 +61,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '7',
+        id: '32408',
         name: '压缩机软件版本',
         type: 'property',
         dataType: {
@@ -72,7 +69,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '8',
+        id: '32407',
         name: '压缩机软件编码',
         type: 'property',
         dataType: {
@@ -80,55 +77,28 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '9',
+        id: '32000',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '断开',
-            '1': '连接',
+            '0': '初始化',
+            '1': '断开',
+            '2': '连接',
           },
         },
       },
       {
-        id: '10',
+        id: '32001',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '11',
-        name: '制冷输入功率',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '12',
-        name: '制冷量',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '13',
-        name: '加热输入功率',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '14',
-        name: '加热量',
-        type: 'property',
-        dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            '0': '485',
+            '1': '未知',
+          },
         },
       },
     ],
@@ -142,7 +112,7 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '32425',
         name: '液冷机系统模式',
         type: 'property',
         dataType: {
@@ -158,20 +128,20 @@ export const statusItems: any = [
         },
       },
       {
-        id: '2',
+        id: '32045',
         name: '液冷机工作状态',
         type: 'property',
         dataType: {
           type: 'enum',
           specs: {
-            '0': '运行',
-            '1': '停止',
-            '2': '故障',
+            '0': '停机',
+            '1': '故障',
+            '2': '运行',
           },
         },
       },
       {
-        id: '3',
+        id: '32210',
         name: '当前告警最高等级',
         type: 'property',
         dataType: {
@@ -185,7 +155,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '4',
+        id: '32200',
         name: '变频器通讯故障',
         type: 'property',
         dataType: {
@@ -193,12 +163,12 @@ export const statusItems: any = [
           specs: {
             '0': '正常',
             '1': '告警',
-            '255': '告警未使能',
+            '255': '未使能',
           },
         },
       },
       {
-        id: '5',
+        id: '394',
         name: '水温制冷点',
         type: 'property',
         dataType: {
@@ -213,7 +183,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '6',
+        id: '395',
         name: '水温加热点',
         type: 'property',
         dataType: {
@@ -228,7 +198,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '7',
+        id: '32025',
         name: '出水温度',
         dataType: {
           type: 'double',
@@ -242,7 +212,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '8',
+        id: '32026',
         name: '回水温度',
         type: 'property',
         dataType: {
@@ -257,7 +227,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '9',
+        id: '32029',
         name: '进水压力',
         type: 'property',
         dataType: {
@@ -272,7 +242,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '10',
+        id: '32030',
         name: '出水压力',
         type: 'property',
         dataType: {
@@ -287,7 +257,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '32028',
         name: '环境温度',
         type: 'property',
         dataType: {
@@ -302,7 +272,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '12',
+        id: '32027',
         name: '排气温度',
         type: 'property',
         dataType: {
@@ -317,7 +287,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '13',
+        id: '32404',
         name: '水泵状态 ',
         type: 'property',
         dataType: {
@@ -329,16 +299,15 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '32403',
         name: '水泵当前转速',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: '15',
+        id: '32417',
         name: '水泵总运行时间',
         type: 'property',
         dataType: {
@@ -353,25 +322,23 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '32419',
         name: '水泵开启次数',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: '17',
+        id: '32405',
         name: '心跳',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: '18',
+        id: '32406',
         name: '压缩机状态',
         type: 'property',
         dataType: {
@@ -383,7 +350,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '19',
+        id: '32409',
         name: '压缩机总运行时间',
         type: 'property',
         dataType: {
@@ -398,16 +365,15 @@ export const statusItems: any = [
         },
       },
       {
-        id: '20',
+        id: '32411',
         name: '压缩机开启次数',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: '21',
+        id: '32413',
         name: '电加热总运行时间',
         type: 'property',
         dataType: {
@@ -422,16 +388,15 @@ export const statusItems: any = [
         },
       },
       {
-        id: '22',
+        id: '32415',
         name: '电加热开启次数',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
       {
-        id: '23',
+        id: '32421',
         name: '外风机总运行时间',
         type: 'property',
         dataType: {
@@ -446,12 +411,11 @@ export const statusItems: any = [
         },
       },
       {
-        id: '24',
+        id: '32423',
         name: '外风机开启次数',
         type: 'property',
         dataType: {
           type: 'long',
-          specs: {},
         },
       },
     ],

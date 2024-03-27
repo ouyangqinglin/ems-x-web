@@ -230,7 +230,11 @@ export const statusItems: any = [
             type: 'property',
             name: '系统控制模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
@@ -240,10 +244,11 @@ export const statusItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '自发自用',
-                2: '削峰填谷',
-                3: '备电',
-                4: '手动控制',
+                0: '削峰填谷',
+                1: '备电',
+                2: '手动控制',
+                3: '自发自用',
+                4: '售电模式',
               },
             },
           },
@@ -252,7 +257,14 @@ export const statusItems: any = [
             type: 'property',
             name: '系统工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '启动',
+                1: '待机',
+                2: '停止',
+                3: '急停',
+                4: '复位',
+              },
             },
           },
           {
@@ -518,7 +530,11 @@ export const statusItems: any = [
             type: 'property',
             name: '防逆流启动',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '禁止',
+                1: '允许',
+              },
             },
           },
           {
@@ -526,7 +542,11 @@ export const statusItems: any = [
             type: 'property',
             name: '防过流启动',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '禁止',
+                1: '允许',
+              },
             },
           },
           {

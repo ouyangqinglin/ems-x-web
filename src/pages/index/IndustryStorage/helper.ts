@@ -432,14 +432,16 @@ export const systemItems: any = [
             },
           },
           {
-            id: '3412',
+            id: '342',
             name: '离并网模式',
             type: 'property',
             dataType: {
               type: 'enum',
               specs: {
-                0: '并网使能',
-                1: '离网使能',
+                1: '离网',
+                2: '并网',
+                3: '并网(仅馈电)',
+                4: '并网(仅市电充电)',
               },
             },
           },
@@ -594,8 +596,8 @@ export const systemItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '本地',
-                1: '远程',
+                0: '手动',
+                1: '自动',
               },
             },
           },
