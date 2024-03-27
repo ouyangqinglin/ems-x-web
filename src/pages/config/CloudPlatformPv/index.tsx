@@ -11,11 +11,10 @@ import React, { useMemo, useState } from 'react';
 import Card from '@/components/Card';
 import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, commInterface4GItems, cloudApiSoftwareItems, yotaiComApiItems } from './helper';
 import Control from '@/components/Device/Control';
-import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 
 const CloudPlatformPv: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData } = useDeviceData();
   const [groupData, setGroupData] = useState([]);
 
   useMemo(() => {
@@ -37,16 +36,15 @@ const CloudPlatformPv: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card>
           <Control groupData={groupData} realTimeData={realTimeData} detailProps={{ column: 3 }} />
         </Card>
-        {/* <Card className="my20">
-          <Control groupData={yotaiComApiItems} realTimeData={realTimeData} />
-        </Card> */}
         <Card className="my20">
           <Control groupData={cloudApiSoftwareItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control groupData={yotaiComApiItems} realTimeData={realTimeData} />
         </Card>
       </div>
     </>
