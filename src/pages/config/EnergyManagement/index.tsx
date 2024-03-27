@@ -16,15 +16,13 @@ import {
   backupModeItems
 } from './helper';
 import Control from '@/components/Device/Control';
-import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 
 const EnergyManagement: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card className="my20">
           <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} detailProps={{

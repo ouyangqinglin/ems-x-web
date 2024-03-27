@@ -11,15 +11,13 @@ import React from 'react';
 import Card from '@/components/Card';
 import { baseInfoItems, gridSidEleMetParamsItems } from './helper';
 import Control from '@/components/Device/Control';
-import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 
 const GridSideElectricityMeter: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card>
           <Control

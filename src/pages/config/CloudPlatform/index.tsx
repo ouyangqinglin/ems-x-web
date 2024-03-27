@@ -7,15 +7,14 @@
  * @FilePath: \ems-x-web\src\pages\config\PcsSess\index.tsx
  */
 
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Card from '@/components/Card';
-import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, commInterface4GItems, cloudApiSoftwareItems, yotaiComApiItems } from './helper';
+import { commInterfaceWiFiItems, commInterfaceLAN1Items, commInterfaceLAN2Items, commInterface4GItems, cloudApiSoftwareItems } from './helper';
 import Control from '@/components/Device/Control';
-import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 
 const CloudPlatform: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData } = useDeviceData();
   const [groupData, setGroupData] = useState([]);
 
   useMemo(() => {
@@ -37,7 +36,6 @@ const CloudPlatform: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Card>
           <Control groupData={groupData} realTimeData={realTimeData} detailProps={{ column: 3 }} />
