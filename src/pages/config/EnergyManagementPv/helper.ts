@@ -7,7 +7,7 @@
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
 
-// 自发自用模式参数设置 - 暂时不写
+// 自发自用模式参数设置
 export const spontaneousSelfUseItems: any = [
   {
     id: 'eS19',
@@ -749,89 +749,6 @@ export const peakShavingValleyFillingItems: any = [
               },
               type: 'double',
             },
-          },
-        ],
-      },
-    ],
-  },
-];
-
-// 备电模式参数设置
-export const backupModeItems: any = [
-  {
-    id: 'BackupPowerModeSetting',
-    name: '备电模式设置',
-    type: 'group',
-    children: [
-      {
-        id: 'BackupPowerModeSetting',
-        name: '备电模式设置',
-        type: 'service',
-        buttons: ['refresh', 'edit'],
-        children: [
-          {
-            id: '51024',
-            name: '充电功率',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              type: 'double',
-              specs: {
-                unit: 'kW',
-                min: '0',
-                unitName: '千瓦',
-                max: '10000000000',
-                step: '0.1',
-              },
-            },
-            sortOrder: 1,
-          },
-          {
-            id: '51025',
-            name: '放电功率',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              type: 'double',
-              specs: {
-                unit: 'kW',
-                min: '0',
-                unitName: '千瓦',
-                max: '10000000000',
-                step: '0.1',
-              },
-            },
-            sortOrder: 2,
-          },
-          {
-            id: '51026',
-            name: '最高SOC',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              type: 'double',
-              specs: {
-                unit: '%',
-                min: '-100',
-                unitName: '百分比',
-                max: '100',
-                step: '0.1',
-              },
-            },
-            sortOrder: 3,
-          },
-          {
-            id: '51027',
-            name: '最低SOC',
-            buttons: ['refresh', 'edit'],
-            dataType: {
-              type: 'double',
-              specs: {
-                unit: '%',
-                min: '-100',
-                unitName: '百分比',
-                max: '100',
-                step: '0.1',
-              },
-            },
-            sortOrder: 4,
           },
         ],
       },

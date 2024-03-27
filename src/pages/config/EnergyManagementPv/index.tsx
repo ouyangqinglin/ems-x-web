@@ -14,18 +14,15 @@ import {
   peakShavingValleyFillingItems,
   manualModeItems,
   elePriceItems,
-  backupModeItems
 } from './helper';
 import Control from '@/components/Device/Control';
-import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 
 const EnergyManagementPv: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
       <Card className="my20">
           <Control groupData={spontaneousSelfUseItems} realTimeData={realTimeData} detailProps={{
@@ -39,11 +36,6 @@ const EnergyManagementPv: React.FC = () => {
         </Card>
         <Card className="my20">
           <Control groupData={manualModeItems} realTimeData={realTimeData} detailProps={{
-            column: 4,
-          }} />
-        </Card>
-        <Card className="my20">
-          <Control groupData={backupModeItems} realTimeData={realTimeData} detailProps={{
             column: 4,
           }} />
         </Card>
