@@ -5,39 +5,31 @@ import Avatar from './AvatarDropdown';
 import styles from './index.less';
 export type SiderTheme = 'light' | 'dark';
 import { getSystemTime, exportData } from '@/services/device';
+import { useRequest } from 'umi';
+import moment from 'moment';
 
 const GlobalHeaderRight: React.FC = () => {
   const { initialState } = useModel('@@initialState');
-  const [tiem, setTime] = useState();
+  const { data: systemDate } = useRequest(getSystemTime, { manual: false });
+  const [time, setTime] = useState();
   const [checkData, setCheckData] = useState<string[]>([]);
-  const { config } = useModel('config');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const requestSystemTime = async () => {
-    let isError = false;
-    try {
-      const res = await getSystemTime();
-      if (res.code === 200) {
-        setTime(res.data);
-      } else {
-        isError = true;
-      }
-    } catch {
-      isError = true;
-    }
-    return isError;
-  };
   useEffect(() => {
-    requestSystemTime();
-    const timer = setInterval(async () => {
-      const isError = await requestSystemTime();
-      isError && clearInterval(timer);
-    }, config.refreshTime * 1000);
+    let timer: any = null;
+    if (systemDate) {
+      setTime(systemDate);
+      timer = setInterval(() => {
+        const dataFormat = 'YYYY/MM/DD HH:mm:ss';
+        setTime(
+          (prevTime) => moment(prevTime, dataFormat).add(1, 'seconds').format(dataFormat) as any,
+        );
+      }, 1000);
+    }
     return () => {
       clearInterval(timer);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [config.refreshTime]);
+  }, [systemDate]);
 
   if (!initialState || !initialState.settings) {
     return null;
@@ -73,7 +65,7 @@ const GlobalHeaderRight: React.FC = () => {
         <Button type="link" onClick={showModal}>
           数据导出
         </Button>
-        <span>{tiem}</span>
+        <span>系统时间：{time || '--'}</span>
         <Avatar menu />
       </Space>
       <Modal title="选择导出数据页面" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>

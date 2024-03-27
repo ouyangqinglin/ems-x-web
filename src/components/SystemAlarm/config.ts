@@ -1,15 +1,20 @@
 import { formatMessage } from '@/utils';
 import type { ProColumns } from '@ant-design/pro-components';
 
+export type DeviceType = 0 | 1 | 2; //0:一体  1：风冷  2：液冷
+
 export type ModelTypeEnum =
-  | 'system'
-  | 'wind'
-  | 'converter'
-  | 'battery'
-  | 'aircond'
-  | 'fireFightWind'
-  | 'wet'
-  | 'fireFightWet';
+  | 'system' //系统
+  | 'wind' //风冷
+  | 'converter' //变流器
+  | 'battery' //电池组
+  | 'aircond' //空调
+  | 'fireFightWind' //消防-风冷
+  | 'fireFightWet' //消防-液冷
+  | 'wet' //液冷
+  | 'wetCooler' //液冷机
+  | 'dehumidifier'; //除湿机
+
 export enum AlarmStatusTypeEnum {
   Alarmimng, //告警中
   Restored, //已恢复

@@ -26,7 +26,7 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} showDeviceModel time={realTimeData?.refreshTime} />
       <div className={styles.industry}>
         <Row gutter={16}>
           <Col span={8}>

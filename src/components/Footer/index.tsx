@@ -5,7 +5,9 @@ import { getSystemStatus } from '@/services/device';
 import { useEffect, useState } from 'react';
 import { ReactComponent as AlarmStatusIcon } from '@/assets/image/device/alarm_status.svg';
 import { ReactComponent as NormalStatusIcon } from '@/assets/image/device/normal_status.svg';
+
 const options = [
+  { label: '关闭', value: 0 },
   { label: '1s', value: 1 },
   { label: '2s', value: 2 },
   { label: '3s', value: 3 },
@@ -19,6 +21,7 @@ const options = [
 ];
 // import { useDeviceData } from '@/hooks';
 export default () => {
+  const { data: page } = useModel('page');
   const { config, dispatch } = useModel('config');
   const [statusInfo, setStatusInfo] = useState({
     status: false,
@@ -42,10 +45,14 @@ export default () => {
     return isError;
   };
   useEffect(() => {
+    if (!config.refreshTime) {
+      requestSystemStatus();
+      return;
+    }
     requestSystemStatus();
     const timer = setInterval(async () => {
       const isError = await requestSystemStatus();
-      isError && clearInterval(timer);
+      (isError || !page?.isVisible) && clearInterval(timer);
     }, config.refreshTime * 1000);
     return () => {
       clearInterval(timer);

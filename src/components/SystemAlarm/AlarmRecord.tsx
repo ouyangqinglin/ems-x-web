@@ -1,11 +1,12 @@
 import React from 'react';
 import YTProTable from '@/components/YTProTable';
-import type { AlarmRecordDataType, ModelTypeEnum } from './config';
+import type { AlarmRecordDataType, ModelTypeEnum, DeviceType } from './config';
 import { columns } from './config';
 // import { getytOrder } from '@/services/equipment';
 
 export type AlarmRecordProps = {
   modelType?: ModelTypeEnum;
+  deviceType?: DeviceType;
   realTimeData?: any;
 };
 

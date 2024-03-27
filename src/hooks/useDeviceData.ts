@@ -59,7 +59,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
     let timer: NodeJS.Timer;
     if (!manual && sourceId && page?.isVisible) {
       runRequest();
-      if (isInterval) {
+      if (isInterval && config.refreshTime) {
         timer = setInterval(() => {
           runRequest();
         }, interval || config.refreshTime * 1000);

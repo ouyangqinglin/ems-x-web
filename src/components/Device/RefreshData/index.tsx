@@ -13,16 +13,18 @@ import { Button, message } from 'antd';
 import styles from './index.less';
 import { useBoolean } from 'ahooks';
 import { RequestCode } from '@/utils/dictionary';
-
+import { useRequest } from 'umi';
+import { getSystemStatus } from '@/services/device';
 type RefreshDataType = {
   className?: string;
   time?: string;
+  showDeviceModel?: boolean;
   run?: (params?: any) => Promise<any> | undefined;
 };
 
 const RefreshData: React.FC<RefreshDataType> = (props) => {
-  const { time = '', run, className = '' } = props;
-
+  const { time = '', run, className = '', showDeviceModel = false } = props;
+  const { data: deviceData } = useRequest(getSystemStatus, { manual: false });
   const [loading, { setFalse, setTrue }] = useBoolean(false);
 
   const onClick = () => {
@@ -46,11 +48,16 @@ const RefreshData: React.FC<RefreshDataType> = (props) => {
 
   return (
     <>
-      <div className={`tx-right px24 py16 ${styles.contain} ${className}`}>
-        更新时间：{time}
-        <Button loading={loading} className="ml12" icon={<RedoOutlined />} onClick={onClick}>
-          更新
-        </Button>
+      <div className={`px24 py16 ${styles.flex} ${className}`}>
+        <div className={styles.label}>
+          {showDeviceModel ? `设备型号：${deviceData?.deviceModel || '--'}` : ''}
+        </div>
+        <div>
+          更新时间（本地）：{time}
+          <Button loading={loading} className="ml12" icon={<RedoOutlined />} onClick={onClick}>
+            更新
+          </Button>
+        </div>
       </div>
     </>
   );

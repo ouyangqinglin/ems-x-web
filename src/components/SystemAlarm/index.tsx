@@ -1,17 +1,43 @@
 import React from 'react';
-import type { ModelTypeEnum } from './config';
+import type { ModelTypeEnum, DeviceType } from './config';
 import type { TabsProps } from 'antd';
 import AlarmRecord from './AlarmRecord';
 import AlarmStatus from './AlarmStatus';
-import { Tabs, Card } from 'antd';
+import { Tabs, Button } from 'antd';
 import { formatMessage } from '@/utils';
 import styles from './index.less';
+import { ReactComponent as NormalStatusIcon } from '@/assets/image/device/normal_status.svg';
+import { ReactComponent as AlarmStatusIcon } from '@/assets/image/device/alarm_status.svg';
+import { ReactComponent as AlarmerStatusIcon } from '@/assets/image/device/alarmer_status.svg';
+import { ReactComponent as AlarmestStatusIcon } from '@/assets/image/device/alarmest_status.svg';
+
 export type SystemAlarmProps = {
+  deviceType?: DeviceType;
   modelType?: ModelTypeEnum;
   realTimeData?: any;
 };
 
 const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
+  const tabBar = (
+    <div className={styles.status}>
+      <span>
+        <NormalStatusIcon />
+        正常状态
+      </span>
+      <span>
+        <AlarmestStatusIcon />
+        严重告警
+      </span>
+      <span>
+        <AlarmerStatusIcon />
+        中等告警
+      </span>
+      <span>
+        <AlarmStatusIcon />
+        一般告警
+      </span>
+    </div>
+  );
   const items: TabsProps['items'] = [
     {
       key: '1',
@@ -27,7 +53,7 @@ const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
 
   return (
     <div className="card-wrap shadow p20 h-full">
-      <Tabs items={items} />
+      <Tabs items={items} tabBarExtraContent={tabBar} />
     </div>
   );
 };

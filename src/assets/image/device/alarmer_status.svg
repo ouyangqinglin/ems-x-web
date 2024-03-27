@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>icon_一般告警备份</title>
+    <title>icon_中等告警备份</title>
     <g id="上位机" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="1_1.光储一体机上位机_首页" transform="translate(-1782.000000, -1100.000000)" fill="#007DFF">
+        <g id="1_1.光储一体机上位机_首页" transform="translate(-1680.000000, -1100.000000)" fill="#F99600">
             <g id="main" transform="translate(212.000000, 102.000000)">
                 <g id="7" transform="translate(24.000000, 970.000000)">
                     <g id="标题栏" transform="translate(16.000000, 18.000000)">
                         <g id="状态" transform="translate(1252.000000, 6.000000)">
-                            <g id="告警状态备份-2" transform="translate(278.000000, 0.000000)">
-                                <g id="icon_一般告警备份" transform="translate(0.000000, 4.000000)">
-                                    <circle id="椭圆形" fill-opacity="0.2" cx="7" cy="7" r="7"></circle>
+                            <g id="告警状态备份-3" transform="translate(176.000000, 0.000000)">
+                                <g id="icon_中等告警备份" transform="translate(0.000000, 4.000000)">
+                                    <circle id="椭圆形" fill-opacity="0.196760271" cx="7" cy="7" r="7"></circle>
                                     <circle id="椭圆形备份-25" cx="7" cy="7" r="3"></circle>
                                 </g>
                             </g>
