@@ -12,8 +12,16 @@
   .imgBox {
     position: relative;
     width: 382px;
+    object-fit: contain;
+    @media screen and (max-width: 1560px) {
+      width: 300px;
+    }
     img {
       width: 382px;
+      //object-fit: contain;
+      @media screen and (max-width: 1560px) {
+        width: 300px;
+      }
     }
     span {
       position: absolute;
@@ -23,50 +31,86 @@
     .one {
       top: 43px;
       left: 45%;
+      @media screen and (max-width: 1560px) {
+        top: 30px;
+      }
     }
     .six {
       bottom: 66px;
       left: 43%;
+      @media screen and (max-width: 1560px) {
+        bottom: 50px;
+      }
     }
     .two {
       top: 83px;
       left: 57%;
       transform: rotate(-45deg);
+      @media screen and (max-width: 1560px) {
+        top: 72px;
+      }
     }
     .seven {
       right: 62%;
       bottom: 107px;
       transform: rotate(-40deg);
+      @media screen and (max-width: 1560px) {
+        right: 82%;
+        bottom: 53px;
+      }
     }
     .three {
       top: 105px;
       right: 13%;
       transform: rotate(-23deg);
+      @media screen and (max-width: 1560px) {
+        top: 97px;
+        right: 24%;
+      }
     }
     .eight {
       bottom: 150px;
       left: 18%;
       transform: rotate(-15deg);
+      @media screen and (max-width: 1560px) {
+        bottom: 114px;
+        left: 21%;
+      }
     }
     .four {
-      top: 188px;
-      right: 11%;
+      top: 178px;
+      right: 23%;
       transform: rotate(20deg);
+      @media screen and (max-width: 1560px) {
+        top: 132px;
+        right: 25%;
+      }
     }
     .nine {
       bottom: 199px;
       left: 25%;
       transform: rotate(20deg);
+      @media screen and (max-width: 1560px) {
+        bottom: 162px;
+      }
     }
     .five {
       bottom: 91px;
       left: 64%;
       transform: rotate(45deg);
+      @media screen and (max-width: 1560px) {
+        bottom: 85px;
+        left: 69%;
+      }
     }
     .ten {
       top: 79px;
       right: 59%;
       transform: rotate(40deg);
+      @media screen and (max-width: 1560px) {
+        top: 45px;
+        right: 67%;
+      }
     }
   }
 }
