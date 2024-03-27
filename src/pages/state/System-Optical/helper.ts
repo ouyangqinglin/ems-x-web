@@ -6,6 +6,13 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
+const commonEnumType: any = {
+  type: 'enum',
+  specs: {
+    0: '正常',
+    1: '失联',
+  },
+};
 
 export const baseInfoItems: any = [
   {
@@ -152,76 +159,58 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '17',
+        id: '1101',
         name: '云平台通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '18',
+        id: '1102',
         name: '永泰云通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '19',
+        id: '1103',
         name: '灯板通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '20',
+        id: '1104',
         name: '变流器通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '21',
+        id: '1105',
         name: 'BMS 通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '22',
+        id: '1105',
         name: '空调通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '23',
+        id: '1107',
         name: '消防通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '25',
+        id: '1108',
         name: '电网侧电表通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
       {
-        id: '26',
+        id: '1109',
         name: '逆变侧电表通信',
         type: 'property',
-        dataType: {
-          type: 'string',
-        },
+        dataType: commonEnumType,
       },
     ],
   },
@@ -239,47 +228,79 @@ export const statusItems: any = [
         type: 'group',
         children: [
           {
-            id: '1',
+            id: '1500',
             type: 'property',
             name: '系统控制模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
-            id: '2',
+            id: '1501',
             type: 'property',
             name: '系统工作模式',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '削峰填谷',
+                1: '备电',
+                2: '手动控制',
+                3: '自发自用',
+                4: '全额上网',
+              },
             },
           },
           {
-            id: '3',
+            id: '1502',
             type: 'property',
             name: '系统工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '故障',
+                1: '运行',
+                2: '运行/充电',
+                3: '运行/放电',
+                4: '待机',
+                5: '停机',
+                6: '急停',
+              },
             },
           },
           {
-            id: '4',
+            id: '1200',
             type: 'property',
             name: '系统告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
-            id: '5',
+            id: '3701',
             type: 'property',
             name: '电池组工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '运行',
+                1: '运行/充电',
+                2: '运行/放电',
+                3: '待机',
+                4: '停止',
+                5: '故障',
+              },
             },
           },
           {
-            id: '6',
+            id: '1201',
             type: 'property',
             name: '光伏发电功率',
             dataType: {
@@ -290,7 +311,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '7',
+            id: '1202',
             type: 'property',
             name: '用电功率',
             dataType: {
@@ -301,7 +322,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '8',
+            id: '1204',
             type: 'property',
             name: '自发自用功率',
             dataType: {
@@ -312,7 +333,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '9',
+            id: '1205',
             type: 'property',
             name: '今日发电量',
             dataType: {
@@ -323,7 +344,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '10',
+            id: '1206',
             type: 'property',
             name: '今日用电量',
             dataType: {
@@ -334,7 +355,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '11',
+            id: '1207',
             type: 'property',
             name: '今日自发自用电量',
             dataType: {
@@ -345,7 +366,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '12',
+            id: '1208',
             type: 'property',
             name: '今日自发自用率',
             dataType: {
@@ -356,7 +377,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '13',
+            id: '1209',
             type: 'property',
             name: '累计发电量',
             dataType: {
@@ -367,7 +388,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '14',
+            id: '1211',
             type: 'property',
             name: '累计用电量',
             dataType: {
@@ -378,7 +399,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '15',
+            id: '1213',
             type: 'property',
             name: '累计自发自用电量',
             dataType: {
@@ -389,7 +410,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '16',
+            id: '1215',
             type: 'property',
             name: '累计自发自用率',
             dataType: {
@@ -400,7 +421,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '17',
+            id: '1216',
             type: 'property',
             name: '电池SOC',
             dataType: {
@@ -411,7 +432,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '18',
+            id: '1217',
             type: 'property',
             name: '电池SOH',
             dataType: {
@@ -422,7 +443,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '19',
+            id: '3069',
             type: 'property',
             name: '电池充放电功率',
             dataType: {
@@ -433,7 +454,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '20',
+            id: '1219',
             type: 'property',
             name: '电池剩余电能',
             dataType: {
@@ -444,7 +465,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '21',
+            id: '1220',
             type: 'property',
             name: '今日电池充电量',
             dataType: {
@@ -455,7 +476,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '22',
+            id: '1221',
             type: 'property',
             name: '今日电池放电量',
             dataType: {
@@ -466,7 +487,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '23',
+            id: '1222',
             type: 'property',
             name: '累计电池充电量',
             dataType: {
@@ -477,7 +498,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '24',
+            id: '1224',
             type: 'property',
             name: '累计电池放电量',
             dataType: {
@@ -488,7 +509,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '25',
+            id: '1226',
             type: 'property',
             name: '负载用电功率',
             dataType: {
@@ -499,7 +520,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '26',
+            id: '1228',
             type: 'property',
             name: '今日负载用电量',
             dataType: {
@@ -510,7 +531,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '27',
+            id: '1229',
             type: 'property',
             name: '今日自给自足电量',
             dataType: {
@@ -521,7 +542,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '28',
+            id: '1230',
             type: 'property',
             name: '今日自给自足率',
             dataType: {
@@ -529,7 +550,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '29',
+            id: '1231',
             type: 'property',
             name: '累计负载用电量',
             dataType: {
@@ -540,7 +561,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '30',
+            id: '1233',
             type: 'property',
             name: '累计自给自足电量',
             dataType: {
@@ -551,7 +572,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '31',
+            id: '1235',
             type: 'property',
             name: '累计自给自足率',
             dataType: {
@@ -559,7 +580,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '32',
+            id: '1236',
             type: 'property',
             name: '逆变侧有功功率',
             dataType: {
@@ -570,7 +591,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1237',
             type: 'property',
             name: '逆变侧无功功率',
             dataType: {
@@ -581,7 +602,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1238',
             type: 'property',
             name: '逆变侧视在功率',
             dataType: {
@@ -592,7 +613,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1239',
             type: 'property',
             name: '市电功率',
             dataType: {
@@ -603,7 +624,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1241',
             type: 'property',
             name: '今日市电供电量',
             dataType: {
@@ -614,7 +635,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1242',
             type: 'property',
             name: '今日市电馈网电量',
             dataType: {
@@ -625,7 +646,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1243',
             type: 'property',
             name: '累计市电供电量',
             dataType: {
@@ -636,7 +657,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1245',
             type: 'property',
             name: '累计市电馈网电量',
             dataType: {
@@ -647,7 +668,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1247',
             type: 'property',
             name: '电网侧电表有功功率',
             dataType: {
@@ -658,7 +679,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1249',
             type: 'property',
             name: '电网侧电表当前正向总有功电能',
             dataType: {
@@ -669,7 +690,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1251',
             type: 'property',
             name: '电网侧电表当前反向总有功电能',
             dataType: {
@@ -680,31 +701,31 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1606',
             type: 'property',
             name: '防逆流启动',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停止',
+                1: '启动',
+              },
             },
           },
           {
-            id: '33',
-            type: 'property',
-            name: '防逆流启动',
-            dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: '33',
+            id: '1607',
             type: 'property',
             name: '防过流启动',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停止',
+                1: '启动',
+              },
             },
           },
           {
-            id: '33',
+            id: '1253',
             type: 'property',
             name: '防逆流阈值',
             dataType: {
@@ -715,7 +736,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1254',
             type: 'property',
             name: '系统设置有功功率',
             dataType: {
@@ -726,7 +747,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1255',
             type: 'property',
             name: '系统设置无功功率',
             dataType: {
@@ -737,103 +758,151 @@ export const statusItems: any = [
             },
           },
           {
-            id: '33',
+            id: '1256',
             type: 'property',
             name: '市电开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1257',
             type: 'property',
             name: '直流开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1258',
             type: 'property',
             name: '负载开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1259',
             type: 'property',
             name: '电气急停信号',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '异常',
+              },
             },
           },
           {
-            id: '33',
+            id: '1260',
             type: 'property',
             name: '辅助供电开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1261',
             type: 'property',
             name: 'EMS直流供电开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1262',
             type: 'property',
             name: '站控消防',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '异常',
+              },
             },
           },
           {
-            id: '33',
+            id: '1263',
             type: 'property',
             name: '交流防雷器状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1264',
             type: 'property',
             name: '直流防雷器状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '闭合',
+                1: '断开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1265',
             type: 'property',
             name: '可燃气体排风扇开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '异常',
+              },
             },
           },
           {
-            id: '33',
+            id: '1266',
             type: 'property',
             name: '水浸报警',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '停止',
+                1: '运行',
+              },
             },
           },
           {
-            id: '33',
+            id: '1267',
             type: 'property',
             name: '门禁开关',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '关闭',
+                1: '打开',
+              },
             },
           },
           {
-            id: '33',
+            id: '1268',
             type: 'property',
             name: '电池柜开门次数',
             dataType: {
