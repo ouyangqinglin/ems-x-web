@@ -1,4 +1,5 @@
 .optical {
+  padding: 24px;
   overflow-x: hidden;
   .right {
     display: flex;
@@ -7,6 +8,7 @@
     height: 412px;
   }
   .card {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     .icon {
       display: flex;
       flex-direction: column;
@@ -14,6 +16,9 @@
       align-items: center;
       width: 60px;
       margin: 0 40px;
+    }
+    .title {
+      color: #909399;
     }
     :global {
       .ant-card-body {

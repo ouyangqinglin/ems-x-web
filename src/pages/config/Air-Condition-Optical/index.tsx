@@ -11,7 +11,7 @@ import React from 'react';
 import Card from '@/components/Card';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
-import { baseInfoItems, runValueItems } from './helper';
+import { airSetItems, baseInfoItems, runValueItems } from './helper';
 import Control from '@/components/Device/Control';
 
 const Pcs: React.FC = () => {
@@ -26,6 +26,15 @@ const Pcs: React.FC = () => {
       <div className="p24">
         <Card>
           <Control groupData={baseInfoItems} realTimeData={realTimeData} />
+        </Card>
+        <Card className="my20">
+          <Control
+            groupData={airSetItems}
+            realTimeData={realTimeData}
+            detailProps={{
+              column: 4,
+            }}
+          />
         </Card>
         <Card className="my20">
           <Control

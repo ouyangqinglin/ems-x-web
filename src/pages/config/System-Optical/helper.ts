@@ -22,7 +22,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '1000',
             name: '设备SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +31,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '1010',
             name: '设备厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '1020',
             name: '设备型号',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +49,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '1057',
             name: 'EMS SN',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +58,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '4',
+            id: '1067',
             name: 'EMS 型号',
             type: 'property',
             buttons: ['refresh'],
@@ -67,7 +67,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '6',
+            id: '1077',
             name: 'EMS硬件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -76,7 +76,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '8',
+            id: '1078',
             name: 'EMS软件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -90,6 +90,13 @@ export const baseInfoItems: any = [
   },
 ];
 
+const commonEnumType: any = {
+  specs: {
+    0: '使能',
+    1: '禁止',
+  },
+  type: 'enum',
+};
 export const systemEnableItems: any = [
   {
     id: 'a',
@@ -103,95 +110,53 @@ export const systemEnableItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '11100',
             name: '自启动功能使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11101',
             name: '市电充电功能使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11102',
             name: '向电网馈电功能使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11103',
             name: '离网工作功能使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11104',
             name: '并网工作功能使能',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11106',
             name: '防逆流启动',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
           {
-            id: '1',
+            id: '11107',
             name: '防过流启动',
             type: 'property',
             buttons: ['refresh', 'edit'],
-            dataType: {
-              specs: {
-                0: 'kW',
-                1: 'kW',
-              },
-              type: 'enum',
-            },
+            dataType: commonEnumType,
           },
         ],
       },
@@ -212,7 +177,7 @@ export const systemParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '11200',
             name: '防逆流阈值',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -224,7 +189,7 @@ export const systemParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '11201',
             name: '变压器最大负荷',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -236,7 +201,7 @@ export const systemParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '11202',
             name: '需量启动功率',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -266,7 +231,7 @@ export const otherParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '11250',
             name: '数据上报频率(云平台)',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -278,7 +243,7 @@ export const otherParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '11251',
             name: '数据上报频率(永泰云平台)',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -320,7 +285,7 @@ export const timeSetItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '11252',
             name: '校时时间',
             type: 'property',
             buttons: ['refresh', 'edit'],

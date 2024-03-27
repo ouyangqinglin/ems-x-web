@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Col, Row } from 'antd';
 import styles from './index.less';
 import Chart from '../Chart';
+import CardC from '@/components/Card';
 import Run from '@/components/Device/Run';
 import {
   pvItems,
@@ -20,20 +21,20 @@ import incomeImg from '@/assets/image/station/overview/icon_income_img.svg';
 import reduceImg from '@/assets/image/station/overview/icon_reduce_img.svg';
 import SystemAlarm from '@/components/SystemAlarm';
 import { useDeviceData } from '@/hooks';
-import LiquidSystemRunStatus from '@/pages/index/LiquidSystemRunStatus';
+import SystemRunStatus from '../SystemRunStatusOptical';
 import RefreshData from '@/components/Device/RefreshData';
 const Index: React.FC = () => {
   const { realTimeData, run } = useDeviceData({ isInterval: false });
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className={styles.optical}>
-        <RefreshData run={run} time={realTimeData?.refreshTime} />
         <Row gutter={12}>
           <Col span={12}>
-            <Card className={styles.card} style={{ height: 198 }}>
+            <Card className={styles.card} style={{ height: 218 }}>
               <div className={styles.icon}>
                 <img src={pvImg} alt="" />
-                <span>光伏</span>
+                <span className={styles.title}>光伏</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -45,10 +46,10 @@ const Index: React.FC = () => {
             </Card>
           </Col>
           <Col span={6}>
-            <Card className={styles.card} style={{ height: 198 }}>
+            <Card className={styles.card} style={{ height: 218 }}>
               <div className={styles.icon}>
                 <img src={batImg} alt="" />
-                <span>电池</span>
+                <span className={styles.title}>电池</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -60,10 +61,10 @@ const Index: React.FC = () => {
             </Card>
           </Col>
           <Col span={6}>
-            <Card className={styles.card} style={{ height: 198 }}>
+            <Card className={styles.card} style={{ height: 218 }}>
               <div className={styles.icon}>
                 <img src={loadImg} alt="" />
-                <span>负载</span>
+                <span className={styles.title}>负载</span>
               </div>
               <Run
                 realTimeData={realTimeData}
@@ -78,7 +79,7 @@ const Index: React.FC = () => {
         <Row gutter={12} className="mt16" align="top">
           <Col span={7}>
             <Card style={{ height: 412 }} className={styles.card}>
-              <LiquidSystemRunStatus />
+              <SystemRunStatus data={realTimeData} />
             </Card>
           </Col>
           <Col span={11}>
@@ -91,7 +92,7 @@ const Index: React.FC = () => {
               <Card style={{ height: 200 }} className={styles.card}>
                 <div className={styles.icon}>
                   <img src={electricImg} alt="" />
-                  <span>电网</span>
+                  <span className={styles.title}>电网</span>
                 </div>
                 <Run
                   realTimeData={realTimeData}
@@ -104,7 +105,7 @@ const Index: React.FC = () => {
               <Card style={{ height: 200 }} className={styles.card}>
                 <div className={styles.icon}>
                   <img src={incomeImg} alt="" />
-                  <span>收益</span>
+                  <span className={styles.title}>收益</span>
                 </div>
                 <Run
                   realTimeData={realTimeData}
@@ -120,7 +121,7 @@ const Index: React.FC = () => {
 
         <Row gutter={12} className="mt16">
           <Col span={18}>
-            <Card className="h-full" style={{ height: 248 }}>
+            <CardC className="h-full" style={{ height: 248 }}>
               <Run
                 realTimeData={realTimeData}
                 groupData={systemItems}
@@ -128,13 +129,13 @@ const Index: React.FC = () => {
                   column: 5,
                 }}
               />
-            </Card>
+            </CardC>
           </Col>
           <Col span={6}>
             <Card className={styles.card} style={{ height: 248 }}>
               <div className={styles.icon}>
                 <img src={reduceImg} alt="" />
-                <span>减排</span>
+                <span className={styles.title}>减排</span>
               </div>
               <Run
                 realTimeData={realTimeData}

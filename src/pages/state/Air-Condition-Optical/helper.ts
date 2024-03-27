@@ -16,7 +16,7 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: '1',
+        id: '5500',
         name: '空调SN',
         type: 'property',
         dataType: {
@@ -24,7 +24,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '2',
+        id: '5510',
         name: '空调厂商',
         type: 'property',
         dataType: {
@@ -32,7 +32,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '3',
+        id: '5520',
         name: '空调型号',
         type: 'property',
         dataType: {
@@ -40,7 +40,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '4',
+        id: '5530',
         name: '空调硬件版本',
         type: 'property',
         dataType: {
@@ -48,7 +48,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '5',
+        id: '5531',
         name: '空调软件版本',
         type: 'property',
         dataType: {
@@ -56,19 +56,27 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '6',
+        id: '5532',
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '失联',
+          },
         },
       },
       {
-        id: '6',
+        id: '5533',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '485',
+            1: '未知',
+          },
         },
       },
     ],
@@ -90,87 +98,130 @@ export const statusItems: any = [
         },
       },
       {
-        id: '1',
+        id: '5560',
         type: 'property',
         name: '空调机组工作状态',
         dataType: {
-          type: 'string',
+          dataType: {
+            type: 'enum',
+            specs: {
+              0: '停止',
+              1: '运行',
+              2: '故障',
+            },
+          },
         },
       },
       {
-        id: '2',
+        id: '5534',
         type: 'property',
         name: '空调告警状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '正常',
+            1: '告警',
+          },
         },
       },
       {
-        id: '3',
+        id: '5535',
         type: 'property',
         name: '内风机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '4',
+        id: '5536',
         type: 'property',
         name: '外风机运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '5',
+        id: '5539',
         type: 'property',
         name: '自检状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '6',
+        id: '5540',
         type: 'property',
         name: '制冷运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '7',
+        id: '5541',
         type: 'property',
         name: '制热运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '8',
+        id: '5542',
         type: 'property',
         name: '除湿状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '9',
+        id: '5543',
         type: 'property',
         name: '排氢运行状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '10',
+        id: '5544',
         type: 'property',
         name: '干接点告警输出状态',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+          },
         },
       },
       {
-        id: '11',
+        id: '5537',
         type: 'property',
         name: '室外温度',
         dataType: {
@@ -181,7 +232,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: 'fffff',
         type: 'property',
         name: '室内温度',
         dataType: {
@@ -192,7 +243,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5546',
         type: 'property',
         name: '冷凝盘管温度',
         dataType: {
@@ -203,7 +254,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5545',
         type: 'property',
         name: '回风温度',
         dataType: {
@@ -214,7 +265,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5547',
         type: 'property',
         name: '压缩机/加热器电流',
         dataType: {
@@ -225,7 +276,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5548',
         type: 'property',
         name: '内风机电流',
         dataType: {
@@ -236,7 +287,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '11',
+        id: '5549',
         type: 'property',
         name: '外风机电流',
         dataType: {
@@ -247,7 +298,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '12',
+        id: '5550',
         type: 'property',
         name: '电源电压',
         dataType: {
@@ -258,7 +309,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '13',
+        id: '5551',
         type: 'property',
         name: '蒸发盘管温度',
         dataType: {
@@ -269,7 +320,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5552',
         type: 'property',
         name: '内风机转速',
         dataType: {
@@ -280,7 +331,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5553',
         type: 'property',
         name: '外风机转速',
         dataType: {
@@ -291,7 +342,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '14',
+        id: '5554',
         type: 'property',
         name: '变频压缩机转速',
         dataType: {
@@ -302,7 +353,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '15',
+        id: '5555',
         type: 'property',
         name: '设备累计运行时间',
         dataType: {
@@ -313,7 +364,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5556',
         type: 'property',
         name: '压缩机累计运行时间',
         dataType: {
@@ -324,7 +375,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5557',
         type: 'property',
         name: '加热器累计运行时间',
         dataType: {
@@ -335,7 +386,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5558',
         type: 'property',
         name: '内风机累计运行时间',
         dataType: {
@@ -346,7 +397,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: '16',
+        id: '5559',
         type: 'property',
         name: '外风机累计运行时间',
         dataType: {

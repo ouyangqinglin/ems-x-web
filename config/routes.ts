@@ -440,7 +440,6 @@ const routers: RouterType[] = [
         keepAlive: false,
         locale: 'menu.help',
       },
-      
     ],
   },
   {

@@ -22,60 +22,63 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '11000',
             name: '控制模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '本地',
+                1: '远程',
+              },
             },
           },
           {
-            id: '3',
+            id: '11001',
             name: '工作模式',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '削峰填谷',
+                1: '备电',
+                2: '手动控制',
+                3: '自发自用',
+                4: '售电模式',
+              },
             },
           },
           {
-            id: '2',
+            id: '11002',
             name: '工作状态',
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '启动',
+                1: '待机',
+                2: '停止',
+                3: '急停',
+                4: '复位',
+              },
             },
           },
           {
-            id: '2',
+            id: '11000',
             name: '系统控制模式切换',
             type: 'property',
             buttons: ['edit'],
             dataType: {
               type: 'enum',
               specs: {
-                0: '削峰填谷',
-                1: '备电',
-                2: '手动控制',
+                0: '本地',
+                1: '远程',
               },
             },
           },
           {
-            id: '4',
+            id: '11002',
             name: '系统工作模式切换',
-            type: 'property',
-            buttons: ['edit'],
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '削峰填谷',
-                1: '备电',
-                2: '手动控制',
-              },
-            },
-          },
-          {
-            id: '6',
-            name: '系统工作状态控制',
             type: 'property',
             buttons: ['edit'],
             dataType: {
@@ -85,11 +88,13 @@ export const baseInfoItems: any = [
                 1: '待机',
                 2: '停止',
                 3: '急停',
+                4: '复位',
               },
             },
           },
+
           {
-            id: '8',
+            id: '11003',
             name: '系统能量统计初始化',
             type: 'property',
             buttons: ['refresh'],
@@ -98,7 +103,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '1',
+            id: '11004',
             name: '系统复位',
             buttons: ['refresh'],
             type: 'property',
