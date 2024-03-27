@@ -14,7 +14,8 @@ import {
 } from './helper';
 import Chart from '../Chart';
 import RefreshData from '@/components/Device/RefreshData';
-import SystemRunStatus from '../SystemRunStatus';
+// import SystemRunStatus from '../SystemRunStatus';
+import SystemRunStatus from '../LiquidSystemRunStatus';
 import batImg from '@/assets/image/station/overview/icon_bat_img.svg';
 import batSystemImg from '@/assets/image/station/overview/icon_bat_system_img.svg';
 import loadImg from '@/assets/image/station/overview/icon_load_img.svg';
