@@ -85,15 +85,17 @@ export default defineConfig({
   chainWebpack: (config) => {
     config.module.rule('otf').test(/.otf$/).use('file-loader').loader('file-loader');
     config.module.rule('mp4').test(/.mp4$/).use('file-loader').loader('file-loader');
-    config.plugin('extract-css').tap(() => [
-      {
-        filename: `static/css/[name].[contenthash:8].css`,
-        chunkFilename: `static/css/[name].[contenthash:8].chunk.css`,
-        ignoreOrder: true,
-      },
-    ]);
-    config.output
-      .filename(`static/js/[name].[hash:8].js`)
-      .chunkFilename(`static/js/[name].[contenthash:8].chunk.js`);
+    if (process.env.UMI_ENV !== 'dev') {
+      config.plugin('extract-css').tap(() => [
+        {
+          filename: `static/css/[name].[contenthash:8].css`,
+          chunkFilename: `static/css/[name].[contenthash:8].chunk.css`,
+          ignoreOrder: true,
+        },
+      ]);
+      config.output
+        .filename(`static/js/[name].[hash:8].js`)
+        .chunkFilename(`static/js/[name].[contenthash:8].chunk.js`);
+    }
   },
 });
