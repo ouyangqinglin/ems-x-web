@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -22,7 +19,7 @@ export const baseInfoItems: any = [
         buttons: ['refresh'],
         children: [
           {
-            id: '1',
+            id: '32802',
             name: '除湿机SN',
             type: 'property',
             buttons: ['refresh'],
@@ -31,7 +28,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3',
+            id: '32827',
             name: '除湿机型号',
             type: 'property',
             buttons: ['refresh'],
@@ -40,7 +37,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '32812',
             name: '除湿机厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -49,7 +46,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '32822',
             name: '除湿机硬件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -58,7 +55,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '2',
+            id: '32823',
             name: '除湿机软件版本',
             type: 'property',
             buttons: ['refresh'],
@@ -85,7 +82,7 @@ export const dehumidifierParamsItems: any = [
         buttons: ['refresh', 'edit'],
         children: [
           {
-            id: '1',
+            id: '52206',
             name: '设备通讯地址',
             type: 'property',
             buttons: ['refresh', 'edit'],
@@ -97,11 +94,8 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            id: 'DehumidificationPoint',
+            id: '52201',
             name: '除湿启控值',
-            modelName: '除湿启控值',
-            sortOrder: 9,
-            parentId: 'statusInformation',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -116,11 +110,8 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            id: 'DehumidificationReturnDifference',
+            id: '52202',
             name: '除湿停止值',
-            modelName: '除湿停止值',
-            sortOrder: 10,
-            parentId: 'statusInformation',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -135,11 +126,8 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            id: 'TempWhenStartControl',
+            id: '52203',
             name: '温度启控值',
-            modelName: '温度启控值',
-            sortOrder: 11,
-            parentId: 'statusInformation',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -154,11 +142,8 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            id: 'TempWhenStopControl',
+            id: '52204',
             name: '温度控制回差值',
-            modelName: '温度控制回差值',
-            sortOrder: 12,
-            parentId: 'statusInformation',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -173,11 +158,8 @@ export const dehumidifierParamsItems: any = [
             },
           },
           {
-            id: 'CoolingPlateDeicingTemp',
+            id: '52205',
             name: '冷凝片除冰值',
-            modelName: '冷凝片除冰值',
-            sortOrder: 13,
-            parentId: 'statusInformation',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {

@@ -23,7 +23,7 @@ const LiquidCooledFireProtection: React.FC = () => {
       <div className="p24">
         <Card className="h-full">
           <Run
-            realTimeData={realTimeData}
+            realTimeData={realTimeData}    
             groupData={baseInfoItems}
             detailProps={{
               column: 5,
