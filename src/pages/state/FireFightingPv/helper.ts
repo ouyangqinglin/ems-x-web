@@ -65,7 +65,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '7',
+        id: '5633',
         name: '与EMS通信方式',
         type: 'property',
         dataType: {
