@@ -7,12 +7,11 @@
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import CardC from '@/components/Card';
 import { Col, Row, Card } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import styles from './index.less'
+import styles from './index.less';
 import {
   baseInfoItems,
   funItems,
@@ -38,23 +37,44 @@ import {
   bmuSevenT,
   bmuEightT,
   bmuNineT,
-  bmuTenT
+  bmuTenT,
 } from './helper';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
-import SystemAlarm from "@/components/SystemAlarm";
+import SystemAlarm from '@/components/SystemAlarm';
 
-let arr = new Array(24)
-arr.fill(1)
+const arr = new Array(24);
+arr.fill(1);
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
   const { realTimeData, run } = useDeviceData();
 
   const [activeTabKey, setActiveTabKey] = useState<string>('0');
-  const vArr = [bmuOneV, bmuTwoV, bmuThreeV, bmuFourV, bmuFiveV, bmuSixV, bmuSevenV, bmuEightV, bmuNineV, bmuTenV]
-  const tArr = [  bmuOneT, bmuTwoT, bmuThreeT, bmuFourT, bmuFiveT, bmuSixT, bmuSevenT, bmuEightT, bmuNineT, bmuTenT]
-  const snArr= [5900,5910,5920,5930,5940,5950,5960,5970,5980,5990]
+  const vArr = [
+    bmuOneV,
+    bmuTwoV,
+    bmuThreeV,
+    bmuFourV,
+    bmuFiveV,
+    bmuSixV,
+    bmuSevenV,
+    bmuEightV,
+    bmuNineV,
+    bmuTenV,
+  ];
+  const tArr = [
+    bmuOneT,
+    bmuTwoT,
+    bmuThreeT,
+    bmuFourT,
+    bmuFiveT,
+    bmuSixT,
+    bmuSevenT,
+    bmuEightT,
+    bmuNineT,
+    bmuTenT,
+  ];
+  const snArr = [5900, 5910, 5920, 5930, 5940, 5950, 5960, 5970, 5980, 5990];
   const onTab1Change = (key: string) => {
     setActiveTabKey(key);
   };
@@ -172,37 +192,41 @@ const Pcs: React.FC = () => {
         </Row>
         <Row gutter={20} className="mt24">
           <Col span={24}>
-            <Card tabList={tabList}
-                  className={styles.card}
-                  title="电池模块单体信息"
-                  activeTabKey={activeTabKey}
-                  onTabChange={onTab1Change}>
-              <div className={styles.sn}>BMU SN: <span>{realTimeData[snArr[+activeTabKey]]}</span></div>
+            <Card
+              tabList={tabList}
+              className={styles.card}
+              title="电池模块单体信息"
+              activeTabKey={activeTabKey}
+              onTabChange={onTab1Change}
+            >
+              <div className={styles.sn}>
+                BMU SN: <span>{realTimeData[snArr[+activeTabKey]]}</span>
+              </div>
               <div className={styles.table}>
                 <div className={styles.first}>
                   <span>序号</span>
-                  { arr.map((item, index) => {
-                    return (<span>{index+1}</span>)
-                  } )}
+                  {arr.map((item, index) => {
+                    return <span key={item}>{index + 1}</span>;
+                  })}
                 </div>
                 <div className={styles.two}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>电压(mV)</span>
-                  { vArr[+activeTabKey].map((item) => {
-                    return (<span>{realTimeData[item]}</span>)
-                  } )}
+                  {vArr[+activeTabKey].map((item) => {
+                    return <span key={item}>{realTimeData[item]}</span>;
+                  })}
                 </div>
                 <div className={styles.three}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>温度(℃)</span>
-                  { tArr[+activeTabKey].map((item) => {
-                    return (<span>{realTimeData[item]}</span>)
-                  } )}
+                  {tArr[+activeTabKey].map((item) => {
+                    return <span key={item}>{realTimeData[item]}</span>;
+                  })}
                 </div>
               </div>
             </Card>
           </Col>
         </Row>
         <div className="mt16">
-          <SystemAlarm modelType="battery" realTimeData={realTimeData}/>
+          <SystemAlarm modelType="battery" realTimeData={realTimeData} />
         </div>
       </div>
     </>
