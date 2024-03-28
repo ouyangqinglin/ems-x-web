@@ -232,7 +232,7 @@ export const statusItems: any = [
         },
       },
       {
-        id: 'fffff',
+        id: 'fffffff',
         type: 'property',
         name: '室内温度',
         dataType: {
