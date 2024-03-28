@@ -134,8 +134,8 @@ export async function getInitialState(): Promise<initialStateType> {
 
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
-  console.log('initialState>>', initialState);
   editFavicon(initialState);
+
   return {
     heightLayoutHeader: 56,
     headerRender: () => <MyHeader />,

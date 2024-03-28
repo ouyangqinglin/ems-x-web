@@ -185,6 +185,7 @@ const Index: React.FC = () => {
       optionBat.legend.data = ['充电量', '放电量'];
     } else {
       optionBat.series = seriesLine;
+      optionBat.yAxis.name = '单位(kW)';
       optionBat.legend.data = ['充放电功率'];
     }
     if (domRef?.current) {

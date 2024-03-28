@@ -99,7 +99,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
     <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
       <Menu.Item key="logout">
         <LogoutOutlined />
-        {formatMessage({ id: 'user.loginOut', defaultMessage: '退出登录' })}
+        {formatMessage({ id: 'common.loginOut', defaultMessage: '退出登录' })}
       </Menu.Item>
     </Menu>
   );

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-19 15:28:48
+ * @LastEditTime: 2024-03-28 15:19:07
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\PcsPv\index.tsx
  */
@@ -24,6 +24,7 @@ import {
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -33,7 +34,7 @@ const Pcs: React.FC = () => {
       <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Row gutter={20}>
-          <Col span={4}>
+          <Col className="mb20" span={8} xxl={4}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -44,7 +45,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col className="mb20" span={16} xxl={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -55,7 +56,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={12}>
+          <Col className="mb20" span={24} xxl={12}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -67,7 +68,7 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
-        <Card className="h-full my20">
+        <Card className="h-full mb20">
           <Run
             realTimeData={realTimeData}
             groupData={pvSideItems}
@@ -127,6 +128,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} deviceType={0} />
       </div>
     </>
   );

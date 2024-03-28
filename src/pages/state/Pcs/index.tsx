@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-26 11:08:53
+ * @LastEditTime: 2024-03-28 15:13:16
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
  */
@@ -33,7 +33,7 @@ const Pcs: React.FC = () => {
       <RefreshData run={run} time={realTimeData?.refreshTime} />
       <div className="p24">
         <Row gutter={20}>
-          <Col span={4}>
+          <Col className="mb20" span={8} xxl={4}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -44,7 +44,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col className="mb20" span={16} xxl={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -55,7 +55,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col className="mb20" span={16} xxl={8}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -66,7 +66,7 @@ const Pcs: React.FC = () => {
               />
             </Card>
           </Col>
-          <Col span={4}>
+          <Col className="mb20" span={8} xxl={4}>
             <Card className="h-full">
               <Run
                 realTimeData={realTimeData}
@@ -78,7 +78,7 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
-        <Row gutter={20} className="my20">
+        <Row gutter={20} className="mb20">
           <Col span={14}>
             <Card className="h-full">
               <Run
@@ -120,7 +120,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
-        <SystemAlarm modelType="converter" realTimeData={realTimeData} />
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} deviceType={1} />
       </div>
     </>
   );
