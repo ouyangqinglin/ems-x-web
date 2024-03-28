@@ -24,6 +24,7 @@ import {
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -127,6 +128,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} deviceType={0} />
       </div>
     </>
   );

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-19 17:37:49
+ * @LastEditTime: 2024-03-28 10:11:10
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\PcsSess\index.tsx
  */
@@ -21,6 +21,7 @@ import {
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -97,6 +98,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} deviceType={4} />
       </div>
     </>
   );

@@ -1,5 +1,7 @@
 import pages from './zh-CN/pages';
 import menu from './zh-CN/menu';
+import common from './zh-CN/common';
+import device from './zh-CN/device';
 
 export default {
   'navBar.lang': '语言',
@@ -12,4 +14,6 @@ export default {
   'app.welcome.link.block-list': '基于 block 开发，快速构建标准页面',
   ...pages,
   ...menu,
+  ...common,
+  ...device,
 };

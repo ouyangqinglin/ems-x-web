@@ -112,7 +112,7 @@ const SchemaForm = <
     } else {
       return (
         (type === FormTypeEnum.Add
-          ? formatMessage({ id: 'common.newBuilt', defaultMessage: '新建' })
+          ? formatMessage({ id: 'common.add', defaultMessage: '新建' })
           : formatMessage({ id: 'common.edit', defaultMessage: '编辑' })) + suffixTitle
       );
     }

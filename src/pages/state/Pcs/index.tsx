@@ -120,7 +120,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
-        <SystemAlarm modelType="converter" realTimeData={realTimeData} />
+        <SystemAlarm modelType="converter" realTimeData={realTimeData} deviceType={1} />
       </div>
     </>
   );

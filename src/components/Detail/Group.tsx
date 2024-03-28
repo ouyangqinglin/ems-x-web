@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-07-18 11:55:22
- * @LastEditTime: 2024-01-03 11:21:09
+ * @LastEditTime: 2024-03-28 11:31:04
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\Detail\Group.tsx
+ * @FilePath: \ems-x-web\src\components\Detail\Group.tsx
  */
 import React, { useMemo } from 'react';
 import type { DetailItem, DetailProps } from './Detail';
@@ -53,6 +53,7 @@ const Group: React.FC<GroupProps> = (props) => {
           )}
           {!!item?.tabItems?.length && (
             <Tabs
+              key={'key' + index}
               className="mb16"
               items={item.tabItems?.map?.((tabItem) => {
                 if (tabItem?.groupItems && tabItem?.groupItems?.length) {
