@@ -41,7 +41,7 @@ const FireFightingSESS: React.FC = () => {
           />
         </Card>
         <div className="mt16">
-          <SystemAlarm modelType="fireFight" deviceType={2} realTimeData={realTimeData} />
+          <SystemAlarm modelType="fireFight" deviceType={4} realTimeData={realTimeData} />
         </div>
       </div>
     </>
