@@ -8,8 +8,8 @@ type AlarmStatusItemType = {
 const formatMessage = (message: any) => {
   return message.defaultMessage;
 };
-//系统告警状态
-export const systemAlarmStatusItem: AlarmStatusItemType[] = [
+//首页
+export const indexAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     children: [
@@ -156,8 +156,8 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
     ],
   },
 ];
-//系统风冷-液冷
-export const windAlarmStatusItem: AlarmStatusItemType[] = [
+//系统
+export const systemAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
@@ -791,331 +791,551 @@ export const converterAlarmStatusItem: AlarmStatusItemType[] = [
     ],
   },
 ];
-//电池组--昨天到这（3-27）
+//电池组
 export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
     children: [
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU硬件故障' }),
-        status: '5400[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '充电电流过高一级报警' }),
+        status: '3840[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BCU硬件故障' }),
-        status: '5400[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '放电电流过高一级报警' }),
+        status: '3840[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '极耳温度过高一级报警' }),
+        status: '3840[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温升过高一级报警' }),
+        status: '3840[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度差过大一级报警' }),
+        status: '3840[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池温度过低一级报警' }),
+        status: '3840[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池温度过高一级报警' }),
+        status: '3840[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过低一级报警' }),
+        status: '3840[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过高一级报警' }),
+        status: '3840[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体压差过大一级报警' }),
+        status: '3840[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过低一级报警' }),
+        status: '3840[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过高一级报警' }),
+        status: '3840[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电流过高二级报警' }),
+        status: '3841[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '放电电流过高二级报警' }),
+        status: '3841[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '极耳温度过高二级报警' }),
+        status: '3841[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温升过高二级报警' }),
+        status: '3841[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度差过大二级报警' }),
+        status: '3841[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池温度过低二级报警' }),
+        status: '3841[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电:电池温度过高报警' }),
+        status: '3841[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过低二级报警' }),
+        status: '3841[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过高二级报警' }),
+        status: '3841[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体压差过大二级报警' }),
+        status: '3841[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过低二级报警' }),
+        status: '3841[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过高二级报警' }),
+        status: '3841[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电流过高三级报警' }),
+        status: '3842[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '放电电流过高三级报警' }),
+        status: '3842[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '极耳温度过高三级报警' }),
+        status: '3842[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温升过高三级报警' }),
+        status: '3842[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度差过大三级报警' }),
+        status: '3842[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池温度过低三级报警' }),
+        status: '3842[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电:电池温度过高报警' }),
+        status: '3842[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过低三级报警' }),
+        status: '3842[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度过高三级报警' }),
+        status: '3842[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体压差过大三级报警' }),
+        status: '3842[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过低三级报警' }),
+        status: '3842[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压过高三级报警' }),
+        status: '3842[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '主控初始化故障' }),
+        status: '3843[10,11]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '熔断器故障' }),
-        status: '5400[2,3]',
+        status: '3843[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '接触器粘连故障' }),
-        status: '5400[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '隔离开关状态' }),
+        status: '3843[8,9]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU通信故障' }),
-        status: '5400[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: 'BAU通信故障' }),
+        status: '3843[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '绝缘检测故障' }),
+        status: '3843[6,7]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '电流传感器故障' }),
-        status: '5400[6,7]',
+        status: '3843[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '绝缘监测设备故障' }),
-        status: '5400[7,8]',
+        name: formatMessage({ id: 'common', defaultMessage: 'EEPROM故障' }),
+        status: '3843[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '内网通信故障' }),
+        status: '3843[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '接触器粘连状态' }),
+        status: '3843[2,3]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'NTC故障' }),
-        status: '5400[9,10]',
+        status: '3843[1,2]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '急停信号' }),
-        status: '[11,12]',
+        name: formatMessage({ id: 'common', defaultMessage: '从控概要故障' }),
+        status: '3843[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '水浸信号' }),
-        status: '[12,13]',
+        name: formatMessage({ id: 'common', defaultMessage: '从控初始化故障' }),
+        status: '3844[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '气溶胶信号' }),
-        status: '[13,14]',
+        name: formatMessage({ id: 'common', defaultMessage: '采样线故障' }),
+        status: '3844[1,2]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '交流防雷器故障' }),
-        status: '[14,15]',
+        name: formatMessage({ id: 'common', defaultMessage: '连接线故障' }),
+        status: '3844[2,3]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU1通信故障' }),
-        status: '5404[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '采样芯片故障' }),
+        status: '3844[3,4]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU2通信故障' }),
-        status: '5404[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '电压采样故障' }),
+        status: '3844[4,5]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU3通信故障' }),
-        status: '5404[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: '电池温度采样故障' }),
+        status: '3844[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU4通信故障' }),
-        status: '5404[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '温度传感器故障' }),
+        status: '3844[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU5通信故障' }),
-        status: '5404[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: '接触器故障' }),
+        status: '3844[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU6通信故障' }),
-        status: '5404[5,6]',
+        name: formatMessage({ id: 'common', defaultMessage: 'EEPROM故障' }),
+        status: '3844[8,9]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU7通信故障' }),
-        status: '5404[6,7]',
+        name: formatMessage({ id: 'common', defaultMessage: '被动均衡故障' }),
+        status: '3844[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU8通信故障' }),
-        status: '5404[7,8]',
+        name: formatMessage({ id: 'common', defaultMessage: '被动均衡温度故障' }),
+        status: '3844[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU9通信故障' }),
-        status: '5404[8,9]',
+        name: formatMessage({ id: 'common', defaultMessage: '主动均衡故障' }),
+        status: '3844[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU10通信故障' }),
-        status: '5404[9,10]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极低一级报警' }),
+        status: '3845[15,16]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU1风扇故障' }),
-        status: '5405[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极高一级报警' }),
+        status: '3845[14,15]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU2风扇故障' }),
-        status: '5405[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '高压箱温度过高一级报警' }),
+        status: '3845[13,14]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU3风扇故障' }),
-        status: '5405[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOH过低一级报警' }),
+        status: '3845[12,13]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU4风扇故障' }),
-        status: '5405[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过高一级报警' }),
+        status: '3845[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU5风扇故障' }),
-        status: '5405[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过低一级报警' }),
+        status: '3845[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU6风扇故障' }),
-        status: '5405[5,6]',
+        name: formatMessage({ id: 'common', defaultMessage: '负端绝缘阻值过低一级报警' }),
+        status: '3845[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU7风扇故障' }),
-        status: '5405[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU8风扇故障' }),
-        status: '5405[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU9风扇故障' }),
-        status: '5405[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU10风扇故障' }),
-        status: '5405[9,10]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压过压一级报警' }),
-        status: '5401[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压欠压一级报警' }),
-        status: '5401[1,2]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '单体过压一级报警' }),
-        status: '5401[2,3]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '单体欠压一级报警' }),
-        status: '5401[3,4]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电流过大一级报警' }),
-        status: '5401[4,5]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电流过大一级报警' }),
-        status: '5401[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池过温一级报警' }),
-        status: '5401[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池欠温一级报警' }),
-        status: '5401[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池过温一级报警' }),
-        status: '5401[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池欠温一级报警' }),
-        status: '5401[9,10]',
+        name: formatMessage({ id: 'common', defaultMessage: '正端绝缘阻值过低一级报警' }),
+        status: '3845[8,9]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低一级报警' }),
-        status: '5401[10,11]',
+        status: '3845[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '极柱温度过高一级报警' }),
-        status: '5401[11,12]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压差过大一级报警' }),
+        status: '3845[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '高压箱连接器温度过高一级报警' }),
-        status: '5401[12,13]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过低一级报警' }),
+        status: '3845[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体压差一级报警' }),
-        status: '5401[13,14]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过高一级报警' }),
+        status: '3845[4,5]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体温差一级报警' }),
-        status: '5401[14,15]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极低二级报警' }),
+        status: '3846[15,16]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'SOC低一级报警' }),
-        status: '5401[15,16]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极高二级报警' }),
+        status: '3846[14,15]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压过压二级报警' }),
-        status: '5402[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '高压箱温度过高二级报警' }),
+        status: '3846[13,14]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压欠压二级报警' }),
-        status: '5402[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOH过低二级报警' }),
+        status: '3846[12,13]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体过压二级报警' }),
-        status: '5402[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过高二级报警' }),
+        status: '3846[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体欠压二级报警' }),
-        status: '5402[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过低二级报警' }),
+        status: '3846[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电流过大二级报警' }),
-        status: '5402[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: '负端绝缘阻值过低二级报警' }),
+        status: '3846[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池过温二级报警' }),
-        status: '5402[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池欠温二级报警' }),
-        status: '5402[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电流过大二级报警' }),
-        status: '5402[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池欠温二级报警' }),
-        status: '5402[8,9]',
+        name: formatMessage({ id: 'common', defaultMessage: '正端绝缘阻值过低二级报警' }),
+        status: '3846[8,9]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低二级报警' }),
-        status: '5402[9,10]',
+        status: '3846[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池过温二级报警' }),
-        status: '5402[10,11]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压差过大二级报警' }),
+        status: '3846[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '极柱温度过高二级报警' }),
-        status: '5402[11,12]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过低二级报警' }),
+        status: '3846[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '高压箱连接器温度过高二级报警' }),
-        status: '5402[12,13]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过高二级报警' }),
+        status: '3846[4,5]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体压差二级报警' }),
-        status: '5402[13,14]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极低三级报警' }),
+        status: '3847[15,16]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体温差二级报警' }),
-        status: '5402[14,15]',
+        name: formatMessage({ id: 'common', defaultMessage: '单体电压极高三级报警' }),
+        status: '3847[14,15]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'SOC低二级级报警' }),
-        status: '5402[15,16]',
+        name: formatMessage({ id: 'common', defaultMessage: '高压箱温度过高三级报警' }),
+        status: '3847[13,14]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压过压三级报警' }),
-        status: '5403[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOH过低三级报警' }),
+        status: '3847[12,13]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '总电压欠压三级报警' }),
-        status: '5403[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过高三级报警' }),
+        status: '3847[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体过压三级报警' }),
-        status: '5403[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: 'SOC过低三级报警' }),
+        status: '3847[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体欠压三级报警' }),
-        status: '5403[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '负端绝缘阻值过低三级报警' }),
+        status: '3847[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电流过大三级报警' }),
-        status: '5403[4,5]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电流过大三级报警' }),
-        status: '5403[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池过温三级报警' }),
-        status: '5403[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池欠温三级报警' }),
-        status: '5403[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池过温三级报警' }),
-        status: '5403[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池欠温三级报警' }),
-        status: '5403[9,10]',
+        name: formatMessage({ id: 'common', defaultMessage: '正端绝缘阻值过低三级报警' }),
+        status: '3847[8,9]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低三级报警' }),
-        status: '5403[10,11]',
+        status: '3847[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '极柱温度过高三级报警' }),
-        status: '5403[11,12]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压差过大三级报警' }),
+        status: '3847[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '高压箱连接器温度过高三级报警' }),
-        status: '5403[12,13]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过低三级报警' }),
+        status: '3847[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体压差三级报警' }),
-        status: '5403[13,14]',
+        name: formatMessage({ id: 'common', defaultMessage: '总电压过高三级报警' }),
+        status: '3847[4,5]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '单体温差三级报警' }),
-        status: '5403[14,15]',
+        name: formatMessage({ id: 'common', defaultMessage: '从控1通信故障' }),
+        status: '3849[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'SOC低三级报警' }),
-        status: '5403[15,16]',
+        name: formatMessage({ id: 'common', defaultMessage: '从控2通信故障' }),
+        status: '3849[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控3通信故障' }),
+        status: '3849[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控4通信故障' }),
+        status: '3849[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控5通信故障' }),
+        status: '3849[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控6通信故障' }),
+        status: '3849[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控7通信故障' }),
+        status: '3849[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控8通信故障' }),
+        status: '3849[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控9通信故障' }),
+        status: '3849[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控10通信故障' }),
+        status: '3849[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控11通信故障' }),
+        status: '3849[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控12通信故障' }),
+        status: '3849[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控13通信故障' }),
+        status: '3849[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控14通信故障' }),
+        status: '3849[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控15通信故障' }),
+        status: '3849[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控16通信故障' }),
+        status: '3849[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控17通信故障' }),
+        status: '3848[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控18通信故障' }),
+        status: '3848[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控19通信故障' }),
+        status: '3848[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控20通信故障' }),
+        status: '3848[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控21通信故障' }),
+        status: '3848[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控22通信故障' }),
+        status: '3848[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控23通信故障' }),
+        status: '3848[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控24通信故障' }),
+        status: '3848[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控25通信故障' }),
+        status: '3848[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控26通信故障' }),
+        status: '3848[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控27通信故障' }),
+        status: '3848[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控28通信故障' }),
+        status: '3848[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控29通信故障' }),
+        status: '3848[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控30通信故障' }),
+        status: '3848[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控31通信故障' }),
+        status: '3848[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '从控32通信故障' }),
+        status: '3848[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU硬件故障' }),
+        status: '3850[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BCU硬件故障' }),
+        status: '3850[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '熔断器故障' }),
+        status: '3850[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '接触器粘连故障' }),
+        status: '3850[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU通信故障' }),
+        status: '3850[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BAU通信故障' }),
+        status: '3850[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电流传感器故障' }),
+        status: '3850[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '绝缘监测故障' }),
+        status: '3850[7,8]',
       },
     ],
   },
@@ -1127,293 +1347,162 @@ export const airconditAlarmStatusItem: AlarmStatusItemType[] = [
     hideTitle: true,
     children: [
       {
-        name: formatMessage({ id: 'common', defaultMessage: '盘管防冻' }),
-        status: '30100[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜内温度传感器故障' }),
+        status: '5586[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '排气高温' }),
-        status: '30100[5,6]',
+        name: formatMessage({ id: 'common', defaultMessage: '冷凝盘管温度传感器故障' }),
+        status: '5586[1,2]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '盘管温感失效' }),
-        status: '30100[6,7]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜外温度传感器故障' }),
+        status: '5586[2,3]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '室外温感失效' }),
-        status: '30100[7,8]',
+        name: formatMessage({ id: 'common', defaultMessage: '湿度传感器故障' }),
+        status: '5586[3,4]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '冷凝温感失效' }),
-        status: '30100[8,9]',
+        name: formatMessage({ id: 'common', defaultMessage: '压缩机欠流告警' }),
+        status: '5586[4,5]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '内温感失效' }),
-        status: '30100[9,10]',
+        name: formatMessage({ id: 'common', defaultMessage: '压缩机过流告警' }),
+        status: '5586[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '排气温感失效' }),
-        status: '30100[10,11]',
+        name: formatMessage({ id: 'common', defaultMessage: '加热器欠流告警' }),
+        status: '5586[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '湿感失效' }),
-        status: '30100[11,12]',
+        name: formatMessage({ id: 'common', defaultMessage: '加热器过流告警' }),
+        status: '5586[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '内风机故障' }),
-        status: '30100[12,13]',
+        name: formatMessage({ id: 'common', defaultMessage: '内风机告警' }),
+        status: '5586[8,9]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '外风机故障' }),
-        status: '30100[13,14]',
+        name: formatMessage({ id: 'common', defaultMessage: '外风机告警' }),
+        status: '5586[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '压缩机故障' }),
-        status: '30100[14,15]',
+        name: formatMessage({ id: 'common', defaultMessage: '高压力告警' }),
+        status: '5586[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '电加热故障' }),
-        status: '30100[15,16]',
+        name: formatMessage({ id: 'common', defaultMessage: '低压力告警' }),
+        status: '5586[11,12]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '应急风机故障' }),
-        status: '30101[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜内高温告警' }),
+        status: '5586[12,13]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '高压告警' }),
-        status: '30101[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜内低温告警' }),
+        status: '5586[13,14]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '低压告警' }),
-        status: '30101[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜外高温告警' }),
+        status: '5586[14,15]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '水浸告警' }),
-        status: '30101[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '柜外低温告警' }),
+        status: '5586[15,16]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '烟感告警' }),
-        status: '30101[4,5]',
+        name: formatMessage({ id: 'common', defaultMessage: '外部输入（门禁）告警' }),
+        status: '5587[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '门禁告警' }),
-        status: '30101[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高压锁定' }),
-        status: '30101[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低压锁定' }),
-        status: '30101[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气锁定' }),
-        status: '30101[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流过压' }),
-        status: '30101[9,10]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流欠压' }),
-        status: '30101[10,11]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流掉电' }),
-        status: '30101[11,12]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '缺相' }),
-        status: '30101[12,13]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '频率异常' }),
-        status: '30101[13,14]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '逆相' }),
-        status: '30101[14,15]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '直流过压' }),
-        status: '30101[15,16]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '直流欠压' }),
-        status: '30102[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高温告警' }),
-        status: '30100[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低温告警' }),
-        status: '30100[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '蒸发盘管温度传感器故障' }),
+        status: '5587[1,2]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '高湿告警' }),
-        status: '30100[2,3]',
+        status: '5587[2,3]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '低湿告警' }),
-        status: '30100[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '低电压告警' }),
+        status: '5587[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '高电压告警' }),
+        status: '5587[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变频压缩机故障' }),
+        status: '5587[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '蒸发器冻结告警' }),
+        status: '5587[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '高压力频繁告警' }),
+        status: '5587[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '低压力频繁告警' }),
+        status: '5587[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '冷凝高温告警' }),
+        status: '5587[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '制冷剂泄漏告警' }),
+        status: '5587[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变频压缩机通信故障' }),
+        status: '5587[11,12]',
       },
     ],
   },
 ];
-//消防-风冷
-export const fireFightWindAlarmStatusItem: AlarmStatusItemType[] = [
+//消防
+export const fireFighAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
     children: [
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BIES已启动' }),
-        status: '33070[0,1]',
+        name: formatMessage({ id: 'common', defaultMessage: '总故障标志' }),
+        status: '5659[0,1]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'CAN1通讯故障' }),
-        status: '33070[1,2]',
+        name: formatMessage({ id: 'common', defaultMessage: '备电故障' }),
+        status: '5659[1,2]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '抑制装置故障' }),
-        status: '33070[2,3]',
+        name: formatMessage({ id: 'common', defaultMessage: '第一瓶阀门故障' }),
+        status: '5659[2,3]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '探测器故障' }),
-        status: '33070[3,4]',
+        name: formatMessage({ id: 'common', defaultMessage: '箱外探测器H2预警' }),
+        status: '5659[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '箱外探测器CO预警' }),
+        status: '5659[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '箱外探测器温度预警' }),
+        status: '5659[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '箱外探测器烟雾预警' }),
+        status: '5659[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '箱外探测器故障码' }),
+        status: '5659[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '主机报警' }),
+        status: '5659[8,9]',
       },
     ],
   },
 ];
-//消防-液冷
-export const fireFightWetAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '光电烟雾传感器故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '光电烟雾传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '一氧化碳传感器状态' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '一氧化碳传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '温度传感器状态' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '温度传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '电解液传感器故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '电解液传感器报警' }),
-        status: '',
-      },
-    ],
-  },
-];
-//液冷机
-export const wetAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水高温' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水低温' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水温感故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '回水温感故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气温度过高锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统高压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统低压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过流锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过温锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器欠压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器缺相锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器其他故障锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '补水告警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统压力过高' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水压力过高' }),
-        status: '',
-      },
-    ],
-  },
-];
-
-// export const AlarmStatusItem: AlarmStatusItemType[] = [
-//   {
-//     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-//     hideTitle: true,
-//     children: [
-//       {
-//         name: formatMessage({ id: 'common', defaultMessage: '' }),
-//         status: '',
-//       },
-//       {
-//         name: formatMessage({ id: 'common', defaultMessage: '' }),
-//         status: '',
-//       },
-//     ],
-//   },
-// ];

@@ -41,7 +41,7 @@ const AirCooledFireProtection: React.FC = () => {
           />
         </Card>
         <div className="mt16">
-          <SystemAlarm modelType="fireFightWind" deviceType={1} realTimeData={realTimeData} />
+          <SystemAlarm modelType="fireFight" deviceType={1} realTimeData={realTimeData} />
         </div>
       </div>
     </>
