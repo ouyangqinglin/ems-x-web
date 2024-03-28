@@ -1,10 +1,10 @@
 import { formatMessage } from '@/utils';
 import type { ProColumns } from '@ant-design/pro-components';
 
-enum DeviceTypeEnum {
-  Integrated, //一体
-  Wind, //风冷
-  Liquid, //液冷
+export enum DeviceTypeEnum {
+  Integrated, //0：一体
+  Wind, //1：风冷
+  Liquid, //2：液冷
 }
 
 export type DeviceType = DeviceTypeEnum;

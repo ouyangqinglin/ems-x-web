@@ -57,5 +57,5 @@ const SystemAlarm: React.FC<SystemAlarmProps> = (props) => {
     </div>
   );
 };
-
+export { ModelTypeEnum, DeviceType };
 export default SystemAlarm;
