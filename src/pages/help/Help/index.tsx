@@ -13,7 +13,6 @@ import { DownloadOutlined } from '@ant-design/icons';
 
 const Help: React.FC = () => {
   const onClick = () => {
-    alert("下载用户手册");
   }
 
   return (
