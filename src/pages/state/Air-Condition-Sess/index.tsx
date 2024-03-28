@@ -15,17 +15,12 @@ import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
-  individualExtremumItems,
-  reductionItems,
-  remoteSignalItems,
   statusItems,
-  systemChargeCostItems,
-  systemDischargeCostItems,
 } from './helper';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
+  const { data: realTimeData } = useRequest(getDeviceData, {
     manual: true,
     pollingInterval: config.refreshTime * 1000,
   });
