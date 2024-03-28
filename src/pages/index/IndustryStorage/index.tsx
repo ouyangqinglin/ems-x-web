@@ -131,7 +131,7 @@ const Index: React.FC = () => {
           </Col>
         </Row>
         <div className="mt16">
-          <SystemAlarm modelType="system" realTimeData={realTimeData} />
+          <SystemAlarm modelType="index" realTimeData={realTimeData} />
         </div>
       </div>
     </>

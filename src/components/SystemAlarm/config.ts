@@ -1,14 +1,20 @@
 import { formatMessage } from '@/utils';
 import type { ProColumns } from '@ant-design/pro-components';
 
-export type DeviceType = 0 | 1 | 2; //0:一体  1：风冷  2：液冷
+enum DeviceTypeEnum {
+  Integrated, //一体
+  Wind, //风冷
+  Liquid, //液冷
+}
+
+export type DeviceType = DeviceTypeEnum;
 
 export type ModelTypeEnum =
   | 'index' //首页
   | 'system' //风冷
   | 'converter' //变流器
   | 'battery' //电池组
-  | 'aircond' //空调
+  | 'aircondit' //空调
   | 'fireFight' //消防
   | 'wetCooler' //液冷机
   | 'dehumidifier'; //除湿机

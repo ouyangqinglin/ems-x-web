@@ -22,7 +22,7 @@ import {
 } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
-import SystemAlarm from "@/components/SystemAlarm";
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -98,7 +98,7 @@ const Pcs: React.FC = () => {
           </Col>
         </Row>
         <div className="mt16">
-          <SystemAlarm modelType="wind" realTimeData={realTimeData}/>
+          <SystemAlarm modelType="system" realTimeData={realTimeData} />
         </div>
       </div>
     </>
