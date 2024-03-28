@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-12-29 09:58:34
- * @LastEditTime: 2024-03-26 19:03:15
+ * @LastEditTime: 2024-03-28 11:46:49
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Run\index.tsx
  */
@@ -276,7 +276,6 @@ const Run: React.FC<RunType> = (props) => {
           items={groupsItems}
           detailProps={{
             labelStyle: { width: 140 },
-            contentStyle: { width: 50 },
             unitInLabel: true,
             ...detailProps,
           }}
