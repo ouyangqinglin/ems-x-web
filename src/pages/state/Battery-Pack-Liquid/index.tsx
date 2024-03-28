@@ -39,7 +39,7 @@ arr.fill(1);
 arrT.fill(1);
 
 const Pcs: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   const [activeTabKey, setActiveTabKey] = useState<string>('0');
   const vArr = [bmuOneV, bmuTwoV, bmuThreeV, bmuFourV, bmuFiveV];
@@ -73,7 +73,7 @@ const Pcs: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>

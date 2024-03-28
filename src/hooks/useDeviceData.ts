@@ -31,7 +31,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
     }
   >({});
 
-  const { run } = useRequest(getDeviceData, {
+  const { run, loading } = useRequest(getDeviceData, {
     manual: true,
     formatResult(response) {
       const res = response || {};
@@ -73,6 +73,7 @@ const useDeviceData = (options?: UseDeviceDataType) => {
   return {
     realTimeData,
     run: runRequest,
+    loading,
   };
 };
 

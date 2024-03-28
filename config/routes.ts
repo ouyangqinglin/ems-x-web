@@ -433,6 +433,14 @@ const routers: RouterType[] = [
         locale: 'menu.index',
       },
       {
+        path: 'parallel',
+        name: 'parallel',
+        component: './parallel',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: false,
+        locale: 'menu.parallel',
+      },
+      {
         path: 'help',
         name: 'help',
         component: './help/Help',
