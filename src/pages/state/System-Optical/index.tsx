@@ -18,7 +18,7 @@ import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
+  const { data: realTimeData } = useRequest(getDeviceData, {
     manual: true,
     pollingInterval: config.refreshTime * 1000,
   });

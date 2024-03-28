@@ -1,6 +1,9 @@
 .liquid {
   padding: 24px;
   overflow-x: hidden;
+  @media screen and (max-width: 1556px) {
+    padding: 12px;
+  }
   .right {
     display: flex;
     flex-direction: column;
@@ -16,12 +19,19 @@
       align-items: center;
       width: 60px;
       margin: 0 40px;
-      @media screen and (max-width: 1560px) {
-        margin: 0 10px;
+      @media screen and (max-width: 1556px) {
+        width: 56px;
+        margin: 0 6px;
+        img {
+          width: 42px;
+        }
       }
     }
     .title {
       color: #909399;
+      @media screen and (max-width: 1556px) {
+        font-size: 12px;
+      }
     }
     :global {
       .ant-card-body {
@@ -29,6 +39,9 @@
         align-items: center;
         height: 100%;
         padding: 20px 16px;
+        @media screen and (max-width: 1556px) {
+          padding: 10px 6px;
+        }
       }
     }
   }

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-28 17:23:22
+ * @LastEditTime: 2024-03-28 17:28:07
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Air\index.tsx
  */
@@ -11,8 +11,6 @@ import React from 'react';
 import Card from '@/components/Card';
 import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
   statusItems,

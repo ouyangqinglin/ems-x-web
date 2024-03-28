@@ -1316,7 +1316,7 @@ export const statusItems: any = [
       },
       {
         type: 'group',
-        id: 'fffffff',
+        id: 'aaaaaa',
         name: '消防',
         children: [
           {
