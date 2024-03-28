@@ -3,7 +3,7 @@ import type { ModelTypeEnum, DeviceType } from './config';
 import type { TabsProps } from 'antd';
 import AlarmRecord from './AlarmRecord';
 import AlarmStatus from './AlarmStatus';
-import { Tabs, Button } from 'antd';
+import { Tabs } from 'antd';
 import { formatMessage } from '@/utils';
 import styles from './index.less';
 import { ReactComponent as NormalStatusIcon } from '@/assets/image/device/normal_status.svg';

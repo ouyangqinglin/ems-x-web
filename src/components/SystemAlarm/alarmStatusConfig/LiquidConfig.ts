@@ -8,8 +8,8 @@ type AlarmStatusItemType = {
 const formatMessage = (message: any) => {
   return message.defaultMessage;
 };
-//系统告警状态
-export const systemAlarmStatusItem: AlarmStatusItemType[] = [
+//首页
+export const indexAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     children: [
@@ -157,7 +157,7 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
         status: '3002[10,11]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '消防预警级别' }),
+        name: formatMessage({ id: 'common', defaultMessage: '消防告警状态' }),
         status: '33051',
       },
       {
@@ -181,8 +181,8 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
     ],
   },
 ];
-//系统风冷-液冷
-export const windAlarmStatusItem: AlarmStatusItemType[] = [
+//系统
+export const systemAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
@@ -984,148 +984,8 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
     ],
   },
 ];
-export const airconditAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '盘管防冻' }),
-        status: '30100[4,5]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气高温' }),
-        status: '30100[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '盘管温感失效' }),
-        status: '30100[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '室外温感失效' }),
-        status: '30100[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '冷凝温感失效' }),
-        status: '30100[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '内温感失效' }),
-        status: '30100[9,10]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气温感失效' }),
-        status: '30100[10,11]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '湿感失效' }),
-        status: '30100[11,12]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '内风机故障' }),
-        status: '30100[12,13]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '外风机故障' }),
-        status: '30100[13,14]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '压缩机故障' }),
-        status: '30100[14,15]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '电加热故障' }),
-        status: '30100[15,16]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '应急风机故障' }),
-        status: '30101[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高压告警' }),
-        status: '30101[1,2]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低压告警' }),
-        status: '30101[2,3]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '水浸告警' }),
-        status: '30101[3,4]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '烟感告警' }),
-        status: '30101[4,5]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '门禁告警' }),
-        status: '30101[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高压锁定' }),
-        status: '30101[6,7]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低压锁定' }),
-        status: '30101[7,8]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气锁定' }),
-        status: '30101[8,9]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流过压' }),
-        status: '30101[9,10]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流欠压' }),
-        status: '30101[10,11]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '交流掉电' }),
-        status: '30101[11,12]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '缺相' }),
-        status: '30101[12,13]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '频率异常' }),
-        status: '30101[13,14]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '逆相' }),
-        status: '30101[14,15]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '直流过压' }),
-        status: '30101[15,16]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '直流欠压' }),
-        status: '30102[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高温告警' }),
-        status: '30100[0,1]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低温告警' }),
-        status: '30100[1,2]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '高湿告警' }),
-        status: '30100[2,3]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '低湿告警' }),
-        status: '30100[3,4]',
-      },
-    ],
-  },
-];
-//消防-风冷
-export const fireFightWindAlarmStatusItem: AlarmStatusItemType[] = [
+//消防-液冷
+export const fireFightAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
@@ -1165,121 +1025,6 @@ export const fireFightWindAlarmStatusItem: AlarmStatusItemType[] = [
     ],
   },
 ];
-//消防-液冷
-export const fireFightWetAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '光电烟雾传感器故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '光电烟雾传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '一氧化碳传感器状态' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '一氧化碳传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '温度传感器状态' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '温度传感器报警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '电解液传感器故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '电解液传感器报警' }),
-        status: '',
-      },
-    ],
-  },
-];
-//液冷机
-export const wetAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水高温' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水低温' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水温感故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '回水温感故障' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '排气温度过高锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统高压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统低压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过流锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过温锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器过压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器欠压锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器缺相锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '变频器其他故障锁定' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '补水告警' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '系统压力过高' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '出水压力过高' }),
-        status: '',
-      },
-    ],
-  },
-];
-
 //液冷机
 export const wetCoolerAlarmStatusItem: AlarmStatusItemType[] = [
   {
@@ -1355,23 +1100,6 @@ export const wetCoolerAlarmStatusItem: AlarmStatusItemType[] = [
 ];
 //除湿机
 export const dehumidifierAlarmStatusItem: AlarmStatusItemType[] = [
-  {
-    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
-    hideTitle: true,
-    children: [
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '' }),
-        status: '',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '' }),
-        status: '',
-      },
-    ],
-  },
-];
-
-export const AlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
