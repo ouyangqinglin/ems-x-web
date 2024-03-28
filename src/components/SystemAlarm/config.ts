@@ -4,14 +4,12 @@ import type { ProColumns } from '@ant-design/pro-components';
 export type DeviceType = 0 | 1 | 2; //0:一体  1：风冷  2：液冷
 
 export type ModelTypeEnum =
-  | 'system' //系统
-  | 'wind' //风冷
+  | 'index' //首页
+  | 'system' //风冷
   | 'converter' //变流器
   | 'battery' //电池组
   | 'aircond' //空调
-  | 'fireFightWind' //消防-风冷
-  | 'fireFightWet' //消防-液冷
-  | 'wet' //液冷
+  | 'fireFight' //消防
   | 'wetCooler' //液冷机
   | 'dehumidifier'; //除湿机
 
