@@ -2,13 +2,12 @@ import { LockOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons';
 import { Alert, message, Row } from 'antd';
 import React, { useState } from 'react';
 import { ProFormCheckbox, ProFormText, LoginForm } from '@ant-design/pro-form';
-import { useIntl, history, FormattedMessage, SelectLang, useModel, useAliveController } from 'umi';
+import { useIntl, history, FormattedMessage, useModel, useAliveController } from 'umi';
 import { login } from '@/services/login';
 import BGImg from '@/assets/image/login-bg.png';
 import styles from './index.less';
 import { clearSessionToken, setSessionToken, setUserRoleId } from '@/access';
 import { useLocation } from '@/hooks';
-import request from '@/utils/request';
 //import { getRoutersInfo } from '@/services/session';
 import { getLocaleMenus, getMenus } from '@/utils';
 import { getRouters } from '@/services/session';
@@ -32,19 +31,19 @@ const LoginMessage: React.FC<{
 
 const Login: React.FC = () => {
   const [userLoginState, setUserLoginState] = useState<any>({});
-  const [type, setType] = useState<string>('account');
+  const [type] = useState<string>('account');
   const { initialState, refresh } = useModel('@@initialState');
   const location = useLocation<QueryParams>();
   const { clear } = useAliveController();
 
-  const [uuid, setUuid] = useState<string>('');
+  const [uuid] = useState<string>('');
 
   const intl = useIntl();
 
   const handleSubmit = async (values: API.LoginParams) => {
     try {
       // 登录
-      const { code, data, msg, time } = await login({ ...values, uuid });
+      const { code, data, msg } = await login({ ...values, uuid });
       console.log(code);
       if (+code === 200) {
         const defaultLoginSuccessMessage = intl.formatMessage({
@@ -67,11 +66,11 @@ const Login: React.FC = () => {
         if (!hasRedirectPath) {
           redirectPath = antMenus?.[0]?.key || '/';
         }
-
-        const pathArr = redirectPath.split('?');
+        console.log('>>>>>>>', antMenus);
+        // const pathArr = redirectPath.split('?');
         await clear();
         history.push({
-          pathname: '/index',
+          pathname: antMenus[0]?.key,
           // search: pathArr[1] ? '?' + pathArr[1] : '',
         });
         refresh();

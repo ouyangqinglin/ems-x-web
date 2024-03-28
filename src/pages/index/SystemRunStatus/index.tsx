@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './index.less';
+import styles from '../SystemRunStatusOptical/index.less';
 import energyFlowImg from '@/assets/image/station/overview/energy-flow.webp';
 import { getSystemRunStatus } from '@/services/device';
 const communityMethods = {

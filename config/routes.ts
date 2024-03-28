@@ -440,6 +440,22 @@ const routers: RouterType[] = [
         keepAlive: false,
         locale: 'menu.help',
       },
+      {
+        path: 'optical-index',
+        name: 'optical-index',
+        component: './index/OpticalStorage',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: false,
+        locale: 'menu.index',
+      },
+      {
+        path: 'liquid-index',
+        name: 'liquid-index',
+        component: './index/LiquidStorage',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: false,
+        locale: 'menu.index',
+      },
     ],
   },
   {
