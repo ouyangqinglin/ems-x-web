@@ -13,6 +13,7 @@ import Run from '@/components/Device/Run';
 import { baseInfoItems, statusItems } from './helper';
 import RefreshData from '@/components/Device/RefreshData';
 import useDeviceData from '@/hooks/useDeviceData';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const LiquidCooledFireProtection: React.FC = () => {
   const { realTimeData, run } = useDeviceData();
@@ -23,7 +24,7 @@ const LiquidCooledFireProtection: React.FC = () => {
       <div className="p24">
         <Card className="h-full">
           <Run
-            realTimeData={realTimeData}    
+            realTimeData={realTimeData}
             groupData={baseInfoItems}
             detailProps={{
               column: 5,
@@ -39,6 +40,9 @@ const LiquidCooledFireProtection: React.FC = () => {
             }}
           />
         </Card>
+        <div className="mt16">
+          <SystemAlarm modelType="fireFightWind" deviceType={2} realTimeData={realTimeData} />
+        </div>
       </div>
     </>
   );
