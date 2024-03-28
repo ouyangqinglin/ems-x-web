@@ -14,6 +14,7 @@ import Run from '@/components/Device/Run';
 import { useModel, useRequest } from 'umi';
 import { getDeviceData } from '@/services/device';
 import { baseInfoItems, statusItems, reductionItems, incomeItems } from './helper';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -77,6 +78,7 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
+        <SystemAlarm modelType="system" deviceType={0} realTimeData={realTimeData} />
       </div>
     </>
   );

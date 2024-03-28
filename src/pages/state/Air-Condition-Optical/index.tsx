@@ -22,6 +22,7 @@ import {
   systemChargeCostItems,
   systemDischargeCostItems,
 } from './helper';
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
   const { config } = useModel('config');
@@ -59,6 +60,9 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
+        <div className="mt16">
+          <SystemAlarm modelType="aircondit" deviceType={0} realTimeData={realTimeData} />
+        </div>
       </div>
     </>
   );
