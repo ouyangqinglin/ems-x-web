@@ -1462,7 +1462,7 @@ export const airconditAlarmStatusItem: AlarmStatusItemType[] = [
   },
 ];
 //消防
-export const fireFighAlarmStatusItem: AlarmStatusItemType[] = [
+export const fireFightAlarmStatusItem: AlarmStatusItemType[] = [
   {
     name: formatMessage({ id: 'common', defaultMessage: '系统' }),
     hideTitle: true,
