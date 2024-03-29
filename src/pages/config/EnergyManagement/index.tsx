@@ -19,7 +19,7 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const EnergyManagement: React.FC = () => {
-  const { realTimeData } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>

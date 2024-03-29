@@ -15,7 +15,7 @@ import { useDeviceData } from '@/hooks';
 
 
 const Dehumidifier: React.FC = () => {
-  const { realTimeData } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>

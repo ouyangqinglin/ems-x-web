@@ -15,7 +15,7 @@ import { useDeviceData } from '@/hooks';
 
 
 const InverterSideMeterPv: React.FC = () => {
-  const { realTimeData } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>

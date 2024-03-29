@@ -14,7 +14,7 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const CloudPlatformPv: React.FC = () => {
-  const { realTimeData } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
   const [groupData, setGroupData] = useState([]);
 
   useMemo(() => {

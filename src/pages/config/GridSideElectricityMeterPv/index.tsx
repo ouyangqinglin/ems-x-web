@@ -14,7 +14,7 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const GridSideElectricityMeterPv: React.FC = () => {
-  const { realTimeData } = useDeviceData();
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>
