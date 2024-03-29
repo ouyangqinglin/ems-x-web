@@ -9,17 +9,12 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { Col, Row } from 'antd';
-import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, systemParamsItems, otherParamsItems, timeSetItems } from './helper';
 import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { realTimeData, run } = useDeviceData({ isInterval: false });
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>

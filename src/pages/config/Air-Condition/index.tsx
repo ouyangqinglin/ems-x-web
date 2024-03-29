@@ -9,15 +9,12 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, runValueItems, runTimeSetItems } from './helper';
 import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { realTimeData, run } = useDeviceData({ isInterval: false });
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>
