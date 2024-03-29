@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-26 10:07:06
+ * @LastEditTime: 2024-03-29 11:00:46
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
@@ -209,9 +209,11 @@ export const stateItems: any = [
         type: 'property',
         dataType: {
           specs: {
-            0: '电池恒压',
-            1: '并网恒压',
-            2: '电池恒流',
+            1: '直流恒流',
+            2: '直流恒压',
+            3: '直流恒功率',
+            4: '交流并网恒功率',
+            5: '交流离网恒压',
           },
           type: 'enum',
         },

@@ -387,4 +387,96 @@ export const statusItems: any = [
       },
     ],
   },
+  {
+    id: 'b',
+    name: '1#电池箱',
+    type: 'group',
+    children: [
+      {
+        id: '5652',
+        name: '探测器温度1',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '°C',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '5653',
+        name: '探测器温度2',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: '°C',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '5654',
+        name: '探测器CO传感器实时数据',
+        type: 'property',
+        dataType: {
+          specs: {
+            unit: 'ppm',
+          },
+          type: 'string',
+        },
+      },
+      {
+        id: '5655',
+        name: '探测器烟雾预警',
+        type: 'property',
+        dataType: {
+          type: 'enum',
+          specs: {
+            '0': '正常',
+            '1': '预警',
+          },
+        },
+      },
+      {
+        id: '5656',
+        name: '探测器VOC预警',
+        type: 'property',
+        dataType: {
+          type: 'enum',
+          specs: {
+            '0': '正常',
+            '1': '预警',
+          },
+        },
+      },
+      {
+        id: '5657',
+        name: '探测器预警等级',
+        type: 'property',
+        dataType: {
+          type: 'enum',
+          specs: {
+            '0': '报警等级1',
+            '1': '报警等级2',
+            '2': '报警等级3',
+            '3': '报警等级4',
+          },
+        },
+      },
+      {
+        id: '5658',
+        name: '探测器故障',
+        type: 'property',
+        dataType: {
+          type: 'enum',
+          specs: {
+            '0': '系统正常',
+            '1': '灭火器已启动',
+            '2': '传感器故障',
+            '3': '硬件故障',
+          },
+        },
+      },
+    ],
+  },
 ];

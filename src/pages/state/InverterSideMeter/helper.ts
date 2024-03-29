@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -412,6 +409,7 @@ export const eleInfoItems: any = [
         id: '30353',
         name: '今日放电量',
         type: 'property',
+        span: 3,
         dataType: {
           specs: {
             unit: 'kWh',

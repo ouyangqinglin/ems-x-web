@@ -12,29 +12,28 @@
     font-size: 16px;
   }
   .table {
-    border-left: 1px solid #c8c8c8;
+    padding-bottom: 16px;
+    overflow-x: scroll;
     div {
       display: flex;
       align-items: center;
     }
     span {
       flex-shrink: 0;
-      width: 54px;
+      width: 62px;
       height: 36px;
       line-height: 36px;
       text-align: center;
       border: 1px solid #c8c8c8;
       border-left: none;
-      @media screen and (max-width: 1556px) {
-        width: 40px;
-      }
     }
     .first {
       span {
         background-color: #f2f2f2;
       }
       :nth-child(1) {
-        width: 100px;
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
       }
     }
     .two {
@@ -43,12 +42,14 @@
         border-bottom: 1px solid #c8c8c8;
       }
       :nth-child(1) {
-        width: 100px;
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
       }
     }
     .three {
       :nth-child(1) {
-        width: 100px;
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
       }
       span {
         border-top: none;

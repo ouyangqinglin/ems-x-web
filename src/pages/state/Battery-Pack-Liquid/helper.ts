@@ -93,22 +93,22 @@ export const baseInfoItems: any = [
           type: 'string',
         },
       },
-      {
-        id: '5220',
-        name: 'BCMU硬件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '5221',
-        name: 'BCMU软件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
+      // {
+      //   id: '5220',
+      //   name: 'BCMU硬件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'string',
+      //   },
+      // },
+      // {
+      //   id: '5221',
+      //   name: 'BCMU软件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'string',
+      //   },
+      // },
       {
         id: '5191',
         name: '电池模块个数',
@@ -823,18 +823,18 @@ export const remoteSignalItems: any = [
       //     },
       //   },
       // },
-      {
-        type: 'property',
-        id: '5400[13,14]',
-        name: '气溶胶信号',
-        dataType: {
-          type: 'enum',
-          specs: {
-            0: '正常',
-            1: '告警',
-          },
-        },
-      },
+      // {
+      //   type: 'property',
+      //   id: '5400[13,14]',
+      //   name: '气溶胶信号',
+      //   dataType: {
+      //     type: 'enum',
+      //     specs: {
+      //       0: '正常',
+      //       1: '告警',
+      //     },
+      //   },
+      // },
       {
         type: 'property',
         id: '5331',
