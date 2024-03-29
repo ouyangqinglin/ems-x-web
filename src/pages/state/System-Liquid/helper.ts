@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-03-29 10:53:23
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\System-Liquid\helper.ts
  */
 
 const commonDataType = {
@@ -1688,7 +1688,7 @@ export const systemDischargeCostItems: any = [
   },
 ];
 
-export const reductionItems = [
+export const reductionItems: any = [
   {
     name: '减排',
     type: 'group',
