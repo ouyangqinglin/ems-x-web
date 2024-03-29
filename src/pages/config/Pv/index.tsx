@@ -9,16 +9,11 @@
 
 import React from 'react';
 import Card from '@/components/Card';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, paramsItems } from './helper';
 import Control from '@/components/Device/Control';
+import { useDeviceData } from '@/hooks';
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData, run } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData } = useDeviceData({ isInterval: false });
 
   return (
     <>

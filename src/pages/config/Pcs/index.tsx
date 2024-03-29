@@ -14,7 +14,7 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const Pcs: React.FC = () => {
-  const { realTimeData, run } = useDeviceData({ isInterval: false });
+  const { realTimeData } = useDeviceData({ isInterval: false });
   return (
     <>
       <div className="p24">

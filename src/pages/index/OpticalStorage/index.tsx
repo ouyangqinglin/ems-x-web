@@ -27,7 +27,7 @@ const Index: React.FC = () => {
   const { realTimeData, run, loading } = useDeviceData({ isInterval: false });
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
+      <RefreshData showDeviceModel run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className={styles.optical}>
         <Row gutter={12}>
           <Col span={12}>

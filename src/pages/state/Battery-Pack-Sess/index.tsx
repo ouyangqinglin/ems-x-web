@@ -11,19 +11,16 @@ import React from 'react';
 import Card from '@/components/Card';
 import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, individualExtremumItems, remoteSignalItems, statusItems } from './helper';
+import { useDeviceData } from '@/hooks';
+import RefreshData from '@/components/Device/RefreshData';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { data: realTimeData } = useRequest(getDeviceData, {
-    manual: true,
-    pollingInterval: config.refreshTime * 1000,
-  });
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>
