@@ -408,6 +408,7 @@ export const eleInfoItems: any = [
         id: '5149',
         name: '今日放电量',
         type: 'property',
+        span: 3,
         dataType: {
           specs: {
             unit: 'kWh',

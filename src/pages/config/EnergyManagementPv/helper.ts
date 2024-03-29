@@ -163,7 +163,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段1-固定功率	50969	[削峰填谷参数]时段1-固定功率	
           {
             id: '11305',
-            name: '开始时间',
+            name: '1 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -223,7 +223,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段2-固定功率	50965	[削峰填谷参数]时段2-固定功率	
           {
             id: '11311',
-            name: '开始时间',
+            name: '2 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -285,7 +285,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段3-固定功率	50981	[削峰填谷参数]时段3-固定功率
           {
             id: '11317',
-            name: '开始时间',
+            name: '3 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -346,7 +346,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段4-固定功率	50967	[削峰填谷参数]时段4-固定功率
           {
             id: '11323',
-            name: '开始时间',
+            name: '4 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -406,7 +406,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段5-固定功率	50993	[削峰填谷参数]时段5-固定功率	
           {
             id: '11329',
-            name: '开始时间',
+            name: '5 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -467,7 +467,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段6-固定功率	50999	[削峰填谷参数]时段6-固定功率	
           {
             id: '11335',
-            name: '开始时间',
+            name: '6 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -528,7 +528,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段7-固定功率	51005	[削峰填谷参数]时段7-固定功率
           {
             id: '11341',
-            name: '开始时间',
+            name: '7 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -585,7 +585,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段8-固定功率	51011	[削峰填谷参数]时段8-固定功率
           {
             id: '11347',
-            name: '开始时间',
+            name: '8 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -642,7 +642,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段9-固定功率	51017	[削峰填谷参数]时段9-固定功率
           {
             id: '11353',
-            name: '开始时间',
+            name: '9 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
@@ -699,7 +699,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段10-固定功率	51023	[削峰填谷参数]时段10-固定功率	
           {
             id: '11359',
-            name: '开始时间',
+            name: '10 开始时间',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
