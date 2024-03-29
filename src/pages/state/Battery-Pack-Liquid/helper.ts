@@ -93,22 +93,22 @@ export const baseInfoItems: any = [
           type: 'string',
         },
       },
-      {
-        id: '5220',
-        name: 'BCMU硬件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '5221',
-        name: 'BCMU软件版本',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
+      // {
+      //   id: '5220',
+      //   name: 'BCMU硬件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'string',
+      //   },
+      // },
+      // {
+      //   id: '5221',
+      //   name: 'BCMU软件版本',
+      //   type: 'property',
+      //   dataType: {
+      //     type: 'string',
+      //   },
+      // },
       {
         id: '5191',
         name: '电池模块个数',
@@ -823,18 +823,18 @@ export const remoteSignalItems: any = [
       //     },
       //   },
       // },
-      {
-        type: 'property',
-        id: '5400[13,14]',
-        name: '气溶胶信号',
-        dataType: {
-          type: 'enum',
-          specs: {
-            0: '正常',
-            1: '告警',
-          },
-        },
-      },
+      // {
+      //   type: 'property',
+      //   id: '5400[13,14]',
+      //   name: '气溶胶信号',
+      //   dataType: {
+      //     type: 'enum',
+      //     specs: {
+      //       0: '正常',
+      //       1: '告警',
+      //     },
+      //   },
+      // },
       {
         type: 'property',
         id: '5331',
@@ -1136,7 +1136,7 @@ export const bmuOneV: any = [
 export const bmuTwoV: any = [
   5548, 5549, 5550, 5551, 5552, 5553, 5554, 5555, 5556, 5557, 5558, 5559, 5560, 5561, 5562, 5563,
   5564, 5565, 5566, 5567, 5568, 5569, 5570, 5571, 5572, 5573, 5574, 5575, 5576, 5577, 5578, 5579,
-  5580, 5581, 5582, 5583, 5584, 5588, 5586, 5587, 5588, 5589, 5590, 5591, 5592, 5593, 5594, 5595,
+  5580, 5581, 5582, 5583, 5584, 5585, 5586, 5587, 5588, 5589, 5590, 5591, 5592, 5593, 5594, 5595,
 ];
 export const bmuThreeV: any = [
   5596, 5597, 5598, 5599, 5600, 5601, 5602, 5603, 5604, 5605, 5606, 5607, 5608, 5609, 5610, 5611,

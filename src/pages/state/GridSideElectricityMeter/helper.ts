@@ -6,9 +6,6 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
  */
-
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -87,7 +84,7 @@ export const baseInfoItems: any = [
 export const statusItems: any = [
   {
     id: 'a',
-    name: '状态信息',
+    name: '基本状态信息',
     type: 'group',
     children: [
       {
@@ -412,6 +409,7 @@ export const eleInfoItems: any = [
         id: '30703',
         name: '今日放电量',
         type: 'property',
+        span: 3,
         dataType: {
           specs: {
             unit: 'kWh',

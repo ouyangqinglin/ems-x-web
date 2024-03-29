@@ -7,7 +7,7 @@
  * @FilePath: \ems-x-web\src\components\Device\RefreshData\index.tsx
  */
 
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import { RedoOutlined } from '@ant-design/icons';
 import { Button, message } from 'antd';
 import styles from './index.less';
@@ -25,9 +25,17 @@ type RefreshDataType = {
 
 const RefreshData: React.FC<RefreshDataType> = (props) => {
   const { time = '', run, className = '', showDeviceModel = false, loading = false } = props;
-
-  const { data: deviceData } = useRequest(getSystemStatus, { manual: false });
   const [runLoading, { setFalse, setTrue }] = useBoolean(false);
+  const { data: deviceData, run: runGetSystemStatus } = useRequest(getSystemStatus, {
+    manual: true,
+  });
+
+  useEffect(() => {
+    if (showDeviceModel) {
+      runGetSystemStatus();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showDeviceModel]);
 
   const onClick = () => {
     setTrue();

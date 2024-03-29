@@ -26,7 +26,7 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
+      <RefreshData showDeviceModel run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className={styles.liquid}>
         <Row gutter={16}>
           <Col span={8}>

@@ -168,1695 +168,1711 @@ export const batteryParamsItems: any = [
       },
       {
         id: 'a',
-        name: '一级保护参数',
+        name: '电池组保护参数设置',
         type: 'group',
         showType: 2,
         children: [
           {
             id: 'a',
-            name: '一级保护参数',
-            type: 'service',
-            buttons: ['refresh', 'edit'],
+            name: '电池组保护参数tab',
+            type: 'tab',
+            showType: 2,
             children: [
               {
-                id: '12000',
-                name: '单体过压一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12001',
-                name: '单体过压一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12002',
-                name: '单体欠压一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12003',
-                name: '单体欠压一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12004',
-                name: '总电压过压一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12005',
-                name: '总电压过压一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12006',
-                name: '总电压欠压一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12007',
-                name: '总电压欠压一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12008',
-                name: '单体压差过高一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12009',
-                name: '单体压差过高一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12010',
-                name: '总电压压差过高一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12011',
-                name: '总电压压差过高一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12012',
-                name: '充电过流一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12013',
-                name: '充电过流一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12014',
-                name: '放电过流一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12015',
-                name: '放电过流一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12016',
-                name: '充电过温一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12017',
-                name: '充电过温一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12018',
-                name: '充电欠温一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12019',
-                name: '充电欠温一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12020',
-                name: '放电过温一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12021',
-                name: '放电过温一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12022',
-                name: '放电欠温一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12023',
-                name: '放电欠温一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12024',
-                name: '温差过高一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12025',
-                name: '温差过高一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12026',
-                name: '极柱温度过高一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12027',
-                name: '极柱温度过高一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12028',
-                name: 'SOC 过低一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12029',
-                name: 'SOC 过低一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12030',
-                name: '绝缘失效一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12031',
-                name: '绝缘失效一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12032',
-                name: '高压箱连接器温度过高一级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12033',
-                name: '高压箱连接器温度过高一级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'a',
-        name: '二级保护参数',
-        type: 'group',
-        showType: 2,
-        children: [
-          {
-            id: 'a',
-            name: '二级保护参数',
-            type: 'service',
-            buttons: ['refresh', 'edit'],
-            children: [
-              {
-                id: '12100',
-                name: '单体过压二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12101',
-                name: '单体过压二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12102',
-                name: '单体欠压二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12103',
-                name: '单体欠压二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12104',
-                name: '总电压过压二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12105',
-                name: '总电压过压二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12106',
-                name: '总电压欠压二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12107',
-                name: '总电压欠压二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12108',
-                name: '单体压差过高二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12109',
-                name: '单体压差过高二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12110',
-                name: '总电压压差过高二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12111',
-                name: '总电压压差过高二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12112',
-                name: '充电过流二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12113',
-                name: '充电过流二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12114',
-                name: '放电过流二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12115',
-                name: '放电过流二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12116',
-                name: '充电过温二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12117',
-                name: '充电过温二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12118',
-                name: '充电欠温二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12119',
-                name: '充电欠温二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12120',
-                name: '放电过温二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12121',
-                name: '放电过温二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12122',
-                name: '放电欠温二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12123',
-                name: '放电欠温二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12124',
-                name: '温差过高二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12125',
-                name: '温差过高二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12126',
-                name: '极柱温度过高二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12127',
-                name: '极柱温度过高二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12128',
-                name: 'SOC 过低二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12129',
-                name: 'SOC 过低二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12130',
-                name: '绝缘失效二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12131',
-                name: '绝缘失效二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12132',
-                name: '高压箱连接器温度过高二级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12133',
-                name: '高压箱连接器温度过高二级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'a',
-        name: '三级保护参数',
-        type: 'group',
-        showType: 2,
-        children: [
-          {
-            id: 'a',
-            name: '三级保护参数',
-            type: 'service',
-            buttons: ['refresh', 'edit'],
-            children: [
-              {
-                id: '12200',
-                name: '单体过压三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12201',
-                name: '单体过压三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12202',
-                name: '单体欠压三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12203',
-                name: '单体欠压三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12204',
-                name: '总电压过压三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12205',
-                name: '总电压过压三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12206',
-                name: '总电压欠压三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12207',
-                name: '总电压欠压三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12208',
-                name: '单体压差过高三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12209',
-                name: '单体压差过高三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12210',
-                name: '总电压压差过高三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12211',
-                name: '总电压压差过高三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12212',
-                name: '充电过流三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12213',
-                name: '充电过流三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12214',
-                name: '放电过流三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12215',
-                name: '放电过流三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12216',
-                name: '充电过温三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12217',
-                name: '充电过温三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12218',
-                name: '充电欠温三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12219',
-                name: '充电欠温三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12220',
-                name: '放电过温三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12221',
-                name: '放电过温三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12222',
-                name: '放电欠温三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12223',
-                name: '放电欠温三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12224',
-                name: '温差过高三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12225',
-                name: '温差过高三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12226',
-                name: '极柱温度过高三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12227',
-                name: '极柱温度过高三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12228',
-                name: 'SOC 过低三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12229',
-                name: 'SOC 过低三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12230',
-                name: '绝缘失效三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12231',
-                name: '绝缘失效三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12232',
-                name: '高压箱连接器温度过高三级报警门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12233',
-                name: '高压箱连接器温度过高三级恢复门限',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'a',
-        name: 'EMS四级保护参数',
-        type: 'group',
-        showType: 2,
-        children: [
-          {
-            id: 'a',
-            name: 'EMS四级保护参数',
-            type: 'service',
-            buttons: ['refresh', 'edit'],
-            children: [
-              {
-                id: '12300',
-                name: '单体过压四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12301',
-                name: '单体过压四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12302',
-                name: '单体欠压四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12303',
-                name: '单体欠压四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12304',
-                name: '总电压过压四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12305',
-                name: '总电压过压四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12306',
-                name: '总电压欠压四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12307',
-                name: '总电压欠压四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12308',
-                name: '单体压差过高四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12309',
-                name: '单体压差过高四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12310',
-                name: '总电压压差过高四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12311',
-                name: '总电压压差过高四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'mV',
-                  },
-                },
-              },
-              {
-                id: '12312',
-                name: '充电过流四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12313',
-                name: '充电过流四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12314',
-                name: '放电过流四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12315',
-                name: '放电过流四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'A',
-                  },
-                },
-              },
-              {
-                id: '12316',
-                name: '充电过温四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12317',
-                name: '充电过温四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12318',
-                name: '充电欠温四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12319',
-                name: '充电欠温四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12320',
-                name: '放电过温四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12321',
-                name: '放电过温四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12322',
-                name: '放电欠温四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12323',
-                name: '放电欠温四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12324',
-                name: '温差过高四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12325',
-                name: '温差过高四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12326',
-                name: '极柱温度过高四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12327',
-                name: '极柱温度过高四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12328',
-                name: 'SOC 过低四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12329',
-                name: 'SOC 过低四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '%',
-                  },
-                },
-              },
-              {
-                id: '12330',
-                name: '绝缘失效四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12331',
-                name: '绝缘失效四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: 'KΩ',
-                  },
-                },
-              },
-              {
-                id: '12332',
-                name: '高压箱连接器温度过高四级保护限值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
-              },
-              {
-                id: '12333',
-                name: '高压箱连接器温度过高四级保护恢复值',
-                type: 'property',
-                buttons: ['refresh', 'edit'],
-                dataType: {
-                  type: 'string',
-                  specs: {
-                    unit: '°C',
-                  },
-                },
+                id: 'protectParams1',
+                name: '一级保护参数',
+                type: 'tabItem',
+                children: [
+                  {
+                    id: 'a',
+                    name: '一级保护参数',
+                    modelName: '一级保护参数',
+                    type: 'service',
+                    buttons: ['refresh', 'edit'],
+                    children: [
+                      {
+                        id: '53001',
+                        name: '单体过压一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53002',
+                        name: '单体过压一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53003',
+                        name: '单体欠压一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53004',
+                        name: '单体欠压一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53005',
+                        name: '总电压过压一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53006',
+                        name: '总电压过压一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53007',
+                        name: '总电压欠压一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53008',
+                        name: '总电压欠压一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53009',
+                        name: '单体压差过高一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53010',
+                        name: '单体压差过高一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53011',
+                        name: '总电压压差过高一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53012',
+                        name: '总电压压差过高一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53013',
+                        name: '充电过流一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53014',
+                        name: '充电过流一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53015',
+                        name: '放电过流一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53016',
+                        name: '放电过流一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53017',
+                        name: '充电过温一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53018',
+                        name: '充电过温一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53019',
+                        name: '充电欠温一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53020',
+                        name: '充电欠温一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53021',
+                        name: '放电过温一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53022',
+                        name: '放电过温一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53023',
+                        name: '放电欠温一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53024',
+                        name: '放电欠温一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53025',
+                        name: '温差过高一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53026',
+                        name: '温差过高一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53027',
+                        name: '极柱温度过高一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53028',
+                        name: '极柱温度过高一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53029',
+                        name: 'SOC 过低一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53030',
+                        name: 'SOC 过低一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53031',
+                        name: '绝缘失效一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53032',
+                        name: '绝缘失效一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53033',
+                        name: '高压箱连接器温度过高一级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53034',
+                        name: '高压箱连接器温度过高一级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                id: 'protectParams2',
+                name: '二级保护参数',
+                type: 'tabItem',
+                children: [
+                  {
+                    id: 'b',
+                    name: '二级保护参数',
+                    modelName: '二级保护参数',
+                    type: 'service',
+                    buttons: ['refresh', 'edit'],
+                    children: [
+                      {
+                        id: '53035',
+                        name: '单体过压二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53036',
+                        name: '单体过压二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53037',
+                        name: '单体欠压二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53038',
+                        name: '单体欠压二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53039',
+                        name: '总电压过压二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53040',
+                        name: '总电压过压二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53041',
+                        name: '总电压欠压二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53042',
+                        name: '总电压欠压二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53043',
+                        name: '单体压差过高二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53044',
+                        name: '单体压差过高二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53045',
+                        name: '总电压压差过高二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53046',
+                        name: '总电压压差过高二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53047',
+                        name: '充电过流二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53048',
+                        name: '充电过流二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53049',
+                        name: '放电过流二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53050',
+                        name: '放电过流二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53051',
+                        name: '充电过温二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53052',
+                        name: '充电过温二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53053',
+                        name: '充电欠温二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53054',
+                        name: '充电欠温二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53055',
+                        name: '放电过温二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53056',
+                        name: '放电过温二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53057',
+                        name: '放电欠温二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53058',
+                        name: '放电欠温二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53059',
+                        name: '温差过高二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53060',
+                        name: '温差过高二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53061',
+                        name: '极柱温度过高二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53062',
+                        name: '极柱温度过高二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53063',
+                        name: 'SOC 过低二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53064',
+                        name: 'SOC 过低二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53065',
+                        name: '绝缘失效二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53066',
+                        name: '绝缘失效二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53067',
+                        name: '高压箱连接器温度过高二级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53068',
+                        name: '高压箱连接器温度过高二级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                id: 'protectParams3',
+                name: '三级保护参数',
+                type: 'tabItem',
+                children: [
+                  {
+                    id: 'c',
+                    name: '三级保护参数',
+                    modelName: '三级保护参数',
+                    type: 'service',
+                    buttons: ['refresh', 'edit'],
+                    children: [
+                      {
+                        id: '53069',
+                        name: '单体过压三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53070',
+                        name: '单体过压三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53071',
+                        name: '单体欠压三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53072',
+                        name: '单体欠压三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53073',
+                        name: '总电压过压三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53074',
+                        name: '总电压过压三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53075',
+                        name: '总电压欠压三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53076',
+                        name: '总电压欠压三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53077',
+                        name: '单体压差过高三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53078',
+                        name: '单体压差过高三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53079',
+                        name: '总电压压差过高三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53080',
+                        name: '总电压压差过高三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53081',
+                        name: '充电过流三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53082',
+                        name: '充电过流三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53083',
+                        name: '放电过流三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53084',
+                        name: '放电过流三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53085',
+                        name: '充电过温三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53086',
+                        name: '充电过温三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53087',
+                        name: '充电欠温三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53088',
+                        name: '充电欠温三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53089',
+                        name: '放电过温三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53090',
+                        name: '放电过温三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53091',
+                        name: '放电欠温三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53092',
+                        name: '放电欠温三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53093',
+                        name: '温差过高三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53094',
+                        name: '温差过高三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53095',
+                        name: '极柱温度过高三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53096',
+                        name: '极柱温度过高三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53097',
+                        name: 'SOC 过低三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53098',
+                        name: 'SOC 过低三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53099',
+                        name: '绝缘失效三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53100',
+                        name: '绝缘失效三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53101',
+                        name: '高压箱连接器温度过高三级报警门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53102',
+                        name: '高压箱连接器温度过高三级恢复门限',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                id: 'protectParams4',
+                name: 'EMS四级保护参数',
+                type: 'tabItem',
+                children: [
+                  {
+                    id: 'd',
+                    name: 'EMS四级保护参数',
+                    modelName: 'EMS四级保护参数',
+                    type: 'service',
+                    buttons: ['refresh', 'edit'],
+                    children: [
+                      {
+                        id: '53103',
+                        name: '单体过压四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53104',
+                        name: '单体过压四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53105',
+                        name: '单体欠压四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53106',
+                        name: '单体欠压四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53107',
+                        name: '总电压过压四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53108',
+                        name: '总电压过压四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53109',
+                        name: '总电压欠压四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53110',
+                        name: '总电压欠压四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53111',
+                        name: '单体压差过高四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53112',
+                        name: '单体压差过高四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53113',
+                        name: '总电压压差过高四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53114',
+                        name: '总电压压差过高四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'mV',
+                          },
+                        },
+                      },
+                      {
+                        id: '53115',
+                        name: '充电过流四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53116',
+                        name: '充电过流四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53117',
+                        name: '放电过流四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53118',
+                        name: '放电过流四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'A',
+                          },
+                        },
+                      },
+                      {
+                        id: '53119',
+                        name: '充电过温四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53120',
+                        name: '充电过温四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53121',
+                        name: '充电欠温四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53122',
+                        name: '充电欠温四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53123',
+                        name: '放电过温四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53124',
+                        name: '放电过温四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53125',
+                        name: '放电欠温四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53126',
+                        name: '放电欠温四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53127',
+                        name: '温差过高四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53128',
+                        name: '温差过高四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53129',
+                        name: '极柱温度过高四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53130',
+                        name: '极柱温度过高四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53131',
+                        name: 'SOC 过低四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53132',
+                        name: 'SOC 过低四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '%',
+                          },
+                        },
+                      },
+                      {
+                        id: '53133',
+                        name: '绝缘失效四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53134',
+                        name: '绝缘失效四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: 'KΩ',
+                          },
+                        },
+                      },
+                      {
+                        id: '53135',
+                        name: '高压箱连接器温度过高四级保护限值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                      {
+                        id: '53136',
+                        name: '高压箱连接器温度过高四级保护恢复值',
+                        type: 'property',
+                        buttons: ['refresh', 'edit'],
+                        dataType: {
+                          type: 'string',
+                          specs: {
+                            unit: '°C',
+                          },
+                        },
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },

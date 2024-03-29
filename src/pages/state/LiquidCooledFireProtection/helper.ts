@@ -43,7 +43,7 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            '0': '初始化', 
+            '0': '初始化',
             '1': '断开',
             '2': '连接',
           },
@@ -56,7 +56,7 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            '0': '485', 
+            '0': '485',
             '1': '未知',
           },
         },
@@ -72,31 +72,6 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '33137',
-        name: '消防喷射信号',
-        type: 'property',
-        dataType: {
-          type: 'enum',
-          specs: {
-            '0': '正常',
-            '1': '喷射',
-          },
-        },
-      },
-      {
-        id: '33135',
-        name: '消防工作状态',
-        type: 'property',
-        dataType: {
-          type: 'enum',
-          specs: {
-            '0': '运行',
-            '1': '停止',
-            '2': '故障',
-          },
-        },
-      },
-      {
         id: '33136',
         name: '消防告警状态',
         type: 'property',
@@ -109,6 +84,18 @@ export const statusItems: any = [
         },
       },
       {
+        id: '33137',
+        name: '消防喷射信号',
+        type: 'property',
+        dataType: {
+          type: 'enum',
+          specs: {
+            '0': '正常',
+            '1': '喷射',
+          },
+        },
+      },
+      {
         id: '33150',
         name: '电池箱号',
         type: 'property',
@@ -116,6 +103,13 @@ export const statusItems: any = [
           type: 'long',
         },
       },
+    ],
+  },
+  {
+    id: 'a',
+    name: '传感器',
+    type: 'group',
+    children: [
       {
         id: '33151',
         name: '状态标志',
@@ -271,7 +265,7 @@ export const statusItems: any = [
       },
       {
         id: '33158',
-        name: '一氧化碳数值',
+        name: 'CO数值',
         type: 'property',
         dataType: {
           type: 'double',
