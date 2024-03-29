@@ -145,19 +145,19 @@ const Pcs: React.FC = () => {
             </CardC>
           </Col>
         </Row>
-        <Row gutter={20} className="mt24">
-          <Col span={24}>
-            <CardC className="h-full">
-              <Run
-                realTimeData={realTimeData}
-                groupData={funItems}
-                detailProps={{
-                  column: 4,
-                }}
-              />
-            </CardC>
-          </Col>
-        </Row>
+        {/*<Row gutter={20} className="mt24">*/}
+        {/*  <Col span={24}>*/}
+        {/*    <CardC className="h-full">*/}
+        {/*      <Run*/}
+        {/*        realTimeData={realTimeData}*/}
+        {/*        groupData={funItems}*/}
+        {/*        detailProps={{*/}
+        {/*          column: 4,*/}
+        {/*        }}*/}
+        {/*      />*/}
+        {/*    </CardC>*/}
+        {/*  </Col>*/}
+        {/*</Row>*/}
         <Row gutter={20} className="mt24">
           <Col span={24}>
             <Card
@@ -199,7 +199,6 @@ const Pcs: React.FC = () => {
                     return <span key={item}>{realTimeData[item]}</span>;
                   })}
                 </div>
-
                 <div className={styles.first} style={{ marginTop: '12px' }}>
                   <span>序号</span>
                   {arr.map((item, index) => {

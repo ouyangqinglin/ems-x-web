@@ -299,6 +299,18 @@ export const statusItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        id: 'm',
+        type: 'group',
+        showType: 8,
+      },
+      {
+        id: 's',
+        type: 'group',
+        showType: 2,
+        children: [
           {
             id: '1201',
             type: 'property',
@@ -700,6 +712,19 @@ export const statusItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        id: 'm',
+        type: 'group',
+        showType: 8,
+      },
+      {
+        id: 'm',
+        type: 'group',
+        showType: 2,
+        children: [
+          /// 11111
           {
             id: '1606',
             type: 'property',

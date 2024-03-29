@@ -68,6 +68,7 @@ export const baseInfoItems: any = [
             id: '50400',
             name: '系统控制模式切换',
             type: 'property',
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               type: 'enum',
@@ -81,6 +82,7 @@ export const baseInfoItems: any = [
             id: '50401',
             name: '系统工作模式切换',
             type: 'property',
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               type: 'enum',
@@ -96,6 +98,7 @@ export const baseInfoItems: any = [
             name: '系统工作状态控制',
             type: 'property',
             buttons: ['edit'],
+            showType: 7,
             dataType: {
               type: 'enum',
               specs: {
@@ -121,6 +124,7 @@ export const baseInfoItems: any = [
             name: '系统复位',
             buttons: ['edit'],
             type: 'property',
+            showType: 7,
             dataType: {
               type: 'enum',
               specs: {
@@ -153,10 +157,11 @@ export const batteryModeItems: any = [
             buttons: ['refresh'],
             dataType: {
               specs: {
-                1: '正常',
-                2: '核容',
-                3: '均衡',
-                4: '调试',
+                1: '启动',
+                2: '充电',
+                3: '放电',
+                4: '待机',
+                5: '停止',
               },
               type: 'enum',
             },
@@ -164,11 +169,12 @@ export const batteryModeItems: any = [
           {
             id: '50414',
             name: '电池工作状态控制',
+            showType: 7,
             type: 'property',
             buttons: ['edit'],
             dataType: {
               specs: {
-                1: '正常',
+                1: '启动',
                 2: '充电',
                 3: '放电',
                 4: '待机',

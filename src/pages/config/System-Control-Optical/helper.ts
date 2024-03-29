@@ -7,8 +7,6 @@
  * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
  */
 
-import { DeviceModelDescribeType } from '@/types/device';
-
 export const baseInfoItems: any = [
   {
     id: 'a',
@@ -25,6 +23,7 @@ export const baseInfoItems: any = [
             id: '11000',
             name: '控制模式',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               type: 'enum',
               specs: {
@@ -37,6 +36,7 @@ export const baseInfoItems: any = [
             id: '11001',
             name: '工作模式',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               type: 'enum',
               specs: {
@@ -52,6 +52,7 @@ export const baseInfoItems: any = [
             id: '11002',
             name: '工作状态',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               type: 'enum',
               specs: {
@@ -67,6 +68,7 @@ export const baseInfoItems: any = [
             id: '11000',
             name: '系统控制模式切换',
             type: 'property',
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               type: 'enum',
@@ -79,6 +81,7 @@ export const baseInfoItems: any = [
           {
             id: '11002',
             name: '系统工作模式切换',
+            showType: 7,
             type: 'property',
             buttons: ['edit'],
             dataType: {
@@ -93,22 +96,30 @@ export const baseInfoItems: any = [
             },
           },
 
-          {
-            id: '11003',
-            name: '系统能量统计初始化',
-            type: 'property',
-            buttons: ['refresh'],
-            dataType: {
-              type: 'string',
-            },
-          },
+          // {
+          //   id: '11003',
+          //   name: '系统能量统计初始化',
+          //   type: 'property',
+          //   buttons: ['refresh'],
+          //   showType: 7,
+          //   dataType: {
+          //     type: 'enum',
+          //     specs: {
+          //       11003: '执行'
+          //     }
+          //   },
+          // },
           {
             id: '11004',
             name: '系统复位',
-            buttons: ['refresh'],
+            showType: 7,
+            buttons: ['edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                1: '有效',
+              },
             },
           },
         ],
@@ -133,6 +144,7 @@ export const batteryModeItems: any = [
             id: '1',
             name: '工作状态',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               specs: {
                 0: '充电',
@@ -146,6 +158,7 @@ export const batteryModeItems: any = [
             id: '1',
             name: '电池工作状态控制',
             type: 'property',
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               specs: {
