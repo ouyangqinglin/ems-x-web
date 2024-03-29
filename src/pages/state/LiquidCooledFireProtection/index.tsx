@@ -20,7 +20,7 @@ const LiquidCooledFireProtection: React.FC = () => {
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
+      <RefreshData run={run} showDeviceModel time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Card className="h-full">
           <Run
