@@ -18,6 +18,7 @@ const communityStatus = {
   1: '断开',
   2: '连接',
 };
+console.log('window.innerWidth', window.innerWidth);
 const Index: React.FC = (props) => {
   const { data } = props;
   const [status, setStatus] = useState(0);

@@ -2,17 +2,15 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:29:44
+ * @LastEditTime: 2024-03-28 17:28:07
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\state\System-Air\index.tsx
  */
 
 import React from 'react';
 import Card from '@/components/Card';
 import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import {
   baseInfoItems,
   statusItems,
@@ -25,12 +23,11 @@ import { useDeviceData } from '@/hooks';
 import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>

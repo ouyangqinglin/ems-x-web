@@ -15,7 +15,7 @@ export const pvItems: any = [
     showType: 2,
     children: [
       {
-        id: 'fffff',
+        id: 'fffffff',
         name: '今日发电量',
         type: 'property',
         dataType: {

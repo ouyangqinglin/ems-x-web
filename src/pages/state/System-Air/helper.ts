@@ -149,7 +149,7 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: 'ffff',
+        id: 'fffffff',
         name: '上位机通信',
         type: 'property',
         dataType: {
@@ -1087,7 +1087,7 @@ export const statusItems: any = [
       },
       {
         type: 'group',
-        id: 'fffffff',
+        id: 'aaaaaa',
         name: '消防',
         children: [
           {

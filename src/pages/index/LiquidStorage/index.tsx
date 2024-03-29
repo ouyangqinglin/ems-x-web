@@ -22,11 +22,11 @@ import incomeImg from '@/assets/image/station/overview/icon_income_img.svg';
 import reduceImg from '@/assets/image/station/overview/icon_reduce_img.svg';
 import { useDeviceData } from '@/hooks';
 const Index: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className={styles.liquid}>
         <Row gutter={16}>
           <Col span={8}>

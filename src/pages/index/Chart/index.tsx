@@ -146,7 +146,7 @@ const Index: React.FC = () => {
   }, [chartType]);
   function getChartData(v) {
     if (timerOne?.current) clearInterval(timerOne.current);
-    getDeviceData(1, { id: 313 })
+    getDeviceData(1, ['313', '334', '336'])
       .then((res) => {
         if (+res.code === 200) {
           arrTime.push(res?.data?.refreshTime?.slice(11));

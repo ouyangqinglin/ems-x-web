@@ -24,11 +24,11 @@ import { useDeviceData } from '@/hooks';
 import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={8}>

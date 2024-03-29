@@ -16,11 +16,11 @@ import RefreshData from '@/components/Device/RefreshData';
 import useDeviceData from '@/hooks/useDeviceData';
 
 const FireFightingSESS: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Card className="h-full">
           <Run
@@ -41,7 +41,7 @@ const FireFightingSESS: React.FC = () => {
           />
         </Card>
         <div className="mt16">
-          <SystemAlarm modelType="fireFight" deviceType={2} realTimeData={realTimeData} />
+          <SystemAlarm modelType="fireFight" deviceType={4} realTimeData={realTimeData} />
         </div>
       </div>
     </>

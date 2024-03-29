@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:36:37
- * @LastEditTime: 2024-03-28 10:14:17
+ * @LastEditTime: 2024-03-28 16:11:56
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\locales\zh-CN\menu.ts
  */
@@ -10,6 +10,7 @@ export default {
   'menu.index': '首页',
   'menu.state': '状态数据',
   'menu.help': '帮助',
+  'menu.parallel': '并机管理',
   'menu.state.pcs': '变流器',
   'menu.state.pcsSess': '变流器-SESS',
   'menu.state.airCooledFireProtection': '消防',

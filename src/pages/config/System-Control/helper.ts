@@ -24,6 +24,7 @@ export const baseInfoItems: any = [
           {
             id: '50400',
             name: '控制模式',
+            buttons: ['refresh'],
             type: 'property',
             dataType: {
               type: 'enum',
@@ -37,6 +38,7 @@ export const baseInfoItems: any = [
             id: '50401',
             name: '工作模式',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               type: 'enum',
               specs: {
@@ -50,6 +52,7 @@ export const baseInfoItems: any = [
             id: '50402',
             name: '工作状态',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               type: 'enum',
               specs: {
@@ -116,7 +119,7 @@ export const baseInfoItems: any = [
           {
             id: '50416',
             name: '系统复位',
-            buttons: ['refresh'],
+            buttons: ['edit'],
             type: 'property',
             dataType: {
               type: 'enum',
@@ -147,6 +150,7 @@ export const batteryModeItems: any = [
             id: '50414',
             name: '工作状态',
             type: 'property',
+            buttons: ['refresh'],
             dataType: {
               specs: {
                 1: '正常',

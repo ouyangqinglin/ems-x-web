@@ -11,20 +11,17 @@ import React from 'react';
 import Card from '@/components/Card';
 import { Col, Row } from 'antd';
 import Run from '@/components/Device/Run';
-import { useModel, useRequest } from 'umi';
-import { getDeviceData } from '@/services/device';
 import { baseInfoItems, statusItems } from './helper';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
-import SystemAlarm from "@/components/SystemAlarm";
+import SystemAlarm from '@/components/SystemAlarm';
 
 const Pcs: React.FC = () => {
-  const { config } = useModel('config');
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
 
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Row gutter={20}>
           <Col span={24}>
@@ -53,7 +50,7 @@ const Pcs: React.FC = () => {
           </Col>
         </Row>
         <div className="mt16">
-          <SystemAlarm modelType="aircondit" realTimeData={realTimeData}/>
+          <SystemAlarm modelType="aircondit" realTimeData={realTimeData} />
         </div>
       </div>
     </>

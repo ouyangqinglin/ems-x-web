@@ -15,10 +15,10 @@ import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
 
 const GridSideElectricityMeterPv: React.FC = () => {
-  const { realTimeData, run } = useDeviceData();
+  const { realTimeData, run, loading } = useDeviceData();
   return (
     <>
-      <RefreshData run={run} time={realTimeData?.refreshTime} />
+      <RefreshData run={run} time={realTimeData?.refreshTime} loading={loading} />
       <div className="p24">
         <Card className="h-full">
           <Run

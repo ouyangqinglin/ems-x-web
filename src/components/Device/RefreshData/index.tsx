@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-19 15:10:06
- * @LastEditTime: 2024-03-20 17:42:47
+ * @LastEditTime: 2024-03-28 16:18:02
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\RefreshData\index.tsx
  */
@@ -20,14 +20,15 @@ type RefreshDataType = {
   time?: string;
   showDeviceModel?: boolean;
   run?: (params?: any) => Promise<any> | undefined;
+  loading?: boolean;
 };
 
 const RefreshData: React.FC<RefreshDataType> = (props) => {
-  const { time = '', run, className = '', showDeviceModel = false } = props;
+  const { time = '', run, className = '', showDeviceModel = false, loading = false } = props;
+  const [runLoading, { setFalse, setTrue }] = useBoolean(false);
   const { data: deviceData, run: runGetSystemStatus } = useRequest(getSystemStatus, {
     manual: true,
   });
-  const [loading, { setFalse, setTrue }] = useBoolean(false);
 
   useEffect(() => {
     if (showDeviceModel) {
@@ -63,7 +64,12 @@ const RefreshData: React.FC<RefreshDataType> = (props) => {
         </div>
         <div>
           更新时间（本地）：{time}
-          <Button loading={loading} className="ml12" icon={<RedoOutlined />} onClick={onClick}>
+          <Button
+            loading={loading || runLoading}
+            className="ml12"
+            icon={<RedoOutlined />}
+            onClick={onClick}
+          >
             更新
           </Button>
         </div>
