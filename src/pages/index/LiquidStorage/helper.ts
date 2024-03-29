@@ -446,15 +446,17 @@ export const systemItems: any = [
             },
           },
           {
-            id: '3401',
+            id: '344',
             name: '工作状态',
             type: 'property',
             dataType: {
               type: 'enum',
               specs: {
-                0: '停机',
-                1: '故障',
-                2: '运行',
+                0: '启动',
+                1: '待机',
+                2: '停止',
+                3: '急停',
+                4: '复位',
               },
             },
           },
@@ -562,12 +564,12 @@ export const systemItems: any = [
       },
       {
         id: 'c',
-        name: '空调',
+        name: '液冷机',
         type: 'group',
         children: [
           {
             id: '30002',
-            name: '空调SN',
+            name: '液冷机SN',
             type: 'property',
             dataType: {
               type: 'string',
@@ -575,41 +577,107 @@ export const systemItems: any = [
           },
           {
             id: '30012',
-            name: '空调厂商',
+            name: '液冷机厂商',
             type: 'property',
             dataType: {
               type: 'string',
             },
           },
           {
-            id: '30039',
-            name: '空调型号',
+            id: '32035',
+            name: '液冷机型号',
             type: 'property',
             dataType: {
               type: 'string',
             },
           },
           {
-            id: '30049',
-            name: '控制模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '手动',
-                1: '自动',
-              },
-            },
-          },
-          {
-            id: '30024',
-            name: '工作状态',
+            id: '32425',
+            name: '系统模式',
             type: 'property',
             dataType: {
               type: 'enum',
               specs: {
                 0: '停止',
-                1: '运行',
+                1: '内循环',
+                2: '制冷',
+                3: '加热',
+                4: '全自动',
+                5: '预留',
+              },
+            },
+          },
+          {
+            id: '32045',
+            name: '工作状态',
+            type: 'property',
+            dataType: {
+              type: 'enum',
+              specs: {
+                0: '停机',
+                1: '故障',
+                2: '运行',
+              },
+            },
+          },
+        ],
+      },
+      {
+        id: 'd',
+        name: '除湿机',
+        type: 'group',
+        children: [
+          {
+            id: '32802',
+            name: '除湿机SN',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '32812',
+            name: '除湿机厂商',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '32827',
+            name: '除湿机型号',
+            type: 'property',
+            dataType: {
+              type: 'string',
+            },
+          },
+          {
+            id: '32840',
+            name: '工作模式',
+            type: 'property',
+            dataType: {
+              type: 'enum',
+              specs: {
+                0: '升温型',
+                1: '降温型',
+              },
+            },
+          },
+          {
+            id: '32841',
+            name: '工作状态',
+            type: 'property',
+            dataType: {
+              type: 'enum',
+              specs: {
+                0: '自动状态',
+                1: '手动状态',
+                2: '设置状态',
+                3: '运行状态',
+                4: '除湿器工作状态',
+                5: '加热器工作状态',
+                6: '风扇工作状态',
+                7: '除冰工作状态',
               },
             },
           },

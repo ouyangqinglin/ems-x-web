@@ -41,32 +41,50 @@ arrT.fill(1);
 const Pcs: React.FC = () => {
   const { realTimeData, run, loading } = useDeviceData();
 
-  const [activeTabKey, setActiveTabKey] = useState<string>('0');
-  const vArr = [bmuOneV, bmuTwoV, bmuThreeV, bmuFourV, bmuFiveV];
-  const tArr = [bmuOneT, bmuTwoT, bmuThreeT, bmuFourT, bmuFiveT];
-  const snArr = [5900, 5910, 5920, 5930, 5940];
+  const [activeTabKey, setActiveTabKey] = useState<string>('1');
+  const mvMap = {
+    '1': bmuOneV,
+    '2': bmuTwoV,
+    '3': bmuThreeV,
+    '4': bmuFourV,
+    '5': bmuFiveV,
+  };
+  const tMap = {
+    '1': bmuOneT,
+    '2': bmuTwoT,
+    '3': bmuThreeT,
+    '4': bmuFourT,
+    '5': bmuFiveT,
+  };
+  const snMap = {
+    '1': 5900,
+    '2': 5910,
+    '3': 5920,
+    '4': 5930,
+    '5': 5940,
+  };
   const onTab1Change = (key: string) => {
     setActiveTabKey(key);
   };
   const tabList = [
     {
-      key: '0',
+      key: '1',
       tab: 'BMU1',
     },
     {
-      key: '1',
+      key: '2',
       tab: 'BMU2',
     },
     {
-      key: '2',
+      key: '3',
       tab: 'BMU3',
     },
     {
-      key: '3',
+      key: '4',
       tab: 'BMU4',
     },
     {
-      key: '4',
+      key: '5',
       tab: 'BMU5',
     },
   ];
@@ -150,7 +168,7 @@ const Pcs: React.FC = () => {
               onTabChange={onTab1Change}
             >
               <div className={styles.sn}>
-                BMU SN: <span>{realTimeData[snArr[+activeTabKey]]}</span>
+                BMU SN: <span>{realTimeData[snMap[activeTabKey]]}</span>
               </div>
               <div className={styles.table}>
                 <div className={styles.first}>
@@ -161,7 +179,7 @@ const Pcs: React.FC = () => {
                 </div>
                 <div className={styles.two}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>电压(mV)</span>
-                  {vArr[+activeTabKey].slice(0, 24).map((item) => {
+                  {mvMap[activeTabKey].slice(0, 24).map((item) => {
                     return <span key={item}>{realTimeData[item]}</span>;
                   })}
                 </div>
@@ -177,7 +195,7 @@ const Pcs: React.FC = () => {
                 </div>
                 <div className={styles.two}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>电压(mV)</span>
-                  {vArr[+activeTabKey].slice(24).map((item) => {
+                  {mvMap[activeTabKey].slice(24).map((item) => {
                     return <span key={item}>{realTimeData[item]}</span>;
                   })}
                 </div>
@@ -190,7 +208,7 @@ const Pcs: React.FC = () => {
                 </div>
                 <div className={styles.two}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>温度(℃)</span>
-                  {tArr[+activeTabKey].slice(0, 24).map((item) => {
+                  {tMap[activeTabKey].slice(0, 24).map((item) => {
                     return <span key={item}>{realTimeData[item]}</span>;
                   })}
                 </div>
@@ -206,7 +224,7 @@ const Pcs: React.FC = () => {
                 </div>
                 <div className={styles.two}>
                   <span style={{ backgroundColor: '#f2f2f2' }}>温度(℃)</span>
-                  {tArr[+activeTabKey].slice(24).map((item) => {
+                  {tMap[activeTabKey].slice(24).map((item) => {
                     return <span key={item}>{realTimeData[item]}</span>;
                   })}
                 </div>
