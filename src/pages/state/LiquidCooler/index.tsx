@@ -41,7 +41,7 @@ const LiquidCooler: React.FC = () => {
           />
         </Card>
         <div className="mt16">
-          <SystemAlarm modelType="fireFight" deviceType={2} realTimeData={realTimeData} />
+          <SystemAlarm modelType="wetCooler" deviceType={2} realTimeData={realTimeData} />
         </div>
       </div>
     </>
