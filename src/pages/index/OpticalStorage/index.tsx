@@ -12,6 +12,7 @@ import {
   incomeItems,
   electricItems,
   reduceItems,
+  systemOtherItems,
 } from './helper';
 import pvImg from '@/assets/image/station/overview/icon_pv_img.svg';
 import batImg from '@/assets/image/station/overview/icon_bat_system_img.svg';
@@ -121,7 +122,7 @@ const Index: React.FC = () => {
 
         <Row gutter={12} className="mt16">
           <Col span={18}>
-            <CardC className="h-full" style={{ height: 248 }}>
+            <CardC className="h-full" style={{ height: 198 }}>
               <Run
                 realTimeData={realTimeData}
                 groupData={systemItems}
@@ -132,7 +133,7 @@ const Index: React.FC = () => {
             </CardC>
           </Col>
           <Col span={6}>
-            <Card className={styles.card} style={{ height: 248 }}>
+            <Card className={styles.card} style={{ height: 198 }}>
               <div className={styles.icon}>
                 <img src={reduceImg} alt="" />
                 <span className={styles.title}>减排</span>
@@ -145,6 +146,19 @@ const Index: React.FC = () => {
                 }}
               />
             </Card>
+          </Col>
+        </Row>
+        <Row className="mt16">
+          <Col span={24}>
+            <CardC className="h-full">
+              <Run
+                realTimeData={realTimeData}
+                groupData={systemOtherItems}
+                detailProps={{
+                  column: 5,
+                }}
+              />
+            </CardC>
           </Col>
         </Row>
       </div>

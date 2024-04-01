@@ -14,10 +14,10 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: 'a',
+        type: 'propertyGroup',
+        showType: 2,
         name: '系统当前工作模式和状态',
-        type: 'service',
-        buttons: ['refresh'],
+        id: 'sdkas',
         children: [
           {
             id: '11000',
@@ -64,6 +64,14 @@ export const baseInfoItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '11000',
             name: '系统控制模式切换',
@@ -78,9 +86,42 @@ export const baseInfoItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
+          {
+            id: '11001',
+            name: '系统工作模式切换',
+            showType: 4,
+            type: 'property',
+            buttons: ['edit'],
+            dataType: {
+              type: 'enum',
+              specs: {
+                0: '削峰填谷',
+                1: '备电',
+                2: '手动控制',
+                3: '自发自用',
+                4: '售电模式',
+              },
+            },
+          },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '11002',
-            name: '系统工作模式切换',
+            name: '系统工作状态切换',
             showType: 4,
             type: 'property',
             buttons: ['edit'],
@@ -95,20 +136,14 @@ export const baseInfoItems: any = [
               },
             },
           },
-
-          // {
-          //   id: '11003',
-          //   name: '系统能量统计初始化',
-          //   type: 'property',
-          //   buttons: ['refresh'],
-          //   showType: 7,
-          //   dataType: {
-          //     type: 'enum',
-          //     specs: {
-          //       11003: '执行'
-          //     }
-          //   },
-          // },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '11004',
             name: '系统复位',
@@ -124,6 +159,19 @@ export const baseInfoItems: any = [
           },
         ],
       },
+      // {
+      //   id: '11003',
+      //   name: '系统能量统计初始化',
+      //   type: 'property',
+      //   buttons: ['refresh'],
+      //   showType: 7,
+      //   dataType: {
+      //     type: 'enum',
+      //     specs: {
+      //       11003: '执行'
+      //     }
+      //   },
+      // },
     ],
   },
 ];
@@ -135,13 +183,13 @@ export const batteryModeItems: any = [
     type: 'group',
     children: [
       {
-        id: 'a',
-        name: '电池当前工作模式和状态',
-        type: 'service',
-        buttons: ['refresh'],
+        id: 'tian',
+        type: 'propertyGroup',
+        showType: 2,
+        name: 'sds',
         children: [
           {
-            id: '1',
+            id: '11008',
             name: '工作状态',
             type: 'property',
             buttons: ['refresh'],
@@ -154,8 +202,16 @@ export const batteryModeItems: any = [
               type: 'enum',
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdssad',
+        name: 'sasdd',
+        showType: 2,
+        children: [
           {
-            id: '1',
+            id: '11008',
             name: '电池工作状态控制',
             type: 'property',
             showType: 4,

@@ -575,6 +575,17 @@ export const systemItems: any = [
           },
         ],
       },
+    ],
+  },
+];
+
+export const systemOtherItems: any = [
+  {
+    id: 'other',
+    name: 'other',
+    type: 'group',
+    showType: 2,
+    children: [
       {
         id: 'c',
         name: '变流器',

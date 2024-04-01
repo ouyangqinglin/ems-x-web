@@ -16,10 +16,10 @@ export const baseInfoItems: any = [
     type: 'group',
     children: [
       {
-        id: 'a',
+        type: 'propertyGroup',
+        showType: 2,
         name: '系统当前工作模式和状态',
-        type: 'service',
-        buttons: ['refresh'],
+        id: 'sdkas',
         children: [
           {
             id: '50400',
@@ -64,6 +64,23 @@ export const baseInfoItems: any = [
               },
             },
           },
+          // {
+          //   id: '8',
+          //   name: '系统能量统计初始化',
+          //   type: 'property',
+          //   buttons: ['refresh'],
+          //   dataType: {
+          //     type: 'string',
+          //   },
+          // },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '50400',
             name: '系统控制模式切换',
@@ -78,6 +95,14 @@ export const baseInfoItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '50401',
             name: '系统工作模式切换',
@@ -93,6 +118,14 @@ export const baseInfoItems: any = [
               },
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '50402',
             name: '系统工作状态控制',
@@ -110,15 +143,14 @@ export const baseInfoItems: any = [
               },
             },
           },
-          // {
-          //   id: '8',
-          //   name: '系统能量统计初始化',
-          //   type: 'property',
-          //   buttons: ['refresh'],
-          //   dataType: {
-          //     type: 'string',
-          //   },
-          // },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '50416',
             name: '系统复位',
@@ -145,10 +177,10 @@ export const batteryModeItems: any = [
     type: 'group',
     children: [
       {
-        id: 'a',
-        name: '电池当前工作模式和状态',
-        type: 'service',
-        buttons: ['refresh'],
+        type: 'propertyGroup',
+        showType: 2,
+        name: '系统当前工作模式和状态',
+        id: 'sdkas',
         children: [
           {
             id: '50414',
@@ -166,6 +198,14 @@ export const batteryModeItems: any = [
               type: 'enum',
             },
           },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
           {
             id: '50414',
             name: '电池工作状态控制',
