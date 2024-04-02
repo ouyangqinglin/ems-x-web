@@ -12,109 +12,265 @@
   }
   .imgBox {
     position: relative;
-    width: 382px;
+    width: 362px;
+    height: 346px;
     object-fit: contain;
-    @media screen and (max-width: 1556px) {
-      width: 302px;
+    @media screen and (max-width: 1666px) {
+      width: 280px;
       margin-top: 25px;
-    }
-    img {
-      width: 382px;
-      @media screen and (max-width: 1556px) {
-        width: 100%;
-      }
     }
     span {
       position: absolute;
-      color: #007dff;
-      font-size: 14px;
-      @media screen and (max-width: 1556px) {
-        font-size: 12px;
+      z-index: 1;
+      font-size: 12px;
+    }
+    img {
+      position: absolute;
+      z-index: 2;
+    }
+    .centerImg {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .oneImg {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .oneStatus {
+      top: 16px;
+      left: 39%;
+      @media screen and (max-width: 1666px) {
+        left: 36%;
+      }
+    }
+    .oneName {
+      top: 15px;
+      right: 33%;
+      @media screen and (max-width: 1666px) {
+        right: 30%;
       }
     }
     .one {
-      top: 43px;
-      left: 45%;
-      @media screen and (max-width: 1556px) {
-        top: 30px;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 50%;
+      background-color: #b4b4b4;
+    }
+    .sixImg {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .sixStatus {
+      bottom: 16px;
+      left: 39%;
+      @media screen and (max-width: 1666px) {
+        left: 36%;
+      }
+    }
+    .sixName {
+      right: 36%;
+      bottom: 12px;
+      @media screen and (max-width: 1666px) {
+        right: 32%;
       }
     }
     .six {
-      bottom: 66px;
-      left: 43%;
-      @media screen and (max-width: 1556px) {
-        bottom: 50px;
-      }
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 50%;
+      background-color: #b4b4b4;
+    }
+    .twoImg {
+      top: 0;
+      right: 0;
+    }
+    .twoStatus {
+      top: 16px;
+      right: -20px;
+    }
+    .twoName {
+      top: 36px;
+      right: 0;
     }
     .two {
-      top: 83px;
-      left: 57%;
-      transform: rotate(-45deg);
-      @media screen and (max-width: 1556px) {
-        top: 63px;
+      top: 20px;
+      right: 20px;
+      width: 1px;
+      height: 60%;
+      background-color: #b4b4b4;
+      transform: rotate(45deg);
+      transform-origin: 50% 0;
+      @media screen and (max-width: 1666px) {
+        transform: rotate(40deg);
       }
+    }
+    .sevenImg {
+      bottom: 22px;
+      left: -4px;
+    }
+    .sevenStatus {
+      bottom: 34px;
+      left: -20px;
+    }
+    .sevenName {
+      bottom: 0;
+      left: 0;
     }
     .seven {
-      right: 62%;
-      bottom: 107px;
-      transform: rotate(-40deg);
-      @media screen and (max-width: 1556px) {
-        right: 65%;
-        bottom: 78px;
+      bottom: 22px;
+      left: 20px;
+      width: 1px;
+      height: 60%;
+      background-color: #b4b4b4;
+      transform: rotate(45deg);
+      transform-origin: 50% 100%;
+      @media screen and (max-width: 1666px) {
+        transform: rotate(40deg);
       }
+    }
+    .threeImg {
+      top: 25%;
+      right: 0;
+    }
+    .threeStatus {
+      top: 26%;
+      right: -20px;
+    }
+    .threeName {
+      top: 36%;
+      right: 4px;
     }
     .three {
-      top: 114px;
-      right: 13%;
-      transform: rotate(-23deg);
-      @media screen and (max-width: 1556px) {
-        top: 103px;
-        right: 13%;
-      }
+      top: 32%;
+      right: 4px;
+      width: 1px;
+      height: 48%;
+      background-color: #b4b4b4;
+      transform: rotate(70deg);
+      transform-origin: 50% 0;
+    }
+    .eightImg {
+      bottom: 37%;
+      left: 0;
+    }
+    .eightStatus {
+      bottom: 41%;
+      left: -20px;
+    }
+    .eightName {
+      bottom: 31%;
+      left: 0;
     }
     .eight {
-      bottom: 150px;
-      left: 18%;
-      transform: rotate(-15deg);
-      @media screen and (max-width: 1556px) {
-        bottom: 130px;
-        left: 13%;
-      }
+      bottom: 38%;
+      left: 10px;
+      width: 1px;
+      height: 46%;
+      background-color: #b4b4b4;
+      transform: rotate(75deg);
+      transform-origin: 50% 100%;
+    }
+    .fourImg {
+      right: 0;
+      bottom: 37%;
+    }
+    .fourStatus {
+      right: -20px;
+      bottom: 41%;
+    }
+    .fourName {
+      right: 0;
+      bottom: 31%;
     }
     .four {
-      top: 174px;
-      right: 19%;
-      transform: rotate(20deg);
-      @media screen and (max-width: 1556px) {
-        top: 155px;
-        right: 15%;
+      right: 20px;
+      bottom: 38%;
+      width: 1px;
+      height: 48%;
+      background-color: #b4b4b4;
+      transform: rotate(-75deg);
+      transform-origin: 50% 100%;
+      @media screen and (max-width: 1666px) {
+        height: 39%;
       }
+    }
+    .nineImg {
+      top: 25%;
+      left: 0;
+    }
+    .nineStatus {
+      top: 26%;
+      left: -20px;
+    }
+    .nineName {
+      top: 36%;
+      left: 4px;
     }
     .nine {
-      bottom: 199px;
-      left: 25%;
-      transform: rotate(20deg);
-      @media screen and (max-width: 1556px) {
-        bottom: 179px;
-        left: 16%;
+      top: 34%;
+      left: 10px;
+      width: 1px;
+      height: 48%;
+      background-color: #b4b4b4;
+      transform: rotate(-75deg);
+      transform-origin: 50% 0;
+      @media screen and (max-width: 1666px) {
+        transform: rotate(-65deg);
       }
+    }
+    .fiveImg {
+      right: 0;
+      bottom: 22px;
+    }
+    .fiveStatus {
+      right: -20px;
+      bottom: 36px;
+    }
+    .fiveName {
+      right: 0;
+      bottom: 0;
     }
     .five {
-      bottom: 91px;
-      left: 64%;
-      transform: rotate(45deg);
-      @media screen and (max-width: 1556px) {
-        bottom: 87px;
-        left: 61%;
+      right: 24px;
+      bottom: 26px;
+      width: 1px;
+      height: 60%;
+      background-color: #b4b4b4;
+      transform: rotate(-45deg);
+      transform-origin: 50% 100%;
+      @media screen and (max-width: 1666px) {
+        height: 56%;
+        transform: rotate(-40deg);
       }
     }
+    .tenImg {
+      top: 0;
+      left: 0;
+    }
+    .tenStatus {
+      top: 16px;
+      left: -20px;
+    }
+    .tenName {
+      top: 36px;
+      left: 0;
+    }
     .ten {
-      top: 79px;
-      right: 59%;
-      transform: rotate(40deg);
-      @media screen and (max-width: 1556px) {
-        top: 60px;
-        right: 59%;
+      top: 26px;
+      left: 24px;
+      width: 1px;
+      height: 60%;
+      background-color: #b4b4b4;
+      transform: rotate(-48deg);
+      transform-origin: 50% 0;
+      @media screen and (max-width: 1666px) {
+        height: 54%;
+        transform: rotate(-42deg);
       }
     }
   }

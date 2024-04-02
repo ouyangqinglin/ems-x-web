@@ -35,10 +35,10 @@ const optionBat = {
     trigger: 'axis',
   },
   grid: {
-    bottom: '10%',
+    bottom: '13%',
     left: 28,
     top: '24%',
-    right: 2,
+    right: 8,
   },
   xAxis: [
     {
@@ -78,6 +78,50 @@ const optionBat = {
       },
     },
   },
+  dataZoom: [
+    {
+      showDetail: true,
+      type: 'inside',
+      height: 15,
+      bottom: 2,
+      left: 28,
+      right: 8,
+      start: 0,
+      // zoomOnMouseWheel: false,
+      end: 1999,
+      zlevel: '7',
+    },
+    {
+      height: 15,
+      bottom: 15,
+      left: 28,
+      right: 8,
+      start: 0,
+      end: 1999,
+      backgroundColor: 'white',
+      dataBackground: {
+        lineStyle: {
+          color: '#007dff',
+        },
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+            {
+              offset: 0,
+              color: 'rgba(252, 219, 218, 0.1)',
+            },
+            {
+              offset: 1,
+              color: 'rgb(255, 255, 255)',
+            },
+          ]),
+        },
+      },
+      fillerColor: 'rgba(51, 149, 250, 0.06)',
+      handleStyle: {
+        color: '#7A84B0',
+      },
+    },
+  ],
   series: [],
 };
 
@@ -106,20 +150,16 @@ const seriesBar = [
   {
     name: '充电量',
     symbol: 'none',
-    type: 'bar',
-    stack: 'one',
+    type: 'line',
     color: '#007dff',
     data: [],
-    barWidth: 12,
   },
   {
     name: '放电量',
     symbol: 'none',
-    type: 'bar',
-    stack: 'one',
+    type: 'line',
     color: '#3cd599',
     data: [],
-    barWidth: 12,
   },
 ];
 const Index: React.FC = () => {
@@ -149,7 +189,7 @@ const Index: React.FC = () => {
     getDeviceData(1, ['313', '334', '336'])
       .then((res) => {
         if (+res.code === 200) {
-          arrTime.push(res?.data?.refreshTime?.slice(11));
+          arrTime.push(res?.data?.refreshTime?.slice(11, 16));
           arr1.push(res?.data[313]);
           arr2.push(res?.data[334]);
           arr3.push(res?.data[336]);
