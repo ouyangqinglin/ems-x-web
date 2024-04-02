@@ -63,7 +63,7 @@ const editFavicon = (data?: initialStateType) => {
   setTimeout(() => {
     document.title =
       data?.currentUser?.systemInfo?.title ||
-      formatMessage({ id: 'system.title', defaultMessage: '永泰上位机云平台' });
+      formatMessage({ id: 'system.title', defaultMessage: '工商储能量管理系统上位机软件' });
   }, 700);
 };
 
