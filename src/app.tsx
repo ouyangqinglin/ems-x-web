@@ -26,6 +26,7 @@ import styles from './app.less';
 import { SiteDataType } from './services/station';
 import { defaultSystemInfo } from '@/utils/config';
 import { getSystemStatus } from './services/device';
+import system from './locales/zh-CN/system';
 
 export type initialStateType = {
   settings?: Partial<LayoutSettings>;
