@@ -113,7 +113,6 @@ const Login: React.FC = () => {
             await handleSubmit(values as API.LoginParams);
           }}
         >
-          {status === 'error' && loginType === 'account' && <LoginMessage content={massage} />}
           {type === 'account' && (
             <>
               <ProFormText
