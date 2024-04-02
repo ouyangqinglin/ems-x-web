@@ -1,6 +1,8 @@
 import { createIcon } from '@/utils/IconUtil';
 import request from '@/utils/request';
 import type { MenuDataItem } from '@umijs/route-utils';
+import YTIcon from '@/assets/image/icon-yt.png';
+import YTLogo from '@/assets/image/logo-yt.png';
 
 /** 获取当前的用户 GET /getUserInfo */
 export async function getUserInfo(options?: Record<string, any>) {
@@ -10,9 +12,11 @@ export async function getUserInfo(options?: Record<string, any>) {
         permissions: ['*:*:*'],
         roles: ['admin'],
         systemInfo: {
-          title: '永泰数能',
-          logo: '/file/2023/07/14/a889e2933679773f5f48702691420c0_20230714173347A002.png',
-          icon: '/file/2023/12/27/icon-yt.png',
+          title: '工商储能量管理系统上位机软件',
+          logo: YTLogo,
+          icon: YTIcon,
+          systemNameEN: "YT-ESS-EMS",
+          version: 'v1.0.0,'
         },
         user: {
           account: 'admin',

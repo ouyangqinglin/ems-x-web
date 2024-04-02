@@ -10,13 +10,21 @@
 import styles from './index.less';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
+import { useModel } from 'umi';
 
 const Help: React.FC = () => {
-  const onClick = () => {};
+  const { initialState } = useModel('@@initialState');
+  const onClick = () => {
+    console.log("systemNameEN === ", initialState?.currentUser?.systemInfo?.title);
+    console.log("version === ", initialState?.currentUser?.systemInfo?.version);
+  };
 
   return (
     <>
-      <div className={styles.title}>YT-ESS-EMS工商储能量管理系统上位机软件&nbsp;V1.0</div>
+      <div className={styles.title}>
+        {initialState?.currentUser?.systemInfo?.title}&nbsp;
+        {initialState?.currentUser?.systemInfo?.version}
+      </div>
       <div className={styles.subTitle}>适配&nbsp;EMSV1.0&nbsp;通信盒</div>
       <div className={styles.download}>
         <Button

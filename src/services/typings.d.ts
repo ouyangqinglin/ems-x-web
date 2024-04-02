@@ -51,6 +51,8 @@ declare namespace API {
     title?: string;
     icon?: string;
     logo?: string;
+    version?: string;
+    systemNameEN?: string;
   };
 
   type CurrentUser = {

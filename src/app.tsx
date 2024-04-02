@@ -9,6 +9,8 @@ import { getUserInfo, getRoutersInfo } from './services/session';
 import { getUserRoleId } from '@/access';
 import MyHeader from '@/components/header/MyHeader';
 import Footer from '@/components/Footer';
+import YTIcon from '@/assets/image/icon-yt.png';
+import YTLogo from '@/assets/image/logo-yt.png';
 
 import {
   getMenus,
@@ -23,6 +25,7 @@ import Logo from '@/components/header/Logo';
 import styles from './app.less';
 import { SiteDataType } from './services/station';
 import { defaultSystemInfo } from '@/utils/config';
+import { getSystemStatus } from './services/device';
 
 export type initialStateType = {
   settings?: Partial<LayoutSettings>;
@@ -82,21 +85,33 @@ export async function getInitialState(): Promise<initialStateType> {
     try {
       const result = await getUserInfo({ showMessage: false });
       const resp = result?.data;
+      const resultInfo = await getSystemStatus();
+      const data = resultInfo?.data;
+
       initLocale(resp?.user?.lang);
-      if (resp === undefined || result.code !== 200) {
+      if (resp === undefined || result.code !== 200 || data === undefined || resultInfo.code !== 200) {
         history.push(loginPath);
       } else {
-        return {
+        const information = {
           ...resp.user,
           permissions: resp.permissions,
           systemInfo: {
-            ...defaultSystemInfo,
+            title: data?.systemNameCN,
+            version: data?.version,
+            systemNameEN: data?.systemNameEN,
+            icon: YTIcon,
+            logo: YTLogo,
           },
         } as API.CurrentUser;
+
+        return information;
       }
     } catch (error) {
       history.push(loginPath);
     }
+
+
+
     return undefined;
   };
 
