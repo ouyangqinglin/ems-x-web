@@ -1,7 +1,6 @@
 // import { formatMessage } from '@/utils';
 export {
   indexAlarmStatusItem,
-  systemAlarmStatusItem,
   converterAlarmStatusItem,
 } from './commonConfig';
 type AlarmStatusItemType = {
@@ -13,6 +12,239 @@ type AlarmStatusItemType = {
 const formatMessage = (message: any) => {
   return message.defaultMessage;
 };
+//系统
+export const systemAlarmStatusItem: AlarmStatusItemType[] = [
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
+    hideTitle: true,
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与上位机通信' }),
+        status: '3000[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '触摸屏通信' }),
+        status: '3000[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与云平台通信' }),
+        status: '3000[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与永泰云通信' }),
+        status: '3000[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '4G通信' }),
+        status: '3000[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'WIFI通信' }),
+        status: '3000[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与灯板通信' }),
+        status: '3000[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与IO模块通信' }),
+        status: '3000[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器通信' }),
+        status: '3000[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BCMU通信' }),
+        status: '3000[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU通信' }),
+        status: '3000[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '液冷机通信' }),
+        status: '3000[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '除湿机通信' }),
+        status: '3000[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防通信' }),
+        status: '3000[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电网侧电表通信' }),
+        status: '3000[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '逆变侧电表通信' }),
+        status: '3001[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'EMS板故障' }),
+        status: '3002[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '灯板故障' }),
+        status: '3002[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'IO模块故障' }),
+        status: '3002[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器故障' }),
+        status: '3002[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BCMU故障' }),
+        status: '3002[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU故障' }),
+        status: '3002[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU风扇故障' }),
+        status: '3002[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '液冷机故障' }),
+        status: '3002[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '除湿机故障' }),
+        status: '3002[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防故障' }),
+        status: '3002[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '并机地址冲突' }),
+        status: '3002[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '系统急停' }),
+        status: '3002[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器急停' }),
+        status: '3002[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMS急停' }),
+        status: '3002[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变压器过载预警' }),
+        status: '3002[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变压器过载故障' }),
+        status: '3003[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重过充电功率' }),
+        status: '3004[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重过放电功率' }),
+        status: '3004[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重过压' }),
+        status: '3004[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重欠压' }),
+        status: '3004[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重充电过流' }),
+        status: '3004[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重放电过流' }),
+        status: '3004[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重过温' }),
+        status: '3004[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器严重欠温' }),
+        status: '3004[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池总电压过压报警' }),
+        status: '3005[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池总电压欠压报警' }),
+        status: '3005[1,2]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池单体过压报警' }),
+        status: '3005[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池单体欠压报警' }),
+        status: '3005[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池放电电流过大报警' }),
+        status: '3005[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池充电电流过大报警' }),
+        status: '3005[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池放电过温报警' }),
+        status: '3005[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池放电欠温报警' }),
+        status: '3005[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池充电过温报警' }),
+        status: '3005[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池充电欠温报警' }),
+        status: '3005[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低报警' }),
+        status: '3005[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '极柱温度过高报警' }),
+        status: '3005[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '高压箱连接器温度过高报警' }),
+        status: '3005[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池单体压差报警' }),
+        status: '3005[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池单体温差报警' }),
+        status: '3005[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池SOC低报警' }),
+        status: '3005[15,16]',
+      },
+    ],
+  },
+];
 //电池组
 export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
   {

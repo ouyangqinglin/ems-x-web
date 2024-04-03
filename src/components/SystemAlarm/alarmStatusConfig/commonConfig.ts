@@ -232,7 +232,7 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '逆变侧电表通信' }),
-        status: '',
+        status: '3001[0,1]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'EMS板故障' }),
