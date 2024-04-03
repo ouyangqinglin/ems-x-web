@@ -203,7 +203,7 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
         status: '3000[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '与IO模块' }),
+        name: formatMessage({ id: 'common', defaultMessage: '与IO模块通信' }),
         status: '3000[7,8]',
       },
       {
