@@ -58,7 +58,7 @@ const Chart: React.FC<ChartProps> = (props) => {
   return (
     <>
       {show && (
-        <EChartsReact ref={chartRef} option={chartOptions} style={{ height: 254 }} {...restProps} />
+        <EChartsReact ref={chartRef} option={chartOptions} style={{ height: 400 }} {...restProps} />
       )}
     </>
   );

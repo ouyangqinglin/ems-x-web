@@ -32,7 +32,6 @@ export type TypeChartProps = ChartProps & {
 
 const TypeChart: React.FC<TypeChartProps> = (props) => {
   const { option, type = chartTypeEnum.Day, date, data, step, allLabel, ...restProps } = props;
-
   const [xLabels, setXLables] = useState<string[]>();
 
   const chartOptions = useMemo(() => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './index.less';
 import { useToggle } from 'ahooks';
 import moment from 'moment/moment';
@@ -6,12 +6,12 @@ import TimeButtonGroup, { TimeType } from '@/components/TimeButtonGroup';
 import { getDeviceData } from '@/services/device';
 import * as echarts from 'echarts';
 import { DatePicker, Radio } from 'antd';
+import TypeChart from '@/components/Chart/TypeChart';
 
 let arr1 = localStorage.getItem('arr1') ? JSON.parse(localStorage.getItem('arr1')) : [],
   arr2 = localStorage.getItem('arr2') ? JSON.parse(localStorage.getItem('arr2')) : [],
   arr3 = localStorage.getItem('arr3') ? JSON.parse(localStorage.getItem('arr3')) : [],
-  arrTime = localStorage.getItem('arrTime') ? JSON.parse(localStorage.getItem('arrTime')) : [],
-  myChart = null;
+  arrTime = localStorage.getItem('arrTime') ? JSON.parse(localStorage.getItem('arrTime')) : [];
 
 const day = new Date().getDate();
 if (!localStorage.getItem('day')) localStorage.setItem('day', day);
@@ -35,91 +35,24 @@ const optionBat = {
     trigger: 'axis',
   },
   grid: {
-    bottom: '13%',
-    left: 28,
+    bottom: '10%',
+    left: 6,
     top: '24%',
-    right: 8,
+    right: 16,
   },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: true,
-      data: [],
-      axisLine: {
-        lineStyle: {
-          color: '#BBBBBB',
-        },
-      },
-      axisLabel: {
-        textStyle: {
-          color: '#909399',
-        },
-      },
-    },
-  ],
   yAxis: {
     name: `单位(kW)`,
     type: 'value',
-    axisLine: {
-      show: false,
-    },
-    axisTick: {
-      show: false,
-    },
-    axisLabel: {
-      textStyle: {
-        color: '#909399',
-      },
-    },
-    splitLine: {
-      lineStyle: {
-        type: 'solid',
-        color: ['#E9E9E9'],
-      },
-    },
   },
   dataZoom: [
     {
-      showDetail: true,
       type: 'inside',
-      height: 15,
-      bottom: 2,
-      left: 28,
-      right: 8,
-      start: 0,
-      // zoomOnMouseWheel: false,
-      end: 1999,
-      zlevel: '7',
     },
     {
-      height: 15,
-      bottom: 15,
-      left: 28,
-      right: 8,
       start: 0,
-      end: 1999,
-      backgroundColor: 'white',
-      dataBackground: {
-        lineStyle: {
-          color: '#007dff',
-        },
-        areaStyle: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-            {
-              offset: 0,
-              color: 'rgba(252, 219, 218, 0.1)',
-            },
-            {
-              offset: 1,
-              color: 'rgb(255, 255, 255)',
-            },
-          ]),
-        },
-      },
-      fillerColor: 'rgba(51, 149, 250, 0.06)',
-      handleStyle: {
-        color: '#7A84B0',
-      },
+      end: 100,
+      height: 15,
+      bottom: 10,
     },
   ],
   series: [],
@@ -127,13 +60,12 @@ const optionBat = {
 
 const seriesLine = [
   {
-    name: '充放电功率',
     symbol: 'none',
     type: 'line',
+    name: '充放电功率',
     itemStyle: {
       color: '#007dff',
     },
-    data: [],
     areaStyle: {
       normal: {
         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
@@ -148,18 +80,16 @@ const seriesLine = [
 
 const seriesBar = [
   {
-    name: '充电量',
     symbol: 'none',
     type: 'line',
     color: '#007dff',
-    data: [],
+    name: '充电量',
   },
   {
-    name: '放电量',
     symbol: 'none',
     type: 'line',
     color: '#3cd599',
-    data: [],
+    name: '放电量',
   },
 ];
 const Index: React.FC = () => {
@@ -170,7 +100,6 @@ const Index: React.FC = () => {
   >();
   // const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
   const [chartType, setChartType] = useState(0);
-  const domRef = useRef();
   const timerOne = useRef();
   const newChartType = useRef(chartType);
   useEffect(() => {
@@ -180,16 +109,12 @@ const Index: React.FC = () => {
     // 更新最新的state值到ref中
     newChartType.current = chartType;
   });
-
-  useEffect(() => {
-    chartInit(chartType);
-  }, [chartType]);
   function getChartData(v) {
     if (timerOne?.current) clearInterval(timerOne.current);
     getDeviceData(1, ['313', '334', '336'])
       .then((res) => {
         if (+res.code === 200) {
-          arrTime.push(res?.data?.refreshTime?.slice(11, 16));
+          arrTime.push(res?.data?.refreshTime?.slice(11));
           arr1.push(res?.data[313]);
           arr2.push(res?.data[334]);
           arr3.push(res?.data[336]);
@@ -197,11 +122,6 @@ const Index: React.FC = () => {
           localStorage.setItem('arr1', JSON.stringify(arr1));
           localStorage.setItem('arr2', JSON.stringify(arr2));
           localStorage.setItem('arr3', JSON.stringify(arr3));
-          optionBat.xAxis[0].data = arrTime;
-          seriesLine[0].data = arr1; // 充放电功率
-          seriesBar[0].data = arr2; // 充
-          seriesBar[1].data = arr3; // 放
-          chartInit(v);
         }
       })
       .finally(() => {
@@ -210,29 +130,15 @@ const Index: React.FC = () => {
   }
 
   const changeChartType = (e) => {
-    if (myChart) {
-      myChart.dispose();
-      myChart = null;
-    }
-    setChartType(() => e.target.value);
-    chartInit(e.target.value);
-  };
-
-  function chartInit(v) {
-    if (v && +v === 1) {
+    if (+e.target.value === 1) {
       optionBat.yAxis.name = '单位(kWh)';
-      optionBat.series = seriesBar;
       optionBat.legend.data = ['充电量', '放电量'];
     } else {
-      optionBat.series = seriesLine;
       optionBat.yAxis.name = '单位(kW)';
       optionBat.legend.data = ['充放电功率'];
     }
-    if (domRef?.current) {
-      myChart = echarts.init(domRef.current);
-      myChart.setOption(optionBat, true);
-    }
-  }
+    setChartType(() => e.target.value);
+  };
 
   const onChange = (value) => {
     console.log(value ? value.format('YYYY-MM-DD') : moment().format('YYYY-MM-DD'));
@@ -261,10 +167,38 @@ const Index: React.FC = () => {
     }
   };
 
+  const chartOption = useMemo(() => {
+    return +chartType === 1
+      ? { ...optionBat, ...{ series: seriesBar } }
+      : { ...optionBat, ...{ series: seriesLine } };
+  }, [chartType]);
+
+  const chartData = useMemo(() => {
+    const chartDataLeft = [
+      {
+        name: '充放电功率',
+        data: arr1?.map?.((item, index) => ({ label: arrTime[index], value: item })),
+      },
+    ];
+    const chartDataRight = [
+      {
+        name: '充电量',
+        data: arr2?.map?.((item, index) => ({ label: arrTime[index], value: item })),
+      },
+      {
+        name: '放电量',
+        data: arr3?.map?.((item, index) => ({ label: arrTime[index], value: item })),
+      },
+    ];
+    return +chartType === 1 ? chartDataRight : chartDataLeft;
+  }, [chartType]);
+
   return (
     <>
       <div className={styles.chartBox}>
-        <div className={styles.chart} ref={domRef}></div>
+        <div className={styles.chart}>
+          <TypeChart date={date} key={chartType} option={chartOption} data={chartData} min={-10} />
+        </div>
         <div className={styles.radio}>
           <Radio.Group
             onChange={changeChartType}
