@@ -4,6 +4,26 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .statusGroup {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      span {
+        font-size: 12px;
+      }
+      img {
+        margin-right: 4px;
+      }
+      :nth-child(2) {
+        margin-right: 16px;
+      }
+    }
+  }
   div {
     width: 100%;
     font-weight: 500;
@@ -272,6 +292,54 @@
         height: 54%;
         transform: rotate(-42deg);
       }
+    }
+    .oneMethod {
+      top: 20%;
+      left: 43%;
+    }
+    .sixMethod {
+      bottom: 20%;
+      left: 43%;
+    }
+    .twoMethod {
+      top: 20%;
+      right: 20%;
+      transform: rotate(-45deg);
+    }
+    .sevenMethod {
+      bottom: 26%;
+      left: 20%;
+      transform: rotate(-45deg);
+    }
+    .threeMethod {
+      top: 35%;
+      right: 20%;
+      transform: rotate(-25deg);
+    }
+    .eightMethod {
+      bottom: 44%;
+      left: 20%;
+      transform: rotate(-15deg);
+    }
+    .fourMethod {
+      top: 51%;
+      right: 20%;
+      transform: rotate(10deg);
+    }
+    .nineMethod {
+      top: 35%;
+      left: 20%;
+      transform: rotate(15deg);
+    }
+    .fiveMethod {
+      right: 20%;
+      bottom: 26%;
+      transform: rotate(45deg);
+    }
+    .tenMethod {
+      top: 19%;
+      left: 20%;
+      transform: rotate(45deg);
     }
   }
 }

@@ -347,8 +347,10 @@ export const systemItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '本地',
-                1: '远程',
+                1: '自发自用',
+                2: '削峰填谷',
+                3: '备电',
+                4: '手动控制',
               },
             },
           },
@@ -568,7 +570,7 @@ export const systemItems: any = [
         type: 'group',
         children: [
           {
-            id: '30002',
+            id: '32002',
             name: '液冷机SN',
             type: 'property',
             dataType: {
@@ -576,7 +578,7 @@ export const systemItems: any = [
             },
           },
           {
-            id: '30012',
+            id: '32012',
             name: '液冷机厂商',
             type: 'property',
             dataType: {

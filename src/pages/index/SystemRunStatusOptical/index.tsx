@@ -23,10 +23,6 @@ const communityOtherMethods = {
   1: 'CAN',
   2: '485',
 };
-const communityStatus = {
-  0: '正常',
-  1: '失联',
-};
 
 const Index: React.FC = (props) => {
   const { data } = props;
@@ -40,7 +36,15 @@ const Index: React.FC = (props) => {
   return (
     <>
       <div className={styles.energy}>
-        <div style={{ fontWeight: 600 }}>系统运行状态</div>
+        <div className={styles.title}>
+          <div style={{ fontWeight: 600 }}>系统运行状态</div>
+          <div className={styles.statusGroup}>
+            <img src={IconOn} alt="" />
+            <span>在线</span>
+            <img src={IconOff} alt="" />
+            <span>离线</span>
+          </div>
+        </div>
         <div className={styles.imgBox}>
           <img className={styles.centerImg} src={IconEms} alt="" />
           {/*上位机 对称*/}
@@ -51,10 +55,8 @@ const Index: React.FC = (props) => {
             <img className={styles.oneStatus} src={IconOff} alt="" />
           )}
           <span className={styles.oneName}>上位机</span>
-          <span className={styles.one} style={{ backgroundColor: status ? '#00B42A' : '' }}>
-            {/*{communityMethods[data?.[179]]}*/}
-            {/*{status && ''}*/}
-          </span>
+          <span className={styles.one} style={{ backgroundColor: status ? '#00B42A' : '' }}></span>
+          <span className={styles.oneMethod}>{communityMethods[data?.[179]]}</span>
           <img className={styles.sixImg} src={IconFireFighting} alt="" />
           {+data?.[194] === 0 ? (
             <img className={styles.sixStatus} src={IconOn} alt="" />
@@ -65,9 +67,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.six}
             style={{ backgroundColor: +data?.[194] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityMethods[data?.[195]]}({communityStatus[data?.[194]]})*/}
-          </span>
+          ></span>
+          <span className={styles.sixMethod}>{communityMethods[data?.[195]]}</span>
           <img className={styles.twoImg} src={IconYtCloud} alt="" />
           {+data?.[1102] === 0 ? (
             <img className={styles.twoStatus} src={IconOn} alt="" />
@@ -78,9 +79,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.two}
             style={{ backgroundColor: +data?.[1102] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityMethods[data?.[183]]}({communityStatus[data?.[1102]]})*/}
-          </span>
+          ></span>
+          <span className={styles.twoMethod}>{communityMethods[data?.[183]]}</span>
           <img className={styles.sevenImg} src={IconAir} alt="" />
           {+data?.[1106] === 0 ? (
             <img className={styles.sevenStatus} src={IconOn} alt="" />
@@ -91,9 +91,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.seven}
             style={{ backgroundColor: +data?.[1106] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[5533]]}({communityStatus[data?.[1106]]})*/}
-          </span>
+          ></span>
+          <span className={styles.sevenMethod}>{communityMethods[data?.[5533]]}</span>
           <img className={styles.threeImg} src={IconLampPanel} alt="" />
           {+data?.[1103] === 0 ? (
             <img className={styles.threeStatus} src={IconOn} alt="" />
@@ -104,9 +103,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.three}
             style={{ backgroundColor: +data?.[1103] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[185]]}({communityStatus[data?.[1103]]})*/}
-          </span>
+          ></span>
+          <span className={styles.threeMethod}>{communityOtherMethods[data?.[185]]}</span>
           <img className={styles.eightImg} src={IconBattery} alt="" />
           {+data?.[1105] === 0 ? (
             <img className={styles.eightStatus} src={IconOn} alt="" />
@@ -117,9 +115,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.eight}
             style={{ backgroundColor: +data?.[1105] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[3031]]}({communityStatus[data?.[1105]]})*/}
-          </span>
+          ></span>
+          <span className={styles.eightMethod}>{communityOtherMethods[data?.[3031]]}</span>
           <img className={styles.fourImg} src={IconGridMeter} alt="" />
           {+data?.[1108] === 0 ? (
             <img className={styles.fourStatus} src={IconOn} alt="" />
@@ -130,9 +127,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.four}
             style={{ backgroundColor: +data?.[1108] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[5014]]}({communityStatus[data?.[1108]]})*/}
-          </span>
+          ></span>
+          <span className={styles.fourMethod}>{communityMethods[data?.[5014]]}</span>
           <img className={styles.nineImg} src={IconConverter} alt="" />
           {+data?.[1104] === 0 ? (
             <img className={styles.nineStatus} src={IconOn} alt="" />
@@ -143,9 +139,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.nine}
             style={{ backgroundColor: +data?.[1104] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[2642]]}({communityStatus[data?.[1104]]})*/}
-          </span>
+          ></span>
+          <span className={styles.nineMethod}>{communityMethods[data?.[2642]]}</span>
           <img className={styles.fiveImg} src={IconInverterMeter} alt="" />
           {+data?.[1109] === 0 ? (
             <img className={styles.fiveStatus} src={IconOn} alt="" />
@@ -156,9 +151,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.five}
             style={{ backgroundColor: +data?.[1109] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityOtherMethods[data?.[5007]]}({communityStatus[data?.[1109]]})*/}
-          </span>
+          ></span>
+          <span className={styles.fiveMethod}>{communityMethods[data?.[5007]]}</span>
           <img className={styles.tenImg} src={IconWeb} alt="" />
           {+data?.[1101] === 0 ? (
             <img className={styles.tenStatus} src={IconOn} alt="" />
@@ -169,9 +163,8 @@ const Index: React.FC = (props) => {
           <span
             className={styles.ten}
             style={{ backgroundColor: +data?.[1101] === 0 ? '#00B42A' : '' }}
-          >
-            {/*{communityMethods[data?.[181]]}({communityStatus[data?.[1101]]})*/}
-          </span>
+          ></span>
+          <span className={styles.tenMethod}>{communityMethods[data?.[181]]}</span>
         </div>
       </div>
     </>

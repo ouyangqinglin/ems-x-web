@@ -100,6 +100,7 @@ const Index: React.FC = () => {
   >();
   // const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
   const [chartType, setChartType] = useState(0);
+  const [chartData, setChartData] = useState([]);
   const timerOne = useRef();
   const newChartType = useRef(chartType);
   useEffect(() => {
@@ -109,12 +110,12 @@ const Index: React.FC = () => {
     // 更新最新的state值到ref中
     newChartType.current = chartType;
   });
-  function getChartData(v) {
+  function getChartData() {
     if (timerOne?.current) clearInterval(timerOne.current);
     getDeviceData(1, ['313', '334', '336'])
       .then((res) => {
         if (+res.code === 200) {
-          arrTime.push(res?.data?.refreshTime?.slice(11));
+          arrTime.push(res?.data?.refreshTime?.slice(11, 16));
           arr1.push(res?.data[313]);
           arr2.push(res?.data[334]);
           arr3.push(res?.data[336]);
@@ -122,10 +123,28 @@ const Index: React.FC = () => {
           localStorage.setItem('arr1', JSON.stringify(arr1));
           localStorage.setItem('arr2', JSON.stringify(arr2));
           localStorage.setItem('arr3', JSON.stringify(arr3));
+          const chartDataLeft = [
+            {
+              name: '充放电功率',
+              data: arr1?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
+            },
+          ];
+          const chartDataRight = [
+            {
+              name: '充电量',
+              data: arr2?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
+            },
+            {
+              name: '放电量',
+              data: arr3?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
+            },
+          ];
+          if (+newChartType.current === 1) setChartData(chartDataRight);
+          else setChartData(chartDataLeft);
         }
       })
       .finally(() => {
-        timerOne.current = setInterval(() => getChartData(newChartType.current), 60000);
+        timerOne.current = setInterval(() => getChartData(), 60000);
       });
   }
 
@@ -173,31 +192,11 @@ const Index: React.FC = () => {
       : { ...optionBat, ...{ series: seriesLine } };
   }, [chartType]);
 
-  const chartData = useMemo(() => {
-    const chartDataLeft = [
-      {
-        name: '充放电功率',
-        data: arr1?.map?.((item, index) => ({ label: arrTime[index], value: item })),
-      },
-    ];
-    const chartDataRight = [
-      {
-        name: '充电量',
-        data: arr2?.map?.((item, index) => ({ label: arrTime[index], value: item })),
-      },
-      {
-        name: '放电量',
-        data: arr3?.map?.((item, index) => ({ label: arrTime[index], value: item })),
-      },
-    ];
-    return +chartType === 1 ? chartDataRight : chartDataLeft;
-  }, [chartType]);
-
   return (
     <>
       <div className={styles.chartBox}>
         <div className={styles.chart}>
-          <TypeChart date={date} key={chartType} option={chartOption} data={chartData} min={-10} />
+          <TypeChart date={date} key={chartType} option={chartOption} data={chartData} step={1} />
         </div>
         <div className={styles.radio}>
           <Radio.Group

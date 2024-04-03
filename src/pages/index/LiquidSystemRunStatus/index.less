@@ -3,6 +3,26 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .statusGroup {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      span {
+        font-size: 12px;
+      }
+      img {
+        margin-right: 4px;
+      }
+      :nth-child(2) {
+        margin-right: 16px;
+      }
+    }
+  }
   div {
     width: 100%;
     font-weight: 500;
@@ -58,6 +78,10 @@
       height: 50%;
       background-color: #b4b4b4;
     }
+    .oneMethod {
+      top: 20%;
+      left: 43%;
+    }
     .sixImg {
       bottom: 0;
       left: 50%;
@@ -84,6 +108,10 @@
       height: 50%;
       background-color: #b4b4b4;
     }
+    .sixMethod {
+      bottom: 20%;
+      left: 43%;
+    }
     .twoImg {
       top: 0;
       right: 0;
@@ -107,6 +135,11 @@
       @media screen and (max-width: 1666px) {
         transform: rotate(40deg);
       }
+    }
+    .twoMethod {
+      top: 20%;
+      right: 20%;
+      transform: rotate(-45deg);
     }
     .sevenImg {
       bottom: 22px;
@@ -132,6 +165,11 @@
         transform: rotate(40deg);
       }
     }
+    .sevenMethod {
+      bottom: 26%;
+      left: 20%;
+      transform: rotate(-45deg);
+    }
     .threeImg {
       top: 25%;
       right: 0;
@@ -153,6 +191,11 @@
       transform: rotate(70deg);
       transform-origin: 50% 0;
     }
+    .threeMethod {
+      top: 35%;
+      right: 20%;
+      transform: rotate(-25deg);
+    }
     .eightImg {
       bottom: 37%;
       left: 0;
@@ -173,6 +216,11 @@
       background-color: #b4b4b4;
       transform: rotate(75deg);
       transform-origin: 50% 100%;
+    }
+    .eightMethod {
+      bottom: 44%;
+      left: 20%;
+      transform: rotate(-15deg);
     }
     .fourImg {
       right: 0;
@@ -197,6 +245,11 @@
       @media screen and (max-width: 1666px) {
         height: 39%;
       }
+    }
+    .fourMethod {
+      top: 45%;
+      right: 20%;
+      transform: rotate(5deg);
     }
     .elevenImg {
       right: 0;
@@ -223,6 +276,11 @@
         transform: rotate(-60deg);
       }
     }
+    .elevenMethod {
+      right: 20%;
+      bottom: 39%;
+      transform: rotate(25deg);
+    }
     .nineImg {
       top: 25%;
       left: 0;
@@ -247,6 +305,11 @@
         height: 45%;
         transform: rotate(-65deg);
       }
+    }
+    .nineMethod {
+      top: 35%;
+      left: 20%;
+      transform: rotate(15deg);
     }
     .fiveImg {
       right: 0;
@@ -273,6 +336,11 @@
         transform: rotate(-40deg);
       }
     }
+    .fiveMethod {
+      right: 20%;
+      bottom: 26%;
+      transform: rotate(45deg);
+    }
     .tenImg {
       top: 0;
       left: 0;
@@ -297,6 +365,11 @@
         height: 54%;
         transform: rotate(-42deg);
       }
+    }
+    .tenMethod {
+      top: 19%;
+      left: 20%;
+      transform: rotate(45deg);
     }
   }
 }
