@@ -371,27 +371,27 @@ export const wetCoolerAlarmStatusItem: AlarmStatusItemType[] = [
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '变频器欠压锁定' }),
-        status: '3260[10,11]',
+        status: '32600[10,11]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '变频器缺相锁定' }),
-        status: '3260[11,12]',
+        status: '32600[11,12]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '变频器其他故障锁定' }),
-        status: '3260[12,13]',
+        status: '32600[12,13]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '补水告警' }),
-        status: '3260[13,14]',
+        status: '32600[13,14]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '系统压力过高' }),
-        status: '3260[14,15]',
+        status: '32600[14,15]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '出水压力过高' }),
-        status: '3260[15,16]',
+        status: '32600[15,16]',
       },
     ],
   },

@@ -17,7 +17,7 @@ const Settings: LayoutSettings & {
   fixedHeader: true,
   fixSiderbar: true,
   colorWeak: false,
-  title: 'system.title',
+  title: '工商储能量管理系统上位机软件',
   pwa: false,
   iconfontUrl: '',
   tabsLayout: true,

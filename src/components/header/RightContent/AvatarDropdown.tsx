@@ -37,6 +37,7 @@ const loginOut = async () => {
       }),
     });
   }
+  window.location.reload();
 };
 
 const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
