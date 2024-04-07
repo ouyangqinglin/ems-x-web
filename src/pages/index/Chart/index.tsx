@@ -112,10 +112,10 @@ const Index: React.FC = () => {
   });
   function getChartData() {
     if (timerOne?.current) clearInterval(timerOne.current);
-    getDeviceData(1, ['313', '334', '336'])
+    getDeviceData(1, { data: ['313', '334', '336'] })
       .then((res) => {
         if (+res.code === 200) {
-          arrTime.push(res?.data?.refreshTime?.slice(11, 16));
+          arrTime.push(res?.data?.refreshTime);
           arr1.push(res?.data[313]);
           arr2.push(res?.data[334]);
           arr3.push(res?.data[336]);
