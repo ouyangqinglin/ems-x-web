@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-07-05 19:22:37
- * @LastEditTime: 2023-07-14 17:01:10
+ * @LastEditTime: 2024-04-08 18:01:12
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\header\Logo.tsx
+ * @FilePath: \ems-x-web\src\components\header\Logo.tsx
  */
 import React from 'react';
 import { useModel } from 'umi';
@@ -21,7 +21,10 @@ const Logo: React.FC = () => {
               <img className={styles.logo} src={initialState?.currentUser?.systemInfo?.icon} />
             )
           : initialState?.currentUser?.systemInfo?.logo && (
-              <img className={styles.logo} src={initialState?.currentUser?.systemInfo?.logo} />
+              <>
+                <img className={styles.logo} src={initialState?.currentUser?.systemInfo?.icon} />
+                <span className={styles.title}>YT-ESS-EMS</span>
+              </>
             )}
       </a>
     </>
