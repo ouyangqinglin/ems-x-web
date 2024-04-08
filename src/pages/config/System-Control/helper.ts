@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-08 09:44:26
+ * @LastEditTime: 2024-04-08 10:05:50
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control\helper.ts
  */
@@ -183,7 +183,7 @@ export const batteryModeItems: any = [
         id: 'sdkas',
         children: [
           {
-            id: '50414',
+            id: '50415',
             name: '工作状态',
             type: 'property',
             buttons: ['refresh'],
