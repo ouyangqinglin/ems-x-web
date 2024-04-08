@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-03-28 11:23:31
+ * @LastEditTime: 2024-04-08 17:34:35
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -79,13 +79,14 @@ const Control: React.FC<ControlType> = memo((props) => {
     detailProps,
   } = props;
 
+  const [realTimeData, setRealTimeData] = useState<Record<string, any>>({});
+  const { sourceId } = useSourceId();
+  const [transformData, setTransformData] = useState({});
+  const [openForm, { set, setTrue }] = useBoolean(false);
   const { run: refreshDeviceData, realTimeData: partRealTimeData } = useDeviceData({
     manual: true,
     isInterval: false,
   });
-  const { sourceId } = useSourceId();
-  const [transformData, setTransformData] = useState({});
-  const [openForm, { set, setTrue }] = useBoolean(false);
   const [currentFormInfo, setCurrentFormInfo] = useState<{
     service?: DeviceServiceType;
     columns?: ProFormColumnsType[];
@@ -94,10 +95,6 @@ const Control: React.FC<ControlType> = memo((props) => {
   const { loading, run } = useRequest(editDeviceData, {
     manual: true,
   });
-
-  const realTimeData = useMemo(() => {
-    return merge({}, allRealTimeData, partRealTimeData);
-  }, [allRealTimeData, partRealTimeData]);
 
   const components = useMemo<
     Record<string, React.LazyExoticComponent<React.ComponentType<any>>>
@@ -911,6 +908,18 @@ const Control: React.FC<ControlType> = memo((props) => {
     onLoadChange?.();
   }, [groupsItems]);
 
+  useEffect(() => {
+    setRealTimeData((prevData) => {
+      return merge({}, prevData, allRealTimeData);
+    });
+  }, [allRealTimeData]);
+
+  useEffect(() => {
+    setRealTimeData((prevData) => {
+      return merge({}, prevData, partRealTimeData);
+    });
+  }, [partRealTimeData]);
+
   return (
     <>
       {!!groupsItems?.length && (
@@ -938,7 +947,7 @@ const Control: React.FC<ControlType> = memo((props) => {
             columns={currentFormInfo?.columns || []}
             showClickButton={false}
             colProps={{
-              span: 8,
+              span: currentFormInfo?.service?.form?.span || 8,
             }}
           />
         </>

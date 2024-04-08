@@ -102,6 +102,9 @@ export type DeviceServiceType = {
   children?: DeviceServiceModelType[];
   authority?: DeviceModelAuthorityType[];
   buttons?: 'refresh' | 'edit';
+  form?: {
+    span?: number;
+  };
 };
 
 export type DeviceLocationType = {

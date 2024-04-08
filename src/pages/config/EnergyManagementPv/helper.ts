@@ -97,8 +97,8 @@ export const peakShavingValleyFillingItems: any = [
     name: '削峰填谷模式参数设置',
     type: 'group',
     children: [
-      // [削峰填谷参数]最高SOC	50962	[削峰填谷参数]最高SOC	
-      // [削峰填谷参数]最低SOC	50963	[削峰填谷参数]最低SOC	
+      // [削峰填谷参数]最高SOC	50962	[削峰填谷参数]最高SOC
+      // [削峰填谷参数]最低SOC	50963	[削峰填谷参数]最低SOC
       // [削峰填谷参数]充放电功率方式	51030	[削峰填谷参数]充放电功率方式	[1-最大功率,2-固定功率]
       {
         id: 'jfpgModeSet',
@@ -144,9 +144,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                "1": "最大功率",
-                "2": "固定功率",
-              }
+                '1': '最大功率',
+                '2': '固定功率',
+              },
             },
           },
         ],
@@ -156,11 +156,14 @@ export const peakShavingValleyFillingItems: any = [
         name: '时间段设置(格式：hh:mm)',
         type: 'service',
         buttons: ['refresh', 'edit'],
+        form: {
+          span: 6,
+        },
         children: [
           // [削峰填谷参数]时段1-开始时间	50964	[削峰填谷参数]时段1-开始时间	hh:mm
           // [削峰填谷参数]时段1-结束时间	50966	[削峰填谷参数]时段1-结束时间	hh:mm
           // [削峰填谷参数]时段1-充放电模式	50968	[削峰填谷参数]时段1-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段1-固定功率	50969	[削峰填谷参数]时段1-固定功率	
+          // [削峰填谷参数]时段1-固定功率	50969	[削峰填谷参数]时段1-固定功率
           {
             id: '11305',
             name: '1 开始时间',
@@ -171,7 +174,7 @@ export const peakShavingValleyFillingItems: any = [
                 length: 5,
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -182,10 +185,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -196,14 +198,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11310',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -220,7 +221,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段2-开始时间	50970	[削峰填谷参数]时段2-开始时间	hh:mm
           // [削峰填谷参数]时段2-结束时间	50972	[削峰填谷参数]时段2-结束时间	hh:mm
           // [削峰填谷参数]时段2-充放电模式	50974	[削峰填谷参数]时段2-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段2-固定功率	50965	[削峰填谷参数]时段2-固定功率	
+          // [削峰填谷参数]时段2-固定功率	50965	[削峰填谷参数]时段2-固定功率
           {
             id: '11311',
             name: '2 开始时间',
@@ -229,10 +230,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -243,10 +243,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
 
@@ -258,14 +257,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11316',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -291,10 +289,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -305,10 +302,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -319,14 +315,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11322',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -352,10 +347,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -366,10 +360,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -380,10 +373,10 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
@@ -403,7 +396,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段5-开始时间	50988	[削峰填谷参数]时段5-开始时间	hh:mm
           // [削峰填谷参数]时段5-结束时间	50990	[削峰填谷参数]时段5-结束时间	hh:mm
           // [削峰填谷参数]时段5-充放电模式	50992	[削峰填谷参数]时段5-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段5-固定功率	50993	[削峰填谷参数]时段5-固定功率	
+          // [削峰填谷参数]时段5-固定功率	50993	[削峰填谷参数]时段5-固定功率
           {
             id: '11329',
             name: '5 开始时间',
@@ -412,10 +405,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -426,10 +418,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -440,14 +431,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11334',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -464,7 +454,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段6-开始时间	50994	[削峰填谷参数]时段6-开始时间	hh:mm
           // [削峰填谷参数]时段6-结束时间	50996	[削峰填谷参数]时段6-结束时间	hh:mm
           // [削峰填谷参数]时段6-充放电模式	50998	[削峰填谷参数]时段6-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段6-固定功率	50999	[削峰填谷参数]时段6-固定功率	
+          // [削峰填谷参数]时段6-固定功率	50999	[削峰填谷参数]时段6-固定功率
           {
             id: '11335',
             name: '6 开始时间',
@@ -473,10 +463,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -487,10 +476,9 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               specs: {
                 length: 5,
-
               },
 
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -501,14 +489,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11340',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -535,7 +522,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -547,7 +534,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -558,14 +545,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11346',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -592,7 +578,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -604,7 +590,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -615,14 +601,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11352',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -649,7 +634,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -661,7 +646,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -672,14 +657,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11358',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -696,7 +680,7 @@ export const peakShavingValleyFillingItems: any = [
           // [削峰填谷参数]时段10-开始时间	51018	[削峰填谷参数]时段10-开始时间	hh:mm
           // [削峰填谷参数]时段10-结束时间	51020	[削峰填谷参数]时段10-结束时间	hh:mm
           // [削峰填谷参数]时段10-充放电模式	51022	[削峰填谷参数]时段10-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段10-固定功率	51023	[削峰填谷参数]时段10-固定功率	
+          // [削峰填谷参数]时段10-固定功率	51023	[削峰填谷参数]时段10-固定功率
           {
             id: '11359',
             name: '10 开始时间',
@@ -706,7 +690,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -718,7 +702,7 @@ export const peakShavingValleyFillingItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -729,14 +713,13 @@ export const peakShavingValleyFillingItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "放电",
-                1: "充电",
-                10: "未启用"
-              }
+                0: '放电',
+                1: '充电',
+                10: '未启用',
+              },
             },
           },
           {
-
             id: '11364',
             name: '固定功率',
             buttons: ['refresh', 'edit'],
@@ -985,7 +968,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -997,7 +980,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1008,12 +991,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段2-开始时间	50913	[尖峰平谷参数]时段2-开始时间	hh:mm
@@ -1028,7 +1011,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1040,7 +1023,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1051,12 +1034,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段3-开始时间	50918	[尖峰平谷参数]时段3-开始时间	hh:mm
@@ -1071,7 +1054,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1083,7 +1066,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1094,12 +1077,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段4-开始时间	50923	[尖峰平谷参数]时段4-开始时间	hh:mm
@@ -1114,7 +1097,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1126,7 +1109,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1137,12 +1120,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段5-开始时间	50928	[尖峰平谷参数]时段5-开始时间	hh:mm
@@ -1157,7 +1140,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1169,7 +1152,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1180,12 +1163,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段6-开始时间	50933	[尖峰平谷参数]时段6-开始时间	hh:mm
@@ -1200,7 +1183,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1212,7 +1195,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1223,12 +1206,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段7-开始时间	50938	[尖峰平谷参数]时段7-开始时间	hh:mm
@@ -1243,7 +1226,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1255,7 +1238,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1266,12 +1249,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段8-开始时间	50943	[尖峰平谷参数]时段8-开始时间	hh:mm
@@ -1286,7 +1269,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1298,7 +1281,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1309,12 +1292,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段9-开始时间	50948	[尖峰平谷参数]时段9-开始时间	hh:mm
@@ -1329,7 +1312,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1341,7 +1324,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1352,12 +1335,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
           // [尖峰平谷参数]时段10-开始时间	50953	[尖峰平谷参数]时段10-开始时间	hh:mm
@@ -1372,7 +1355,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1384,7 +1367,7 @@ export const elePriceItems: any = [
               specs: {
                 length: 5,
               },
-              type: 'string'
+              type: 'string',
             },
           },
           {
@@ -1395,12 +1378,12 @@ export const elePriceItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: "未启用",
-                1: "尖",
-                2: "峰",
-                3: "平",
-                4: "谷",
-              }
+                0: '未启用',
+                1: '尖',
+                2: '峰',
+                3: '平',
+                4: '谷',
+              },
             },
           },
         ],

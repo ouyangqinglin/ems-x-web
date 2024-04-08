@@ -264,6 +264,9 @@ export const runTimeSetItems: any = [
         name: '运行时间设置',
         type: 'service',
         buttons: ['refresh', 'edit'],
+        form: {
+          span: 12,
+        },
         children: [
           {
             id: '51216',

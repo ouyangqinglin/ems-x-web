@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-04-08 17:26:02
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\EnergyManagement\helper.ts
  */
 
 // 自发自用模式参数设置 - 暂时不写
@@ -156,6 +156,9 @@ export const peakShavingValleyFillingItems: any = [
         name: '时间段设置(格式：hh:mm)',
         type: 'service',
         buttons: ['refresh', 'edit'],
+        form: {
+          span: 6,
+        },
         children: [
           // [削峰填谷参数]时段1-开始时间	50964	[削峰填谷参数]时段1-开始时间	hh:mm
           // [削峰填谷参数]时段1-结束时间	50966	[削峰填谷参数]时段1-结束时间	hh:mm
