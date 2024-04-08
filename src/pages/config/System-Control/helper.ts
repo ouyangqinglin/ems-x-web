@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-04-08 09:44:26
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\System-Control\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
@@ -207,7 +207,7 @@ export const batteryModeItems: any = [
         showType: 2,
         children: [
           {
-            id: '50414',
+            id: '50415',
             name: '电池工作状态控制',
             showType: 4,
             type: 'property',
