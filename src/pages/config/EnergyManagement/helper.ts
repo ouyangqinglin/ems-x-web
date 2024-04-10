@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-08 17:26:02
+ * @LastEditTime: 2024-04-10 13:53:50
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\EnergyManagement\helper.ts
  */
@@ -118,6 +118,7 @@ export const peakShavingValleyFillingItems: any = [
                 min: '0',
                 unitName: '百分比',
                 max: '100',
+                enable: true,
               },
             },
           },
@@ -133,6 +134,7 @@ export const peakShavingValleyFillingItems: any = [
                 min: '0',
                 unitName: '百分比',
                 max: '100',
+                enable: true,
               },
             },
           },

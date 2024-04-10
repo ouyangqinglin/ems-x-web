@@ -210,6 +210,7 @@ const SchemaForm = <
       scrollToFirstError
       modalProps={{
         centered: true,
+        maskClosable: false,
       }}
       loading={getLoading || addLoading || editLoading}
       title={title}

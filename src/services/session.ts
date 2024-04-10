@@ -15,8 +15,8 @@ export async function getUserInfo(options?: Record<string, any>) {
           title: '工商储能量管理系统上位机软件',
           logo: YTLogo,
           icon: YTIcon,
-          systemNameEN: "YT-ESS-EMS",
-          version: 'v1.0.0,'
+          systemNameEN: 'YT-ESS-EMS',
+          version: 'v1.0.0,',
         },
         user: {
           account: 'admin',
@@ -40,7 +40,7 @@ export async function getUserInfo(options?: Record<string, any>) {
 
 /** 退出登录接口 POST /login/outLogin */
 export async function logout(options?: Record<string, any>) {
-  return request<Record<string, any>>('/auth/logout', {
+  return request<Record<string, any>>('/v1/system/loginOut', {
     method: 'POST',
     ...(options || {}),
   });

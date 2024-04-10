@@ -2,19 +2,24 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-04-10 15:49:22
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\System\index.tsx
  */
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import Card from '@/components/Card';
 import { baseInfoItems, systemParamsItems, otherParamsItems, timeSetItems } from './helper';
 import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
+import moment from 'moment';
 
 const Pcs: React.FC = () => {
   const { realTimeData } = useDeviceData({ isInterval: false });
+
+  const beforeSubmit = useCallback((data) => {
+    data[50000] = moment(data[50000]).format('YYYY-MM-DD HH:mm:ss');
+  }, []);
 
   return (
     <>
@@ -29,7 +34,11 @@ const Pcs: React.FC = () => {
           <Control groupData={otherParamsItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
-          <Control groupData={timeSetItems} realTimeData={realTimeData} />
+          <Control
+            groupData={timeSetItems}
+            realTimeData={realTimeData}
+            beforeSubmit={beforeSubmit}
+          />
         </Card>
       </div>
     </>

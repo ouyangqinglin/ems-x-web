@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-04-08 17:34:35
+ * @LastEditTime: 2024-04-10 15:19:08
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -65,6 +65,8 @@ export type ControlType = {
   deviceData?: DeviceDataType;
   onLoadChange?: () => void;
   detailProps?: Omit<DetailProps, 'items' | 'data'>;
+  onSuccess?: (data: any) => void;
+  beforeSubmit?: (data: Record<string, any>) => void | boolean | any;
 };
 
 const singleFieldName = 'arryField';
@@ -77,6 +79,8 @@ const Control: React.FC<ControlType> = memo((props) => {
     realTimeData: allRealTimeData,
     onLoadChange,
     detailProps,
+    onSuccess,
+    beforeSubmit,
   } = props;
 
   const [realTimeData, setRealTimeData] = useState<Record<string, any>>({});
@@ -170,13 +174,13 @@ const Control: React.FC<ControlType> = memo((props) => {
   );
 
   const onRefresh = useCallback(
-    (service: DeviceServiceType | DeviceServiceModelType) => {
-      const ids = getPropsFromTree([service]);
+    (service?: DeviceServiceType | DeviceServiceModelType, showTip = true) => {
+      const ids = getPropsFromTree([service || {}]);
       const refreshParams = {
         data: ids,
       };
       refreshDeviceData?.(refreshParams)?.then?.((data) => {
-        if (data.code == '200') {
+        if (data.code == '200' && showTip) {
           message.success(
             formatMessage({ id: 'device.refreshSuccess', defaultMessage: '刷新成功' }),
           );
@@ -388,6 +392,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                   <RedoOutlined
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() => onRefresh(field)}
+                    title="刷新"
                   />
                 )}
                 {field?.buttons?.includes?.('edit') && (
@@ -395,11 +400,12 @@ const Control: React.FC<ControlType> = memo((props) => {
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() =>
                       onClick(
-                        { ...field, id: field.serviceId },
+                        { ...field },
                         columns.map((item) => ({ ...item, colProps: { span: 24 } })),
                         1,
                       )
                     }
+                    title="编辑"
                   />
                 )}
               </>
@@ -558,6 +564,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                       <RedoOutlined
                         className={`cl-primary cursor ${styles.refresh}`}
                         onClick={() => onRefresh(field)}
+                        title="刷新"
                       />
                     )}
                     {field?.buttons?.includes?.('edit') && (
@@ -565,11 +572,12 @@ const Control: React.FC<ControlType> = memo((props) => {
                         className={`cl-primary cursor ${styles.refresh}`}
                         onClick={() =>
                           onClick(
-                            { ...field, id: field.serviceId },
+                            { ...field },
                             columns.map((item) => ({ ...item, colProps: { span: 24 } })),
                             1,
                           )
                         }
+                        title="编辑"
                       />
                     )}
                   </>
@@ -621,6 +629,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                   <RedoOutlined
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() => onRefresh(field)}
+                    title="刷新"
                   />
                 )}
                 {field?.buttons?.includes?.('edit') && (
@@ -628,11 +637,12 @@ const Control: React.FC<ControlType> = memo((props) => {
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() =>
                       onClick(
-                        { ...field, id: field.serviceId },
+                        { ...field },
                         columns.map((item) => ({ ...item, colProps: { span: 24 } })),
                         1,
                       )
                     }
+                    title="编辑"
                   />
                 )}
               </>
@@ -645,6 +655,7 @@ const Control: React.FC<ControlType> = memo((props) => {
           valueType = 'digit';
         case DeviceModelTypeEnum.String:
         default:
+          const doubleSpecs = (field?.dataType as DeviceDoubleType)?.specs;
           columns.push({
             title: field?.name,
             dataIndex: field?.id,
@@ -652,12 +663,13 @@ const Control: React.FC<ControlType> = memo((props) => {
             fieldProps: {
               ...(valueType == 'digit'
                 ? {
-                    min: Number.MIN_SAFE_INTEGER,
+                    min: (doubleSpecs?.enable && doubleSpecs?.min) || Number.MIN_SAFE_INTEGER,
+                    max: (doubleSpecs?.enable && doubleSpecs?.max) || Number.MAX_SAFE_INTEGER,
                   }
                 : {}),
-              ...((field?.dataType as DeviceDoubleType)?.specs?.unit
+              ...(doubleSpecs?.unit
                 ? {
-                    addonAfter: (field?.dataType as DeviceDoubleType)?.specs?.unit,
+                    addonAfter: doubleSpecs?.unit,
                   }
                 : {}),
             },
@@ -698,6 +710,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                   <RedoOutlined
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() => onRefresh(field)}
+                    title="刷新"
                   />
                 )}
                 {field?.buttons?.includes?.('edit') && (
@@ -705,11 +718,12 @@ const Control: React.FC<ControlType> = memo((props) => {
                     className={`cl-primary cursor ${styles.refresh}`}
                     onClick={() =>
                       onClick(
-                        { ...field, id: field.serviceId },
+                        { ...field },
                         columns.map((item) => ({ ...item, colProps: { span: 24 } })),
                         1,
                       )
                     }
+                    title="编辑"
                   />
                 )}
               </>
@@ -779,6 +793,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                 <RedoOutlined
                   className={`cl-primary cursor ${styles.refresh}`}
                   onClick={() => onRefresh(service)}
+                  title="刷新"
                 />
               )}
               {service?.buttons?.includes?.('edit') && (
@@ -786,6 +801,7 @@ const Control: React.FC<ControlType> = memo((props) => {
                   className={`cl-primary cursor ml12`}
                   onClick={() => onClick(service, columns, columnsLength)}
                   disabled={deviceData?.networkStatus === OnlineStatusEnum.Offline}
+                  title="编辑"
                 />
               )}
             </Authority>
@@ -943,12 +959,16 @@ const Control: React.FC<ControlType> = memo((props) => {
             realTimeData={{
               ...merge({}, realTimeData, transformData),
             }}
-            serviceId={currentFormInfo?.service?.id || ''}
             columns={currentFormInfo?.columns || []}
             showClickButton={false}
             colProps={{
               span: currentFormInfo?.service?.form?.span || 8,
             }}
+            onSuccess={(data) => {
+              onRefresh(currentFormInfo?.service, false);
+              onSuccess?.(data);
+            }}
+            beforeSubmit={beforeSubmit}
           />
         </>
       )}

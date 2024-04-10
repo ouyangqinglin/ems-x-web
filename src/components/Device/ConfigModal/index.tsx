@@ -20,7 +20,7 @@ export type ConfigModalType<T = any> = Omit<SchemaFormProps, 'beforeSubmit'> & {
   deviceId?: string;
   realTimeData?: Record<string, any>;
   columns: any;
-  serviceId: string;
+  serviceId?: string;
   title: string;
   beforeSubmit?: (data: RemoteSettingDataType<T>) => void | boolean | any;
   showClickButton?: boolean;

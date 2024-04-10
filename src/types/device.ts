@@ -54,6 +54,9 @@ export type DeviceDoubleType = {
   specs?: {
     unit?: string;
     unitName?: string;
+    enable?: boolean;
+    min: number;
+    max: number;
   };
 };
 

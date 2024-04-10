@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-04-09 16:14:32
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\System-Control-Optical\helper.ts
  */
 
 export const baseInfoItems: any = [
@@ -76,7 +76,7 @@ export const baseInfoItems: any = [
             id: '11000',
             name: '系统控制模式切换',
             type: 'property',
-            showType: 4,
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               type: 'enum',
@@ -97,7 +97,7 @@ export const baseInfoItems: any = [
           {
             id: '11001',
             name: '系统工作模式切换',
-            showType: 4,
+            showType: 7,
             type: 'property',
             buttons: ['edit'],
             dataType: {
@@ -110,6 +110,7 @@ export const baseInfoItems: any = [
                 4: '售电模式',
               },
             },
+            disabled: "$data['ctlmd'] != 1",
           },
         ],
       },
@@ -122,7 +123,7 @@ export const baseInfoItems: any = [
           {
             id: '11002',
             name: '系统工作状态切换',
-            showType: 4,
+            showType: 7,
             type: 'property',
             buttons: ['edit'],
             dataType: {
@@ -135,6 +136,47 @@ export const baseInfoItems: any = [
                 4: '复位',
               },
             },
+            disabled: "$data['ctlmd']!=1",
+          },
+        ],
+      },
+      {
+        type: 'propertyGroup',
+        showType: 2,
+        name: '',
+        id: 'sdkas',
+        children: [
+          {
+            id: '50122',
+            name: '系统能量统计初始时间',
+            buttons: ['refresh'],
+            type: 'property',
+            dataType: {
+              type: 'timestamp',
+            },
+          },
+        ],
+      },
+      {
+        type: 'service',
+        id: 'basdsad',
+        name: 'sadd',
+        showType: 2,
+        children: [
+          {
+            id: '50067',
+            name: '能量统计初始化',
+            buttons: ['edit'],
+            type: 'property',
+            showType: 7,
+            dataType: {
+              type: 'enum',
+              specs: {
+                1: '有效',
+              },
+            },
+            disabled: "$data['ctlmd']!=1 || $data['systemOperatingMode']!=2",
+            tip: '仅系统工作模式为手动控制可用',
           },
         ],
       },
@@ -156,6 +198,7 @@ export const baseInfoItems: any = [
                 1: '有效',
               },
             },
+            tip: '仅系统工作模式为手动控制可用',
           },
         ],
       },
@@ -181,6 +224,7 @@ export const batteryModeItems: any = [
     id: 'a',
     name: '电池当前工作模式和状态',
     type: 'group',
+    tip: '仅系统工作模式为手动控制可用',
     children: [
       {
         id: 'tian',
@@ -214,7 +258,7 @@ export const batteryModeItems: any = [
             id: '11008',
             name: '电池工作状态控制',
             type: 'property',
-            showType: 4,
+            showType: 7,
             buttons: ['edit'],
             dataType: {
               specs: {
@@ -224,6 +268,7 @@ export const batteryModeItems: any = [
               },
               type: 'enum',
             },
+            disabled: "$data['ctlmd']!=1 || $data['systemOperatingMode']!=2",
           },
         ],
       },

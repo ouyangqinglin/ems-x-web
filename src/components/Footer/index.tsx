@@ -2,9 +2,10 @@ import styles from './index.less';
 import { Select } from 'antd';
 import { useModel } from 'umi';
 import { getSystemStatus } from '@/services/device';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ReactComponent as AlarmStatusIcon } from '@/assets/image/device/alarm_status.svg';
 import { ReactComponent as NormalStatusIcon } from '@/assets/image/device/normal_status.svg';
+import { useLocation } from '@/hooks';
 
 const options = [
   { label: '关闭', value: 0 },
@@ -29,6 +30,11 @@ export default () => {
     connectType: '',
     address: '',
   });
+  const { pathname } = useLocation();
+
+  const hideRefreshRate = useMemo(() => {
+    return /^\/config/.test(pathname);
+  }, [pathname]);
 
   const requestSystemStatus = async () => {
     let isError = false;
@@ -82,7 +88,7 @@ export default () => {
           <span>SN：</span>
           <span>{statusInfo?.deviceSn}</span>
         </div>
-        <div>
+        <div style={{ display: hideRefreshRate ? 'none' : 'block' }}>
           <span>自动刷新频率：</span>
           <Select
             style={{ width: '70px' }}
