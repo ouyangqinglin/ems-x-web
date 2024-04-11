@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-04-11 13:42:39
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\Battery-Pack-Optical\helper.ts
  */
 
 export const baseInfoItems: any = [

@@ -1,8 +1,10 @@
 .industry {
   padding: 24px;
   overflow-x: hidden;
-  @media screen and (max-width: 1556px) {
-    padding: 12px;
+  :global {
+    .ant-descriptions {
+      margin-bottom: 0 !important;
+    }
   }
   .right {
     display: flex;

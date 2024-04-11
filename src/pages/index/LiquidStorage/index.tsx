@@ -40,6 +40,7 @@ const Index: React.FC = () => {
                 groupData={batteryItems}
                 detailProps={{
                   column: 1,
+                  labelStyle: {},
                 }}
               />
             </Card>
@@ -55,6 +56,7 @@ const Index: React.FC = () => {
                 groupData={batterySysItems}
                 detailProps={{
                   column: 1,
+                  labelStyle: {},
                 }}
               />
             </Card>
@@ -70,6 +72,7 @@ const Index: React.FC = () => {
                 groupData={loadItems}
                 detailProps={{
                   column: 1,
+                  labelStyle: {},
                 }}
               />
             </Card>
@@ -98,6 +101,7 @@ const Index: React.FC = () => {
                   groupData={incomeItems}
                   detailProps={{
                     column: 1,
+                    ellipsis: true,
                   }}
                 />
               </Card>
@@ -111,6 +115,7 @@ const Index: React.FC = () => {
                   groupData={reduceItems}
                   detailProps={{
                     column: 1,
+                    ellipsis: true,
                   }}
                 />
               </Card>

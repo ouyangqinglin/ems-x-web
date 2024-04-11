@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-28 11:15:32
- * @LastEditTime: 2024-03-28 11:15:32
+ * @LastEditTime: 2024-04-11 11:31:52
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\locales\zh-CN\common.ts
  */
@@ -34,4 +34,12 @@ export default {
   'common.websiteCommonIcons': '网站通用图标',
   'common.yotaiIcon': '永泰图标',
   'common.deleteConfirm': '删除确认',
+  'common.time.day': '日',
+  'common.time.month': '月',
+  'common.time.oneMonth': '一个月',
+  'common.time.threeMonth': '三个月',
+  'common.time.sixMonth': '六个月',
+  'common.time.oneYear': '一年',
+  'common.time.year': '年',
+  'common.time.total': '累计',
 };

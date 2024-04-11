@@ -42,6 +42,7 @@ const Index: React.FC = () => {
                 groupData={pvItems}
                 detailProps={{
                   column: 2,
+                  labelStyle: {},
                 }}
               />
             </Card>
@@ -57,6 +58,7 @@ const Index: React.FC = () => {
                 groupData={batteryItems}
                 detailProps={{
                   column: 1,
+                  ellipsis: true,
                 }}
               />
             </Card>
@@ -72,6 +74,7 @@ const Index: React.FC = () => {
                 groupData={loadItems}
                 detailProps={{
                   column: 1,
+                  ellipsis: true,
                 }}
               />
             </Card>
@@ -100,6 +103,7 @@ const Index: React.FC = () => {
                   groupData={electricItems}
                   detailProps={{
                     column: 1,
+                    ellipsis: true,
                   }}
                 />
               </Card>
@@ -113,6 +117,7 @@ const Index: React.FC = () => {
                   groupData={incomeItems}
                   detailProps={{
                     column: 1,
+                    ellipsis: true,
                   }}
                 />
               </Card>
@@ -128,6 +133,7 @@ const Index: React.FC = () => {
                 groupData={systemItems}
                 detailProps={{
                   column: 5,
+                  labelStyle: {},
                 }}
               />
             </CardC>
@@ -143,6 +149,7 @@ const Index: React.FC = () => {
                 groupData={reduceItems}
                 detailProps={{
                   column: 1,
+                  ellipsis: true,
                 }}
               />
             </Card>

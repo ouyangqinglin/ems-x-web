@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-04-11 13:40:58
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\Battery-Pack\index.tsx
  */
 
 import React from 'react';
@@ -28,6 +28,9 @@ const Pcs: React.FC = () => {
             realTimeData={realTimeData}
             detailProps={{
               column: 2,
+              labelStyle: {
+                width: '280px',
+              },
             }}
           />
         </Card>

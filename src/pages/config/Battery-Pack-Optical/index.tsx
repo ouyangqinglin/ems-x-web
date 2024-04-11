@@ -31,6 +31,9 @@ const Pcs: React.FC = () => {
             realTimeData={realTimeData}
             detailProps={{
               column: 2,
+              labelStyle: {
+                width: '280px',
+              },
             }}
           />
         </Card>
