@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-04-10 15:19:08
+ * @LastEditTime: 2024-04-12 15:49:46
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -166,11 +166,12 @@ const Control: React.FC<ControlType> = memo((props) => {
               message.success(
                 formatMessage({ id: 'device.issueSuccess', defaultMessage: '下发成功' }),
               );
+              onSuccess?.(data);
             }
           }),
       });
     },
-    [deviceData?.deviceId, sourceId],
+    [deviceData?.deviceId, sourceId, onSuccess],
   );
 
   const onRefresh = useCallback(

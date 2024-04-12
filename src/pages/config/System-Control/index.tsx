@@ -14,16 +14,24 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 
 const Pcs: React.FC = () => {
-  const { realTimeData } = useDeviceData({ isInterval: false });
+  const { realTimeData, run } = useDeviceData({ isInterval: false });
 
   return (
     <>
       <div className="p24">
         <Card>
-          <Control groupData={baseInfoItems} realTimeData={realTimeData} />
+          <Control
+            groupData={baseInfoItems}
+            realTimeData={realTimeData}
+            onSuccess={() => run?.()}
+          />
         </Card>
         <Card className="my20">
-          <Control groupData={batteryModeItems} realTimeData={realTimeData} />
+          <Control
+            groupData={batteryModeItems}
+            realTimeData={realTimeData}
+            onSuccess={() => run?.()}
+          />
         </Card>
       </div>
     </>
