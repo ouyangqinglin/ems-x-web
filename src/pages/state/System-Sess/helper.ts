@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-04-15 13:42:10
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\System-Sess\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
@@ -148,8 +148,8 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '连接失败',
-            1: '连接正常',
+            0: '断开',
+            1: '连接',
           },
         },
       },

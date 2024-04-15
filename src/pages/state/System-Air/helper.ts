@@ -155,8 +155,8 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '连接失败',
-            1: '连接正常',
+            0: '断开',
+            1: '连接',
           },
         },
       },
