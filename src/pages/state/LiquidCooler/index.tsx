@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:29:44
+ * @LastEditTime: 2024-04-15 11:09:02
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\state\LiquidCooler\index.tsx
  */
 
 import React from 'react';
@@ -24,7 +24,13 @@ const LiquidCooler: React.FC = () => {
       <div className="p24">
         <Card className="h-full">
           <Run
-            realTimeData={realTimeData}
+            realTimeData={{
+              ...realTimeData,
+              s1: 2400,
+              s2: 5000,
+              s3: 2350,
+              s4: 2000,
+            }}
             groupData={baseInfoItems}
             detailProps={{
               column: 4,

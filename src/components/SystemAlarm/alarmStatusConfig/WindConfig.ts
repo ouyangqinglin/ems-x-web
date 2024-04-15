@@ -53,19 +53,19 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '急停信号' }),
-        status: '[11,12]',
+        status: '5400[11,12]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '水浸信号' }),
-        status: '[12,13]',
+        status: '5400[12,13]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '气溶胶信号' }),
-        status: '[13,14]',
+        status: '5400[13,14]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '交流防雷器故障' }),
-        status: '[14,15]',
+        status: '5400[14,15]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BMU1通信故障' }),

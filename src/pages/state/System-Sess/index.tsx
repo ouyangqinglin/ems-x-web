@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:29:44
+ * @LastEditTime: 2024-04-15 11:41:30
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\state\System-Sess\index.tsx
  */
 
 import React from 'react';
@@ -20,9 +20,11 @@ import {
 } from './helper';
 import { useDeviceData } from '@/hooks';
 import RefreshData from '@/components/Device/RefreshData';
+import { useModel } from 'umi';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run, loading } = useDeviceData();
+  const { deviceData } = useModel('device');
 
   return (
     <>
@@ -32,7 +34,10 @@ const Pcs: React.FC = () => {
           <Col span={24}>
             <Card className="h-full">
               <Run
-                realTimeData={realTimeData}
+                realTimeData={{
+                  ...realTimeData,
+                  upperComputerConnect: deviceData?.status,
+                }}
                 groupData={baseInfoItems}
                 detailProps={{
                   column: 5,

@@ -102,35 +102,47 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '',
+        id: 's1',
         name: '制冷输入功率',
         type: 'property',
         dataType: {
           type: 'string',
+          specs: {
+            unit: 'W',
+          },
         },
       },
       {
-        id: '',
+        id: 's2',
         name: '制冷量',
         type: 'property',
         dataType: {
           type: 'string',
+          specs: {
+            unit: 'W',
+          },
         },
       },
       {
-        id: '',
+        id: 's3',
         name: '加热输入功率',
         type: 'property',
         dataType: {
           type: 'string',
+          specs: {
+            unit: 'W',
+          },
         },
       },
       {
-        id: '',
+        id: 's4',
         name: '加热量',
         type: 'property',
         dataType: {
           type: 'string',
+          specs: {
+            unit: 'W',
+          },
         },
       },
     ],

@@ -21,9 +21,11 @@ import {
 import RefreshData from '@/components/Device/RefreshData';
 import { useDeviceData } from '@/hooks';
 import SystemAlarm from '@/components/SystemAlarm';
+import { useModel } from 'umi';
 
 const Pcs: React.FC = () => {
   const { realTimeData, run, loading } = useDeviceData();
+  const { deviceData } = useModel('device');
 
   return (
     <>
@@ -33,7 +35,10 @@ const Pcs: React.FC = () => {
           <Col span={24}>
             <Card className="h-full">
               <Run
-                realTimeData={realTimeData}
+                realTimeData={{
+                  ...realTimeData,
+                  upperComputerConnect: deviceData?.status,
+                }}
                 groupData={baseInfoItems}
                 detailProps={{
                   column: 5,

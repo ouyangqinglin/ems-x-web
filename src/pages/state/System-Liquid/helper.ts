@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-29 10:53:23
+ * @LastEditTime: 2024-04-15 11:17:27
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Liquid\helper.ts
  */
@@ -149,11 +149,15 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: 'ffffff',
+        id: 'upperComputerConnect',
         name: '上位机通信',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '连接失败',
+            1: '连接正常',
+          },
         },
       },
       {
@@ -181,7 +185,7 @@ export const baseInfoItems: any = [
         dataType: commonDataType,
       },
       {
-        id: '230',
+        id: '231',
         name: 'BMS 通信',
         type: 'property',
         dataType: commonDataType,
@@ -194,7 +198,7 @@ export const baseInfoItems: any = [
       },
       {
         id: '192',
-        name: '液冷机通信',
+        name: '除湿机通信',
         type: 'property',
         dataType: commonDataType,
       },
@@ -1238,7 +1242,12 @@ export const statusItems: any = [
             type: 'property',
             name: '消防工作状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '运行',
+                1: '停止',
+                2: '故障',
+              },
             },
           },
           {
@@ -1246,7 +1255,11 @@ export const statusItems: any = [
             type: 'property',
             name: '消防告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
@@ -1254,7 +1267,11 @@ export const statusItems: any = [
             type: 'property',
             name: '消防喷射信号',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '喷射',
+              },
             },
           },
         ],

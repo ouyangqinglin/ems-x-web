@@ -24,6 +24,7 @@ const options = [
 export default () => {
   const { data: page } = useModel('page');
   const { config, dispatch } = useModel('config');
+  const { dispatch: dispatchDevice } = useModel('device');
   const [statusInfo, setStatusInfo] = useState({
     status: false,
     deviceSn: '',
@@ -42,6 +43,7 @@ export default () => {
       const res = await getSystemStatus();
       if (res.code === 200) {
         setStatusInfo(res.data);
+        dispatchDevice({ payload: { status: res.data?.status } });
       } else {
         isError = true;
       }

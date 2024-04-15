@@ -142,11 +142,15 @@ export const baseInfoItems: any = [
         },
       },
       {
-        id: '16',
+        id: 'upperComputerConnect',
         name: '上位机通信',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '连接失败',
+            1: '连接正常',
+          },
         },
       },
       {
