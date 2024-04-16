@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-15 11:17:27
+ * @LastEditTime: 2024-04-16 09:03:06
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Liquid\helper.ts
  */
@@ -800,7 +800,7 @@ export const statusItems: any = [
           {
             id: '341',
             type: 'property',
-            name: '电池组工作模式',
+            name: '电池组工作状态',
             dataType: {
               type: 'enum',
               specs: {

@@ -794,7 +794,7 @@ export const statusItems: any = [
           {
             id: '341',
             type: 'property',
-            name: '电池组工作模式',
+            name: '电池组工作状态',
             dataType: {
               type: 'enum',
               specs: {
