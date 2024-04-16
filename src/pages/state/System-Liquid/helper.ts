@@ -817,7 +817,11 @@ export const statusItems: any = [
             type: 'property',
             name: '电池组告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {

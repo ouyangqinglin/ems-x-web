@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-15 13:42:10
+ * @LastEditTime: 2024-04-16 09:09:58
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Sess\helper.ts
  */
@@ -720,7 +720,11 @@ export const statusItems: any = [
             type: 'property',
             name: '电池组告警状态',
             dataType: {
-              type: 'string',
+              type: 'enum',
+              specs: {
+                0: '正常',
+                1: '告警',
+              },
             },
           },
           {
