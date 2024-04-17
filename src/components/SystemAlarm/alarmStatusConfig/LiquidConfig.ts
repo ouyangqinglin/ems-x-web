@@ -1,5 +1,5 @@
 // import { formatMessage } from '@/utils';
-export { indexAlarmStatusItem, converterAlarmStatusItem } from './commonConfig';
+export { converterAlarmStatusItem } from './commonConfig';
 type AlarmStatusItemType = {
   name: string;
   hideTitle?: boolean;
@@ -9,6 +9,168 @@ type AlarmStatusItemType = {
 const formatMessage = (message: any) => {
   return message.defaultMessage;
 };
+
+// 首页
+export const indexAlarmStatusItem: AlarmStatusItemType[] = [
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '系统' }),
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与上位机通信' }),
+        status: '3000[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与云平台通信' }),
+        status: '3000[2,3]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与永泰云通信' }),
+        status: '3000[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与灯板通信' }),
+        status: '3000[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与IO模块' }),
+        status: '3000[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'EMS板故障' }),
+        status: '3002[0,1]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '系统告警状态' }),
+        status: '381',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '系统急停' }),
+        status: '3002[12,13]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '并机地址冲突' }),
+        status: '3002[11,12]',
+      },
+    ],
+  },
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '变流器' }),
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '与EMS通信' }),
+        status: '3000[8,9]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器故障' }),
+        status: '3002[3,4]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器告警状态' }),
+        status: '345',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变流器急停' }),
+        status: '3002[13,14]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变压器过载预警' }),
+        status: '3002[15,16]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '变压器过载故障' }),
+        status: '3002[0,1]',
+      },
+    ],
+  },
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '电池' }),
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BCMU与EMS通信' }),
+        status: '3000[9,10]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BCMU故障' }),
+        status: '3002[4,5]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU与BCMU通信' }),
+        status: '3000[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU故障' }),
+        status: '3002[5,6]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMU风扇故障' }),
+        status: '3002[6,7]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电池组告警状态' }),
+        status: '386',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: 'BMS急停' }),
+        status: '3002[14,15]',
+      },
+    ],
+  },
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '空调和消防' }),
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '空调与EMS通信' }),
+        status: '3000[11,12]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '空调故障' }),
+        status: '3002[7,8]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '空调告警状态' }),
+        status: '3002[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防与EMS通信' }),
+        status: '3000[14,15]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防故障' }),
+        status: '3002[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防告警状态' }),
+        status: '33136',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '消防喷射信号' }),
+        status: '33137',
+      },
+    ],
+  },
+  {
+    name: formatMessage({ id: 'common', defaultMessage: '电表' }),
+    children: [
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '电网侧电表与EMS通信' }),
+        status: '3000[15,16]',
+      },
+      // {
+      //   name: formatMessage({ id: 'common', defaultMessage: '电网侧电表故障' }),
+      //   status: '',
+      // },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '逆变侧电表与EMS通信' }),
+        status: '3001[0,1]',
+      },
+      // {
+      //   name: formatMessage({ id: 'common', defaultMessage: '逆变侧电表故障' }),
+      //   status: '',
+      // },
+    ],
+  },
+];
+
 //系统
 export const systemAlarmStatusItem: AlarmStatusItemType[] = [
   {
@@ -287,10 +449,6 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
       {
         name: formatMessage({ id: 'common', defaultMessage: '水浸信号' }),
         status: '5400[12,13]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '气溶胶信号' }),
-        status: '5400[13,14]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '交流防雷器故障' }),

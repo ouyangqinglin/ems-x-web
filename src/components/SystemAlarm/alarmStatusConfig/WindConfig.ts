@@ -60,10 +60,6 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
         status: '5400[12,13]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '气溶胶信号' }),
-        status: '5400[13,14]',
-      },
-      {
         name: formatMessage({ id: 'common', defaultMessage: '交流防雷器故障' }),
         status: '5400[14,15]',
       },

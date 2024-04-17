@@ -50,4 +50,6 @@ export default {
   'menu.config.airConditionOptical': '空调',
   'menu.state.batteryPackAir': '电池组',
   'menu.state.batteryPackLiquid': '电池组',
+  'menu.system': '系统管理',
+  'menu.system.metadataConfig': '元数据配置',
 };

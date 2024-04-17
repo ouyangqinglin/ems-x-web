@@ -417,6 +417,21 @@ const routers: RouterType[] = [
     ],
   },
   {
+    path: '/system',
+    name: 'system',
+    component: '@/layouts/TabsLayout',
+    locale: 'menu.system',
+    routes: [
+      {
+        path: 'metadata-config',
+        name: 'metadataConfig',
+        component: './system/MetadataConfig',
+        wrappers: ['@/components/KeepAlive'],
+        locale: 'menu.system.metadataConfig',
+      },
+    ],
+  },
+  {
     path: '/',
     component: '@/layouts/TabsLayout',
     routes: [
