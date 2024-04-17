@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-09 16:00:36
+ * @LastEditTime: 2024-04-17 15:04:41
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control\helper.ts
  */
@@ -57,8 +57,6 @@ export const baseInfoItems: any = [
                 0: '启动',
                 1: '待机',
                 2: '停止',
-                3: '急停',
-                4: '复位',
               },
             },
           },
@@ -128,8 +126,6 @@ export const baseInfoItems: any = [
                 0: '启动',
                 1: '待机',
                 2: '停止',
-                3: '急停',
-                4: '复位',
               },
             },
             disabled: "$data['50400']!=0",
@@ -222,11 +218,8 @@ export const batteryModeItems: any = [
             buttons: ['refresh'],
             dataType: {
               specs: {
-                1: '启动',
                 2: '充电',
                 3: '放电',
-                4: '待机',
-                5: '停止',
               },
               type: 'enum',
             },
@@ -247,11 +240,8 @@ export const batteryModeItems: any = [
             buttons: ['edit'],
             dataType: {
               specs: {
-                1: '启动',
                 2: '充电',
                 3: '放电',
-                4: '待机',
-                5: '停止',
               },
               type: 'enum',
             },
