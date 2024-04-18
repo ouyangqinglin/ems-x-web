@@ -53,13 +53,12 @@ export const normalizeRequestOption = <D, V>(
         }
       };
     }
-    if (col.render) {
-      const render = col.render;
+    if (col.renderWithEmit) {
       col.render = (...params) => {
         params[1].emit = (...emitParams) => {
           onEvent?.(...emitParams);
         };
-        return render(...params);
+        return col?.renderWithEmit?.(...params);
       };
     }
     return col;

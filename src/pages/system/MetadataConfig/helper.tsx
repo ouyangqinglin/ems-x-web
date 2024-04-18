@@ -2,15 +2,15 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 15:54:59
- * @LastEditTime: 2024-04-17 18:01:06
+ * @LastEditTime: 2024-04-18 16:21:55
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\helper.tsx
  */
 
-import { ProColumns } from '@ant-design/pro-components';
+import { YTProColumns } from '@/components/YTProTable/typing';
 import { Button } from 'antd';
 
-export const columns: ProColumns[] = [
+export const columns: YTProColumns<any>[] = [
   {
     title: '序号',
     valueType: 'index',
@@ -53,7 +53,7 @@ export const columns: ProColumns[] = [
     valueType: 'option',
     width: 100,
     fixed: 'right',
-    render: (_, { emit, ...entity }) => (
+    renderWithEmit: (_, { emit, ...entity }) => (
       <Button type="link" onClick={() => emit('debug', entity)}>
         调试
       </Button>

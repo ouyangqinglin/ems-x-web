@@ -58,6 +58,10 @@ export type YTProTableCustomProps<D, P, V = 'text'> = {
   extraHeight?: number;
 };
 
+type EmitType = {
+  emit?: (eventName?: string, params?: any) => void;
+};
+
 export type YTProColumns<D, V = 'text'> = ProColumns<D, V> & {
   requestOption?: {
     url: string;
@@ -65,4 +69,5 @@ export type YTProColumns<D, V = 'text'> = ProColumns<D, V> & {
     mapKey?: Record<string, string>;
     dataIndex?: string;
   };
+  renderWithEmit?: ProColumns<D, V>['render'];
 };
