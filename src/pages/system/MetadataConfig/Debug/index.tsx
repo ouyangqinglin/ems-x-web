@@ -40,7 +40,7 @@ const Debug: React.FC<DebugType> = (props) => {
   const { open, onCancel, debugInfo } = props;
 
   const [debugData, setDebugData] = useState<Record<string, any>[]>([]);
-  const containRef = useRef<HTMLElement>(null);
+  const containRef = useRef<HTMLDivElement>(null);
   const [error, { setFalse, setTrue }] = useBoolean(false);
   const [value, setValue] = useState<string>();
   const { run, loading } = useRequest(debugMetadata, {

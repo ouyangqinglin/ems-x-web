@@ -55,6 +55,7 @@ export type YTProTableCustomProps<D, P, V = 'text'> = {
     maxWidth?: number;
   };
   onEvent?: (eventName?: string, params?: any) => void;
+  extraHeight?: number;
 };
 
 export type YTProColumns<D, V = 'text'> = ProColumns<D, V> & {

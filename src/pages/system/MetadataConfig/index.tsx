@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 15:11:54
- * @LastEditTime: 2024-04-17 17:42:58
+ * @LastEditTime: 2024-04-18 15:37:02
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\index.tsx
  */
@@ -52,8 +52,10 @@ const MetadataConfig: React.FC = () => {
           columns={columns}
           request={requestPage}
           manualRequest
-          resizable={true}
+          resizable
           onEvent={onEvent}
+          search={false}
+          extraHeight={134}
         />
         <Debug open={openDebug} onCancel={() => setFalse()} debugInfo={debugData} />
       </div>

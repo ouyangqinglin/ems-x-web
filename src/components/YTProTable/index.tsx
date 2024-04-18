@@ -32,6 +32,7 @@ const YTProTable = <
     resizable = false,
     resizableOptions,
     onEvent,
+    extraHeight,
     ...restProps
   } = props;
 
@@ -67,7 +68,7 @@ const YTProTable = <
   // 对request请求方法进行封装，解构表格数据格式
   const standardRequest = standardRequestTableData<DataType, Params>(request);
 
-  const { scrollX } = useTableSize(mergedTableRef, restProps.scroll, collapsed);
+  const { scrollX } = useTableSize(mergedTableRef, restProps.scroll, collapsed, extraHeight);
 
   const { resizableColumns, components, tableWidth } = useAntdColumnResize(() => {
     return { minWidth: 100, ...resizableOptions, columns: resizable ? adaptionColumns : [] };

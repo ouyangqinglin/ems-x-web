@@ -88,7 +88,7 @@ const Index: React.FC = () => {
           </Col>
           <Col span={11}>
             <Card style={{ height: 412 }} className={styles.card}>
-              <Chart />
+              <Chart sourceIds={['3069', '3079', '3081']} />
             </Card>
           </Col>
           <Col span={6}>

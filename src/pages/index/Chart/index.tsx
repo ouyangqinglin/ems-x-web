@@ -92,7 +92,14 @@ const seriesBar = [
     name: '放电量',
   },
 ];
-const Index: React.FC = () => {
+
+type ChartType = {
+  sourceIds?: string[];
+};
+
+const Chart: React.FC<ChartType> = (props) => {
+  const { sourceIds = ['313', '334', '336'] } = props;
+
   const [showDatePicker, { set }] = useToggle(false);
   const [date, setDate] = useState(moment());
   const [picker, setPicker] = useState<
@@ -112,13 +119,13 @@ const Index: React.FC = () => {
   });
   function getChartData() {
     if (timerOne?.current) clearInterval(timerOne.current);
-    getDeviceData(1, { data: ['313', '334', '336'] })
+    getDeviceData(1, { data: sourceIds })
       .then((res) => {
         if (+res.code === 200) {
           arrTime.push(res?.data?.refreshTime);
-          arr1.push(res?.data[313]);
-          arr2.push(res?.data[334]);
-          arr3.push(res?.data[336]);
+          arr1.push(res?.data[sourceIds[0]]);
+          arr2.push(res?.data[sourceIds[1]]);
+          arr3.push(res?.data[sourceIds[2]]);
           localStorage.setItem('arrTime', JSON.stringify(arrTime));
           localStorage.setItem('arr1', JSON.stringify(arr1));
           localStorage.setItem('arr2', JSON.stringify(arr2));
@@ -223,4 +230,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default Chart;

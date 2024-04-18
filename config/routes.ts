@@ -427,6 +427,7 @@ const routers: RouterType[] = [
         name: 'metadataConfig',
         component: './system/MetadataConfig',
         wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
         locale: 'menu.system.metadataConfig',
       },
     ],
