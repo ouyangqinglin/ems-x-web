@@ -58,7 +58,7 @@ export type YTProTableCustomProps<D, P, V = 'text'> = {
   extraHeight?: number;
 };
 
-type EmitType = {
+export type EmitType = {
   emit?: (eventName?: string, params?: any) => void;
 };
 

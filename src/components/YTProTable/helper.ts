@@ -1,10 +1,10 @@
 import { get as requestGet, post as requestPost } from '@/utils/request';
 import type { ProTableProps } from '@ant-design/pro-components';
 import { get, isEmpty, isNil } from 'lodash';
-import type { YTProColumns, YTProTableCustomProps } from './typing';
+import type { EmitType, YTProColumns, YTProTableCustomProps } from './typing';
 
 export const normalizeRequestOption = <D, V>(
-  columns: YTProColumns<D, V>[] | undefined,
+  columns: YTProColumns<D & EmitType, V>[] | undefined,
   onEvent: YTProTableCustomProps<D, V>['onEvent'],
 ) => {
   if (!Array.isArray(columns) || !columns.length) {

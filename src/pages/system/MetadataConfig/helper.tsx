@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 15:54:59
- * @LastEditTime: 2024-04-18 16:21:55
+ * @LastEditTime: 2024-04-18 16:35:36
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\helper.tsx
  */
@@ -53,10 +53,6 @@ export const columns: YTProColumns<any>[] = [
     valueType: 'option',
     width: 100,
     fixed: 'right',
-    renderWithEmit: (_, { emit, ...entity }) => (
-      <Button type="link" onClick={() => emit('debug', entity)}>
-        调试
-      </Button>
-    ),
+    renderWithEmit: (_, { emit, ...entity }) => <a onClick={() => emit('debug', entity)}>调试</a>,
   },
 ];
