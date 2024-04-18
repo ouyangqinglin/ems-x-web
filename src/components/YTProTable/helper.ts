@@ -59,7 +59,7 @@ export const normalizeRequestOption = <D, V>(
         params[1].emit = (...emitParams) => {
           onEvent?.(...emitParams);
         };
-        render(...params);
+        return render(...params);
       };
     }
     return col;

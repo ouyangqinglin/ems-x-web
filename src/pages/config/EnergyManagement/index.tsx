@@ -13,7 +13,7 @@ import {
   peakShavingValleyFillingItems,
   manualModeItems,
   elePriceItems,
-  backupModeItems
+  backupModeItems,
 } from './helper';
 import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
@@ -25,25 +25,37 @@ const EnergyManagement: React.FC = () => {
     <>
       <div className="p24">
         <Card className="my20">
-          <Control groupData={peakShavingValleyFillingItems} realTimeData={realTimeData} detailProps={{
-            column: 4,
-          }} />
+          <Control
+            groupData={peakShavingValleyFillingItems}
+            realTimeData={realTimeData}
+            detailProps={{
+              column: 4,
+            }}
+          />
         </Card>
         <Card className="my20">
-          <Control groupData={manualModeItems} realTimeData={realTimeData} detailProps={{
-            column: 4,
-          }} />
+          <Control
+            groupData={manualModeItems}
+            realTimeData={realTimeData}
+            detailProps={{
+              column: 4,
+            }}
+          />
         </Card>
         <Card className="my20">
-          <Control groupData={backupModeItems} realTimeData={realTimeData} detailProps={{
-            column: 4,
-          }} />
+          <Control
+            groupData={backupModeItems}
+            realTimeData={realTimeData}
+            detailProps={{
+              column: 4,
+            }}
+          />
         </Card>
-        <Card className="my20">
+        {/* <Card className="my20">
           <Control groupData={elePriceItems} realTimeData={realTimeData} detailProps={{
             column: 3,
           }} />
-        </Card>
+        </Card> */}
       </div>
     </>
   );

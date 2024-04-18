@@ -1,0 +1,17 @@
+.timeline {
+  height: calc(100vh - 346px);
+  padding-top: 22px;
+  padding-left: 17px;
+  overflow: auto;
+}
+
+.detail {
+  :global {
+    .ant-descriptions-row:nth-child(3) {
+      display: none;
+    }
+    td.ant-descriptions-item-content {
+      width: 100px;
+    }
+  }
+}
