@@ -15,3 +15,10 @@ export const getMetadataPage = (data: any) => {
     data,
   });
 };
+
+export const debugMetadata = (data: any) => {
+  return request('/v1/system/data/debug', {
+    method: 'POST',
+    data,
+  });
+};

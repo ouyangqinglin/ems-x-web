@@ -560,27 +560,27 @@ export const batteryAlarmStatusItem: AlarmStatusItemType[] = [
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '放电电池过温二级报警' }),
-        status: '5402[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: '放电电池欠温二级报警' }),
         status: '5402[6,7]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电流过大二级报警' }),
+        name: formatMessage({ id: 'common', defaultMessage: '放电电池欠温二级报警' }),
         status: '5402[7,8]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池欠温二级报警' }),
-        status: '5402[8,9]',
+        name: formatMessage({ id: 'common', defaultMessage: '充电电流过大二级报警' }),
+        status: '5402[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低二级报警' }),
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池欠温二级报警' }),
         status: '5402[9,10]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: '充电电池过温二级报警' }),
+        name: formatMessage({ id: 'common', defaultMessage: '绝缘阻值过低二级报警' }),
         status: '5402[10,11]',
+      },
+      {
+        name: formatMessage({ id: 'common', defaultMessage: '充电电池过温二级报警' }),
+        status: '5402[8,9]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '极柱温度过高二级报警' }),

@@ -6,12 +6,14 @@
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Detail\Detail\index.tsx
  */
-import React, { cloneElement, useMemo } from 'react';
+import React, { cloneElement, useCallback, useMemo } from 'react';
 import { Descriptions } from 'antd';
 import type { DescriptionsProps } from 'antd';
 import { isEmpty } from '@/utils';
 import type { ProFormColumnsType } from '@ant-design/pro-components';
 import styles from './index.less';
+
+export type EventType = (eventName?: string, eventData?: Record<string, any>) => void;
 
 export type DetailItem = {
   className?: string;
@@ -21,7 +23,7 @@ export type DetailItem = {
   field?: string;
   showPlaceholder?: boolean;
   valueInterceptor?: (value: any, data?: any) => any;
-  format?: (value: any, data?: any) => React.ReactNode;
+  format?: (value: any, data?: any, emit?: EventType) => React.ReactNode;
   span?: number;
   labelStyle?: React.CSSProperties;
   contentStyle?: React.CSSProperties;
@@ -38,11 +40,12 @@ export type FormAndDetailType = ProFormColumnsType & DetailItem;
 export type DetailProps = DescriptionsProps & {
   items: DetailItem[];
   data: any;
-  format?: (value: any, data?: any) => React.ReactNode;
+  format?: (value: any, data?: any, emit?: EventType) => React.ReactNode;
   extral?: React.ReactElement;
   valueStyle?: React.CSSProperties;
   unitInLabel?: boolean;
   ellipsis?: boolean;
+  onEvent?: EventType;
 };
 
 const Detail: React.FC<DetailProps> = (props) => {
@@ -58,12 +61,20 @@ const Detail: React.FC<DetailProps> = (props) => {
     unitInLabel = false,
     className = '',
     ellipsis = false,
+    onEvent,
     ...restProps
   } = props;
 
   const data = useMemo(() => {
     return props?.data || {};
   }, [props?.data]);
+
+  const emit = useCallback(
+    (...params) => {
+      onEvent?.(...params);
+    },
+    [onEvent],
+  );
 
   const descriptionItems = useMemo(() => {
     const content: React.ReactNode[] = [];
@@ -112,9 +123,9 @@ const Detail: React.FC<DetailProps> = (props) => {
               <span style={item.valueStyle || valueStyle}>
                 {!isEmpty(fieldValue) || item.showPlaceholder === false
                   ? item.format
-                    ? item.format(fieldValue ?? '', data)
+                    ? item.format(fieldValue ?? '', data, emit)
                     : format
-                    ? format(fieldValue ?? '', data)
+                    ? format(fieldValue ?? '', data, emit)
                     : fieldValue ?? ''
                   : '--'}
               </span>
@@ -127,7 +138,7 @@ const Detail: React.FC<DetailProps> = (props) => {
       }
     });
     return content;
-  }, [items, contentStyle, valueStyle, data, extral]);
+  }, [items, contentStyle, valueStyle, data, extral, emit]);
 
   return (
     <Descriptions

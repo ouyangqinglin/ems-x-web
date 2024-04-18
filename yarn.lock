@@ -17210,14 +17210,6 @@ react-activation@^0.12.1:
     react-node-key "^0.4.0"
     szfe-tools "^0.0.0-beta.7"
 
-react-antd-column-resize@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmmirror.com/react-antd-column-resize/-/react-antd-column-resize-1.0.3.tgz#71170e97e0497ce476793d5969ca4f404e3470e4"
-  integrity sha512-JOuwMwR3N5xs3VKZ2pEfA3KWO394WJL9OgqYs7zeYhaD9buEK42kvVtrs590iEK0qmRatrsei11lekjY9ilNrQ==
-  dependencies:
-    rc-util "^5.31.1"
-    react-resizable "^3.0.5"
-
 react-attr-converter@^0.3.1:
   version "0.3.1"
   resolved "https://registry.npmmirror.com/react-attr-converter/-/react-attr-converter-0.3.1.tgz"

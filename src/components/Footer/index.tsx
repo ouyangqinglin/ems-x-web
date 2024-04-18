@@ -3,7 +3,7 @@ import { Select } from 'antd';
 import { useModel } from 'umi';
 import { getSystemStatus } from '@/services/device';
 import { useEffect, useMemo, useState } from 'react';
-import { ReactComponent as AlarmStatusIcon } from '@/assets/image/device/alarm_status.svg';
+import { ReactComponent as AlarmStatusIcon } from '@/assets/image/device/alarmest_status.svg';
 import { ReactComponent as NormalStatusIcon } from '@/assets/image/device/normal_status.svg';
 import { useLocation } from '@/hooks';
 
@@ -33,8 +33,8 @@ export default () => {
   });
   const { pathname } = useLocation();
 
-  const hideRefreshRate = useMemo(() => {
-    return /^\/config/.test(pathname);
+  const showRefreshRate = useMemo(() => {
+    return /^\/(index|state|optical-index|liquid-index)/.test(pathname);
   }, [pathname]);
 
   const requestSystemStatus = async () => {
@@ -90,7 +90,7 @@ export default () => {
           <span>SN：</span>
           <span>{statusInfo?.deviceSn}</span>
         </div>
-        <div style={{ display: hideRefreshRate ? 'none' : 'block' }}>
+        <div style={{ display: showRefreshRate ? 'block' : 'none' }}>
           <span>自动刷新频率：</span>
           <Select
             style={{ width: '70px' }}

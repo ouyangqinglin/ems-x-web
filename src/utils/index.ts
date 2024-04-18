@@ -51,6 +51,7 @@ export type AntMenuProps = {
   sourceId?: string;
   disabled: boolean;
   children?: AntMenuProps[];
+  selectable?: boolean;
 };
 
 export type ValueUnitType = {

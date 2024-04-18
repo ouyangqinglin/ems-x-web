@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ProTable } from '@ant-design/pro-table';
+import { ProTable } from '@ant-design/pro-components';
 import type { ProFormInstance } from '@ant-design/pro-components';
 import type { ParamsType } from '@ant-design/pro-provider';
 import type { YTProColumns, YTProTableProps } from './typing';
@@ -31,6 +31,7 @@ const YTProTable = <
     className,
     resizable = false,
     resizableOptions,
+    onEvent,
     ...restProps
   } = props;
 
@@ -74,7 +75,7 @@ const YTProTable = <
 
   useEffect(() => {
     // TODO: 支持选项式的请求
-    const result = normalizeRequestOption<DataType, ValueType>(columns);
+    const result = normalizeRequestOption<DataType, ValueType>(columns, onEvent);
 
     // 合并默认的操作(删除，编辑，进入)
     const defaultOperation = genDefaultOperation<DataType, Params, ValueType>(props);
@@ -85,7 +86,7 @@ const YTProTable = <
       calculateColumns(result, mergedTableRef);
     }
     setAdaptionColumns(result);
-  }, [columns, resizable, scrollX]);
+  }, [columns, resizable, scrollX, onEvent]);
 
   return (
     <div ref={mergedTableRef}>

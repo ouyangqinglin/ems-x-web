@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 15:54:59
- * @LastEditTime: 2024-04-17 15:54:59
+ * @LastEditTime: 2024-04-17 18:01:06
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\helper.tsx
  */
@@ -50,9 +50,13 @@ export const columns: ProColumns[] = [
   },
   {
     title: '操作',
-    dataIndex: 'operate',
+    valueType: 'option',
     width: 100,
     fixed: 'right',
-    render: () => <Button type="link">调试</Button>,
+    render: (_, { emit, ...entity }) => (
+      <Button type="link" onClick={() => emit('debug', entity)}>
+        调试
+      </Button>
+    ),
   },
 ];

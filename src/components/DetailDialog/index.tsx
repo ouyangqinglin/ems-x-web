@@ -31,6 +31,7 @@ const DetailDialog: React.FC<DetailDialogProps> = (props) => {
           </Button>,
         ]}
         onCancel={onCancel}
+        maskClosable={false}
         {...reseProps}
       >
         {prepend}
