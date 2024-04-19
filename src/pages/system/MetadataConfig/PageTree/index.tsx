@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 16:37:32
- * @LastEditTime: 2024-04-18 09:12:43
+ * @LastEditTime: 2024-04-19 09:57:08
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\PageTree\index.tsx
  */
@@ -23,10 +23,11 @@ const PageTree: React.FC<PageTreeType> = (props) => {
     const menu = (data.initialState?.antMenus as AntMenuProps[]) || [];
     const result: AntMenuProps[] = [];
     menu.forEach((item) => {
-      if (!item.disabled) {
+      if (item.isConfig) {
         result.push({
           ...item,
           selectable: !(item.children && item.children.length),
+          disabled: false,
         });
       }
     });

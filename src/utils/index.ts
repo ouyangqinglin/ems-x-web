@@ -52,6 +52,7 @@ export type AntMenuProps = {
   disabled: boolean;
   children?: AntMenuProps[];
   selectable?: boolean;
+  isConfig?: boolean;
 };
 
 export type ValueUnitType = {
@@ -82,6 +83,7 @@ export const getMenus = (data: MenuDataItem[], prePath = ''): AntMenuProps[] => 
     if (!item.hideInMenu) {
       arr.push({
         disabled: !item.is_export,
+        isConfig: item.is_config,
         label: item?.name || '',
         key: path,
         icon: createIcon(item?.meta?.icon, { style: { fontSize: '20px' } }),

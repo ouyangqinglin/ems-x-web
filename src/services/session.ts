@@ -256,6 +256,7 @@ export function convertCompatRouters(childrens: API.RoutersMenuItem[]): MenuData
       component: item.component,
       authority: item.perms,
       is_export: item.is_export,
+      is_config: item.is_config,
       meta: item?.meta || {},
       sourceId: item?.source_id,
     };
