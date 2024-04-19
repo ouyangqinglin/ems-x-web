@@ -42,6 +42,12 @@ export const columns: YTProColumns<any>[] = [
     ellipsis: true,
   },
   {
+    title: '精度',
+    dataIndex: 'ratio',
+    width: 100,
+    ellipsis: true,
+  },
+  {
     title: '描述',
     dataIndex: 'remark',
     width: 150,

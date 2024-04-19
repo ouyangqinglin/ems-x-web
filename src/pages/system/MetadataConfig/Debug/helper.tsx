@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-18 09:37:16
- * @LastEditTime: 2024-04-18 14:17:27
+ * @LastEditTime: 2024-04-19 09:15:21
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\Debug\helper.tsx
  */
@@ -26,6 +26,10 @@ export const baseInfoItems: DetailItem[] = [
   {
     label: '数据类型',
     field: 'dataType',
+  },
+  {
+    label: '精度',
+    field: 'ratio',
   },
 ];
 
@@ -116,6 +120,7 @@ export const debugDataItems: DetailItem[] = [
     field: 'w1',
     showPlaceholder: false,
     format: () => '',
+    show: (value, data) => data.mode == DebugMode.Red,
   },
   ...debugBaseItems.slice(6),
   {
@@ -127,5 +132,6 @@ export const debugDataItems: DetailItem[] = [
     field: 'w2',
     showPlaceholder: false,
     format: () => '',
+    show: (value, data) => data.mode == DebugMode.Red,
   },
 ];

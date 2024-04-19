@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-18 09:34:56
- * @LastEditTime: 2024-04-18 14:38:27
+ * @LastEditTime: 2024-04-19 09:07:15
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\Debug\index.tsx
  */
@@ -60,9 +60,8 @@ const Debug: React.FC<DebugType> = (props) => {
             message.success('操作成功');
             data.mode = mode;
             data.dateTime = moment().format('YYYY-MM-DD HH:mm:ss');
-            setDebugData((prevData) => {
-              return [...prevData, data];
-            });
+            setDebugData([data]);
+            setValue(data?.responseBody?.dataValue);
           }
         });
       } else {
@@ -109,34 +108,33 @@ const Debug: React.FC<DebugType> = (props) => {
     const result: React.ReactNode[] = [];
     debugData?.forEach?.((item) => {
       result.push(
-        <Timeline.Item
-          dot={item.mode == DebugMode.Red ? '读操作' : '写操作'}
-          color={item.mode == DebugMode.Red ? 'blue' : 'green'}
-        >
-          <div className="ml20 pt2 pb12">{item.dateTime}</div>
-          <Card>
-            <Detail
-              className={styles.detail}
-              title={`request：${item.request}`}
-              items={item.mode == DebugMode.Red ? debugAddressItems : debugDataItems}
-              data={item.requestBody}
-              layout="vertical"
-              column={8}
-              bordered
-              size="small"
-            />
-            <Detail
-              className={`mt12 ${styles.detail}`}
-              title={`response：${item.response}`}
-              items={debugDataItems}
-              data={item.responseBody}
-              layout="vertical"
-              column={8}
-              bordered
-              size="small"
-            />
-          </Card>
-        </Timeline.Item>,
+        // <Timeline.Item
+        //   dot={item.mode == DebugMode.Red ? '读操作' : '写操作'}
+        //   color={item.mode == DebugMode.Red ? 'blue' : 'green'}
+        // >
+        <Card>
+          <Detail
+            className={styles.detail}
+            title={`request：${item.request}`}
+            items={item.mode == DebugMode.Red ? debugAddressItems : debugDataItems}
+            data={{ ...item.requestBody, mode: item.mode }}
+            layout="vertical"
+            column={item.mode == DebugMode.Red ? 8 : 7}
+            bordered
+            size="small"
+          />
+          <Detail
+            className={`mt12 ${styles.detail}`}
+            title={`response：${item.response}`}
+            items={debugDataItems}
+            data={{ ...item.responseBody, mode: item.mode }}
+            layout="vertical"
+            column={item.mode == DebugMode.Red ? 8 : 7}
+            bordered
+            size="small"
+          />
+        </Card>,
+        // </Timeline.Item>,
       );
     });
     return result;
@@ -149,10 +147,6 @@ const Debug: React.FC<DebugType> = (props) => {
     }
   }, [open]);
 
-  useEffect(() => {
-    containRef?.current?.scrollTo?.(0, containRef?.current?.scrollHeight);
-  }, [debugData]);
-
   return (
     <>
       <DetailDialog
@@ -164,15 +158,16 @@ const Debug: React.FC<DebugType> = (props) => {
         detailProps={{
           items: baseInfoItems,
           data: debugInfo,
-          column: 3,
+          column: 4,
         }}
         append={
           <>
             <Detail className="mt12" items={valueItems} data={{}} />
             <div ref={containRef} className={styles.timeline}>
               {timeItems.length ? (
-                <Timeline>{timeItems}</Timeline>
+                timeItems
               ) : (
+                // <Timeline>{timeItems}</Timeline>
                 <div className="tx-center pt20">
                   <Empty />
                 </div>
