@@ -31,7 +31,7 @@ export const columns: YTProColumns<any>[] = [
   },
   {
     title: '名称',
-    dataIndex: 'metaName',
+    dataIndex: 'pointName',
     width: 150,
     ellipsis: true,
   },

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-17 15:04:41
+ * @LastEditTime: 2024-04-22 09:03:20
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control\helper.ts
  */
@@ -190,7 +190,6 @@ export const baseInfoItems: any = [
                 1: '有效',
               },
             },
-            tip: '仅系统工作模式为手动控制可用',
           },
         ],
       },

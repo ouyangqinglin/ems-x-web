@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-17 16:37:32
- * @LastEditTime: 2024-04-19 09:57:08
+ * @LastEditTime: 2024-04-19 11:23:51
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\PageTree\index.tsx
  */
@@ -46,9 +46,10 @@ const PageTree: React.FC<PageTreeType> = (props) => {
   );
 
   useEffect(() => {
-    if (antMenus?.[0]?.sourceId) {
-      setSelectedKeys([antMenus?.[0]?.sourceId]);
-      onSelect?.(antMenus?.[0]?.sourceId);
+    const firstMenu = antMenus?.[0]?.children?.[0] || antMenus?.[0];
+    if (firstMenu?.sourceId) {
+      setSelectedKeys([firstMenu?.sourceId]);
+      onSelect?.(firstMenu?.sourceId);
     }
   }, [antMenus]);
 
