@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-10 13:53:50
+ * @LastEditTime: 2024-04-25 09:49:51
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\EnergyManagement\helper.ts
  */
@@ -170,7 +170,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50964',
             name: '1 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -183,7 +182,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50966',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -196,7 +194,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50968',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -209,7 +206,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '50969',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -228,7 +224,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50970',
             name: '2 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -241,7 +236,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50972',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -254,7 +248,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50974',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -265,9 +258,8 @@ export const peakShavingValleyFillingItems: any = [
             },
           },
           {
-            id: '50965',
+            id: '50975',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -286,7 +278,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50976',
             name: '3 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -299,7 +290,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50978',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -312,7 +302,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50980',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -325,7 +314,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '50981',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -344,7 +332,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50982',
             name: '4 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -357,7 +344,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50984',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -370,7 +356,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50986',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -381,9 +366,8 @@ export const peakShavingValleyFillingItems: any = [
             },
           },
           {
-            id: '50967',
+            id: '50987',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -402,7 +386,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50988',
             name: '5 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -415,7 +398,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50990',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -428,7 +410,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50992',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -441,7 +422,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '50993',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -460,7 +440,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50994',
             name: '6 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -473,7 +452,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50996',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -486,7 +464,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '50998',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -499,7 +476,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '50999',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -518,7 +494,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51000',
             name: '7 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -531,7 +506,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51002',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -544,7 +518,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51004',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -557,7 +530,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '51005',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -576,7 +548,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51006',
             name: '8 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -589,7 +560,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51008',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -602,7 +572,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51010',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -615,7 +584,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '51011',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -634,7 +602,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51012',
             name: '9 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -647,7 +614,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51014',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -660,7 +626,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51016',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -673,7 +638,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '51017',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
@@ -692,7 +656,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51018',
             name: '10 开始时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -705,7 +668,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51020',
             name: '结束时间',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 length: 5,
@@ -718,7 +680,6 @@ export const peakShavingValleyFillingItems: any = [
             id: '51022',
             name: '充放电模式',
             type: 'property',
-            buttons: ['refresh', 'edit'],
             dataType: {
               type: 'enum',
               specs: {
@@ -731,7 +692,6 @@ export const peakShavingValleyFillingItems: any = [
           {
             id: '51023',
             name: '固定功率',
-            buttons: ['refresh', 'edit'],
             dataType: {
               specs: {
                 unit: 'kW',
