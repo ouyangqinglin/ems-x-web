@@ -89,7 +89,11 @@ export const baseInfoItems: any = [
         name: '主从标识',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '从机',
+            1: '主机',
+          },
+          type: 'enum',
         },
       },
       {
@@ -185,7 +189,7 @@ export const baseInfoItems: any = [
         dataType: commonDataType,
       },
       {
-        id: '230',
+        id: '231',
         name: 'BMS 通信',
         type: 'property',
         dataType: commonDataType,
@@ -896,7 +900,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '334',
+            id: '5232',
             type: 'property',
             name: '累计充电量',
             dataType: {
@@ -907,7 +911,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '336',
+            id: '5234',
             type: 'property',
             name: '累计放电量',
             dataType: {

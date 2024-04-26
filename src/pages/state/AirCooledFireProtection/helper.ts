@@ -110,9 +110,8 @@ export const statusItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            '0': '运行',
-            '1': '停止',
-            '2': '故障',
+            '0': '正常',
+            '1': '告警',
           },
         },
       },

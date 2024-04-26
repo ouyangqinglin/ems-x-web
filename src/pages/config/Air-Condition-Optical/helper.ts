@@ -153,7 +153,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -165,7 +165,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -177,7 +177,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -189,7 +189,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -201,7 +201,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -213,7 +213,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -225,7 +225,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -237,7 +237,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -249,7 +249,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '%',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -270,7 +270,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -339,7 +339,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: 'V',
               },
@@ -351,7 +351,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: 'V',
               },
@@ -372,7 +372,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -384,7 +384,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -396,7 +396,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -408,7 +408,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },

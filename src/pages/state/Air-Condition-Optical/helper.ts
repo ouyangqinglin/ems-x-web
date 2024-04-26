@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-04-25 17:45:44
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\Air-Condition-Optical\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
@@ -74,7 +74,7 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '485',
+            0: 'RS485',
             1: '未知',
           },
         },

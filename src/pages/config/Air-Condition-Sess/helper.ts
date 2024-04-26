@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-08 17:28:32
+ * @LastEditTime: 2024-04-25 17:39:50
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\Air-Condition-Sess\helper.ts
  */
@@ -88,7 +88,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -100,7 +100,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -112,7 +112,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -124,7 +124,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -136,7 +136,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -148,7 +148,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -160,7 +160,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -172,7 +172,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -184,7 +184,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -205,7 +205,7 @@ export const runValueItems: any = [
               specs: {
                 unit: '℃',
               },
-              type: 'string',
+              type: 'int',
             },
           },
           {
@@ -273,7 +273,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: 'V',
               },
@@ -285,7 +285,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: 'V',
               },
@@ -306,7 +306,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -318,7 +318,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -330,7 +330,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },
@@ -342,7 +342,7 @@ export const runValueItems: any = [
             buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
-              type: 'string',
+              type: 'int',
               specs: {
                 unit: '°C',
               },

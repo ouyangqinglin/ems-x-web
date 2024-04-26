@@ -73,7 +73,7 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '485',
+            0: 'RS485',
             1: '未知',
           },
         },

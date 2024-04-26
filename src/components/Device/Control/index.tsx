@@ -67,6 +67,7 @@ export type ControlType = {
   detailProps?: Omit<DetailProps, 'items' | 'data'>;
   onSuccess?: (data: any) => void;
   beforeSubmit?: (data: Record<string, any>) => void | boolean | any;
+  beforeRefresh?: (data: Record<string, any>) => any;
 };
 
 const singleFieldName = 'arryField';
@@ -81,6 +82,7 @@ const Control: React.FC<ControlType> = memo((props) => {
     detailProps,
     onSuccess,
     beforeSubmit,
+    beforeRefresh,
   } = props;
 
   const [realTimeData, setRealTimeData] = useState<Record<string, any>>({});
@@ -180,7 +182,8 @@ const Control: React.FC<ControlType> = memo((props) => {
       const refreshParams = {
         data: ids,
       };
-      refreshDeviceData?.(refreshParams)?.then?.((data) => {
+      const result = beforeRefresh?.(refreshParams);
+      refreshDeviceData?.(result || refreshParams)?.then?.((data) => {
         if (data.code == '200' && showTip) {
           message.success(
             formatMessage({ id: 'device.refreshSuccess', defaultMessage: '刷新成功' }),
@@ -188,7 +191,7 @@ const Control: React.FC<ControlType> = memo((props) => {
         }
       });
     },
-    [refreshDeviceData, deviceId],
+    [refreshDeviceData, deviceId, beforeRefresh],
   );
 
   const passAuthority = useCallback(

@@ -2,10 +2,23 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-25 09:49:51
+ * @LastEditTime: 2024-04-26 11:40:46
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\EnergyManagement\helper.ts
  */
+
+export const timeRangeFieldConfig = [
+  { start: '50964', end: '50966', mode: '50968', power: '50969' },
+  { start: '50970', end: '50972', mode: '50974', power: '50975' },
+  { start: '50976', end: '50978', mode: '50980', power: '50981' },
+  { start: '50982', end: '50984', mode: '50986', power: '50987' },
+  { start: '50988', end: '50990', mode: '50992', power: '50993' },
+  { start: '50994', end: '50996', mode: '50998', power: '50999' },
+  { start: '51000', end: '51002', mode: '51004', power: '51005' },
+  { start: '51006', end: '51008', mode: '51010', power: '51011' },
+  { start: '51012', end: '51014', mode: '51016', power: '51017' },
+  { start: '51018', end: '51020', mode: '51022', power: '51023' },
+];
 
 // 自发自用模式参数设置 - 暂时不写
 export const spontaneousSelfUseItems: any = [
@@ -158,548 +171,56 @@ export const peakShavingValleyFillingItems: any = [
         name: '时间段设置(格式：hh:mm)',
         type: 'service',
         buttons: ['refresh', 'edit'],
-        form: {
-          span: 6,
-        },
         children: [
-          // [削峰填谷参数]时段1-开始时间	50964	[削峰填谷参数]时段1-开始时间	hh:mm
-          // [削峰填谷参数]时段1-结束时间	50966	[削峰填谷参数]时段1-结束时间	hh:mm
-          // [削峰填谷参数]时段1-充放电模式	50968	[削峰填谷参数]时段1-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段1-固定功率	50969	[削峰填谷参数]时段1-固定功率
           {
-            id: '50964',
-            name: '1 开始时间',
+            id: 'chargeMode',
+            name: '时间段设置',
             type: 'property',
             dataType: {
               specs: {
-                length: 5,
+                item: {
+                  specs: [
+                    {
+                      id: 'time',
+                      name: '运行时段',
+                      dataType: {
+                        specs: {
+                          length: 11,
+                        },
+                        type: 'timeRange',
+                      },
+                    },
+                    {
+                      id: 'mode',
+                      name: '充放电模式',
+                      dataType: {
+                        specs: {
+                          0: '放电',
+                          1: '充电',
+                          // 10: '未启用',
+                        },
+                        type: 'enum',
+                      },
+                    },
+                    {
+                      id: 'power',
+                      name: '固定功率',
+                      dataType: {
+                        specs: {
+                          unit: 'kW',
+                          min: '-100000',
+                          unitName: '千瓦',
+                          max: '10000000000',
+                        },
+                        type: 'double',
+                      },
+                    },
+                  ],
+                  type: 'struct',
+                },
+                size: 10,
               },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50966',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50968',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50969',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段2-开始时间	50970	[削峰填谷参数]时段2-开始时间	hh:mm
-          // [削峰填谷参数]时段2-结束时间	50972	[削峰填谷参数]时段2-结束时间	hh:mm
-          // [削峰填谷参数]时段2-充放电模式	50974	[削峰填谷参数]时段2-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段2-固定功率	50965	[削峰填谷参数]时段2-固定功率
-          {
-            id: '50970',
-            name: '2 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50972',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50974',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50975',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段3-开始时间	50976	[削峰填谷参数]时段3-开始时间	hh:mm
-          // [削峰填谷参数]时段3-结束时间	50978	[削峰填谷参数]时段3-结束时间	hh:mm
-          // [削峰填谷参数]时段3-充放电模式	50980	[削峰填谷参数]时段3-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段3-固定功率	50981	[削峰填谷参数]时段3-固定功率
-          {
-            id: '50976',
-            name: '3 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50978',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50980',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50981',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段4-开始时间	50982	[削峰填谷参数]时段4-开始时间	hh:mm
-          // [削峰填谷参数]时段4-结束时间	50984	[削峰填谷参数]时段4-结束时间	hh:mm
-          // [削峰填谷参数]时段4-充放电模式	50986	[削峰填谷参数]时段4-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段4-固定功率	50967	[削峰填谷参数]时段4-固定功率
-          {
-            id: '50982',
-            name: '4 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50984',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50986',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50987',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段5-开始时间	50988	[削峰填谷参数]时段5-开始时间	hh:mm
-          // [削峰填谷参数]时段5-结束时间	50990	[削峰填谷参数]时段5-结束时间	hh:mm
-          // [削峰填谷参数]时段5-充放电模式	50992	[削峰填谷参数]时段5-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段5-固定功率	50993	[削峰填谷参数]时段5-固定功率
-          {
-            id: '50988',
-            name: '5 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50990',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50992',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50993',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段6-开始时间	50994	[削峰填谷参数]时段6-开始时间	hh:mm
-          // [削峰填谷参数]时段6-结束时间	50996	[削峰填谷参数]时段6-结束时间	hh:mm
-          // [削峰填谷参数]时段6-充放电模式	50998	[削峰填谷参数]时段6-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段6-固定功率	50999	[削峰填谷参数]时段6-固定功率
-          {
-            id: '50994',
-            name: '6 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50996',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '50998',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '50999',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段7-开始时间	51000	[削峰填谷参数]时段7-开始时间	hh:mm
-          // [削峰填谷参数]时段7-结束时间	51002	[削峰填谷参数]时段7-结束时间	hh:mm
-          // [削峰填谷参数]时段7-充放电模式	51004	[削峰填谷参数]时段7-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段7-固定功率	51005	[削峰填谷参数]时段7-固定功率
-          {
-            id: '51000',
-            name: '7 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51002',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51004',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '51005',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段8-开始时间	51006	[削峰填谷参数]时段8-开始时间	hh:mm
-          // [削峰填谷参数]时段8-结束时间	51008	[削峰填谷参数]时段8-结束时间	hh:mm
-          // [削峰填谷参数]时段8-充放电模式	51010	[削峰填谷参数]时段8-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段8-固定功率	51011	[削峰填谷参数]时段8-固定功率
-          {
-            id: '51006',
-            name: '8 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51008',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51010',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '51011',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段9-开始时间	51012	[削峰填谷参数]时段9-开始时间	hh:mm
-          // [削峰填谷参数]时段9-结束时间	51014	[削峰填谷参数]时段9-结束时间	hh:mm
-          // [削峰填谷参数]时段9-充放电模式	51016	[削峰填谷参数]时段9-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段9-固定功率	51017	[削峰填谷参数]时段9-固定功率
-          {
-            id: '51012',
-            name: '9 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51014',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51016',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '51017',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
-            },
-          },
-          // [削峰填谷参数]时段10-开始时间	51018	[削峰填谷参数]时段10-开始时间	hh:mm
-          // [削峰填谷参数]时段10-结束时间	51020	[削峰填谷参数]时段10-结束时间	hh:mm
-          // [削峰填谷参数]时段10-充放电模式	51022	[削峰填谷参数]时段10-充放电模式	[10-未启用,0-放电,1-充电,]
-          // [削峰填谷参数]时段10-固定功率	51023	[削峰填谷参数]时段10-固定功率
-          {
-            id: '51018',
-            name: '10 开始时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51020',
-            name: '结束时间',
-            type: 'property',
-            dataType: {
-              specs: {
-                length: 5,
-              },
-
-              type: 'string',
-            },
-          },
-          {
-            id: '51022',
-            name: '充放电模式',
-            type: 'property',
-            dataType: {
-              type: 'enum',
-              specs: {
-                0: '放电',
-                1: '充电',
-                10: '未启用',
-              },
-            },
-          },
-          {
-            id: '51023',
-            name: '固定功率',
-            dataType: {
-              specs: {
-                unit: 'kW',
-                min: '-100000',
-                unitName: '千瓦',
-                max: '10000000000',
-              },
-              type: 'double',
+              type: 'array',
             },
           },
         ],

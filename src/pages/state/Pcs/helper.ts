@@ -69,7 +69,7 @@ export const baseInfoItems: any = [
         type: 'property',
         dataType: {
           specs: {
-            0: '485',
+            0: 'RS485',
             1: '未知',
           },
           type: 'enum',
@@ -778,7 +778,7 @@ export const gridSideItems: any = [
         },
       },
       {
-        id: '3714',
+        id: '3715',
         name: '电网A相电压',
         type: 'property',
         dataType: {
@@ -789,7 +789,7 @@ export const gridSideItems: any = [
         },
       },
       {
-        id: '3715',
+        id: '3716',
         name: '电网B相电压',
         type: 'property',
         dataType: {
@@ -800,7 +800,7 @@ export const gridSideItems: any = [
         },
       },
       {
-        id: '3716',
+        id: '3717',
         name: '电网C相电压',
         type: 'property',
         span: 2,

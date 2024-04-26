@@ -17,10 +17,11 @@ type UseDeviceDataType = {
   manual?: boolean;
   isInterval?: boolean;
   interval?: number;
+  formatResult?: (data: any) => any;
 };
 
 const useDeviceData = (options?: UseDeviceDataType) => {
-  const { manual, isInterval = true, interval } = options || {};
+  const { manual, isInterval = true, interval, formatResult } = options || {};
 
   const { data: page } = useModel('page');
   const { sourceId } = useSourceId();
@@ -40,7 +41,8 @@ const useDeviceData = (options?: UseDeviceDataType) => {
         ...res?.data,
       };
       if (res.code == RequestCode.Success) {
-        setRealTimeData(res.data);
+        const result = formatResult?.(res.data);
+        setRealTimeData(result || res.data);
       }
       return res.data;
     },

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-22 09:03:20
+ * @LastEditTime: 2024-04-25 17:47:43
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control\helper.ts
  */
@@ -27,7 +27,7 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '本地',
+                0: '就地',
                 1: '远程',
               },
             },
@@ -77,7 +77,7 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '本地',
+                0: '就地',
                 1: '远程',
               },
             },
@@ -164,7 +164,7 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '有效',
+                1: '执行',
               },
             },
             disabled: "$data['50400']!=0 || $data['50401']!=2",
@@ -187,7 +187,7 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                1: '有效',
+                1: '执行',
               },
             },
           },

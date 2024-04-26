@@ -82,7 +82,11 @@ export const baseInfoItems: any = [
         name: '主从标识',
         type: 'property',
         dataType: {
-          type: 'string',
+          specs: {
+            0: '从机',
+            1: '主机',
+          },
+          type: 'enum',
         },
       },
       {
