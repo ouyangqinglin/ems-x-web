@@ -42,7 +42,7 @@ import {
 import ConfigModal from '../ConfigModal';
 import type { ProFormColumnsType } from '@ant-design/pro-components';
 import { getColumnsLength, timeRangeColumn, validatorTime } from './helper';
-import { merge } from 'lodash';
+import { merge, mergeWith } from 'lodash';
 import { Button, Modal, Spin, message, Typography, Switch } from 'antd';
 import { useBoolean } from 'ahooks';
 import { TimeRangePicker, DateStamp } from '@/components/Time';
@@ -930,13 +930,21 @@ const Control: React.FC<ControlType> = memo((props) => {
 
   useEffect(() => {
     setRealTimeData((prevData) => {
-      return merge({}, prevData, allRealTimeData);
+      return mergeWith({}, prevData, allRealTimeData, (_, newValue) => {
+        if (Array.isArray(newValue)) {
+          return newValue;
+        }
+      });
     });
   }, [allRealTimeData]);
 
   useEffect(() => {
     setRealTimeData((prevData) => {
-      return merge({}, prevData, partRealTimeData);
+      return mergeWith({}, prevData, partRealTimeData, (_, newValue) => {
+        if (Array.isArray(newValue)) {
+          return newValue;
+        }
+      });
     });
   }, [partRealTimeData]);
 
