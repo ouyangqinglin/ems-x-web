@@ -52,4 +52,6 @@ export default {
   'menu.state.batteryPackLiquid': '电池组',
   'menu.system': '系统管理',
   'menu.system.metadataConfig': '元数据配置',
+  'menu.system.systemMonitor': '系统监控',
+  'menu.upgrade': '升级管理',
 };

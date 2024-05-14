@@ -22,3 +22,10 @@ export const debugMetadata = (data: any) => {
     data,
   });
 };
+
+export const getSystemMonitor = (data: any) => {
+  return request(`/v1/system/system-monitor`, {
+    method: 'POST',
+    data,
+  });
+};

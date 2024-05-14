@@ -430,6 +430,30 @@ const routers: RouterType[] = [
         keepAlive: true,
         locale: 'menu.system.metadataConfig',
       },
+      {
+        path: 'system-monitor',
+        name: 'systemMonitor',
+        component: './system/SystemMonitor',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.system.systemMonitor',
+      },
+    ],
+  },
+  {
+    path: '/upgrade',
+    name: 'upgrade',
+    component: '@/layouts/TabsLayout',
+    locale: 'menu.upgrade',
+    routes: [
+      {
+        path: 'upgrade-index',
+        name: 'upgradeIndex',
+        component: './upgrade/UpgaradeIndex',
+        wrappers: ['@/components/KeepAlive'],
+        keepAlive: true,
+        locale: 'menu.upgrade',
+      },
     ],
   },
   {
