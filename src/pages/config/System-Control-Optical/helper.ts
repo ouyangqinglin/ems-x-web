@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-25 17:48:45
+ * @LastEditTime: 2024-05-16 13:55:32
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control-Optical\helper.ts
  */
@@ -110,7 +110,7 @@ export const baseInfoItems: any = [
                 4: '售电模式',
               },
             },
-            disabled: "$data['50400'] != 0",
+            disabled: "$data['11000'] != 0",
           },
         ],
       },
@@ -136,7 +136,7 @@ export const baseInfoItems: any = [
                 4: '复位',
               },
             },
-            disabled: "$data['50400']!=0",
+            disabled: "$data['11000']!=0",
           },
         ],
       },
@@ -175,7 +175,7 @@ export const baseInfoItems: any = [
                 1: '执行',
               },
             },
-            disabled: "$data['50400']!=0 || $data['50401']!=2",
+            disabled: "$data['11000']!=0 || $data['11001']!=2",
             tip: '仅系统工作模式为手动控制可用',
           },
         ],
@@ -267,7 +267,7 @@ export const batteryModeItems: any = [
               },
               type: 'enum',
             },
-            disabled: "$data['50400']!=0 || $data['50401']!=2",
+            disabled: "$data['11000']!=0 || $data['11001']!=2",
           },
         ],
       },
