@@ -1,0 +1,86 @@
+.monitor {
+  padding: 24px;
+  overflow: hidden;
+  .card {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    .icon {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+      width: 60px;
+      margin: 0 20px;
+      img {
+        width: 48px;
+      }
+      @media screen and (max-width: 1556px) {
+        width: 56px;
+        margin: 0 6px;
+        img {
+          width: 42px;
+        }
+      }
+    }
+    .title {
+      color: #909399;
+      @media screen and (max-width: 1556px) {
+        font-size: 12px;
+      }
+    }
+    :global {
+      .ant-card-body {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 20px 16px;
+        @media screen and (max-width: 1556px) {
+          padding: 10px 6px;
+        }
+      }
+    }
+  }
+  .cloudBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .cloud {
+    width: 70px;
+    height: 70px;
+  }
+  .chart {
+    width: 100%;
+    height: 400px;
+  }
+  .thread {
+    display: flex;
+    justify-content: space-between;
+  }
+  .threadTable {
+    .item {
+      display: grid;
+      grid-template-columns: 1fr 100px 100px;
+      @media screen and (max-width: 1556px) {
+        grid-template-columns: 1fr 70px 70px;
+      }
+      :nth-child(1) {
+        color: #909399;
+      }
+      :nth-child(2) {
+        text-align: center;
+      }
+      :nth-child(3) {
+        text-align: right;
+      }
+      p {
+        color: #007dff !important;
+      }
+    }
+  }
+  .threadName {
+    max-width: 88%;
+    overflow: hidden;
+    white-space: no-wrap;
+    text-overflow: ellipsis;
+  }
+}
