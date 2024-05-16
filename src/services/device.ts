@@ -29,6 +29,13 @@ export const editDeviceData = (data: any) => {
   });
 };
 
+export const getIndexChart = (data: any) => {
+  return request('/v1/system/custom/chart', {
+    method: 'POST',
+    data,
+  });
+};
+
 export const getSystemRunStatus = () => {
   return request('/v1/system/data/deviceStatus', {
     method: 'GET',

@@ -3,27 +3,14 @@ import styles from './index.less';
 import { useToggle } from 'ahooks';
 import moment from 'moment/moment';
 import TimeButtonGroup, { TimeType } from '@/components/TimeButtonGroup';
-import { getDeviceData } from '@/services/device';
+import { getIndexChart } from '@/services/device';
 import * as echarts from 'echarts';
 import { DatePicker, Radio } from 'antd';
 import TypeChart from '@/components/Chart/TypeChart';
 
-let arr1 = localStorage.getItem('arr1') ? JSON.parse(localStorage.getItem('arr1')) : [],
-  arr2 = localStorage.getItem('arr2') ? JSON.parse(localStorage.getItem('arr2')) : [],
-  arr3 = localStorage.getItem('arr3') ? JSON.parse(localStorage.getItem('arr3')) : [],
-  arrTime = localStorage.getItem('arrTime') ? JSON.parse(localStorage.getItem('arrTime')) : [];
-
-const day = new Date().getDate();
-if (!localStorage.getItem('day')) localStorage.setItem('day', day);
-else {
-  if (+day !== +localStorage.getItem('day')) {
-    localStorage.setItem('day', day);
-    arr1 = [];
-    arr2 = [];
-    arr3 = [];
-    arrTime = [];
-  }
-}
+const arr1 = [],
+  arr2 = [],
+  arr3 = [];
 const optionBat = {
   legend: {
     data: ['充放电功率'],
@@ -93,67 +80,118 @@ const seriesBar = [
   },
 ];
 
-type ChartType = {
-  sourceIds?: string[];
-};
-
 const Chart: React.FC<ChartType> = (props) => {
-  const { sourceIds = ['313', '334', '336'] } = props;
-
-  const [showDatePicker, { set }] = useToggle(false);
+  const [showDatePicker, { set }] = useToggle(true);
   const [date, setDate] = useState(moment());
   const [picker, setPicker] = useState<
     'year' | 'month' | 'time' | 'date' | 'week' | 'quarter' | undefined
   >();
-  // const [timeType, setTimeType] = useState<TimeType>(TimeType.TOTAL);
+  const [timeType, setTimeType] = useState<TimeType>(TimeType.DAY);
   const [chartType, setChartType] = useState(0);
   const [chartData, setChartData] = useState([]);
   const timerOne = useRef();
   const newChartType = useRef(chartType);
   useEffect(() => {
-    getChartData();
-  }, []);
+    getData();
+  }, [chartType, timeType]);
+
+  function computedTime(time: string, type: number): string {
+    const d = new Date();
+    const year = d.getFullYear(); // 获取当前年份，例如：2021
+    const month =
+      (d.getMonth() + 1).toString().length === 1 ? '0' + (d.getMonth() + 1) : d.getMonth() + 1; // 获取当前月份，注意需要加1，例如：9
+    const day = d.getDate() < 10 ? '0' + d.getDate() : d.getDate(); // 获取当前日期，例如：22
+    if (type === 0) {
+      // '2024-05-16 00:00:00'
+      return `${year}-${month}-${day} ${time}:00:00`;
+    }
+    if (type === 1) {
+      // '2024-05-16'
+      if (+time < 10) return `${year}-${month}-0${time}`;
+      else return `${year}-${month}-${time}`;
+    }
+    if (type === 2) {
+      // '2024-01'
+      if (+time < 10) return `${year}-0${time}`;
+      else return `${year}-${time}`;
+    }
+    if (type === 3) {
+      return time;
+    }
+  }
+  function getData() {
+    if (timerOne?.current) clearInterval(timerOne.current);
+    getIndexChart({ TimeType: timeType, DataType: chartType })
+      .then((res) => {
+        if (res?.data?.powerData && chartType === 0) {
+          // 充放电功率
+          const powerData = res?.data?.powerData;
+          for (const key in powerData) {
+            if (powerData.hasOwnProperty(key))
+              arr1.push({
+                label:
+                  timeType === 0
+                    ? computedTime(key, timeType)
+                    : computedTime(key.slice(0, -1), timeType),
+                value: +powerData[key],
+              });
+          }
+        }
+        if (res?.data?.chargeData && chartType === 1) {
+          // 充电量
+          const chargeData = res?.data?.chargeData;
+          for (const key in chargeData) {
+            if (chargeData.hasOwnProperty(key))
+              arr2.push({
+                label:
+                  timeType === 0
+                    ? computedTime(key, timeType)
+                    : computedTime(key.slice(0, -1), timeType),
+                value: +chargeData[key],
+              });
+          }
+        }
+        if (res?.data?.disChargeData && chartType === 1) {
+          // 放电量
+          const disChargeData = res?.data?.disChargeData;
+          for (const key in disChargeData) {
+            if (disChargeData.hasOwnProperty(key))
+              arr3.push({
+                label:
+                  timeType === 0
+                    ? computedTime(key, timeType)
+                    : computedTime(key.slice(0, -1), timeType),
+                value: +disChargeData[key],
+              });
+          }
+        }
+        const chartDataLeft = [
+          {
+            name: '充放电功率',
+            data: arr1,
+          },
+        ];
+        const chartDataRight = [
+          {
+            name: '充电量',
+            data: arr2,
+          },
+          {
+            name: '放电量',
+            data: arr3,
+          },
+        ];
+        if (+newChartType.current === 1) setChartData(chartDataRight);
+        else setChartData(chartDataLeft);
+      })
+      .finally(() => {
+        if (timeType === 0) timerOne.current = setInterval(() => getChartData(), 900000);
+      });
+  }
   useEffect(() => {
     // 更新最新的state值到ref中
     newChartType.current = chartType;
   });
-  function getChartData() {
-    if (timerOne?.current) clearInterval(timerOne.current);
-    getDeviceData(1, { data: sourceIds })
-      .then((res) => {
-        if (+res.code === 200) {
-          arrTime.push(res?.data?.refreshTime);
-          arr1.push(res?.data[sourceIds[0]]);
-          arr2.push(res?.data[sourceIds[1]]);
-          arr3.push(res?.data[sourceIds[2]]);
-          localStorage.setItem('arrTime', JSON.stringify(arrTime));
-          localStorage.setItem('arr1', JSON.stringify(arr1));
-          localStorage.setItem('arr2', JSON.stringify(arr2));
-          localStorage.setItem('arr3', JSON.stringify(arr3));
-          const chartDataLeft = [
-            {
-              name: '充放电功率',
-              data: arr1?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
-            },
-          ];
-          const chartDataRight = [
-            {
-              name: '充电量',
-              data: arr2?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
-            },
-            {
-              name: '放电量',
-              data: arr3?.map?.((item, index) => ({ label: arrTime[index], value: +item })),
-            },
-          ];
-          if (+newChartType.current === 1) setChartData(chartDataRight);
-          else setChartData(chartDataLeft);
-        }
-      })
-      .finally(() => {
-        timerOne.current = setInterval(() => getChartData(), 60000);
-      });
-  }
 
   const changeChartType = (e) => {
     if (+e.target.value === 1) {
@@ -167,12 +205,11 @@ const Chart: React.FC<ChartType> = (props) => {
   };
 
   const onChange = (value) => {
-    console.log(value ? value.format('YYYY-MM-DD') : moment().format('YYYY-MM-DD'));
+    // console.log(value ? value.format('YYYY-MM-DD') : moment().format('YYYY-MM-DD'));
     setDate(value);
   };
   const timeTypeChange = (type: TimeType) => {
-    console.log(type);
-    console.log(date ? date.format('YYYY-MM-DD') : moment().format('YYYY-MM-DD'));
+    // console.log(date ? date.format('YYYY-MM-DD') : moment().format('YYYY-MM-DD'));
     setTimeType(type);
     switch (type) {
       case TimeType.DAY:
@@ -188,7 +225,7 @@ const Chart: React.FC<ChartType> = (props) => {
         set(true);
         break;
       case TimeType.TOTAL:
-        set(false);
+        set(true);
         break;
     }
   };
@@ -203,7 +240,14 @@ const Chart: React.FC<ChartType> = (props) => {
     <>
       <div className={styles.chartBox}>
         <div className={styles.chart}>
-          <TypeChart date={date} key={chartType} option={chartOption} data={chartData} step={1} />
+          <TypeChart
+            type={timeType}
+            date={date}
+            key={chartType}
+            option={chartOption}
+            data={chartData}
+            step={1}
+          />
         </div>
         <div className={styles.radio}>
           <Radio.Group
@@ -217,7 +261,9 @@ const Chart: React.FC<ChartType> = (props) => {
           </Radio.Group>
         </div>
         <div className={styles.time}>
-          {showDatePicker && <DatePicker defaultValue={date} onChange={onChange} picker={picker} />}
+          {!showDatePicker && (
+            <DatePicker defaultValue={date} onChange={onChange} picker={picker} />
+          )}
           <TimeButtonGroup
             style={{
               marginLeft: 20,
