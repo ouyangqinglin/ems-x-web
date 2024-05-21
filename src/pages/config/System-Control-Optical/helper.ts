@@ -238,9 +238,9 @@ export const batteryModeItems: any = [
             buttons: ['refresh'],
             dataType: {
               specs: {
-                0: '充电',
                 1: '启动',
-                2: '放电',
+                2: '充电',
+                3: '放电',
               },
               type: 'enum',
             },
@@ -261,9 +261,9 @@ export const batteryModeItems: any = [
             buttons: ['edit'],
             dataType: {
               specs: {
-                0: '充电',
                 1: '启动',
-                2: '放电',
+                2: '充电',
+                3: '放电',
               },
               type: 'enum',
             },
