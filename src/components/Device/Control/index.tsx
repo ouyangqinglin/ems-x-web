@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 14:38:35
- * @LastEditTime: 2024-04-12 15:49:46
+ * @LastEditTime: 2024-05-21 17:53:28
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\Device\Control\index.tsx
  */
@@ -761,10 +761,10 @@ const Control: React.FC<ControlType> = memo((props) => {
         }
       });
       const columnsLength = getColumnsLength(columns);
-      if (columnsLength < 3) {
+      if (columns.length < 3) {
         columns.forEach((item) => {
           item.colProps = {
-            span: 24 / columnsLength,
+            span: 24 / columns.length,
           };
         });
       }
