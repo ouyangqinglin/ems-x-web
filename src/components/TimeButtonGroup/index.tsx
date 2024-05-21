@@ -18,7 +18,7 @@ export type TimeButtonGroupProps = {
 
 const TimeButtonGroup: FC<TimeButtonGroupProps> = ({ onChange, className, style }) => {
   const intl = useIntl();
-  const [size, setSize] = useState<TimeType>(TimeType.TOTAL);
+  const [size, setSize] = useState<TimeType>(TimeType.DAY);
   const handleClick = (e: RadioChangeEvent) => {
     setSize(e.target.value);
     onChange?.(e.target.value as TimeType);
@@ -33,13 +33,13 @@ const TimeButtonGroup: FC<TimeButtonGroupProps> = ({ onChange, className, style 
       onChange={handleClick}
       buttonStyle="solid"
     >
-      <Radio.Button value={TimeType.DAY} disabled>
+      <Radio.Button value={TimeType.DAY}>
         {intl.formatMessage({ id: 'common.time.day', defaultMessage: '日' })}
       </Radio.Button>
-      <Radio.Button value={TimeType.MONTH} disabled>
+      <Radio.Button value={TimeType.MONTH}>
         {intl.formatMessage({ id: 'common.time.month', defaultMessage: '月' })}
       </Radio.Button>
-      <Radio.Button value={TimeType.YEAR} disabled>
+      <Radio.Button value={TimeType.YEAR}>
         {intl.formatMessage({ id: 'common.time.year', defaultMessage: '年' })}
       </Radio.Button>
       <Radio.Button value={TimeType.TOTAL}>
