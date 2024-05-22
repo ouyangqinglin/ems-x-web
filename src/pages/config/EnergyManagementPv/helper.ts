@@ -196,6 +196,7 @@ export const peakShavingValleyFillingItems: any = [
             id: 'chargeMode',
             name: '时间段设置',
             type: 'property',
+            required: false,
             dataType: {
               specs: {
                 item: {
@@ -473,6 +474,7 @@ export const elePriceItems: any = [
             id: 'priceMode',
             name: '时间段设置',
             type: 'property',
+            required: false,
             dataType: {
               specs: {
                 item: {

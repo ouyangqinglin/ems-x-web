@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-26 11:40:46
+ * @LastEditTime: 2024-05-22 10:39:35
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\EnergyManagement\helper.ts
  */
@@ -176,6 +176,7 @@ export const peakShavingValleyFillingItems: any = [
             id: 'chargeMode',
             name: '时间段设置',
             type: 'property',
+            required: false,
             dataType: {
               specs: {
                 item: {

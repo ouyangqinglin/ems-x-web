@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-11-27 16:00:49
- * @LastEditTime: 2024-01-11 13:52:49
+ * @LastEditTime: 2024-05-22 10:38:01
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\Device\Control\helper.tsx
+ * @FilePath: \ems-x-web\src\components\Device\Control\helper.tsx
  */
 import { MinusCircleOutlined, PlusCircleOutlined } from '@ant-design/icons';
 import { ProFormColumnsType } from '@ant-design/pro-components';
@@ -100,7 +100,7 @@ export const timeRangeColumn: ProFormColumnsType = {
       type: 'link',
       style: { width: 'unset' },
     },
-    min: 1,
+    min: 0,
     deleteIconProps: {
       Icon: (prop: any) => {
         return <MinusCircleOutlined {...prop} style={{ color: '#165dff' }} />;
