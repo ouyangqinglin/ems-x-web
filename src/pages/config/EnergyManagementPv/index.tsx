@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-05-21 17:36:13
+ * @LastEditTime: 2024-05-22 09:48:36
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\EnergyManagementPv\index.tsx
  */
@@ -29,7 +29,7 @@ type ChargeModeType = {
   power?: string;
 };
 
-const formatResult = (data: any, config: ConfigType[]) => {
+const formatResult = (data: any, config: ConfigType[], field: string) => {
   const chargeMode: ChargeModeType[] = Array.from({ length: 10 });
   config.forEach((item, index) => {
     chargeMode[index] = {};
@@ -52,20 +52,20 @@ const formatResult = (data: any, config: ConfigType[]) => {
       break;
     }
   }
-  data.chargeMode = chargeMode;
+  data[field] = chargeMode;
 };
 
 const EnergyManagementPv: React.FC = () => {
   const { realTimeData, run } = useDeviceData({
     isInterval: false,
     formatResult: (data) => {
-      formatResult(data, timeRangeFieldConfig);
-      formatResult(data, priceTimeRangeFieldConfig);
+      formatResult(data, timeRangeFieldConfig, 'chargeMode');
+      formatResult(data, priceTimeRangeFieldConfig, 'priceMode');
     },
   });
 
-  const beforeSubmit = useCallback((formData, config) => {
-    (formData?.chargeMode as ChargeModeType[])?.forEach?.((item, index) => {
+  const beforeSubmit = useCallback((formData, config, field) => {
+    (formData?.[field] as ChargeModeType[])?.forEach?.((item, index) => {
       if (item.time) {
         formData[config[index].start] = item.time.split('-')[0];
         formData[config[index].end] = item.time.split('-')[1];
@@ -77,13 +77,13 @@ const EnergyManagementPv: React.FC = () => {
         formData[config[index].power] = item.power;
       }
     });
-    for (let i = formData?.chargeMode?.length || 0; i < 10; i++) {
+    for (let i = formData?.[field]?.length || 0; i < 10; i++) {
       formData[config[i].mode] = '0';
     }
   }, []);
 
-  const beforeRefresh = useCallback((params, config: ConfigType[]) => {
-    if (params?.data?.includes?.('chargeMode')) {
+  const beforeRefresh = useCallback((params, config: ConfigType[], field) => {
+    if (params?.data?.includes?.(field)) {
       const chargeModeIds: string[] = [];
       config.forEach((item) => {
         chargeModeIds.push(item.start, item.end, item.mode);
@@ -114,8 +114,8 @@ const EnergyManagementPv: React.FC = () => {
             detailProps={{
               column: 3,
             }}
-            beforeSubmit={(data) => beforeSubmit(data, timeRangeFieldConfig)}
-            beforeRefresh={(data) => beforeRefresh(data, timeRangeFieldConfig)}
+            beforeSubmit={(data) => beforeSubmit(data, timeRangeFieldConfig, 'chargeMode')}
+            beforeRefresh={(data) => beforeRefresh(data, timeRangeFieldConfig, 'chargeMode')}
             onSuccess={() => run?.()}
           />
         </Card>
@@ -135,8 +135,8 @@ const EnergyManagementPv: React.FC = () => {
             detailProps={{
               column: 3,
             }}
-            beforeSubmit={(data) => beforeSubmit(data, priceTimeRangeFieldConfig)}
-            beforeRefresh={(data) => beforeRefresh(data, priceTimeRangeFieldConfig)}
+            beforeSubmit={(data) => beforeSubmit(data, priceTimeRangeFieldConfig, 'priceMode')}
+            beforeRefresh={(data) => beforeRefresh(data, priceTimeRangeFieldConfig, 'priceMode')}
             onSuccess={() => run?.()}
           />
         </Card>

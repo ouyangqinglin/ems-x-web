@@ -470,7 +470,7 @@ export const elePriceItems: any = [
         },
         children: [
           {
-            id: 'chargeMode',
+            id: 'priceMode',
             name: '时间段设置',
             type: 'property',
             dataType: {
