@@ -43,5 +43,8 @@ export default {
   'menu.state.batteryPackLiquid': 'battery pack liquid',
   'menu.help': 'Help',
   'menu.system.systemMonitor': 'System Monitor',
+  'menu.system.user': 'User',
+  'menu.system.role': 'Role',
+  'menu.system.menu': 'Menu',
   'menu.upgrade': 'upgrade management',
 };

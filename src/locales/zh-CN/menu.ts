@@ -53,5 +53,8 @@ export default {
   'menu.system': '系统管理',
   'menu.system.metadataConfig': '元数据配置',
   'menu.system.systemMonitor': '系统监控',
+  'menu.system.user': '用户管理',
+  'menu.system.role': '角色管理',
+  'menu.system.menu': '菜单管理',
   'menu.upgrade': '升级管理',
 };

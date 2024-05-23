@@ -46,7 +46,7 @@ export function buildTreeData(
   const config = {
     id: id || 'id',
     name: name || 'name',
-    parentId: parentId || 'parentId',
+    parentId: parentId || 'parent_id',
     parentName: parentName || 'parentName',
     childrenList: children || 'children',
   };
