@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-23 09:32:18
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\index\OpticalStorage\helper.ts
  */
 
 export const pvItems: any = [
@@ -15,7 +15,7 @@ export const pvItems: any = [
     showType: 2,
     children: [
       {
-        id: 'fffffff',
+        id: '1205',
         name: '今日发电量',
         type: 'property',
         dataType: {
