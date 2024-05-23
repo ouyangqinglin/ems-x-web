@@ -58,7 +58,7 @@ const Index: React.FC = (props) => {
           <span className={styles.one} style={{ backgroundColor: status ? '#00B42A' : '' }}></span>
           <span className={styles.oneMethod}>{communityMethods[data?.[179]]}</span>
           <img className={styles.sixImg} src={IconFireFighting} alt="" />
-          {+data?.[194] === 0 ? (
+          {+data?.[1107] === 0 ? (
             <img className={styles.sixStatus} src={IconOn} alt="" />
           ) : (
             <img className={styles.sixStatus} src={IconOff} alt="" />
@@ -66,7 +66,7 @@ const Index: React.FC = (props) => {
           <span className={styles.sixName}>消防</span>
           <span
             className={styles.six}
-            style={{ backgroundColor: +data?.[194] === 0 ? '#00B42A' : '' }}
+            style={{ backgroundColor: +data?.[1107] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.sixMethod}>{communityMethods[data?.[195]]}</span>
           <img className={styles.twoImg} src={IconYtCloud} alt="" />

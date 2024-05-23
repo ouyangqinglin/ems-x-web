@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-04-18 09:37:16
- * @LastEditTime: 2024-04-19 09:15:21
+ * @LastEditTime: 2024-05-23 11:05:56
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\system\MetadataConfig\Debug\helper.tsx
  */
@@ -95,7 +95,7 @@ export const debugAddressItems: DetailItem[] = [
     field: 'address',
   },
   {
-    label: '寄存器地址',
+    label: '寄存器数量',
     field: 'quantity',
   },
   ...debugBaseItems.slice(6),

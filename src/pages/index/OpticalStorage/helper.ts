@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-23 09:32:18
+ * @LastEditTime: 2024-05-23 16:41:13
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\index\OpticalStorage\helper.ts
  */
@@ -165,6 +165,17 @@ export const batteryItems: any = [
       {
         id: '1222',
         name: '累计电池充电量',
+        type: 'property',
+        dataType: {
+          type: 'string',
+          specs: {
+            unit: 'kWh',
+          },
+        },
+      },
+      {
+        id: '1224',
+        name: '累计电池放电量',
         type: 'property',
         dataType: {
           type: 'string',
@@ -788,14 +799,6 @@ export const systemOtherItems: any = [
           {
             id: '5520',
             name: '空调型号',
-            type: 'property',
-            dataType: {
-              type: 'string',
-            },
-          },
-          {
-            id: 'ffff',
-            name: '控制模式',
             type: 'property',
             dataType: {
               type: 'string',

@@ -85,31 +85,27 @@ export const indexAlarmStatusItem: AlarmStatusItemType[] = [
     children: [
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BCMU与EMS通信' }),
-        status: '3000[9,10]',
+        status: '2600[9,10]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BCMU故障' }),
-        status: '3002[4,5]',
+        status: '2602[4,5]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BMU与BCMU通信' }),
-        status: '3000[10,11]',
+        status: '2600[10,11]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BMU故障' }),
-        status: '3002[5,6]',
-      },
-      {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU风扇故障' }),
-        status: '3002[6,7]',
+        status: '2602[5,6]',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: '电池组告警状态' }),
-        status: '386',
+        status: '3066',
       },
       {
         name: formatMessage({ id: 'common', defaultMessage: 'BMS急停' }),
-        status: '3002[14,15]',
+        status: '2602[14,15]',
       },
     ],
   },
