@@ -118,6 +118,7 @@ const Chart: React.FC<ChartType> = (props) => {
     if (type === 3) {
       return time;
     }
+    return '';
   }
   function getData() {
     if (timerOne?.current) clearInterval(timerOne.current);
@@ -185,7 +186,7 @@ const Chart: React.FC<ChartType> = (props) => {
         else setChartData(chartDataLeft);
       })
       .finally(() => {
-        if (timeType === 0) timerOne.current = setInterval(() => getChartData(), 900000);
+        if (timeType === 0) timerOne.current = setInterval(() => getData(), 900000);
       });
   }
   useEffect(() => {

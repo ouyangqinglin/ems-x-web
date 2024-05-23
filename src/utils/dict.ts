@@ -257,11 +257,11 @@ export const cleanUpType = {
 };
 
 export const effectStatus = {
-  0: {
+  1: {
     text: formatMessage({ id: 'taskManage.valid', defaultMessage: '有效' }),
     status: 'Success',
   },
-  1: {
+  0: {
     text: formatMessage({ id: 'taskManage.invalid', defaultMessage: '无效' }),
     status: 'Error',
   },
