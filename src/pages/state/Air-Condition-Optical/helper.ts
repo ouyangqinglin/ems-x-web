@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-04-25 17:45:44
+ * @LastEditTime: 2024-05-24 16:21:16
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Air-Condition-Optical\helper.ts
  */
@@ -90,25 +90,15 @@ export const statusItems: any = [
     type: 'group',
     children: [
       {
-        id: '50',
-        type: 'property',
-        name: '空调机组控制模式',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
         id: '5560',
         type: 'property',
         name: '空调机组工作状态',
         dataType: {
-          dataType: {
-            type: 'enum',
-            specs: {
-              0: '停止',
-              1: '运行',
-              2: '故障',
-            },
+          type: 'enum',
+          specs: {
+            0: '停止',
+            1: '运行',
+            2: '故障',
           },
         },
       },
@@ -224,17 +214,6 @@ export const statusItems: any = [
         id: '5537',
         type: 'property',
         name: '室外温度',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '°C',
-          },
-        },
-      },
-      {
-        id: 'fffffff',
-        type: 'property',
-        name: '室内温度',
         dataType: {
           type: 'string',
           specs: {

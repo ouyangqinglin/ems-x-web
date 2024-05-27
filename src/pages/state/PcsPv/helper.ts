@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-19 13:54:53
+ * @LastEditTime: 2024-05-24 14:41:53
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\PcsPv\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
@@ -605,17 +605,6 @@ export const inverterSideItems: any = [
         },
       },
       {
-        id: '2',
-        name: '逆变视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
         id: '2774',
         name: '逆变功率因数',
         type: 'property',
@@ -717,18 +706,6 @@ export const epsItems: any = [
         dataType: {
           specs: {
             unit: 'kVar',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '6',
-        name: 'EPS 视在功率',
-        type: 'property',
-        span: 2,
-        dataType: {
-          specs: {
-            unit: 'kVA',
           },
           type: 'string',
         },
@@ -859,39 +836,6 @@ export const gridSideItems: any = [
         },
       },
       {
-        id: '1',
-        name: '电网有功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网无功功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网视在功率',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'kW',
-          },
-          type: 'string',
-        },
-      },
-      {
         id: '2741',
         name: '电网频率',
         type: 'property',
@@ -899,14 +843,6 @@ export const gridSideItems: any = [
           specs: {
             unit: 'hz',
           },
-          type: 'string',
-        },
-      },
-      {
-        id: '1',
-        name: '电网功率因数',
-        type: 'property',
-        dataType: {
           type: 'string',
         },
       },

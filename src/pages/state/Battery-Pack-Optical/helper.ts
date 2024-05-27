@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-24 15:27:19
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\Battery-Pack-Optical\helper.ts
  */
 
 export const baseInfoItems: any = [
@@ -44,8 +44,9 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '正常',
-            1: '失联',
+            0: '初始化',
+            1: '断开',
+            2: '已连接',
           },
         },
       },
@@ -777,14 +778,6 @@ export const remoteSignalItems: any = [
             0: '闭合',
             1: '断开',
           },
-        },
-      },
-      {
-        type: 'property',
-        id: '1',
-        name: 'BMS急停信号',
-        dataType: {
-          type: 'string',
         },
       },
     ],

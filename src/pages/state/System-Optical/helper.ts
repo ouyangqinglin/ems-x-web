@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-24 14:25:17
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\System-Optical\helper.ts
  */
 const commonEnumType: any = {
   type: 'enum',
@@ -1285,15 +1285,6 @@ export const statusItems: any = [
         id: 'e',
         children: [
           {
-            id: '1',
-            type: 'property',
-            name: '空调机组控制模式',
-            dataType: {
-              type: 'enum',
-              specs: {},
-            },
-          },
-          {
             id: '5560',
             type: 'property',
             name: '空调机组工作状态',
@@ -1370,7 +1361,7 @@ export const statusItems: any = [
         name: '消防',
         children: [
           {
-            id: '5607',
+            id: '5634',
             type: 'property',
             name: '消防告警状态',
             dataType: {
@@ -1382,7 +1373,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '5608',
+            id: '5635',
             type: 'property',
             name: '主机报警状态',
             dataType: {
@@ -1396,7 +1387,7 @@ export const statusItems: any = [
             },
           },
           {
-            id: '5609',
+            id: '5636',
             type: 'property',
             name: '总故障标志',
             dataType: {

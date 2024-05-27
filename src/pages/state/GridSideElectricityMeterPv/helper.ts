@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-24 18:07:51
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\GridSideElectricityMeterPv\helper.ts
  */
 export const baseInfoItems: any = [
   {
@@ -59,8 +59,9 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            '0': '正常',
-            '1': '失联',
+            '0': '初始化',
+            '1': '断开',
+            2: '已连接',
           },
         },
       },
