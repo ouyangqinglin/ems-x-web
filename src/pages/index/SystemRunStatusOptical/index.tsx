@@ -68,7 +68,7 @@ const Index: React.FC = (props) => {
             className={styles.six}
             style={{ backgroundColor: +data?.[1107] === 0 ? '#00B42A' : '' }}
           ></span>
-          <span className={styles.sixMethod}>{communityMethods[data?.[5606]]}</span>
+          <span className={styles.sixMethod}>{communityMethods[data?.[5633]]}</span>
           <img className={styles.twoImg} src={IconYtCloud} alt="" />
           {+data?.[1102] === 0 ? (
             <img className={styles.twoStatus} src={IconOn} alt="" />
