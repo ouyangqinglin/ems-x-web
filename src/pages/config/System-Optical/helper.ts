@@ -255,7 +255,7 @@ export const otherParamsItems: any = [
             },
           },
           {
-            id: '1',
+            id: '11249',
             name: '数据刷新频率(上位机软件)',
             type: 'property',
             buttons: ['refresh', 'edit'],

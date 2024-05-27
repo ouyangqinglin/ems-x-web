@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-27 13:59:22
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\Air-Condition-Optical\helper.ts
  */
 
 export const baseInfoItems: any = [
@@ -52,7 +52,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '5501',
+            id: '5531',
             name: '空调软件版本',
             type: 'property',
             dataType: {
@@ -75,6 +75,7 @@ export const airSetItems: any = [
         id: 'a',
         name: '空调设置',
         type: 'service',
+        buttons: ['refresh', 'edit'],
         children: [
           {
             id: '12500',
@@ -105,7 +106,7 @@ export const airSetItems: any = [
           {
             id: '12602',
             name: '恢复出厂参数',
-            buttons: ['edit'],
+            buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
               specs: {
@@ -117,7 +118,7 @@ export const airSetItems: any = [
           {
             id: '12603',
             name: '告警复位',
-            buttons: ['edit'],
+            buttons: ['refresh', 'edit'],
             type: 'property',
             dataType: {
               specs: {

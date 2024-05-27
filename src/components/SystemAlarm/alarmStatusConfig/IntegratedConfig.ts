@@ -243,10 +243,6 @@ export const systemAlarmStatusItem: AlarmStatusItemType[] = [
         status: '2602[5,6]',
       },
       {
-        name: formatMessage({ id: 'common', defaultMessage: 'BMU风扇故障' }),
-        status: '2602[6,7]',
-      },
-      {
         name: formatMessage({ id: 'common', defaultMessage: '空调故障' }),
         status: '2602[7,8]',
       },
