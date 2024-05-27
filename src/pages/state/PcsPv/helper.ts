@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-24 14:41:53
+ * @LastEditTime: 2024-05-27 16:42:42
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\PcsPv\helper.ts
  */
@@ -279,7 +279,7 @@ export const electricEnergyItems: any = [
       },
       {
         id: '2684',
-        name: '逆变器总输出EPS电量',
+        name: '逆变器总输出电量',
         type: 'property',
         dataType: {
           specs: {
