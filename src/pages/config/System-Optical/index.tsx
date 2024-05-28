@@ -7,7 +7,7 @@
  * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
  */
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import Card from '@/components/Card';
 import {
   baseInfoItems,
@@ -18,9 +18,18 @@ import {
 } from './helper';
 import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
+import { useModel } from 'umi';
+import { isEmpty } from '@/utils';
 
 const Pcs: React.FC = () => {
+  const { config, dispatch } = useModel('config');
   const { realTimeData } = useDeviceData({ isInterval: false });
+
+  const beforeSubmit = useCallback((data) => {
+    if (!isEmpty(data.dataRefreshTime)) {
+      dispatch({ payload: { refreshTime: data.dataRefreshTime } });
+    }
+  }, []);
 
   return (
     <>
@@ -35,7 +44,11 @@ const Pcs: React.FC = () => {
           <Control groupData={systemParamsItems} realTimeData={realTimeData} />
         </Card>
         <Card className="my20">
-          <Control groupData={otherParamsItems} realTimeData={realTimeData} />
+          <Control
+            groupData={otherParamsItems}
+            realTimeData={{ ...realTimeData, dataRefreshTime: config.refreshTime }}
+            beforeSubmit={beforeSubmit}
+          />
         </Card>
         <Card className="my20">
           <Control groupData={timeSetItems} realTimeData={realTimeData} />

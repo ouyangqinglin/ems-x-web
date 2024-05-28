@@ -474,3 +474,17 @@ export const alarmSource = {
     text: '平台规则',
   },
 };
+
+export const RefreshTimeOptions = [
+  { label: '关闭', value: 0 },
+  { label: '1s', value: 1 },
+  { label: '2s', value: 2 },
+  { label: '3s', value: 3 },
+  { label: '5s', value: 5 },
+  { label: '7s', value: 7 },
+  { label: '9s', value: 9 },
+  { label: '10s', value: 10 },
+  { label: '12s', value: 12 },
+  { label: '13s', value: 13 },
+  { label: '15s', value: 15 },
+];

@@ -2,12 +2,14 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 11:40:33
+ * @LastEditTime: 2024-05-28 15:36:46
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\config\System-Optical\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
+import { arrayToMap } from '@/utils';
+import { RefreshTimeOptions } from '@/utils/dictionary';
 
 export const baseInfoItems: any = [
   {
@@ -255,15 +257,13 @@ export const otherParamsItems: any = [
             },
           },
           {
-            id: '11249',
+            id: 'dataRefreshTime',
             name: '数据刷新频率(上位机软件)',
             type: 'property',
             buttons: ['refresh', 'edit'],
             dataType: {
-              specs: {
-                unit: 'S',
-              },
-              type: 'string',
+              specs: arrayToMap(RefreshTimeOptions, 'value', 'label'),
+              type: 'enum',
             },
           },
         ],
