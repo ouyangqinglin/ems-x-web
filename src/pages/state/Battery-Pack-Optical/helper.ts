@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-24 15:27:19
+ * @LastEditTime: 2024-05-27 17:55:08
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Battery-Pack-Optical\helper.ts
  */
@@ -69,9 +69,6 @@ export const baseInfoItems: any = [
         type: 'property',
         dataType: {
           type: 'string',
-          specs: {
-            unit: 'kW',
-          },
         },
       },
       {
@@ -80,9 +77,6 @@ export const baseInfoItems: any = [
         type: 'property',
         dataType: {
           type: 'string',
-          specs: {
-            unit: 'kWh',
-          },
         },
       },
       {
@@ -722,7 +716,7 @@ export const remoteSignalItems: any = [
       },
       {
         type: 'property',
-        id: '3121',
+        id: '3122',
         name: '正极接触器状态',
         dataType: {
           type: 'enum',
@@ -734,7 +728,7 @@ export const remoteSignalItems: any = [
       },
       {
         type: 'property',
-        id: '3122',
+        id: '3121',
         name: '负极接触器状态',
         dataType: {
           type: 'enum',
