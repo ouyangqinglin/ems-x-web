@@ -2,14 +2,13 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-04-25 14:26:38
- * @LastEditTime: 2023-06-15 10:36:39
+ * @LastEditTime: 2024-05-28 10:04:14
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\Dialog\index.tsx
+ * @FilePath: \ems-x-web\src\components\Dialog\index.tsx
  */
 import React, { ReactNode, useState, useMemo } from 'react';
 import { Modal, Spin } from 'antd';
 import type { ModalProps } from 'antd';
-import IconClose from '@/assets/image/screen/dialog/close.png';
 import './index.less';
 import DialogContext from './DialogContext';
 import { formatMessage } from '@/utils';
@@ -21,10 +20,7 @@ export type DialogProps = ModalProps & {
 
 export const getModalProps = (model: string | undefined, wrapClassName = '') => {
   return model === 'screen'
-    ? {
-        closeIcon: <img className="close" src={IconClose} />,
-        wrapClassName: `dialog-screen ${wrapClassName}`,
-      }
+    ? {}
     : {
         wrapClassName: `dialog-equipment ${wrapClassName}`,
       };

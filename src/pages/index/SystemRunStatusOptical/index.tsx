@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import styles from './index.less';
 import { getSystemRunStatus } from '@/services/device';
+import IconEms from '@/assets/image/station/overview/icon_ems.png';
 import IconOff from '@/assets/image/station/overview/icon_off.svg';
 import IconOn from '@/assets/image/station/overview/icon_on.svg';
-import IconUpperComputer from '@/assets/image/station/overview/icon_upper_computer.svg';
-import IconYtCloud from '@/assets/image/station/overview/icon_yt_cloud.svg';
-import IconLampPanel from '@/assets/image/station/overview/icon_lamp_panel.svg';
-import IconGridMeter from '@/assets/image/station/overview/icon_grid_side_meter.svg';
-import IconInverterMeter from '@/assets/image/station/overview/icon_inverter_side_meter.svg';
-import IconFireFighting from '@/assets/image/station/overview/icon_fire_fighting.svg';
-import IconAir from '@/assets/image/station/overview/icon_air.svg';
-import IconBattery from '@/assets/image/station/overview/icon_battery.svg';
-import IconConverter from '@/assets/image/station/overview/icon_converter.svg';
-import IconWeb from '@/assets/image/station/overview/icon_web.svg';
-import IconEms from '@/assets/image/station/overview/icon_ems.svg';
-const communityMethods = {
+import IconUpperComputer from '@/assets/image/station/overview/icon_upper_computer.png';
+import IconYtCloud from '@/assets/image/station/overview/icon_yt_cloud.png';
+import IconLampPanel from '@/assets/image/station/overview/icon_lamp_panel.png';
+import IconMeter from '@/assets/image/station/overview/icon_meter.png';
+import IconFireFighting from '@/assets/image/station/overview/icon_fire_fighting.png';
+import IconAir from '@/assets/image/station/overview/icon_air.png';
+import IconBattery from '@/assets/image/station/overview/icon_battery.png';
+import IconConverter from '@/assets/image/station/overview/icon_converter.png';
+import IconWeb from '@/assets/image/station/overview/icon_web.png';
+
+const communityMethods: Record<string, string> = {
   0: 'RS485',
   1: '未知',
 };
-const communityOtherMethods = {
+
+const communityOtherMethods: Record<string, string> = {
   0: '以太网',
   1: 'CAN',
   2: '485',
@@ -46,9 +47,9 @@ const Index: React.FC = (props) => {
           </div>
         </div>
         <div className={styles.imgBox}>
-          <img className={styles.centerImg} src={IconEms} alt="" />
+          <img className={`${styles.centerImg} ${styles.deviceImg}`} src={IconEms} alt="" />
           {/*上位机 对称*/}
-          <img className={styles.oneImg} src={IconUpperComputer} alt="" />
+          <img className={`${styles.oneImg} ${styles.deviceImg}`} src={IconUpperComputer} alt="" />
           {status ? (
             <img className={styles.oneStatus} src={IconOn} alt="" />
           ) : (
@@ -57,7 +58,7 @@ const Index: React.FC = (props) => {
           <span className={styles.oneName}>上位机</span>
           <span className={styles.one} style={{ backgroundColor: status ? '#00B42A' : '' }}></span>
           <span className={styles.oneMethod}>{communityMethods[data?.[179]]}</span>
-          <img className={styles.sixImg} src={IconFireFighting} alt="" />
+          <img className={`${styles.sixImg} ${styles.deviceImg}`} src={IconFireFighting} alt="" />
           {+data?.[1107] === 0 ? (
             <img className={styles.sixStatus} src={IconOn} alt="" />
           ) : (
@@ -69,7 +70,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1107] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.sixMethod}>{communityMethods[data?.[5633]]}</span>
-          <img className={styles.twoImg} src={IconYtCloud} alt="" />
+          <img className={`${styles.twoImg} ${styles.deviceImg}`} src={IconYtCloud} alt="" />
           {+data?.[1102] === 0 ? (
             <img className={styles.twoStatus} src={IconOn} alt="" />
           ) : (
@@ -81,7 +82,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1102] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.twoMethod}>{communityMethods[data?.[183]]}</span>
-          <img className={styles.sevenImg} src={IconAir} alt="" />
+          <img className={`${styles.sevenImg} ${styles.deviceImg}`} src={IconAir} alt="" />
           {+data?.[1106] === 0 ? (
             <img className={styles.sevenStatus} src={IconOn} alt="" />
           ) : (
@@ -93,7 +94,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1106] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.sevenMethod}>{communityMethods[data?.[5533]]}</span>
-          <img className={styles.threeImg} src={IconLampPanel} alt="" />
+          <img className={`${styles.threeImg} ${styles.deviceImg}`} src={IconLampPanel} alt="" />
           {+data?.[1103] === 0 ? (
             <img className={styles.threeStatus} src={IconOn} alt="" />
           ) : (
@@ -105,7 +106,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1103] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.threeMethod}>{communityOtherMethods[data?.[185]]}</span>
-          <img className={styles.eightImg} src={IconBattery} alt="" />
+          <img className={`${styles.eightImg} ${styles.deviceImg}`} src={IconBattery} alt="" />
           {+data?.[1105] === 0 ? (
             <img className={styles.eightStatus} src={IconOn} alt="" />
           ) : (
@@ -117,7 +118,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1105] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.eightMethod}>{communityOtherMethods[data?.[3031]]}</span>
-          <img className={styles.fourImg} src={IconGridMeter} alt="" />
+          <img className={`${styles.fourImg} ${styles.deviceImg}`} src={IconMeter} alt="" />
           {+data?.[1108] === 0 ? (
             <img className={styles.fourStatus} src={IconOn} alt="" />
           ) : (
@@ -129,7 +130,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1108] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.fourMethod}>{communityMethods[data?.[5014]]}</span>
-          <img className={styles.nineImg} src={IconConverter} alt="" />
+          <img className={`${styles.nineImg} ${styles.deviceImg}`} src={IconConverter} alt="" />
           {+data?.[1104] === 0 ? (
             <img className={styles.nineStatus} src={IconOn} alt="" />
           ) : (
@@ -141,7 +142,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1104] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.nineMethod}>{communityMethods[data?.[2642]]}</span>
-          <img className={styles.fiveImg} src={IconInverterMeter} alt="" />
+          <img className={`${styles.fiveImg} ${styles.deviceImg}`} src={IconMeter} alt="" />
           {+data?.[1109] === 0 ? (
             <img className={styles.fiveStatus} src={IconOn} alt="" />
           ) : (
@@ -153,7 +154,7 @@ const Index: React.FC = (props) => {
             style={{ backgroundColor: +data?.[1109] === 0 ? '#00B42A' : '' }}
           ></span>
           <span className={styles.fiveMethod}>{communityMethods[data?.[5007]]}</span>
-          <img className={styles.tenImg} src={IconWeb} alt="" />
+          <img className={`${styles.tenImg} ${styles.deviceImg}`} src={IconWeb} alt="" />
           {+data?.[1101] === 0 ? (
             <img className={styles.tenStatus} src={IconOn} alt="" />
           ) : (

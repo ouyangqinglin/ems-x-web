@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-07-05 19:22:37
- * @LastEditTime: 2024-04-08 18:01:12
+ * @LastEditTime: 2024-05-28 10:33:26
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\components\header\Logo.tsx
  */
@@ -20,7 +20,7 @@ const Logo: React.FC = () => {
           ? initialState?.currentUser?.systemInfo?.icon && (
               <img className={styles.logo} src={initialState?.currentUser?.systemInfo?.icon} />
             )
-          : initialState?.currentUser?.systemInfo?.logo && (
+          : initialState?.currentUser?.systemInfo?.icon && (
               <>
                 <img className={styles.logo} src={initialState?.currentUser?.systemInfo?.icon} />
                 <span className={styles.title}>YT-ESS-EMS</span>

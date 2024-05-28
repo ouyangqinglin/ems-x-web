@@ -1,16 +1,14 @@
 import type { Settings as LayoutSettings } from '@ant-design/pro-layout';
-import { PageLoading, SettingDrawer } from '@ant-design/pro-layout';
+import { PageLoading } from '@ant-design/pro-layout';
 import type { RunTimeLayoutConfig } from 'umi';
 import type { MenuDataItem } from '@umijs/route-utils';
-import { history, setLocale } from 'umi';
-import { BookOutlined, LinkOutlined } from '@ant-design/icons';
+import { history } from 'umi';
 import defaultSettings from '../config/defaultSettings';
 import { getUserInfo, getRoutersInfo } from './services/session';
 import { getUserRoleId } from '@/access';
 import MyHeader from '@/components/header/MyHeader';
 import Footer from '@/components/Footer';
 import YTIcon from '@/assets/image/icon-yt.png';
-import YTLogo from '@/assets/image/logo-yt.png';
 
 import {
   getMenus,
@@ -26,7 +24,6 @@ import styles from './app.less';
 import { SiteDataType } from './services/station';
 import { defaultSystemInfo } from '@/utils/config';
 import { getSystemStatus } from './services/device';
-import system from './locales/zh-CN/system';
 
 export type initialStateType = {
   settings?: Partial<LayoutSettings>;
@@ -90,7 +87,12 @@ export async function getInitialState(): Promise<initialStateType> {
       const data = resultInfo?.data;
 
       initLocale(resp?.user?.lang);
-      if (resp === undefined || result.code !== 200 || data === undefined || resultInfo.code !== 200) {
+      if (
+        resp === undefined ||
+        result.code !== 200 ||
+        data === undefined ||
+        resultInfo.code !== 200
+      ) {
         history.push(loginPath);
       } else {
         const information = {
@@ -101,7 +103,6 @@ export async function getInitialState(): Promise<initialStateType> {
             version: data?.version,
             systemNameEN: data?.systemNameEN,
             icon: YTIcon,
-            logo: YTLogo,
           },
         } as API.CurrentUser;
 
@@ -110,8 +111,6 @@ export async function getInitialState(): Promise<initialStateType> {
     } catch (error) {
       history.push(loginPath);
     }
-
-
 
     return undefined;
   };
