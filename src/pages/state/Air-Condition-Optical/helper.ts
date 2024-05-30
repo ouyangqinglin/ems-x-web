@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-24 16:21:16
+ * @LastEditTime: 2024-05-30 14:59:24
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Air-Condition-Optical\helper.ts
  */
@@ -205,8 +205,8 @@ export const statusItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '停止',
-            1: '运行',
+            0: '正常',
+            1: '告警',
           },
         },
       },
