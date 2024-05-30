@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-27 17:55:08
+ * @LastEditTime: 2024-05-30 14:45:35
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Battery-Pack-Optical\helper.ts
  */
@@ -587,82 +587,6 @@ export const individualExtremumItems: any = [
           specs: {
             unit: '°C',
           },
-        },
-      },
-      {
-        id: '3110',
-        name: '最高电池模块电压',
-        type: 'property',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: 'V',
-          },
-        },
-      },
-      {
-        id: '3111',
-        name: '最高电池电压模块编号',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3112',
-        name: '最低电池模块电压',
-        type: 'property',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: 'V',
-          },
-        },
-      },
-      {
-        id: '3113',
-        name: '最低电池电压模块编号',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3114',
-        name: '最高电池模块温度',
-        type: 'property',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '°C',
-          },
-        },
-      },
-      {
-        id: '3115',
-        name: '最高电池温度模块编号',
-        type: 'property',
-        dataType: {
-          type: 'string',
-        },
-      },
-      {
-        id: '3116',
-        name: '最低电池模块温度',
-        type: 'property',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '°C',
-          },
-        },
-      },
-      {
-        id: '3117',
-        name: '最低电池温度模块编号',
-        type: 'property',
-        dataType: {
-          type: 'string',
         },
       },
     ],
