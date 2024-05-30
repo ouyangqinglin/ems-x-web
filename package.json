@@ -42,7 +42,7 @@
     "test:all": "node ./tests/run-tests.js",
     "test:component": "umi test ./src/components",
     "tsc": "tsc --noEmit",
-    "preview": "cd ./dist && npx live-server --port=8080 --proxy=/prod-api:http://192.168.3.74:8080/prod-api"
+    "preview": "cd ./dist && npx live-server --port=8080 --proxy=/api:http://192.168.3.53:8080/api"
   },
   "lint-staged": {
     "**/*.less": "stylelint --syntax less",

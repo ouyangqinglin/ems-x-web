@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-07-31 11:23:15
- * @LastEditTime: 2023-09-21 13:42:36
+ * @LastEditTime: 2024-05-30 09:20:34
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\YTProTable\useTableSize.ts
+ * @FilePath: \ems-x-web\src\components\YTProTable\useTableSize.ts
  */
 import { useEffect, useState } from 'react';
 import { useSize } from 'ahooks';
@@ -12,7 +12,7 @@ import { debounce } from 'lodash';
 import type { TableProps as RcTableProps } from 'rc-table/lib/Table';
 import { isEmpty } from '@/utils';
 
-export function getTableScroll(contain: HTMLDivElement, extraHeight = 78) {
+export function getTableScroll(contain: HTMLDivElement, extraHeight = 134) {
   const tHeader = contain.querySelector('.ant-table-thead');
   let offsetToTopForTHeader = 0;
   if (tHeader) {

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-24 14:25:17
+ * @LastEditTime: 2024-05-29 17:56:06
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Optical\helper.ts
  */
@@ -197,7 +197,7 @@ export const baseInfoItems: any = [
         dataType: commonEnumType,
       },
       {
-        id: '1105',
+        id: '1106',
         name: '空调通信',
         type: 'property',
         dataType: commonEnumType,
@@ -901,24 +901,24 @@ export const statusItems: any = [
           {
             id: '1265',
             type: 'property',
-            name: '可燃气体排风扇开关',
+            name: '可燃气体排风扇',
             dataType: {
               type: 'enum',
               specs: {
-                0: '正常',
-                1: '异常',
+                0: '停止',
+                1: '运行',
               },
             },
           },
           {
             id: '1266',
             type: 'property',
-            name: '水浸报警',
+            name: '水浸状态',
             dataType: {
               type: 'enum',
               specs: {
-                0: '停止',
-                1: '运行',
+                0: '正常',
+                1: '异常',
               },
             },
           },
