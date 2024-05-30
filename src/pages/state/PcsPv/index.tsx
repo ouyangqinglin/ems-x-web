@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-28 15:19:07
+ * @LastEditTime: 2024-05-30 14:13:45
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\PcsPv\index.tsx
  */
@@ -119,7 +119,7 @@ const Pcs: React.FC = () => {
             }}
           />
         </Card>
-        <Card className="h-full">
+        <Card className="h-full mb20">
           <Run
             realTimeData={realTimeData}
             groupData={meterItems}

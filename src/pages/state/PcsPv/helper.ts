@@ -803,39 +803,6 @@ export const gridSideItems: any = [
         },
       },
       {
-        id: '2738',
-        name: '电网RS线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '2739',
-        name: '电网RT线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
-        id: '2740',
-        name: '电网ST线电压',
-        type: 'property',
-        dataType: {
-          specs: {
-            unit: 'V',
-          },
-          type: 'string',
-        },
-      },
-      {
         id: '2741',
         name: '电网频率',
         type: 'property',
