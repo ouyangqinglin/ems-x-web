@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-29 17:56:06
+ * @LastEditTime: 2024-05-30 15:05:56
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\System-Optical\helper.ts
  */
@@ -1306,17 +1306,6 @@ export const statusItems: any = [
               specs: {
                 0: '正常',
                 1: '告警',
-              },
-            },
-          },
-          {
-            id: '5537',
-            type: 'property',
-            name: '室外温度',
-            dataType: {
-              type: 'string',
-              specs: {
-                unit: '°C',
               },
             },
           },

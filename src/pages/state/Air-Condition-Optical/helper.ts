@@ -211,17 +211,6 @@ export const statusItems: any = [
         },
       },
       {
-        id: '5537',
-        type: 'property',
-        name: '室外温度',
-        dataType: {
-          type: 'string',
-          specs: {
-            unit: '°C',
-          },
-        },
-      },
-      {
         id: '5546',
         type: 'property',
         name: '冷凝盘管温度',
