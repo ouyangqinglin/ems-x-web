@@ -44,7 +44,6 @@ export const baseInfoItems: any = [
         dataType: {
           type: 'enum',
           specs: {
-            0: '初始化',
             1: '断开',
             2: '已连接',
           },
