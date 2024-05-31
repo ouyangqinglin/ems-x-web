@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-16 13:55:32
+ * @LastEditTime: 2024-05-31 14:29:55
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control-Optical\helper.ts
  */
@@ -147,7 +147,7 @@ export const baseInfoItems: any = [
         id: 'sdkas',
         children: [
           {
-            id: '50122',
+            id: '1503',
             name: '系统能量统计初始时间',
             buttons: ['refresh'],
             type: 'property',
@@ -164,7 +164,7 @@ export const baseInfoItems: any = [
         showType: 2,
         children: [
           {
-            id: '50067',
+            id: '11003',
             name: '能量统计初始化',
             buttons: ['edit'],
             type: 'property',

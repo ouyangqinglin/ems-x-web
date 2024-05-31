@@ -230,7 +230,7 @@ export const otherParamsItems: any = [
         id: 'a',
         name: '其他参数设置',
         type: 'service',
-        buttons: ['refresh', 'edit'],
+        buttons: ['refresh'],
         children: [
           {
             id: '11250',

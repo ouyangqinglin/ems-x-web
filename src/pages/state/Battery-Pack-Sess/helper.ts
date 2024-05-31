@@ -44,7 +44,12 @@ export const baseInfoItems: any = [
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '初始化',
+            1: '断开',
+            2: '连接',
+          },
         },
       },
       {

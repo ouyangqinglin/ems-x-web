@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2023-06-30 09:30:58
- * @LastEditTime: 2023-11-27 13:57:43
+ * @LastEditTime: 2024-05-31 14:51:59
  * @LastEditors: YangJianFei
- * @FilePath: \energy-cloud-frontend\src\components\SchemaForm\index.tsx
+ * @FilePath: \ems-x-web\src\components\SchemaForm\index.tsx
  */
 import React, { useMemo, useEffect, useCallback, useRef } from 'react';
 import { useRequest } from 'umi';
@@ -148,7 +148,9 @@ const SchemaForm = <
     (formData: FormData) => {
       const request = type == FormTypeEnum.Add ? runAdd : runEdit;
       const beforeSubmitResult = beforeSubmit?.(formData);
-      if (beforeSubmitResult !== false) {
+      if (typeof beforeSubmitResult === 'boolean') {
+        return Promise.resolve(beforeSubmitResult);
+      } else {
         return request?.({
           ...((beforeSubmitResult as ParamData) ?? formData),
           [idKey]: id,
@@ -176,8 +178,6 @@ const SchemaForm = <
           ?.catch((data) => {
             onError?.(data);
           });
-      } else {
-        return Promise.resolve(false);
       }
     },
     [type, id, runAdd, runEdit, onSuccess, extraData, layoutType, beforeSubmit],

@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-03-16 10:52:13
+ * @LastEditTime: 2024-05-31 11:27:29
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\state\Pcs\helper.ts
+ * @FilePath: \ems-x-web\src\pages\state\PcsSess\helper.ts
  */
 
 import { DeviceModelDescribeType } from '@/types/device';
@@ -55,7 +55,12 @@ export const baseInfoItems: any = [
         name: '与EMS通信状态',
         type: 'property',
         dataType: {
-          type: 'string',
+          type: 'enum',
+          specs: {
+            0: '初始化',
+            1: '断开',
+            2: '连接',
+          },
         },
       },
       {

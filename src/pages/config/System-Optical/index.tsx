@@ -2,9 +2,9 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-03-16 11:35:13
+ * @LastEditTime: 2024-05-31 14:49:26
  * @LastEditors: YangJianFei
- * @FilePath: \ems-x-web\src\pages\config\Pcs\index.tsx
+ * @FilePath: \ems-x-web\src\pages\config\System-Optical\index.tsx
  */
 
 import React, { useCallback } from 'react';
@@ -20,6 +20,7 @@ import Control from '@/components/Device/Control';
 import { useDeviceData } from '@/hooks';
 import { useModel } from 'umi';
 import { isEmpty } from '@/utils';
+import { message } from 'antd';
 
 const Pcs: React.FC = () => {
   const { config, dispatch } = useModel('config');
@@ -28,6 +29,8 @@ const Pcs: React.FC = () => {
   const beforeSubmit = useCallback((data) => {
     if (!isEmpty(data.dataRefreshTime)) {
       dispatch({ payload: { refreshTime: data.dataRefreshTime } });
+      message.success('保存成功');
+      return true;
     }
   }, []);
 
