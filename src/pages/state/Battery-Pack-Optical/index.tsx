@@ -29,7 +29,7 @@ const tabList: {
   key: string;
   tab: string;
 }[] = [];
-Array.from({ length: 10 }).forEach((_, index) => {
+Array.from({ length: 9 }).forEach((_, index) => {
   tabList.push({
     key: index + '',
     tab: `BMU${index + 1}`,

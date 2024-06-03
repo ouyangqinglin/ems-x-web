@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-30 14:45:35
+ * @LastEditTime: 2024-06-03 11:25:20
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\state\Battery-Pack-Optical\helper.ts
  */
@@ -703,7 +703,7 @@ export const remoteSignalItems: any = [
 
 const bmuVoltages: number[][] = [];
 const bmuTemps: number[][] = [];
-Array.from({ length: 10 }).forEach((_, bmuIndex) => {
+Array.from({ length: 9 }).forEach((_, bmuIndex) => {
   bmuVoltages.push([]);
   bmuTemps.push([]);
   Array.from({ length: 24 }).forEach((__, voltageIndex) => {

@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-15 16:40:51
- * @LastEditTime: 2024-05-31 14:49:26
+ * @LastEditTime: 2024-06-03 11:24:19
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Optical\index.tsx
  */
@@ -32,8 +32,8 @@ const Pcs: React.FC = () => {
       dispatch({ payload: { refreshTime: data.dataRefreshTime } });
       message.success('保存成功');
       return true;
-    } else if (data[50000]) {
-      data[50000] = moment(data[50000]).format('YYYY-MM-DD HH:mm:ss');
+    } else if (data[11252]) {
+      data[11252] = moment(data[11252]).format('YYYY-MM-DD HH:mm:ss');
     }
   }, []);
 
