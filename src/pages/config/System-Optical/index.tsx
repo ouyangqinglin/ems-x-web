@@ -21,6 +21,7 @@ import { useDeviceData } from '@/hooks';
 import { useModel } from 'umi';
 import { isEmpty } from '@/utils';
 import { message } from 'antd';
+import moment from 'moment';
 
 const Pcs: React.FC = () => {
   const { config, dispatch } = useModel('config');
@@ -31,6 +32,8 @@ const Pcs: React.FC = () => {
       dispatch({ payload: { refreshTime: data.dataRefreshTime } });
       message.success('保存成功');
       return true;
+    } else if (data[50000]) {
+      data[50000] = moment(data[50000]).format('YYYY-MM-DD HH:mm:ss');
     }
   }, []);
 
@@ -54,7 +57,11 @@ const Pcs: React.FC = () => {
           />
         </Card>
         <Card className="my20">
-          <Control groupData={timeSetItems} realTimeData={realTimeData} />
+          <Control
+            groupData={timeSetItems}
+            realTimeData={realTimeData}
+            beforeSubmit={beforeSubmit}
+          />
         </Card>
       </div>
     </>
