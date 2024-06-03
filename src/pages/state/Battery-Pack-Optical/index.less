@@ -1,0 +1,60 @@
+.card {
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  :global {
+    .ant-card-head-title {
+      color: #191919;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+  .sn {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  .table {
+    padding-bottom: 16px;
+    overflow-x: scroll;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      flex-shrink: 0;
+      width: 62px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border: 1px solid #c8c8c8;
+      border-left: none;
+    }
+    .first {
+      span {
+        background-color: #f2f2f2;
+      }
+      :nth-child(1) {
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
+      }
+    }
+    .two {
+      span {
+        border-top: none;
+        border-bottom: 1px solid #c8c8c8;
+      }
+      :nth-child(1) {
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
+      }
+    }
+    .three {
+      :nth-child(1) {
+        width: 90px;
+        border-left: 1px solid #c8c8c8;
+      }
+      span {
+        border-top: none;
+      }
+    }
+  }
+}

@@ -225,7 +225,7 @@ const Pcs: React.FC = () => {
             </Card>
           </Col>
         </Row>
-        <div className="mt16">
+        <div className="mt24">
           <SystemAlarm modelType="battery" realTimeData={realTimeData} />
         </div>
       </div>

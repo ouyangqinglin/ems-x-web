@@ -700,3 +700,20 @@ export const remoteSignalItems: any = [
     ],
   },
 ];
+
+const bmuVoltages: number[][] = [];
+const bmuTemps: number[][] = [];
+Array.from({ length: 10 }).forEach((_, bmuIndex) => {
+  bmuVoltages.push([]);
+  bmuTemps.push([]);
+  Array.from({ length: 24 }).forEach((__, voltageIndex) => {
+    bmuVoltages[bmuIndex].push(3201 + bmuIndex * 24 + voltageIndex);
+  });
+  Array.from({ length: 12 }).forEach((__, tempIndex) => {
+    bmuTemps[bmuIndex].push(3501 + bmuIndex * 12 + tempIndex);
+  });
+});
+
+const bmuSns = [4000, 4010, 4020, 4030, 4040, 4050, 4060, 4070, 4080, 4090];
+
+export { bmuVoltages, bmuTemps, bmuSns };
