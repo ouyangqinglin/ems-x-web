@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-05-31 14:29:55
+ * @LastEditTime: 2024-06-03 14:30:33
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control-Optical\helper.ts
  */
@@ -27,8 +27,8 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '就地',
-                1: '远程',
+                1: '就地',
+                2: '远程',
               },
             },
           },
@@ -81,8 +81,8 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '就地',
-                1: '远程',
+                1: '就地',
+                2: '远程',
               },
             },
           },
