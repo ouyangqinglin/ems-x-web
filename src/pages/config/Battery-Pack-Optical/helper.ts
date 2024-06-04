@@ -29,7 +29,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3010',
+            id: '3020',
             name: '电池组型号',
             type: 'property',
             buttons: ['refresh'],
@@ -38,7 +38,7 @@ export const baseInfoItems: any = [
             },
           },
           {
-            id: '3020',
+            id: '3010',
             name: '电池组厂商',
             type: 'property',
             buttons: ['refresh'],
@@ -191,7 +191,7 @@ export const batteryParamsItems: any = [
                     buttons: ['refresh', 'edit'],
                     children: [
                       {
-                        id: '53001',
+                        id: '12000',
                         name: '单体过压一级报警门限',
                         type: 'property',
                         dataType: {
@@ -202,7 +202,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53002',
+                        id: '12001',
                         name: '单体过压一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -213,7 +213,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53003',
+                        id: '12002',
                         name: '单体欠压一级报警门限',
                         type: 'property',
                         dataType: {
@@ -224,7 +224,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53004',
+                        id: '12003',
                         name: '单体欠压一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -235,7 +235,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53005',
+                        id: '12004',
                         name: '总电压过压一级报警门限',
                         type: 'property',
                         dataType: {
@@ -246,7 +246,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53006',
+                        id: '12005',
                         name: '总电压过压一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -257,7 +257,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53007',
+                        id: '12006',
                         name: '总电压欠压一级报警门限',
                         type: 'property',
                         dataType: {
@@ -268,7 +268,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53008',
+                        id: '12007',
                         name: '总电压欠压一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -279,7 +279,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53009',
+                        id: '12008',
                         name: '单体压差过高一级报警门限',
                         type: 'property',
                         dataType: {
@@ -290,7 +290,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53010',
+                        id: '12009',
                         name: '单体压差过高一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -301,7 +301,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53011',
+                        id: '12010',
                         name: '总电压压差过高一级报警门限',
                         type: 'property',
                         dataType: {
@@ -312,7 +312,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53012',
+                        id: '12011',
                         name: '总电压压差过高一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -323,7 +323,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53013',
+                        id: '12012',
                         name: '充电过流一级报警门限',
                         type: 'property',
                         dataType: {
@@ -334,7 +334,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53014',
+                        id: '12013',
                         name: '充电过流一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -345,7 +345,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53015',
+                        id: '12014',
                         name: '放电过流一级报警门限',
                         type: 'property',
                         dataType: {
@@ -356,7 +356,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53016',
+                        id: '12015',
                         name: '放电过流一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -367,7 +367,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53017',
+                        id: '12016',
                         name: '充电过温一级报警门限',
                         type: 'property',
                         dataType: {
@@ -378,7 +378,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53018',
+                        id: '12017',
                         name: '充电过温一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -389,7 +389,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53019',
+                        id: '12018',
                         name: '充电欠温一级报警门限',
                         type: 'property',
                         dataType: {
@@ -400,7 +400,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53020',
+                        id: '12019',
                         name: '充电欠温一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -411,7 +411,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53021',
+                        id: '12020',
                         name: '放电过温一级报警门限',
                         type: 'property',
                         dataType: {
@@ -422,7 +422,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53022',
+                        id: '12021',
                         name: '放电过温一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -433,7 +433,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53023',
+                        id: '12022',
                         name: '放电欠温一级报警门限',
                         type: 'property',
                         dataType: {
@@ -444,7 +444,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53024',
+                        id: '12023',
                         name: '放电欠温一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -455,7 +455,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53025',
+                        id: '12024',
                         name: '温差过高一级报警门限',
                         type: 'property',
                         dataType: {
@@ -466,7 +466,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53026',
+                        id: '12025',
                         name: '温差过高一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -477,7 +477,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53027',
+                        id: '12026',
                         name: '极柱温度过高一级报警门限',
                         type: 'property',
                         dataType: {
@@ -488,7 +488,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53028',
+                        id: '12027',
                         name: '极柱温度过高一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -499,7 +499,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53029',
+                        id: '12028',
                         name: 'SOC 过低一级报警门限',
                         type: 'property',
                         dataType: {
@@ -510,7 +510,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53030',
+                        id: '12029',
                         name: 'SOC 过低一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -521,7 +521,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53031',
+                        id: '12030',
                         name: '绝缘失效一级报警门限',
                         type: 'property',
                         dataType: {
@@ -532,7 +532,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53032',
+                        id: '12031',
                         name: '绝缘失效一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -543,7 +543,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53033',
+                        id: '12032',
                         name: '高压箱连接器温度过高一级报警门限',
                         type: 'property',
                         dataType: {
@@ -554,7 +554,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53034',
+                        id: '12033',
                         name: '高压箱连接器温度过高一级恢复门限',
                         type: 'property',
                         dataType: {
@@ -581,7 +581,7 @@ export const batteryParamsItems: any = [
                     buttons: ['refresh', 'edit'],
                     children: [
                       {
-                        id: '53035',
+                        id: '12100',
                         name: '单体过压二级报警门限',
                         type: 'property',
                         dataType: {
@@ -592,7 +592,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53036',
+                        id: '12101',
                         name: '单体过压二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -603,7 +603,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53037',
+                        id: '12102',
                         name: '单体欠压二级报警门限',
                         type: 'property',
                         dataType: {
@@ -614,7 +614,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53038',
+                        id: '12103',
                         name: '单体欠压二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -625,7 +625,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53039',
+                        id: '12104',
                         name: '总电压过压二级报警门限',
                         type: 'property',
                         dataType: {
@@ -636,7 +636,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53040',
+                        id: '12105',
                         name: '总电压过压二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -647,7 +647,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53041',
+                        id: '12106',
                         name: '总电压欠压二级报警门限',
                         type: 'property',
                         dataType: {
@@ -658,7 +658,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53042',
+                        id: '12107',
                         name: '总电压欠压二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -669,7 +669,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53043',
+                        id: '12108',
                         name: '单体压差过高二级报警门限',
                         type: 'property',
                         dataType: {
@@ -680,7 +680,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53044',
+                        id: '12109',
                         name: '单体压差过高二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -691,7 +691,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53045',
+                        id: '12110',
                         name: '总电压压差过高二级报警门限',
                         type: 'property',
                         dataType: {
@@ -702,7 +702,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53046',
+                        id: '12111',
                         name: '总电压压差过高二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -713,7 +713,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53047',
+                        id: '12112',
                         name: '充电过流二级报警门限',
                         type: 'property',
                         dataType: {
@@ -724,7 +724,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53048',
+                        id: '12113',
                         name: '充电过流二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -735,7 +735,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53049',
+                        id: '12114',
                         name: '放电过流二级报警门限',
                         type: 'property',
                         dataType: {
@@ -746,7 +746,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53050',
+                        id: '12115',
                         name: '放电过流二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -757,7 +757,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53051',
+                        id: '12116',
                         name: '充电过温二级报警门限',
                         type: 'property',
                         dataType: {
@@ -768,7 +768,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53052',
+                        id: '12117',
                         name: '充电过温二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -779,7 +779,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53053',
+                        id: '12118',
                         name: '充电欠温二级报警门限',
                         type: 'property',
                         dataType: {
@@ -790,7 +790,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53054',
+                        id: '12119',
                         name: '充电欠温二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -801,7 +801,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53055',
+                        id: '12120',
                         name: '放电过温二级报警门限',
                         type: 'property',
                         dataType: {
@@ -812,7 +812,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53056',
+                        id: '12121',
                         name: '放电过温二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -823,7 +823,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53057',
+                        id: '12122',
                         name: '放电欠温二级报警门限',
                         type: 'property',
                         dataType: {
@@ -834,7 +834,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53058',
+                        id: '12123',
                         name: '放电欠温二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -845,7 +845,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53059',
+                        id: '12124',
                         name: '温差过高二级报警门限',
                         type: 'property',
                         dataType: {
@@ -856,7 +856,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53060',
+                        id: '12125',
                         name: '温差过高二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -867,7 +867,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53061',
+                        id: '12126',
                         name: '极柱温度过高二级报警门限',
                         type: 'property',
                         dataType: {
@@ -878,7 +878,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53062',
+                        id: '12127',
                         name: '极柱温度过高二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -889,7 +889,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53063',
+                        id: '12128',
                         name: 'SOC 过低二级报警门限',
                         type: 'property',
                         dataType: {
@@ -900,7 +900,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53064',
+                        id: '12129',
                         name: 'SOC 过低二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -911,7 +911,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53065',
+                        id: '12130',
                         name: '绝缘失效二级报警门限',
                         type: 'property',
                         dataType: {
@@ -922,7 +922,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53066',
+                        id: '12131',
                         name: '绝缘失效二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -933,7 +933,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53067',
+                        id: '12132',
                         name: '高压箱连接器温度过高二级报警门限',
                         type: 'property',
                         dataType: {
@@ -944,7 +944,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53068',
+                        id: '12133',
                         name: '高压箱连接器温度过高二级恢复门限',
                         type: 'property',
                         dataType: {
@@ -971,7 +971,7 @@ export const batteryParamsItems: any = [
                     buttons: ['refresh', 'edit'],
                     children: [
                       {
-                        id: '53069',
+                        id: '12200',
                         name: '单体过压三级报警门限',
                         type: 'property',
                         dataType: {
@@ -982,7 +982,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53070',
+                        id: '12201',
                         name: '单体过压三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -993,7 +993,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53071',
+                        id: '12202',
                         name: '单体欠压三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1004,7 +1004,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53072',
+                        id: '12203',
                         name: '单体欠压三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1015,7 +1015,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53073',
+                        id: '12204',
                         name: '总电压过压三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1026,7 +1026,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53074',
+                        id: '12205',
                         name: '总电压过压三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1037,7 +1037,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53075',
+                        id: '12206',
                         name: '总电压欠压三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1048,7 +1048,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53076',
+                        id: '12207',
                         name: '总电压欠压三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1059,7 +1059,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53077',
+                        id: '12208',
                         name: '单体压差过高三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1070,7 +1070,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53078',
+                        id: '12209',
                         name: '单体压差过高三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1081,7 +1081,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53079',
+                        id: '12210',
                         name: '总电压压差过高三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1092,7 +1092,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53080',
+                        id: '12211',
                         name: '总电压压差过高三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1103,7 +1103,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53081',
+                        id: '12212',
                         name: '充电过流三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1114,7 +1114,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53082',
+                        id: '12213',
                         name: '充电过流三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1125,7 +1125,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53083',
+                        id: '12214',
                         name: '放电过流三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1136,7 +1136,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53084',
+                        id: '12215',
                         name: '放电过流三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1147,7 +1147,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53085',
+                        id: '12216',
                         name: '充电过温三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1158,7 +1158,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53086',
+                        id: '12217',
                         name: '充电过温三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1169,7 +1169,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53087',
+                        id: '12218',
                         name: '充电欠温三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1180,7 +1180,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53088',
+                        id: '12219',
                         name: '充电欠温三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1191,7 +1191,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53089',
+                        id: '12220',
                         name: '放电过温三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1202,7 +1202,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53090',
+                        id: '12221',
                         name: '放电过温三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1213,7 +1213,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53091',
+                        id: '12222',
                         name: '放电欠温三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1224,7 +1224,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53092',
+                        id: '12223',
                         name: '放电欠温三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1235,7 +1235,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53093',
+                        id: '12224',
                         name: '温差过高三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1246,7 +1246,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53094',
+                        id: '12225',
                         name: '温差过高三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1257,7 +1257,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53095',
+                        id: '12226',
                         name: '极柱温度过高三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1268,7 +1268,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53096',
+                        id: '12227',
                         name: '极柱温度过高三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1279,7 +1279,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53097',
+                        id: '12228',
                         name: 'SOC 过低三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1290,7 +1290,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53098',
+                        id: '12229',
                         name: 'SOC 过低三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1301,7 +1301,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53099',
+                        id: '12230',
                         name: '绝缘失效三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1312,7 +1312,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53100',
+                        id: '12231',
                         name: '绝缘失效三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1323,7 +1323,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53101',
+                        id: '12232',
                         name: '高压箱连接器温度过高三级报警门限',
                         type: 'property',
                         dataType: {
@@ -1334,7 +1334,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53102',
+                        id: '12233',
                         name: '高压箱连接器温度过高三级恢复门限',
                         type: 'property',
                         dataType: {
@@ -1361,7 +1361,7 @@ export const batteryParamsItems: any = [
                     buttons: ['refresh', 'edit'],
                     children: [
                       {
-                        id: '53103',
+                        id: '12300',
                         name: '单体过压四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1372,7 +1372,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53104',
+                        id: '12301',
                         name: '单体过压四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1383,7 +1383,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53105',
+                        id: '12302',
                         name: '单体欠压四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1394,7 +1394,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53106',
+                        id: '12303',
                         name: '单体欠压四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1405,7 +1405,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53107',
+                        id: '12304',
                         name: '总电压过压四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1416,7 +1416,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53108',
+                        id: '12305',
                         name: '总电压过压四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1427,7 +1427,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53109',
+                        id: '12306',
                         name: '总电压欠压四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1438,7 +1438,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53110',
+                        id: '12307',
                         name: '总电压欠压四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1449,7 +1449,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53111',
+                        id: '12308',
                         name: '单体压差过高四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1460,7 +1460,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53112',
+                        id: '12309',
                         name: '单体压差过高四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1471,7 +1471,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53113',
+                        id: '12310',
                         name: '总电压压差过高四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1482,7 +1482,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53114',
+                        id: '12311',
                         name: '总电压压差过高四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1493,7 +1493,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53115',
+                        id: '12312',
                         name: '充电过流四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1504,7 +1504,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53116',
+                        id: '12313',
                         name: '充电过流四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1515,7 +1515,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53117',
+                        id: '12314',
                         name: '放电过流四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1526,7 +1526,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53118',
+                        id: '12315',
                         name: '放电过流四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1537,7 +1537,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53119',
+                        id: '12316',
                         name: '充电过温四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1548,7 +1548,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53120',
+                        id: '12317',
                         name: '充电过温四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1559,7 +1559,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53121',
+                        id: '12318',
                         name: '充电欠温四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1570,7 +1570,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53122',
+                        id: '12319',
                         name: '充电欠温四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1581,7 +1581,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53123',
+                        id: '12320',
                         name: '放电过温四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1592,7 +1592,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53124',
+                        id: '12321',
                         name: '放电过温四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1603,7 +1603,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53125',
+                        id: '12322',
                         name: '放电欠温四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1614,7 +1614,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53126',
+                        id: '12323',
                         name: '放电欠温四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1625,7 +1625,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53127',
+                        id: '12324',
                         name: '温差过高四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1636,7 +1636,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53128',
+                        id: '12325',
                         name: '温差过高四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1647,7 +1647,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53129',
+                        id: '12326',
                         name: '极柱温度过高四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1658,7 +1658,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53130',
+                        id: '12327',
                         name: '极柱温度过高四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1669,7 +1669,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53131',
+                        id: '12328',
                         name: 'SOC 过低四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1680,7 +1680,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53132',
+                        id: '12329',
                         name: 'SOC 过低四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1691,7 +1691,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53133',
+                        id: '12330',
                         name: '绝缘失效四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1702,7 +1702,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53134',
+                        id: '12331',
                         name: '绝缘失效四级保护恢复值',
                         type: 'property',
                         dataType: {
@@ -1713,7 +1713,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53135',
+                        id: '12332',
                         name: '高压箱连接器温度过高四级保护限值',
                         type: 'property',
                         dataType: {
@@ -1724,7 +1724,7 @@ export const batteryParamsItems: any = [
                         },
                       },
                       {
-                        id: '53136',
+                        id: '12333',
                         name: '高压箱连接器温度过高四级保护恢复值',
                         type: 'property',
                         dataType: {
