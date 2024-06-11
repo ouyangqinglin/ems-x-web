@@ -2,7 +2,7 @@
  * @Description:
  * @Author: YangJianFei
  * @Date: 2024-03-16 09:42:18
- * @LastEditTime: 2024-06-03 16:42:42
+ * @LastEditTime: 2024-06-11 16:13:31
  * @LastEditors: YangJianFei
  * @FilePath: \ems-x-web\src\pages\config\System-Control-Optical\helper.ts
  */
@@ -56,11 +56,13 @@ export const baseInfoItems: any = [
             dataType: {
               type: 'enum',
               specs: {
-                0: '启动',
-                1: '待机',
-                2: '停止',
-                3: '急停',
-                4: '复位',
+                0: '故障',
+                1: '运行',
+                2: '运行/充电',
+                3: '运行/放电',
+                4: '待机',
+                5: '停机',
+                6: '急停',
               },
             },
           },
